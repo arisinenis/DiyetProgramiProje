@@ -56,6 +56,7 @@ namespace DiyetProgramiProje
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button2);
@@ -96,7 +97,7 @@ namespace DiyetProgramiProje
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(46, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 30);
+            this.label2.Size = new System.Drawing.Size(62, 24);
             this.label2.TabIndex = 12;
             this.label2.Text = "Email";
             // 
@@ -122,7 +123,7 @@ namespace DiyetProgramiProje
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(47, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 30);
+            this.label3.Size = new System.Drawing.Size(100, 24);
             this.label3.TabIndex = 13;
             this.label3.Text = "Password";
             // 
@@ -133,7 +134,7 @@ namespace DiyetProgramiProje
             this.ClientSize = new System.Drawing.Size(1077, 701);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
