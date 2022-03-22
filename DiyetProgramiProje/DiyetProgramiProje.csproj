@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DieticianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieticianForm.Designer.cs">
+      <DependentUpon>DieticianForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoodAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DieticianForm.resx">
+      <DependentUpon>DieticianForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FoodAddForm.resx">
       <DependentUpon>FoodAddForm.cs</DependentUpon>
     </EmbeddedResource>
