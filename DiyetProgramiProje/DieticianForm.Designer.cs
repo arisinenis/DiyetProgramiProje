@@ -62,6 +62,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox7.BackColor = System.Drawing.Color.Transparent;
             this.groupBox7.Controls.Add(this.groupBox6);
             this.groupBox7.Controls.Add(this.groupBox1);
@@ -153,6 +154,7 @@
             // 
             // grpbox
             // 
+            this.grpbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpbox.BackColor = System.Drawing.Color.Transparent;
             this.grpbox.Controls.Add(this.button1);
             this.grpbox.Controls.Add(this.richTextBox1);
@@ -227,7 +229,7 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "Birthdate";
-            this.columnHeader9.Width = 81;
+            this.columnHeader9.Width = 76;
             // 
             // groupBox6
             // 
@@ -290,7 +292,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DieticianForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DieticianForm";
             this.Load += new System.EventHandler(this.DieticianForm_Load);
             this.groupBox7.ResumeLayout(false);
