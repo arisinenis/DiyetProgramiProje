@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace DiyetProgramiProje
 {
-    public partial class RegisterForm : Form
+    public partial class UserForm : Form
     {
-        public RegisterForm()
+        public UserForm()
         {
             InitializeComponent();
         }
 
- 
     }
 }

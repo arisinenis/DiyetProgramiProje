@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace DiyetProgramiProje
 {
-    public partial class RegisterForm : Form
+    public partial class FoodAddForm : Form
     {
-        public RegisterForm()
+        public FoodAddForm()
         {
             InitializeComponent();
         }
-
- 
     }
 }

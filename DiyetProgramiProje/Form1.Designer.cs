@@ -29,7 +29,6 @@ namespace DiyetProgramiProje
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,7 +44,7 @@ namespace DiyetProgramiProje
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuText;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImage = global::DiyetProgramiProje.Properties.Resources.WhatsApp_Image_2022_03_21_at_4_14_36_PM;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
