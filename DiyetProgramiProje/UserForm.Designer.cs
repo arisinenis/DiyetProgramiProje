@@ -30,9 +30,11 @@ namespace DiyetProgramiProje
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnNewMeal = new System.Windows.Forms.Button();
             this.btnAddMeal = new System.Windows.Forms.Button();
             this.nudPortion = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -66,7 +68,6 @@ namespace DiyetProgramiProje
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnNewMeal = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
@@ -125,6 +126,15 @@ namespace DiyetProgramiProje
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Meal";
+            // 
+            // btnNewMeal
+            // 
+            this.btnNewMeal.Location = new System.Drawing.Point(326, 599);
+            this.btnNewMeal.Name = "btnNewMeal";
+            this.btnNewMeal.Size = new System.Drawing.Size(210, 47);
+            this.btnNewMeal.TabIndex = 13;
+            this.btnNewMeal.Text = "New Meal Request";
+            this.btnNewMeal.UseVisualStyleBackColor = true;
             // 
             // btnAddMeal
             // 
@@ -424,21 +434,12 @@ namespace DiyetProgramiProje
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
-            // btnNewMeal
-            // 
-            this.btnNewMeal.Location = new System.Drawing.Point(326, 599);
-            this.btnNewMeal.Name = "btnNewMeal";
-            this.btnNewMeal.Size = new System.Drawing.Size(210, 47);
-            this.btnNewMeal.TabIndex = 13;
-            this.btnNewMeal.Text = "New Meal Request";
-            this.btnNewMeal.UseVisualStyleBackColor = true;
-            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.BackgroundImage = global::DiyetProgramiProje.Properties.Resources._1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1188, 690);
             this.Controls.Add(this.groupBox7);

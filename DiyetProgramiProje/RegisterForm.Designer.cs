@@ -29,6 +29,7 @@ namespace DiyetProgramiProje
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnJoin = new System.Windows.Forms.Button();
             this.btnShowDetails = new System.Windows.Forms.Button();
@@ -424,7 +425,7 @@ namespace DiyetProgramiProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DiyetProgramiProje.Properties.Resources.tosty_khleb_sendvich_kuritsa_miasmo_ovoshchi_zelen_sous_ingr;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 842);
             this.Controls.Add(this.groupBox1);
