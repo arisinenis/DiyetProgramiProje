@@ -45,12 +45,10 @@
     <Compile Include="Entities\DieticianRegisterInfo.cs" />
     <Compile Include="Entities\FoodCategory.cs" />
     <Compile Include="Entities\FoodName.cs" />
-    <Compile Include="Entities\MealTime.cs" />
     <Compile Include="Entities\Message.cs" />
     <Compile Include="Entities\UserInformation.cs" />
     <Compile Include="Entities\UserMeal.cs" />
     <Compile Include="Entities\UserRegisterInfo.cs" />
-    <Compile Include="Entities\UserRequest.cs" />
     <Compile Include="Enums\MealTimesEnum.cs" />
     <Compile Include="Enums\MembershipTypeEnum.cs" />
     <Compile Include="Enums\UserRequestsEnum.cs" />

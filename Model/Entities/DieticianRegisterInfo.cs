@@ -15,6 +15,6 @@ namespace Model.Entities
         public MembershipTypeEnum UserType { get; set; }
 
         public virtual int DieticianId { get; set; }
-        public Dietician Dietician { get; set; }
+        public virtual Dietician Dietician { get; set; }
     }
 }

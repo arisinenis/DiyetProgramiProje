@@ -54,6 +54,8 @@
             this.lvCategory = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnAddCatAndFood = new System.Windows.Forms.Button();
             this.grpbox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFoodPic)).BeginInit();
@@ -65,7 +67,7 @@
             this.grpbox.BackColor = System.Drawing.Color.Transparent;
             this.grpbox.Controls.Add(this.lvUserInf);
             this.grpbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.grpbox.Location = new System.Drawing.Point(12, 7);
+            this.grpbox.Location = new System.Drawing.Point(12, 6);
             this.grpbox.Name = "grpbox";
             this.grpbox.Size = new System.Drawing.Size(1176, 308);
             this.grpbox.TabIndex = 17;
@@ -132,10 +134,12 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "User Status";
+            this.columnHeader2.Width = 160;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Gender";
+            this.columnHeader3.Width = 74;
             // 
             // columnHeader4
             // 
@@ -144,6 +148,7 @@
             // columnHeader11
             // 
             this.columnHeader11.Text = "MemberShipStart";
+            this.columnHeader11.Width = 190;
             // 
             // columnHeader12
             // 
@@ -151,6 +156,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAddCatAndFood);
             this.groupBox1.Controls.Add(this.btnCategoryApprove);
             this.groupBox1.Controls.Add(this.btnFoodApprove);
             this.groupBox1.Controls.Add(this.pboxFoodPic);
@@ -165,25 +171,25 @@
             // 
             // btnCategoryApprove
             // 
-            this.btnCategoryApprove.Location = new System.Drawing.Point(1003, 90);
+            this.btnCategoryApprove.Location = new System.Drawing.Point(6, 240);
             this.btnCategoryApprove.Name = "btnCategoryApprove";
-            this.btnCategoryApprove.Size = new System.Drawing.Size(166, 54);
+            this.btnCategoryApprove.Size = new System.Drawing.Size(305, 37);
             this.btnCategoryApprove.TabIndex = 25;
             this.btnCategoryApprove.Text = "Category Approve";
             this.btnCategoryApprove.UseVisualStyleBackColor = true;
             // 
             // btnFoodApprove
             // 
-            this.btnFoodApprove.Location = new System.Drawing.Point(1003, 32);
+            this.btnFoodApprove.Location = new System.Drawing.Point(317, 241);
             this.btnFoodApprove.Name = "btnFoodApprove";
-            this.btnFoodApprove.Size = new System.Drawing.Size(166, 52);
+            this.btnFoodApprove.Size = new System.Drawing.Size(166, 38);
             this.btnFoodApprove.TabIndex = 26;
             this.btnFoodApprove.Text = "Food Approve";
             this.btnFoodApprove.UseVisualStyleBackColor = true;
             // 
             // pboxFoodPic
             // 
-            this.pboxFoodPic.Location = new System.Drawing.Point(789, 32);
+            this.pboxFoodPic.Location = new System.Drawing.Point(942, 33);
             this.pboxFoodPic.Name = "pboxFoodPic";
             this.pboxFoodPic.Size = new System.Drawing.Size(208, 202);
             this.pboxFoodPic.TabIndex = 24;
@@ -193,6 +199,7 @@
             // 
             this.lvFood.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader15,
+            this.columnHeader19,
             this.columnHeader16,
             this.columnHeader17,
             this.columnHeader18});
@@ -201,7 +208,7 @@
             this.lvFood.HideSelection = false;
             this.lvFood.Location = new System.Drawing.Point(317, 33);
             this.lvFood.Name = "lvFood";
-            this.lvFood.Size = new System.Drawing.Size(466, 202);
+            this.lvFood.Size = new System.Drawing.Size(591, 202);
             this.lvFood.TabIndex = 23;
             this.lvFood.UseCompatibleStateImageBehavior = false;
             this.lvFood.View = System.Windows.Forms.View.Details;
@@ -213,16 +220,19 @@
             // 
             // columnHeader16
             // 
+            this.columnHeader16.DisplayIndex = 1;
             this.columnHeader16.Text = "Food Name";
             this.columnHeader16.Width = 100;
             // 
             // columnHeader17
             // 
+            this.columnHeader17.DisplayIndex = 2;
             this.columnHeader17.Text = "Food Category";
             this.columnHeader17.Width = 120;
             // 
             // columnHeader18
             // 
+            this.columnHeader18.DisplayIndex = 3;
             this.columnHeader18.Text = "Food Calorie";
             this.columnHeader18.Width = 120;
             // 
@@ -251,15 +261,30 @@
             this.columnHeader14.Text = "CategoryName";
             this.columnHeader14.Width = 150;
             // 
+            // columnHeader19
+            // 
+            this.columnHeader19.DisplayIndex = 4;
+            this.columnHeader19.Text = "CategoryID";
+            this.columnHeader19.Width = 116;
+            // 
+            // btnAddCatAndFood
+            // 
+            this.btnAddCatAndFood.Location = new System.Drawing.Point(510, 241);
+            this.btnAddCatAndFood.Name = "btnAddCatAndFood";
+            this.btnAddCatAndFood.Size = new System.Drawing.Size(398, 38);
+            this.btnAddCatAndFood.TabIndex = 27;
+            this.btnAddCatAndFood.Text = "Add Food And Category ";
+            this.btnAddCatAndFood.UseVisualStyleBackColor = true;
+            // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 612);
+            this.ClientSize = new System.Drawing.Size(1200, 611);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpbox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.grpbox.ResumeLayout(false);
@@ -297,5 +322,7 @@
         private System.Windows.Forms.ListView lvCategory;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.Button btnAddCatAndFood;
     }
 }

@@ -9,9 +9,10 @@ namespace Model.Entities
     public class Message
     {
         public int Id { get; set; }
+        public string MessageHeader { get; set; }
         public string Text { get; set; }
 
         public virtual int UserInformationId { get; set; }
-        public UserInformation UserInformation { get; set; }
+        public virtual UserInformation UserInformation { get; set; }
     }
 }

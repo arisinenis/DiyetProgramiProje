@@ -55,11 +55,48 @@
     <Compile Include="EntityConfiguration\DieticianConfiguration.cs" />
     <Compile Include="EntityConfiguration\DieticianRegisterInfoConfiguration.cs" />
     <Compile Include="EntityConfiguration\FoodCategoryConfiguration.cs" />
+    <Compile Include="EntityConfiguration\FoodNameConfiguration.cs" />
+    <Compile Include="EntityConfiguration\MessageConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserInformationConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
+    <Compile Include="Migrations\202203231150587_test1.cs" />
+    <Compile Include="Migrations\202203231150587_test1.designer.cs">
+      <DependentUpon>202203231150587_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231207018_test2.cs" />
+    <Compile Include="Migrations\202203231207018_test2.designer.cs">
+      <DependentUpon>202203231207018_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231223197_test3.cs" />
+    <Compile Include="Migrations\202203231223197_test3.designer.cs">
+      <DependentUpon>202203231223197_test3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231230131_test4.cs" />
+    <Compile Include="Migrations\202203231230131_test4.designer.cs">
+      <DependentUpon>202203231230131_test4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231237522_test5.cs" />
+    <Compile Include="Migrations\202203231237522_test5.designer.cs">
+      <DependentUpon>202203231237522_test5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231241283_test6.cs" />
+    <Compile Include="Migrations\202203231241283_test6.designer.cs">
+      <DependentUpon>202203231241283_test6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231243484_test7.cs" />
+    <Compile Include="Migrations\202203231243484_test7.designer.cs">
+      <DependentUpon>202203231243484_test7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231248230_test8.cs" />
+    <Compile Include="Migrations\202203231248230_test8.designer.cs">
+      <DependentUpon>202203231248230_test8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
-    <Folder Include="Strategies\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +107,32 @@
       <Project>{A85F341A-AC94-4C84-85A8-E139C0649842}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202203231150587_test1.resx">
+      <DependentUpon>202203231150587_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231207018_test2.resx">
+      <DependentUpon>202203231207018_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231223197_test3.resx">
+      <DependentUpon>202203231223197_test3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231230131_test4.resx">
+      <DependentUpon>202203231230131_test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231237522_test5.resx">
+      <DependentUpon>202203231237522_test5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231241283_test6.resx">
+      <DependentUpon>202203231241283_test6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231243484_test7.resx">
+      <DependentUpon>202203231243484_test7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231248230_test8.resx">
+      <DependentUpon>202203231248230_test8.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,11 @@ namespace Model.Entities
         public string Gender { get; set; }
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
+        public UserRequestsEnum UserRequest { get; set; }
         public string Status { get; set; } = "Passive";
 
-        public virtual int UserRegisterInfoId { get; set; }
+        //public virtual int UserRegisterInfoId { get; set; }
         public UserRegisterInfo UserRegisterInfo { get; set; }
-
-        public virtual int UserRequestId { get; set; }
-        public UserRequest UserRequest { get; set; }
 
         public virtual int DieticianId { get; set; }
         public Dietician Dietician { get; set; }

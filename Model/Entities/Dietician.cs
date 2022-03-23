@@ -21,7 +21,8 @@ namespace Model.Entities
 
         public virtual ICollection<UserInformation> UserInformations { get; set; }
 
+
         //public virtual int DieticianRegisterInfoId { get; set; }
-        public DieticianRegisterInfo DieticianRegisterInfo { get; set; }
+        public virtual DieticianRegisterInfo DieticianRegisterInfo { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Model.Entities
         public string Name { get; set; }
         public int Calorie { get; set; }
         public string Status { get; set; } = "Passive";
-        public byte[] FoodPicture { get; set; }
+        public byte?[] FoodPicture { get; set; }
 
         public virtual int FoodCategoryId { get; set; }
         public FoodCategory FoodCategory { get; set; }
