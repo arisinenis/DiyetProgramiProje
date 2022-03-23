@@ -25,10 +25,10 @@ namespace Model.Entities
         public string Status { get; set; } = "Passive";
 
         //public virtual int UserRegisterInfoId { get; set; }
-        public UserRegisterInfo UserRegisterInfo { get; set; }
+        public virtual UserRegisterInfo UserRegisterInfo { get; set; }
 
-        public virtual int DieticianId { get; set; }
-        public Dietician Dietician { get; set; }
+        public int? DieticianId { get; set; }
+        public virtual Dietician Dietician { get; set; }
 
         public virtual ICollection<UserMeal> UserMeals { get; set; }
 

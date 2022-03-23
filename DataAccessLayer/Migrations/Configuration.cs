@@ -1,6 +1,5 @@
 ﻿namespace DataAccessLayer.Migrations
 {
-    using DataAccessLayer.Context;
     using Model.Entities;
     using Model.Enums;
     using System;
@@ -27,6 +26,8 @@
             admin.Password = "1";
             admin.UserType = MembershipTypeEnum.Admin;
 
+            context.UserRegisterInfos.Add(admin);
+
             context.UserInformations.Add(new UserInformation()
             {
                 FirstName = "admin",
@@ -39,9 +40,8 @@
                 UserRequest = UserRequestsEnum.MaintainWeight
             });
 
-            context.UserRegisterInfos.Add(admin);
-
             context.SaveChanges();
+
         }
     }
 }

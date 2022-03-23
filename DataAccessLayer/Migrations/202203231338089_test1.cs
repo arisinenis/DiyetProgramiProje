@@ -46,10 +46,11 @@
                         Weight = c.Decimal(nullable: false, precision: 18, scale: 2),
                         UserRequest = c.Int(nullable: false),
                         Status = c.String(nullable: false, maxLength: 7),
-                        DieticianId = c.Int(nullable: false),
+                        UserRegisterInfoId = c.Int(nullable: false),
+                        DieticianId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Dieticians", t => t.DieticianId, cascadeDelete: true)
+                .ForeignKey("dbo.Dieticians", t => t.DieticianId)
                 .Index(t => t.DieticianId);
             
             CreateTable(
@@ -72,6 +73,7 @@
                         Id = c.Int(nullable: false, identity: true),
                         MealDate = c.DateTime(nullable: false),
                         Portion = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        MealTime = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -113,15 +115,6 @@
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.UserInformations", t => t.Id)
                 .Index(t => t.Id);
-            
-            CreateTable(
-                "dbo.MealTimes",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Time = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.UserMealsAndFoodNames",
@@ -174,7 +167,6 @@
             DropIndex("dbo.DieticianRegisterInfoes", new[] { "Id" });
             DropTable("dbo.UserInfosAndMeals");
             DropTable("dbo.UserMealsAndFoodNames");
-            DropTable("dbo.MealTimes");
             DropTable("dbo.UserRegisterInfoes");
             DropTable("dbo.FoodCategories");
             DropTable("dbo.FoodNames");

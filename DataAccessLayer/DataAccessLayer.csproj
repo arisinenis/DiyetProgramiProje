@@ -60,37 +60,41 @@
     <Compile Include="EntityConfiguration\UserInformationConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
-    <Compile Include="Migrations\202203231150587_test1.cs" />
-    <Compile Include="Migrations\202203231150587_test1.designer.cs">
-      <DependentUpon>202203231150587_test1.cs</DependentUpon>
+    <Compile Include="Migrations\202203231338089_test1.cs" />
+    <Compile Include="Migrations\202203231338089_test1.designer.cs">
+      <DependentUpon>202203231338089_test1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231207018_test2.cs" />
-    <Compile Include="Migrations\202203231207018_test2.designer.cs">
-      <DependentUpon>202203231207018_test2.cs</DependentUpon>
+    <Compile Include="Migrations\202203231346106_test2.cs" />
+    <Compile Include="Migrations\202203231346106_test2.designer.cs">
+      <DependentUpon>202203231346106_test2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231223197_test3.cs" />
-    <Compile Include="Migrations\202203231223197_test3.designer.cs">
-      <DependentUpon>202203231223197_test3.cs</DependentUpon>
+    <Compile Include="Migrations\202203231350338_test3.cs" />
+    <Compile Include="Migrations\202203231350338_test3.designer.cs">
+      <DependentUpon>202203231350338_test3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231230131_test4.cs" />
-    <Compile Include="Migrations\202203231230131_test4.designer.cs">
-      <DependentUpon>202203231230131_test4.cs</DependentUpon>
+    <Compile Include="Migrations\202203231356506_test4.cs" />
+    <Compile Include="Migrations\202203231356506_test4.designer.cs">
+      <DependentUpon>202203231356506_test4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231237522_test5.cs" />
-    <Compile Include="Migrations\202203231237522_test5.designer.cs">
-      <DependentUpon>202203231237522_test5.cs</DependentUpon>
+    <Compile Include="Migrations\202203231401394_test5.cs" />
+    <Compile Include="Migrations\202203231401394_test5.designer.cs">
+      <DependentUpon>202203231401394_test5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231241283_test6.cs" />
-    <Compile Include="Migrations\202203231241283_test6.designer.cs">
-      <DependentUpon>202203231241283_test6.cs</DependentUpon>
+    <Compile Include="Migrations\202203231408198_test6.cs" />
+    <Compile Include="Migrations\202203231408198_test6.designer.cs">
+      <DependentUpon>202203231408198_test6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231243484_test7.cs" />
-    <Compile Include="Migrations\202203231243484_test7.designer.cs">
-      <DependentUpon>202203231243484_test7.cs</DependentUpon>
+    <Compile Include="Migrations\202203231516168_test7.cs" />
+    <Compile Include="Migrations\202203231516168_test7.designer.cs">
+      <DependentUpon>202203231516168_test7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203231248230_test8.cs" />
-    <Compile Include="Migrations\202203231248230_test8.designer.cs">
-      <DependentUpon>202203231248230_test8.cs</DependentUpon>
+    <Compile Include="Migrations\202203231519416_test8.cs" />
+    <Compile Include="Migrations\202203231519416_test8.designer.cs">
+      <DependentUpon>202203231519416_test8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203231523169_test9.cs" />
+    <Compile Include="Migrations\202203231523169_test9.designer.cs">
+      <DependentUpon>202203231523169_test9.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,29 +113,32 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202203231150587_test1.resx">
-      <DependentUpon>202203231150587_test1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231338089_test1.resx">
+      <DependentUpon>202203231338089_test1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231207018_test2.resx">
-      <DependentUpon>202203231207018_test2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231346106_test2.resx">
+      <DependentUpon>202203231346106_test2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231223197_test3.resx">
-      <DependentUpon>202203231223197_test3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231350338_test3.resx">
+      <DependentUpon>202203231350338_test3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231230131_test4.resx">
-      <DependentUpon>202203231230131_test4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231356506_test4.resx">
+      <DependentUpon>202203231356506_test4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231237522_test5.resx">
-      <DependentUpon>202203231237522_test5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231401394_test5.resx">
+      <DependentUpon>202203231401394_test5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231241283_test6.resx">
-      <DependentUpon>202203231241283_test6.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231408198_test6.resx">
+      <DependentUpon>202203231408198_test6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231243484_test7.resx">
-      <DependentUpon>202203231243484_test7.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231516168_test7.resx">
+      <DependentUpon>202203231516168_test7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203231248230_test8.resx">
-      <DependentUpon>202203231248230_test8.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203231519416_test8.resx">
+      <DependentUpon>202203231519416_test8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203231523169_test9.resx">
+      <DependentUpon>202203231523169_test9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,7 +14,7 @@ namespace Model.Entities
         public string Password { get; set; }
         public MembershipTypeEnum UserType { get; set; }
 
-        public virtual int UserInformationId { get; set; }
-        public UserInformation UserInformation { get; set; }
+        //public virtual int UserInformationId { get; set; }
+        public virtual UserInformation UserInformation { get; set; }
     }
 }
