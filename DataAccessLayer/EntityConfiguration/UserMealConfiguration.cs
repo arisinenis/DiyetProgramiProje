@@ -16,6 +16,7 @@ namespace DataAccessLayer.EntityConfiguration
             Property(u => u.Portion).IsRequired();
             Property(u => u.MealTime).IsRequired();
 
+            HasRequired(m => m.UserInformation).WithMany(m => m.UserMeals).HasForeignKey(m => m.UserInformationId);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace DataAccessLayer.EntityConfiguration
     {
         public DieticianConfiguration()
         {
-            Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //Property(a => a.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(a => a.FirstName).IsRequired().HasMaxLength(50);
             Property(a => a.LastName).IsRequired().HasMaxLength(50);
             Property(a => a.Graduation).IsRequired().HasMaxLength(100);

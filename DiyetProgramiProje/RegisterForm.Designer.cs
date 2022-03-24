@@ -31,6 +31,8 @@ namespace DiyetProgramiProje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnJoin = new System.Windows.Forms.Button();
             this.btnShowDetails = new System.Windows.Forms.Button();
             this.cboxDietician = new System.Windows.Forms.ComboBox();
@@ -63,16 +65,39 @@ namespace DiyetProgramiProje
             this.lblFirstName = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pboxDietician = new System.Windows.Forms.PictureBox();
+            this.rbUser = new System.Windows.Forms.RadioButton();
+            this.rbDietician = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnChoosePics = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxDietician)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.btnJoin);
             this.panel1.Controls.Add(this.btnShowDetails);
             this.panel1.Controls.Add(this.cboxDietician);
@@ -102,6 +127,23 @@ namespace DiyetProgramiProje
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 818);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(7, 544);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 30);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 517);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(149, 24);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Daily Exercise:";
             // 
             // btnJoin
             // 
@@ -159,7 +201,7 @@ namespace DiyetProgramiProje
             // 
             // nudWeight
             // 
-            this.nudWeight.Location = new System.Drawing.Point(7, 552);
+            this.nudWeight.Location = new System.Drawing.Point(194, 469);
             this.nudWeight.Maximum = new decimal(new int[] {
             400,
             0,
@@ -172,7 +214,7 @@ namespace DiyetProgramiProje
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 519);
+            this.label8.Location = new System.Drawing.Point(192, 436);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 24);
             this.label8.TabIndex = 14;
@@ -421,6 +463,194 @@ namespace DiyetProgramiProje
             this.pboxDietician.TabIndex = 0;
             this.pboxDietician.TabStop = false;
             // 
+            // rbUser
+            // 
+            this.rbUser.AutoSize = true;
+            this.rbUser.BackColor = System.Drawing.Color.Transparent;
+            this.rbUser.Checked = true;
+            this.rbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rbUser.Location = new System.Drawing.Point(6, 48);
+            this.rbUser.Name = "rbUser";
+            this.rbUser.Size = new System.Drawing.Size(187, 28);
+            this.rbUser.TabIndex = 2;
+            this.rbUser.TabStop = true;
+            this.rbUser.Text = "Register As User";
+            this.rbUser.UseVisualStyleBackColor = false;
+            // 
+            // rbDietician
+            // 
+            this.rbDietician.AutoSize = true;
+            this.rbDietician.BackColor = System.Drawing.Color.Transparent;
+            this.rbDietician.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbDietician.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rbDietician.Location = new System.Drawing.Point(6, 82);
+            this.rbDietician.Name = "rbDietician";
+            this.rbDietician.Size = new System.Drawing.Size(224, 28);
+            this.rbDietician.TabIndex = 2;
+            this.rbDietician.Text = "Register As Dietician";
+            this.rbDietician.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.rbUser);
+            this.groupBox2.Controls.Add(this.rbDietician);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(458, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(238, 133);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Register Type";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnChoosePics);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.label21);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(440, 667);
+            this.panel2.TabIndex = 4;
+            this.panel2.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(24, 565);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(316, 90);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Join !";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnChoosePics
+            // 
+            this.btnChoosePics.Location = new System.Drawing.Point(239, 408);
+            this.btnChoosePics.Name = "btnChoosePics";
+            this.btnChoosePics.Size = new System.Drawing.Size(101, 62);
+            this.btnChoosePics.TabIndex = 20;
+            this.btnChoosePics.Text = "Choose A Picture";
+            this.btnChoosePics.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(24, 408);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 150);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(20, 375);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 30);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Picture:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(24, 329);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(395, 35);
+            this.textBox1.TabIndex = 17;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(20, 302);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(134, 30);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Graduation:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(24, 255);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(395, 35);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(20, 228);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(126, 30);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "Lastname: ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(24, 186);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(395, 35);
+            this.textBox3.TabIndex = 13;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(20, 159);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(123, 30);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "Firstname:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(24, 117);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(395, 35);
+            this.textBox4.TabIndex = 11;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(20, 90);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(121, 30);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Password:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(24, 45);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(395, 35);
+            this.textBox5.TabIndex = 9;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label21.Location = new System.Drawing.Point(20, 12);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 24);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Email:";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -428,6 +658,8 @@ namespace DiyetProgramiProje
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(894, 842);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "RegisterForm";
@@ -439,6 +671,11 @@ namespace DiyetProgramiProje
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxDietician)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +715,25 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton rbUser;
+        private System.Windows.Forms.RadioButton rbDietician;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnChoosePics;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label21;
     }
 }

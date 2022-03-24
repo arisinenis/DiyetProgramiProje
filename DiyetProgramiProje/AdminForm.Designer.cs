@@ -43,19 +43,19 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddCatAndFood = new System.Windows.Forms.Button();
             this.btnCategoryApprove = new System.Windows.Forms.Button();
             this.btnFoodApprove = new System.Windows.Forms.Button();
             this.pboxFoodPic = new System.Windows.Forms.PictureBox();
             this.lvFood = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvCategory = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnAddCatAndFood = new System.Windows.Forms.Button();
             this.grpbox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFoodPic)).BeginInit();
@@ -107,52 +107,57 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Name";
+            this.columnHeader5.Width = 103;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Surname";
-            this.columnHeader6.Width = 87;
+            this.columnHeader6.Width = 118;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Height";
-            this.columnHeader7.Width = 57;
+            this.columnHeader7.Width = 99;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Weight";
+            this.columnHeader8.Width = 110;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Birthdate";
-            this.columnHeader9.Width = 76;
+            this.columnHeader9.Width = 130;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "User Request";
+            this.columnHeader10.Width = 152;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "User Status";
-            this.columnHeader2.Width = 160;
+            this.columnHeader2.Width = 106;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Gender";
-            this.columnHeader3.Width = 74;
+            this.columnHeader3.Width = 87;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "MemberShip Preiod";
+            this.columnHeader4.Width = 179;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "MemberShipStart";
-            this.columnHeader11.Width = 190;
+            this.columnHeader11.Width = 171;
             // 
             // columnHeader12
             // 
             this.columnHeader12.Text = "MemberShipRemaining";
+            this.columnHeader12.Width = 165;
             // 
             // groupBox1
             // 
@@ -168,6 +173,15 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Membership Request Panel";
+            // 
+            // btnAddCatAndFood
+            // 
+            this.btnAddCatAndFood.Location = new System.Drawing.Point(510, 241);
+            this.btnAddCatAndFood.Name = "btnAddCatAndFood";
+            this.btnAddCatAndFood.Size = new System.Drawing.Size(398, 38);
+            this.btnAddCatAndFood.TabIndex = 27;
+            this.btnAddCatAndFood.Text = "Add Food And Category ";
+            this.btnAddCatAndFood.UseVisualStyleBackColor = true;
             // 
             // btnCategoryApprove
             // 
@@ -218,6 +232,12 @@
             this.columnHeader15.Text = "FoodID";
             this.columnHeader15.Width = 120;
             // 
+            // columnHeader19
+            // 
+            this.columnHeader19.DisplayIndex = 4;
+            this.columnHeader19.Text = "CategoryID";
+            this.columnHeader19.Width = 116;
+            // 
             // columnHeader16
             // 
             this.columnHeader16.DisplayIndex = 1;
@@ -260,21 +280,6 @@
             // 
             this.columnHeader14.Text = "CategoryName";
             this.columnHeader14.Width = 150;
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.DisplayIndex = 4;
-            this.columnHeader19.Text = "CategoryID";
-            this.columnHeader19.Width = 116;
-            // 
-            // btnAddCatAndFood
-            // 
-            this.btnAddCatAndFood.Location = new System.Drawing.Point(510, 241);
-            this.btnAddCatAndFood.Name = "btnAddCatAndFood";
-            this.btnAddCatAndFood.Size = new System.Drawing.Size(398, 38);
-            this.btnAddCatAndFood.TabIndex = 27;
-            this.btnAddCatAndFood.Text = "Add Food And Category ";
-            this.btnAddCatAndFood.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 

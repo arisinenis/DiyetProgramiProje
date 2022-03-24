@@ -13,7 +13,7 @@ namespace DataAccessLayer.EntityConfiguration
     {
         public DieticianRegisterInfoConfiguration()
         {
-            Property(dr => dr.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            //Property(dr => dr.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(dr => dr.Email).IsRequired();
             Property(dr => dr.Password).IsRequired();
             Property(dr => dr.UserType).IsRequired();

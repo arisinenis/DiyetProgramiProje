@@ -11,7 +11,6 @@ namespace Model.Entities
     {
         public UserMeal()
         {
-            UserInformations = new HashSet<UserInformation>();
             FoodNames = new HashSet<FoodName>();
         }
         public int Id { get; set; }
@@ -19,8 +18,8 @@ namespace Model.Entities
         public decimal Portion { get; set; }
         public MealTimesEnum MealTime { get; set; }
 
-
-        public virtual ICollection<UserInformation> UserInformations { get; set; }
+        public int UserInformationId { get; set; }
+        public virtual UserInformation UserInformation { get; set; }
 
         public virtual ICollection<FoodName> FoodNames { get; set; }
     }

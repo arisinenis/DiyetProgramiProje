@@ -17,6 +17,7 @@ namespace Model.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Graduation { get; set; }
+        public string Status { get; set; } = "Passive";
         public byte[] Picture { get; set; }
 
         public virtual ICollection<UserInformation> UserInformations { get; set; }

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class test1 : DbMigration
+    public partial class test4 : DbMigration
     {
         public override void Up()
         {
@@ -11,11 +11,10 @@
                 "dbo.DieticianRegisterInfoes",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         Email = c.String(nullable: false),
                         Password = c.String(nullable: false),
                         UserType = c.Int(nullable: false),
-                        DieticianId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Dieticians", t => t.Id)
@@ -46,7 +45,6 @@
                         Weight = c.Decimal(nullable: false, precision: 18, scale: 2),
                         UserRequest = c.Int(nullable: false),
                         Status = c.String(nullable: false, maxLength: 7),
-                        UserRegisterInfoId = c.Int(nullable: false),
                         DieticianId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -110,7 +108,6 @@
                         Email = c.String(nullable: false, maxLength: 50),
                         Password = c.String(nullable: false, maxLength: 20),
                         UserType = c.Int(nullable: false),
-                        UserInformationId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.UserInformations", t => t.Id)

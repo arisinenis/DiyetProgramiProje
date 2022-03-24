@@ -22,6 +22,9 @@ namespace Model.Entities
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
         public UserRequestsEnum UserRequest { get; set; }
+        public ExerciseEnum DailyExercise { get; set; }
+        public decimal DailyCalorie { get; set; }
+        public decimal RequireCalorie { get; set; }
         public string Status { get; set; } = "Passive";
 
         //public virtual int UserRegisterInfoId { get; set; }

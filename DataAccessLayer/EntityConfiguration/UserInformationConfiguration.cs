@@ -23,12 +23,14 @@ namespace DataAccessLayer.EntityConfiguration
             HasOptional(u => u.Dietician).WithMany(u => u.UserInformations).HasForeignKey(u => u.DieticianId);
 
 
-            HasMany(u => u.UserMeals).WithMany(m => m.UserInformations).Map(um =>
-            {
-                um.MapLeftKey("UserInfoRefId");
-                um.MapRightKey("UserMealRefId");
-                um.ToTable("UserInfosAndMeals");
-            });
+            //HasMany(u => u.UserMeals).WithMany(m => m.UserInformations).Map(um =>
+            //{
+            //    um.MapLeftKey("UserInfoRefId");
+            //    um.MapRightKey("UserMealRefId");
+            //    um.ToTable("UserInfosAndMeals");
+            //});
+
+            HasMany(u => u.UserMeals).WithRequired(u => u.UserInformation).HasForeignKey(u => u.UserInformationId);
 
             HasMany(u => u.Messages).WithRequired(u => u.UserInformation).HasForeignKey(u => u.UserInformationId);
 
