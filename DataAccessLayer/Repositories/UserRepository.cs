@@ -79,5 +79,27 @@ namespace DataAccessLayer.Repositories
 
             db.SaveChanges();
         }
+
+        public List<UserMealsAndFoods> GetAllMealsById(int userId)
+        {
+            //List<UserMealsAndFoods> meals = new List<UserMealsAndFoods>();
+            var meals = db.UserMealsAndFoods.Where(u => u.UserMeal.UserInformationId == userId).ToList();
+
+            return meals;
+        }
+
+
+
+        public decimal TotalCalorieById(int userId)
+        {
+            decimal TotalCalorie = 0;
+            List<UserMealsAndFoods> meals = GetAllMealsById(userId);
+            foreach (UserMealsAndFoods item in meals)
+            {
+                TotalCalorie += (item.Calorie * item.Portion);
+            }
+            return TotalCalorie;
+
+        }
     }
 }

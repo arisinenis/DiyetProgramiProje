@@ -15,7 +15,7 @@ namespace Model.Entities
         }
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Calorie { get; set; }
+        public decimal Calorie { get; set; }
         public string Status { get; set; } = "Passive";
         public byte?[] FoodPicture { get; set; }
 

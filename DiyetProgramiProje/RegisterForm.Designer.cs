@@ -523,7 +523,7 @@ namespace DiyetProgramiProje
             this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(12, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 667);
             this.panel2.TabIndex = 4;
@@ -561,7 +561,7 @@ namespace DiyetProgramiProje
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label16.Location = new System.Drawing.Point(20, 375);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(91, 30);
+            this.label16.Size = new System.Drawing.Size(73, 24);
             this.label16.TabIndex = 18;
             this.label16.Text = "Picture:";
             // 
@@ -569,7 +569,7 @@ namespace DiyetProgramiProje
             // 
             this.textBox1.Location = new System.Drawing.Point(24, 329);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(395, 35);
+            this.textBox1.Size = new System.Drawing.Size(395, 28);
             this.textBox1.TabIndex = 17;
             // 
             // label17
@@ -578,7 +578,7 @@ namespace DiyetProgramiProje
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label17.Location = new System.Drawing.Point(20, 302);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(134, 30);
+            this.label17.Size = new System.Drawing.Size(107, 24);
             this.label17.TabIndex = 16;
             this.label17.Text = "Graduation:";
             // 
@@ -586,7 +586,7 @@ namespace DiyetProgramiProje
             // 
             this.textBox2.Location = new System.Drawing.Point(24, 255);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(395, 35);
+            this.textBox2.Size = new System.Drawing.Size(395, 28);
             this.textBox2.TabIndex = 15;
             // 
             // label18
@@ -595,7 +595,7 @@ namespace DiyetProgramiProje
             this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label18.Location = new System.Drawing.Point(20, 228);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 30);
+            this.label18.Size = new System.Drawing.Size(101, 24);
             this.label18.TabIndex = 14;
             this.label18.Text = "Lastname: ";
             // 
@@ -603,7 +603,7 @@ namespace DiyetProgramiProje
             // 
             this.textBox3.Location = new System.Drawing.Point(24, 186);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(395, 35);
+            this.textBox3.Size = new System.Drawing.Size(395, 28);
             this.textBox3.TabIndex = 13;
             // 
             // label19
@@ -612,7 +612,7 @@ namespace DiyetProgramiProje
             this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label19.Location = new System.Drawing.Point(20, 159);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(123, 30);
+            this.label19.Size = new System.Drawing.Size(98, 24);
             this.label19.TabIndex = 12;
             this.label19.Text = "Firstname:";
             // 
@@ -620,7 +620,7 @@ namespace DiyetProgramiProje
             // 
             this.textBox4.Location = new System.Drawing.Point(24, 117);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(395, 35);
+            this.textBox4.Size = new System.Drawing.Size(395, 28);
             this.textBox4.TabIndex = 11;
             // 
             // label20
@@ -629,7 +629,7 @@ namespace DiyetProgramiProje
             this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label20.Location = new System.Drawing.Point(20, 90);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(121, 30);
+            this.label20.Size = new System.Drawing.Size(97, 24);
             this.label20.TabIndex = 10;
             this.label20.Text = "Password:";
             // 
@@ -637,7 +637,7 @@ namespace DiyetProgramiProje
             // 
             this.textBox5.Location = new System.Drawing.Point(24, 45);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(395, 35);
+            this.textBox5.Size = new System.Drawing.Size(395, 28);
             this.textBox5.TabIndex = 9;
             // 
             // label21

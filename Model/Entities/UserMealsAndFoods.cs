@@ -12,6 +12,7 @@ namespace Model.Entities
         public int UserMealID { get; set; }
         public int FoodNameID { get; set; }
         public decimal Portion { get; set; }
+        public decimal Calorie { get; set; }
 
         public virtual UserMeal UserMeal { get; set; }
         public virtual FoodName FoodName { get; set; }

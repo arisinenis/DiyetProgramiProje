@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class UserMealsAndFoodsRepository : IRepository<UserMealsAndFoods>
+    public class UserMealsAndFoodsRepository
     {
         DietProgramContext db;
         public UserMealsAndFoodsRepository()
@@ -39,11 +40,20 @@ namespace DataAccessLayer.Repositories
         public UserMealsAndFoods GetById(int id)
         {
             throw new NotImplementedException();
+            
         }
 
-        public List<UserMealsAndFoods> GetAll()
+        
+        public List<UserMealsAndFoods> GetAllByMealTime(MealTimesEnum mealTimes)
         {
-            throw new NotImplementedException();
+            var mealList = db.UserMealsAndFoods.Select(u => new
+            {
+                u.FoodName,
+                u.UserMeal.MealTime,
+                u.Calorie
+            }).Where(u => u.MealTime == mealTimes);
+
+            return (List<UserMealsAndFoods>)mealList;
         }
 
     }
