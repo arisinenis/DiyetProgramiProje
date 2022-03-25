@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    public class FoodCategory
+    public class FoodCategory : IEntity
     {
         public FoodCategory()
         {

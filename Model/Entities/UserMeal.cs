@@ -1,4 +1,5 @@
-﻿using Model.Enums;
+﻿using Model.Abstract;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +8,19 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    public class UserMeal
+    public class UserMeal : IEntity
     {
         public UserMeal()
         {
-            FoodNames = new HashSet<FoodName>();
+            UserMealsAndFoods = new HashSet<UserMealsAndFoods>();
         }
         public int Id { get; set; }
         public DateTime MealDate { get; set; } = DateTime.Now;
-        public decimal Portion { get; set; }
         public MealTimesEnum MealTime { get; set; }
 
         public int UserInformationId { get; set; }
         public virtual UserInformation UserInformation { get; set; }
 
-        public virtual ICollection<FoodName> FoodNames { get; set; }
+        public virtual ICollection<UserMealsAndFoods> UserMealsAndFoods { get; set; }
     }
 }

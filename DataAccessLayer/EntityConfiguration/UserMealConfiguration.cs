@@ -12,8 +12,8 @@ namespace DataAccessLayer.EntityConfiguration
     {
         public UserMealConfiguration()
         {
+            HasKey(u => u.Id);
             Property(u => u.MealDate).IsRequired();
-            Property(u => u.Portion).IsRequired();
             Property(u => u.MealTime).IsRequired();
 
             HasRequired(m => m.UserInformation).WithMany(m => m.UserMeals).HasForeignKey(m => m.UserInformationId);

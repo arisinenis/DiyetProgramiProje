@@ -139,6 +139,7 @@ namespace DiyetProgramiProje
             // 
             // btnUpdateMeal
             // 
+            this.btnUpdateMeal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdateMeal.Location = new System.Drawing.Point(326, 557);
             this.btnUpdateMeal.Name = "btnUpdateMeal";
             this.btnUpdateMeal.Size = new System.Drawing.Size(210, 47);
@@ -148,6 +149,7 @@ namespace DiyetProgramiProje
             // 
             // btnNewMeal
             // 
+            this.btnNewMeal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNewMeal.Location = new System.Drawing.Point(58, 569);
             this.btnNewMeal.Name = "btnNewMeal";
             this.btnNewMeal.Size = new System.Drawing.Size(210, 47);
@@ -157,6 +159,7 @@ namespace DiyetProgramiProje
             // 
             // btnAddMeal
             // 
+            this.btnAddMeal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAddMeal.Location = new System.Drawing.Point(326, 493);
             this.btnAddMeal.Name = "btnAddMeal";
             this.btnAddMeal.Size = new System.Drawing.Size(210, 47);
@@ -398,6 +401,7 @@ namespace DiyetProgramiProje
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(390, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 64);
@@ -407,6 +411,7 @@ namespace DiyetProgramiProje
             // 
             // btnShowMeal
             // 
+            this.btnShowMeal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnShowMeal.Location = new System.Drawing.Point(479, 36);
             this.btnShowMeal.Name = "btnShowMeal";
             this.btnShowMeal.Size = new System.Drawing.Size(95, 95);
@@ -504,12 +509,13 @@ namespace DiyetProgramiProje
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(33, 667);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(138, 30);
+            this.label12.Size = new System.Drawing.Size(110, 24);
             this.label12.TabIndex = 17;
             this.label12.Text = "Messages:";
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Location = new System.Drawing.Point(177, 655);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 47);

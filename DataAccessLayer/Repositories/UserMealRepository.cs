@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Context;
+using Model.Abstract;
 using Model.Entities;
 using System;
 using System.Collections.Generic;
@@ -21,5 +22,16 @@ namespace DataAccessLayer.Repositories
 
             return db.SaveChanges() > 0;
         }
+
+        public bool Update(UserMeal _meal)
+        {
+            UserMeal meal = db.UserMeals.Find(_meal.Id);
+            meal.MealDate = _meal.MealDate;
+            meal.MealTime = _meal.MealTime;
+            
+            return db.SaveChanges() > 0;
+        }
+
+
     }
 }
