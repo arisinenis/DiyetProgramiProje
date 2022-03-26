@@ -12,6 +12,7 @@ namespace Model.Entities
         public int Id { get; set; }
         public string MessageHeader { get; set; }
         public string Text { get; set; }
+        public string Status { get; set; } = "Active";
 
         public virtual int UserInformationId { get; set; }
         public virtual UserInformation UserInformation { get; set; }

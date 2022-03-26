@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,13 @@ namespace DataAccessLayer.Repositories
             }
         }
 
+        public string CheckUserStatus(string email)
+        {
+            UserRegisterInfo user = db.UserRegisterInfos.Where(u => u.Email == email).FirstOrDefault();
+
+            return user.UserInformation.Status;
+        }
+
         public List<UserInformation> GetAllPassives()
         {
             return db.UserInformations.Where(u => u.Status == "Passive").ToList();
@@ -65,41 +73,20 @@ namespace DataAccessLayer.Repositories
             return customers;
         }
 
-        public void Active(UserInformation entity)
+        public bool Active(UserInformation entity)
         {
             UserInformation passiveUser = db.UserInformations.Find(entity.Id);
             passiveUser.Status = "Active";
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
-        public void Passive(UserInformation entity)
+        public bool Passive(UserInformation entity)
         {
             UserInformation userInf = db.UserInformations.Find(entity.Id);
             userInf.Status = "Passive";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
-        public List<UserMealsAndFoods> GetAllMealsById(int userId)
-        {
-            //List<UserMealsAndFoods> meals = new List<UserMealsAndFoods>();
-            var meals = db.UserMealsAndFoods.Where(u => u.UserMeal.UserInformationId == userId).ToList();
-
-            return meals;
-        }
-
-
-
-        public decimal TotalCalorieById(int userId)
-        {
-            decimal TotalCalorie = 0;
-            List<UserMealsAndFoods> meals = GetAllMealsById(userId);
-            foreach (UserMealsAndFoods item in meals)
-            {
-                TotalCalorie += (item.Calorie * item.Portion);
-            }
-            return TotalCalorie;
-
-        }
     }
 }

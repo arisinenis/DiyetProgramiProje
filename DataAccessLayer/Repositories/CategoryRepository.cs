@@ -32,20 +32,20 @@ namespace DataAccessLayer.Repositories
             return db.SaveChanges() > 0;
         }
 
-        public void Active(FoodCategory entity)
+        public bool Active(FoodCategory entity)
         {
             FoodCategory foodCategory = db.FoodCategories.Find(entity.Id);
             foodCategory.Status = "Active";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
-        public void Passive(FoodCategory entity)
+        public bool Passive(FoodCategory entity)
         {
             FoodCategory foodCategory = db.FoodCategories.Find(entity.Id);
             foodCategory.Status = "Passive";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
         public List<FoodCategory> GetAll()
@@ -58,6 +58,6 @@ namespace DataAccessLayer.Repositories
             return db.FoodCategories.Find(id);
         }
 
-        
+
     }
 }

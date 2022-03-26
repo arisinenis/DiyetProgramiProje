@@ -64,5 +64,25 @@ namespace DataAccessLayer.Repositories
 
             db.SaveChanges();
         }
+
+        public string GetCategoryNameByFoodId(int foodId)
+        {
+            FoodName food = (FoodName)db.FoodNames.Where(f => f.Id == foodId);
+            var categoryName = food.FoodCategory.CategoryName;
+
+            return categoryName;
+        }
+
+        public decimal GetCalorieByFoodId(int foodId)
+        {
+            return db.FoodNames.Find(foodId).Calorie;
+        }
+
+        public decimal GetTotalCalorieByPortion(int portion, int foodId)
+        {
+            FoodName food = db.FoodNames.Find(foodId);
+
+            return food.Calorie * portion;
+        }
     }
 }

@@ -45,20 +45,27 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        public void Active(Dietician entity)
+        public bool Active(Dietician entity)
         {
             Dietician dietician = db.Dieticians.Find(entity.Id);
             dietician.Status = "Active";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
-        public void Passive(Dietician entity)
+        public bool Passive(Dietician entity)
         {
             Dietician dietician = db.Dieticians.Find(entity.Id);
             dietician.Status = "Passive";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
+        }
+
+        public string CheckStatus(string email)
+        {
+            DieticianRegisterInfo dietician = (DieticianRegisterInfo)db.DieticianRegisterInfos.Where(d => d.Email == email);
+
+            return dietician.Dietician.Status;
         }
     }
 }

@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace BusinessLayer.Abstract
 {
-    public interface IStatusRepository<T>
+    public interface ICategoryService<T>
     {
+        bool Add(T category);
+        bool Update(T category);
         bool Active(T entity);
         bool Passive(T entity);
+        List<T> GetAll();
+        T GetById(int id);
     }
 }

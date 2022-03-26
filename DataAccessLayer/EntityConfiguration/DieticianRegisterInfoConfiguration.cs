@@ -17,6 +17,8 @@ namespace DataAccessLayer.EntityConfiguration
             Property(dr => dr.Email).IsRequired();
             Property(dr => dr.Password).IsRequired();
             Property(dr => dr.UserType).IsRequired();
+
+            HasIndex(dr => dr.Email).IsUnique();
         }
     }
 }
