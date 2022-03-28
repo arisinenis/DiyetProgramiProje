@@ -67,5 +67,20 @@ namespace DataAccessLayer.Repositories
 
             return dietician.Dietician.Status;
         }
+
+        public List<Dietician> GetActiveAll()
+        {
+
+            List<Dietician> dieticians = db.Dieticians.Where(d => d.Status == "Active").ToList();
+            return dieticians;
+        
+        }
+
+        public Dietician GetById(int _Id)
+        {
+            Dietician dietician = (Dietician)db.Dieticians.Where(d => d.Id == _Id).SingleOrDefault();
+
+            return dietician;
+        }
     }
 }

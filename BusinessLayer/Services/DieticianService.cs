@@ -21,20 +21,27 @@ namespace BusinessLayer.Services
             return dieticianRepository.Active(dietician);
         }
 
-        public bool Add(DieticianRegisterInfo dieticianRegister, Dietician dietician)
+        public bool AddInformation(Dietician dietician)
         {
-            if (String.IsNullOrWhiteSpace(dieticianRegister.Email) || String.IsNullOrWhiteSpace(dieticianRegister.Password) || String.IsNullOrWhiteSpace(dietician.FirstName) || String.IsNullOrWhiteSpace(dietician.LastName) || String.IsNullOrWhiteSpace(dietician.Graduation))
+            if(String.IsNullOrWhiteSpace(dietician.FirstName) || String.IsNullOrWhiteSpace(dietician.LastName) || String.IsNullOrWhiteSpace(dietician.Graduation))
             {
-                throw new Exception("Please fill all blanks.");
+                throw new Exception("Please fill all blanks");
             }
             else
             {
-                bool checkRegister, checkInformation;
+                return dieticianRepository.AddInformation(dietician);
+            }
+        }
 
-                checkRegister = dieticianRepository.AddRegister(dieticianRegister);
-                checkInformation = dieticianRepository.AddInformation(dietician);
-
-                return checkRegister && checkInformation;
+        public bool AddRegister(DieticianRegisterInfo dietician)
+        {
+            if (String.IsNullOrWhiteSpace(dietician.Email) || String.IsNullOrWhiteSpace(dietician.Password))
+            {
+                throw new Exception("Please fill all blanks");
+            }
+            else
+            {
+                return dieticianRepository.AddRegister(dietician);
             }
         }
 
@@ -51,6 +58,23 @@ namespace BusinessLayer.Services
             else
             {
                 return dieticianRepository.CheckLogin(email, password);
+            }
+        }
+
+        public List<Dietician> GetActiveAll()
+        {
+            return dieticianRepository.GetActiveAll();
+        }
+
+        public Dietician GetById(int id)
+        {
+            if (id<1)
+            {
+                throw new Exception("Invalid Input");
+            }
+            else
+            {
+                return dieticianRepository.GetById(id);
             }
         }
 

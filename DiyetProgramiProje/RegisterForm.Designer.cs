@@ -31,7 +31,7 @@ namespace DiyetProgramiProje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboxDailyExercise = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnJoin = new System.Windows.Forms.Button();
             this.btnShowDetails = new System.Windows.Forms.Button();
@@ -83,6 +83,7 @@ namespace DiyetProgramiProje
             this.label20 = new System.Windows.Forms.Label();
             this.txtDEmail = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
@@ -96,7 +97,7 @@ namespace DiyetProgramiProje
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cboxDailyExercise);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.btnJoin);
             this.panel1.Controls.Add(this.btnShowDetails);
@@ -128,13 +129,13 @@ namespace DiyetProgramiProje
             this.panel1.Size = new System.Drawing.Size(366, 818);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox1
+            // cboxDailyExercise
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 544);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 30);
-            this.comboBox1.TabIndex = 23;
+            this.cboxDailyExercise.FormattingEnabled = true;
+            this.cboxDailyExercise.Location = new System.Drawing.Point(7, 544);
+            this.cboxDailyExercise.Name = "cboxDailyExercise";
+            this.cboxDailyExercise.Size = new System.Drawing.Size(266, 30);
+            this.cboxDailyExercise.TabIndex = 23;
             // 
             // label14
             // 
@@ -159,19 +160,20 @@ namespace DiyetProgramiProje
             // btnShowDetails
             // 
             this.btnShowDetails.ForeColor = System.Drawing.Color.Black;
-            this.btnShowDetails.Location = new System.Drawing.Point(196, 691);
+            this.btnShowDetails.Location = new System.Drawing.Point(264, 676);
             this.btnShowDetails.Name = "btnShowDetails";
-            this.btnShowDetails.Size = new System.Drawing.Size(155, 46);
+            this.btnShowDetails.Size = new System.Drawing.Size(87, 69);
             this.btnShowDetails.TabIndex = 20;
             this.btnShowDetails.Text = "Show Details";
             this.btnShowDetails.UseVisualStyleBackColor = true;
+            this.btnShowDetails.Click += new System.EventHandler(this.btnShowDetails_Click);
             // 
             // cboxDietician
             // 
             this.cboxDietician.FormattingEnabled = true;
             this.cboxDietician.Location = new System.Drawing.Point(9, 700);
             this.cboxDietician.Name = "cboxDietician";
-            this.cboxDietician.Size = new System.Drawing.Size(167, 30);
+            this.cboxDietician.Size = new System.Drawing.Size(249, 30);
             this.cboxDietician.TabIndex = 19;
             // 
             // label10
@@ -188,7 +190,7 @@ namespace DiyetProgramiProje
             this.cboxRequest.FormattingEnabled = true;
             this.cboxRequest.Location = new System.Drawing.Point(9, 624);
             this.cboxRequest.Name = "cboxRequest";
-            this.cboxRequest.Size = new System.Drawing.Size(167, 30);
+            this.cboxRequest.Size = new System.Drawing.Size(264, 30);
             this.cboxRequest.TabIndex = 17;
             // 
             // label9
@@ -367,6 +369,7 @@ namespace DiyetProgramiProje
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblLastName);
             this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.lblGraduation);
@@ -392,7 +395,6 @@ namespace DiyetProgramiProje
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(0, 24);
             this.lblEmail.TabIndex = 8;
-            this.lblEmail.Visible = false;
             // 
             // label12
             // 
@@ -461,6 +463,7 @@ namespace DiyetProgramiProje
             this.pboxDietician.Location = new System.Drawing.Point(235, 27);
             this.pboxDietician.Name = "pboxDietician";
             this.pboxDietician.Size = new System.Drawing.Size(217, 189);
+            this.pboxDietician.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxDietician.TabIndex = 0;
             this.pboxDietician.TabStop = false;
             // 
@@ -478,6 +481,7 @@ namespace DiyetProgramiProje
             this.rbUser.TabStop = true;
             this.rbUser.Text = "Register As User";
             this.rbUser.UseVisualStyleBackColor = false;
+            this.rbUser.CheckedChanged += new System.EventHandler(this.rbUser_CheckedChanged);
             // 
             // rbDietician
             // 
@@ -491,10 +495,12 @@ namespace DiyetProgramiProje
             this.rbDietician.TabIndex = 2;
             this.rbDietician.Text = "Register As Dietician";
             this.rbDietician.UseVisualStyleBackColor = false;
+            this.rbDietician.CheckedChanged += new System.EventHandler(this.rbDietician_CheckedChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.rbUser);
             this.groupBox2.Controls.Add(this.rbDietician);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -524,7 +530,7 @@ namespace DiyetProgramiProje
             this.panel2.Controls.Add(this.txtDEmail);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel2.Location = new System.Drawing.Point(12, 15);
+            this.panel2.Location = new System.Drawing.Point(75, 78);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 667);
             this.panel2.TabIndex = 4;
@@ -554,6 +560,7 @@ namespace DiyetProgramiProje
             this.pictureBox1.Location = new System.Drawing.Point(24, 408);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
@@ -653,19 +660,28 @@ namespace DiyetProgramiProje
             this.label21.TabIndex = 8;
             this.label21.Text = "Email:";
             // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblLastName.Location = new System.Drawing.Point(7, 154);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(0, 24);
+            this.lblLastName.TabIndex = 9;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(894, 842);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(892, 842);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
@@ -717,7 +733,7 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboxDailyExercise;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton rbUser;
         private System.Windows.Forms.RadioButton rbDietician;
@@ -737,5 +753,6 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtDEmail;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblLastName;
     }
 }

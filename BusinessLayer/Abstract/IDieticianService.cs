@@ -9,9 +9,12 @@ namespace BusinessLayer.Abstract
 {
     public interface IDieticianService<TRegister,TInformation>
     {
-        bool Add(TRegister dieticianRegister,TInformation dietician);
+        bool AddInformation(TInformation dietician);
+        bool AddRegister(TRegister dietician);
         TRegister CheckLogin(string email, string password);
         bool Active(TInformation dietician);
         bool Passive(TInformation dietician);
+        List<TInformation> GetActiveAll();
+        TInformation GetById(int id);
     }
 }
