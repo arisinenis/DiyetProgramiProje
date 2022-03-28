@@ -23,12 +23,19 @@ namespace BusinessLayer.Services
 
         public bool Add(DieticianRegisterInfo dieticianRegister, Dietician dietician)
         {
-            bool checkRegister, checkInformation;
+            if (String.IsNullOrWhiteSpace(dieticianRegister.Email) || String.IsNullOrWhiteSpace(dieticianRegister.Password) || String.IsNullOrWhiteSpace(dietician.FirstName) || String.IsNullOrWhiteSpace(dietician.LastName) || String.IsNullOrWhiteSpace(dietician.Graduation))
+            {
+                throw new Exception("Please fill all blanks.");
+            }
+            else
+            {
+                bool checkRegister, checkInformation;
 
-            checkRegister = dieticianRepository.AddRegister(dieticianRegister);
-            checkInformation = dieticianRepository.AddInformation(dietician);
+                checkRegister = dieticianRepository.AddRegister(dieticianRegister);
+                checkInformation = dieticianRepository.AddInformation(dietician);
 
-            return checkRegister && checkInformation;
+                return checkRegister && checkInformation;
+            }
         }
 
         public DieticianRegisterInfo CheckLogin(string email, string password)

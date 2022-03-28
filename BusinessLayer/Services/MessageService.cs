@@ -18,22 +18,43 @@ namespace BusinessLayer.Services
         }
         public bool Add(Message message)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(message.MessageHeader) || String.IsNullOrWhiteSpace(message.Text))
+            {
+                throw new Exception("Please fill all blanks");
+            }
+            else
+            {
+                return messageRepository.Add(message);
+            }
         }
 
         public bool Delete(int messageId)
         {
-            throw new NotImplementedException();
+            if (messageId < 1)
+            {
+                throw new Exception("Invalid input");
+            }
+            else
+            {
+                return messageRepository.Delete(messageId);
+            }
         }
 
         public List<Message> GetAll()
         {
-            throw new NotImplementedException();
+            return messageRepository.GetAll();
         }
 
         public List<Message> GetByUserId(int userId)
         {
-            throw new NotImplementedException();
+            if (userId < 1)
+            {
+                throw new Exception("Invalid input");
+            }
+            else
+            {
+                return messageRepository.GetByUserId(userId);
+            }
         }
     }
 }

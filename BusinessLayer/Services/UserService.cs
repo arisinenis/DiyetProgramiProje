@@ -67,12 +67,19 @@ namespace BusinessLayer.Services
 
         public bool Add(UserRegisterInfo userRegister, UserInformation userInfo)
         {
-            bool checkRegister, checkInformation;
+            if (String.IsNullOrWhiteSpace(userRegister.Email) || String.IsNullOrWhiteSpace(userRegister.Password) || String.IsNullOrWhiteSpace(userRegister.UserInformation.FirstName) || String.IsNullOrWhiteSpace(userRegister.UserInformation.LastName) || String.IsNullOrWhiteSpace(userRegister.UserInformation.BirthDate.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Gender) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Height.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Weight.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.DailyExercise.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.UserRequest.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Dietician.ToString()))
+            {
+                throw new Exception("Please fill all blanks.");
+            }
+            else
+            {
+                bool checkRegister, checkInformation;
 
-            checkRegister = userRepository.AddRegister(userRegister);
-            checkInformation = userRepository.AddInformation(userInfo);
+                checkRegister = userRepository.AddRegister(userRegister);
+                checkInformation = userRepository.AddInformation(userInfo);
 
-            return checkRegister && checkInformation;
+                return checkRegister && checkInformation;
+            }
         }
 
         public bool Passive(UserInformation user)

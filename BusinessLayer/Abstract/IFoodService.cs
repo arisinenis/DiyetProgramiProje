@@ -12,8 +12,8 @@ namespace BusinessLayer.Abstract
         bool Update(T food);
         List<T> GetAll();
         T GetById(int id);
-        void Active(T food);
-        void Passive(T food);
+        bool Active(T food);
+        bool Passive(T food);
         string GetCategoryNameByFoodId(int foodId);
         decimal GetCalorieByFoodId(int foodId);
         decimal GetTotalCalorieByPortion(int portion, int foodId);

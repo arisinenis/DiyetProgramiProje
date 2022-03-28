@@ -18,12 +18,26 @@ namespace BusinessLayer.Services
         }
         public bool Add(UserMeal meal)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(meal.MealDate.ToString()) || String.IsNullOrWhiteSpace(meal.MealTime.ToString()))
+            {
+                throw new Exception("Please fill all blanks.");
+            }
+            else
+            {
+                return userMealRepository.Add(meal);
+            }
         }
 
         public bool Update(UserMeal _meal)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(_meal.MealDate.ToString()) || String.IsNullOrWhiteSpace(_meal.MealTime.ToString()))
+            {
+                throw new Exception("Please fill all blanks.");
+            }
+            else
+            {
+                return userMealRepository.Update(_meal);
+            }
         }
     }
 }

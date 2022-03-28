@@ -49,20 +49,20 @@ namespace DataAccessLayer.Repositories
             return food;
         }
 
-        public void Active(FoodName entity)
+        public bool Active(FoodName entity)
         {
             FoodName food = db.FoodNames.Find(entity.Id);
             food.Status = "Active";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
-        public void Passive(FoodName entity)
+        public bool Passive(FoodName entity)
         {
             FoodName food = db.FoodNames.Find(entity.Id);
             food.Status = "Passive";
 
-            db.SaveChanges();
+            return db.SaveChanges() > 0;
         }
 
         public string GetCategoryNameByFoodId(int foodId)

@@ -69,19 +69,19 @@ namespace DiyetProgramiProje
             this.rbDietician = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDieticianJoin = new System.Windows.Forms.Button();
             this.btnChoosePics = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDGraduation = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDLastName = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDFirstName = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDPassword = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDEmail = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -154,6 +154,7 @@ namespace DiyetProgramiProje
             this.btnJoin.TabIndex = 21;
             this.btnJoin.Text = "Join !";
             this.btnJoin.UseVisualStyleBackColor = true;
+            this.btnJoin.Click += new System.EventHandler(this.btnJoin_Click);
             // 
             // btnShowDetails
             // 
@@ -508,35 +509,35 @@ namespace DiyetProgramiProje
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnDieticianJoin);
             this.panel2.Controls.Add(this.btnChoosePics);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtDGraduation);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtDLastName);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtDFirstName);
             this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtDPassword);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtDEmail);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel2.Location = new System.Drawing.Point(12, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 667);
             this.panel2.TabIndex = 4;
-            this.panel2.Visible = false;
             // 
-            // button2
+            // btnDieticianJoin
             // 
-            this.button2.Location = new System.Drawing.Point(24, 565);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(316, 90);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Join !";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDieticianJoin.Location = new System.Drawing.Point(24, 565);
+            this.btnDieticianJoin.Name = "btnDieticianJoin";
+            this.btnDieticianJoin.Size = new System.Drawing.Size(316, 90);
+            this.btnDieticianJoin.TabIndex = 21;
+            this.btnDieticianJoin.Text = "Join !";
+            this.btnDieticianJoin.UseVisualStyleBackColor = true;
+            this.btnDieticianJoin.Click += new System.EventHandler(this.btnDieticianJoin_Click);
             // 
             // btnChoosePics
             // 
@@ -546,6 +547,7 @@ namespace DiyetProgramiProje
             this.btnChoosePics.TabIndex = 20;
             this.btnChoosePics.Text = "Choose A Picture";
             this.btnChoosePics.UseVisualStyleBackColor = true;
+            this.btnChoosePics.Click += new System.EventHandler(this.btnChoosePics_Click);
             // 
             // pictureBox1
             // 
@@ -565,12 +567,12 @@ namespace DiyetProgramiProje
             this.label16.TabIndex = 18;
             this.label16.Text = "Picture:";
             // 
-            // textBox1
+            // txtDGraduation
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 329);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(395, 28);
-            this.textBox1.TabIndex = 17;
+            this.txtDGraduation.Location = new System.Drawing.Point(24, 329);
+            this.txtDGraduation.Name = "txtDGraduation";
+            this.txtDGraduation.Size = new System.Drawing.Size(395, 28);
+            this.txtDGraduation.TabIndex = 17;
             // 
             // label17
             // 
@@ -582,12 +584,12 @@ namespace DiyetProgramiProje
             this.label17.TabIndex = 16;
             this.label17.Text = "Graduation:";
             // 
-            // textBox2
+            // txtDLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 255);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(395, 28);
-            this.textBox2.TabIndex = 15;
+            this.txtDLastName.Location = new System.Drawing.Point(24, 255);
+            this.txtDLastName.Name = "txtDLastName";
+            this.txtDLastName.Size = new System.Drawing.Size(395, 28);
+            this.txtDLastName.TabIndex = 15;
             // 
             // label18
             // 
@@ -599,12 +601,12 @@ namespace DiyetProgramiProje
             this.label18.TabIndex = 14;
             this.label18.Text = "Lastname: ";
             // 
-            // textBox3
+            // txtDFirstName
             // 
-            this.textBox3.Location = new System.Drawing.Point(24, 186);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(395, 28);
-            this.textBox3.TabIndex = 13;
+            this.txtDFirstName.Location = new System.Drawing.Point(24, 186);
+            this.txtDFirstName.Name = "txtDFirstName";
+            this.txtDFirstName.Size = new System.Drawing.Size(395, 28);
+            this.txtDFirstName.TabIndex = 13;
             // 
             // label19
             // 
@@ -616,12 +618,12 @@ namespace DiyetProgramiProje
             this.label19.TabIndex = 12;
             this.label19.Text = "Firstname:";
             // 
-            // textBox4
+            // txtDPassword
             // 
-            this.textBox4.Location = new System.Drawing.Point(24, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(395, 28);
-            this.textBox4.TabIndex = 11;
+            this.txtDPassword.Location = new System.Drawing.Point(24, 117);
+            this.txtDPassword.Name = "txtDPassword";
+            this.txtDPassword.Size = new System.Drawing.Size(395, 28);
+            this.txtDPassword.TabIndex = 11;
             // 
             // label20
             // 
@@ -633,12 +635,12 @@ namespace DiyetProgramiProje
             this.label20.TabIndex = 10;
             this.label20.Text = "Password:";
             // 
-            // textBox5
+            // txtDEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(24, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(395, 28);
-            this.textBox5.TabIndex = 9;
+            this.txtDEmail.Location = new System.Drawing.Point(24, 45);
+            this.txtDEmail.Name = "txtDEmail";
+            this.txtDEmail.Size = new System.Drawing.Size(395, 28);
+            this.txtDEmail.TabIndex = 9;
             // 
             // label21
             // 
@@ -721,19 +723,19 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.RadioButton rbDietician;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDieticianJoin;
         private System.Windows.Forms.Button btnChoosePics;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDGraduation;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDLastName;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDFirstName;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDPassword;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDEmail;
         private System.Windows.Forms.Label label21;
     }
 }

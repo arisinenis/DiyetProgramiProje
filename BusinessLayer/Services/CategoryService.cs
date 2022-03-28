@@ -57,7 +57,14 @@ namespace BusinessLayer.Services
 
         public bool Update(FoodCategory category)
         {
-            return categoryRepository.Update(category);
+            if (String.IsNullOrWhiteSpace(category.CategoryName))
+            {
+                throw new Exception("Please fill all blanks");
+            }
+            else
+            {
+                return categoryRepository.Update(category);
+            }
         }
     }
 }

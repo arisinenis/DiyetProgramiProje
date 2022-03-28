@@ -16,49 +16,99 @@ namespace BusinessLayer.Services
         {
             foodRepository = new FoodRepository();
         }
-        public void Active(FoodName food)
+        public bool Active(FoodName food)
         {
-            throw new NotImplementedException();
+            return foodRepository.Active(food);
         }
 
         public bool Add(FoodName food)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(food.Name))
+            {
+                throw new Exception("Please type a food name !");
+            }
+            else if (String.IsNullOrWhiteSpace(food.Calorie.ToString()))
+            {
+                throw new Exception("Please type a calorie !");
+            }
+            else if (String.IsNullOrWhiteSpace(food.FoodCategory.CategoryName))
+            {
+                throw new Exception("Please type a categorie name !");
+            }
+            else
+            {
+                return foodRepository.Add(food);
+            }
         }
 
         public List<FoodName> GetAll()
         {
-            throw new NotImplementedException();
+            return foodRepository.GetAll();
         }
 
         public FoodName GetById(int id)
         {
-            throw new NotImplementedException();
+            if (id < 1)
+            {
+                throw new Exception("Invalid input");
+            }
+            else
+            {
+                return foodRepository.GetById(id);
+            }
         }
 
         public decimal GetCalorieByFoodId(int foodId)
         {
-            throw new NotImplementedException();
+            if (foodId < 1)
+            {
+                throw new Exception("Invalid input");
+            }
+            else
+            {
+                return foodRepository.GetCalorieByFoodId(foodId);
+            }
         }
 
         public string GetCategoryNameByFoodId(int foodId)
         {
-            throw new NotImplementedException();
+            if (foodId < 1)
+            {
+                throw new Exception("Invalid input");
+            }
+            else
+            {
+                return foodRepository.GetCategoryNameByFoodId(foodId);
+            }
         }
 
         public decimal GetTotalCalorieByPortion(int portion, int foodId)
         {
-            throw new NotImplementedException();
+            if (foodId < 1 || portion < 0.25)
+            {
+                throw new Exception("Invalid input");
+            }
+            else
+            {
+                return foodRepository.GetTotalCalorieByPortion(portion, foodId);
+            }
         }
 
-        public void Passive(FoodName food)
+        public bool Passive(FoodName food)
         {
-            throw new NotImplementedException();
+            return foodRepository.Passive(food);
         }
 
         public bool Update(FoodName food)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(food.Name) || String.IsNullOrWhiteSpace(food.FoodCategory.ToString()) || String.IsNullOrWhiteSpace(food.Calorie.ToString()))
+            {
+                throw new Exception("Please fill all blanks");
+            }
+            else
+            {
+                return foodRepository.Update(food);
+            }
         }
     }
 }

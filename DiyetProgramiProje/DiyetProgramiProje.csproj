@@ -155,5 +155,15 @@
   <ItemGroup>
     <None Include="Resources\healthy-food-cooking-background-vegetable-2055280.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{DB70E96E-4108-4401-8AFE-3399C32E98D3}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{A85F341A-AC94-4C84-85A8-E139C0649842}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
