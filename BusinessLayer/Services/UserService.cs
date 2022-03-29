@@ -65,26 +65,38 @@ namespace BusinessLayer.Services
             return userRepository.GetAllPassives();
         }
 
-        public bool Add(UserRegisterInfo userRegister, UserInformation userInfo)
+       
+        public bool AddInformation(UserInformation userInfo)
         {
-            if (String.IsNullOrWhiteSpace(userRegister.Email) || String.IsNullOrWhiteSpace(userRegister.Password) || String.IsNullOrWhiteSpace(userRegister.UserInformation.FirstName) || String.IsNullOrWhiteSpace(userRegister.UserInformation.LastName) || String.IsNullOrWhiteSpace(userRegister.UserInformation.BirthDate.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Gender) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Height.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Weight.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.DailyExercise.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.UserRequest.ToString()) || String.IsNullOrWhiteSpace(userRegister.UserInformation.Dietician.ToString()))
+            if (String.IsNullOrWhiteSpace(userInfo.FirstName) || String.IsNullOrWhiteSpace(userInfo.LastName) || String.IsNullOrWhiteSpace(userInfo.BirthDate.ToString()) || String.IsNullOrWhiteSpace(userInfo.Gender) || String.IsNullOrWhiteSpace(userInfo.Height.ToString()) || String.IsNullOrWhiteSpace(userInfo.Weight.ToString()) || String.IsNullOrWhiteSpace(userInfo.DailyExercise.ToString()) || String.IsNullOrWhiteSpace(userInfo.UserRequest.ToString()) || String.IsNullOrWhiteSpace(userInfo.DieticianId.ToString()) || String.IsNullOrWhiteSpace(userInfo.DailyCalorie.ToString()) || String.IsNullOrWhiteSpace(userInfo.RequireCalorie.ToString()))
             {
                 throw new Exception("Please fill all blanks.");
             }
             else
             {
-                bool checkRegister, checkInformation;
+                return userRepository.AddInformation(userInfo);
+            }
+            
+        }
 
-                checkRegister = userRepository.AddRegister(userRegister);
-                checkInformation = userRepository.AddInformation(userInfo);
-
-                return checkRegister && checkInformation;
+        public bool AddRegister(UserRegisterInfo userRegister)
+        {
+            if (String.IsNullOrWhiteSpace(userRegister.Email) || String.IsNullOrWhiteSpace(userRegister.Password))
+            {
+                throw new Exception("Please fill all blanks.");
+            }
+            else
+            {
+                return userRepository.AddRegister(userRegister);
             }
         }
+        
 
         public bool Passive(UserInformation user)
         {
             return userRepository.Passive(user);
         }
+
+       
     }
 }

@@ -17,6 +17,13 @@ namespace Model.Entities
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
         public string Graduation { get; set; }
         public string Status { get; set; } = "Passive";
         public byte[] Picture { get; set; }

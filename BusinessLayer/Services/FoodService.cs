@@ -46,6 +46,12 @@ namespace BusinessLayer.Services
             return foodRepository.GetAll();
         }
 
+
+        public List<FoodName> GetByFilter(string filter)
+        {
+            return foodRepository.GetByFilter(filter);
+        }
+
         public FoodName GetById(int id)
         {
             if (id < 1)

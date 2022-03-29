@@ -23,26 +23,59 @@ namespace DiyetProgramiProje
             InitializeComponent();
             userService = new UserService();
             dieticianService = new DieticianService();
+
         }
         private void RegisterForm_Load(object sender, EventArgs e)
         {
             FillExerciseCBox();
             FillRequestCbox();
             FillDieticianCbox();
+            panel2.Visible = false;
+            cboxDailyExercise.SelectedIndex=0;
+            cboxRequest.SelectedIndex=0;
+            cboxDietician.SelectedIndex=-1;
+
         }
+
+        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["Form1"];
+            frm.Show();
+        }
+
 
         private void btnJoin_Click(object sender, EventArgs e)
         {
-            UserInformation userInformation = new UserInformation();
-            userInformation.FirstName = txtFirstName.Text;
-            userInformation.LastName = txtLastName.Text;
-            userInformation.BirthDate = dtBirthDate.Value;
-            userInformation.Gender = rbMale.Checked ? "Male" : "Female";
-            userInformation.Height = nudHeight.Value;
-            userInformation.Weight = nudWeight.Value;
-            userInformation.DailyExercise = (ExerciseEnum)Enum.Parse(typeof(ExerciseEnum), cboxDailyExercise.SelectedItem.ToString());
-            userInformation.UserRequest = (UserRequestsEnum)Enum.Parse(typeof(UserRequestsEnum), cboxRequest.SelectedItem.ToString());
-            userInformation.Dietician.Id = (int)cboxDietician.SelectedValue;
+            try
+            {
+                UserInformation userInformation = new UserInformation();
+                userInformation.FirstName = txtFirstName.Text;
+                userInformation.LastName = txtLastName.Text;
+                userInformation.BirthDate = dtBirthDate.Value;
+                userInformation.Gender = rbMale.Checked ? "Male" : "Female";
+                userInformation.Height = nudHeight.Value;
+                userInformation.Weight = nudWeight.Value;
+                userInformation.DailyExercise = (ExerciseEnum)Enum.Parse(typeof(ExerciseEnum), cboxDailyExercise.SelectedItem.ToString());
+                userInformation.UserRequest = (UserRequestsEnum)Enum.Parse(typeof(UserRequestsEnum), cboxRequest.SelectedItem.ToString());
+                userInformation.DieticianId = (int)cboxDietician.SelectedValue;
+                userInformation.DailyCalorie = CalculateDailyCalorie(userInformation.Height, userInformation.Weight, userInformation.BirthDate, userInformation.Gender, userInformation.DailyExercise);
+                userInformation.RequireCalorie = CalculateRequaireCalorie(userInformation.UserRequest, userInformation.DailyCalorie);
+                userService.AddInformation(userInformation);
+
+                UserRegisterInfo userRegisterInfo = new UserRegisterInfo();
+                userRegisterInfo.Id = userInformation.Id;
+                userRegisterInfo.Email = txtEmail.Text;
+                userRegisterInfo.Password = txtPassword.Text;
+                userRegisterInfo.UserType = MembershipTypeEnum.Client;
+                userService.AddRegister(userRegisterInfo);
+
+                MessageBox.Show("Added");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your informations");
+            }
+
         }
 
         private void btnChoosePics_Click(object sender, EventArgs e)
@@ -59,6 +92,7 @@ namespace DiyetProgramiProje
 
         private void btnDieticianJoin_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 Dietician dietician = new Dietician();
@@ -82,7 +116,7 @@ namespace DiyetProgramiProje
                 dieticianRegisterInfo.Id = dietician.Id;
                 dieticianRegisterInfo.Email = txtDEmail.Text;
                 dieticianRegisterInfo.Password = txtDPassword.Text;
-                dieticianRegisterInfo.UserType = Model.Enums.MembershipTypeEnum.Dietician;
+                dieticianRegisterInfo.UserType = MembershipTypeEnum.Dietician;
 
                 dieticianService.AddRegister(dieticianRegisterInfo);
 
@@ -110,13 +144,21 @@ namespace DiyetProgramiProje
         {
             try
             {
-                groupBox1.Visible = true;
-                Dietician dietician = dieticianService.GetById((int)cboxDietician.SelectedValue);
-                lblFirstName.Text = dietician.FirstName;
-                lblLastName.Text = dietician.LastName;
-                lblEmail.Text = dietician.DieticianRegisterInfo.Email;
-                lblGraduation.Text = dietician.Graduation;
-                pboxDietician.Image = ConvertByteToPicture(dietician);
+                if (cboxDietician.SelectedIndex!=-1)
+                {
+                    groupBox1.Visible = true;
+                    Dietician dietician = dieticianService.GetById((int)cboxDietician.SelectedValue);
+                    lblFirstName.Text = dietician.FirstName;
+                    lblLastName.Text = dietician.LastName;
+                    lblEmail.Text = dietician.DieticianRegisterInfo.Email;
+                    lblGraduation.Text = dietician.Graduation;
+                    pboxDietician.Image = ConvertByteToPicture(dietician);
+                }
+                else
+                {
+                    MessageBox.Show("Nothing selected");
+                }
+
             }
             catch (Exception ex)
             {
@@ -128,9 +170,10 @@ namespace DiyetProgramiProje
         {
             List<Dietician> dieticianList = new List<Dietician>();
             dieticianList = dieticianService.GetActiveAll();
-            cboxDietician.DisplayMember = "FirstName";
+            cboxDietician.DisplayMember = "FullName";
             cboxDietician.ValueMember = "Id";
             cboxDietician.DataSource = dieticianList;
+            
         }
 
         private void FillExerciseCBox()
@@ -155,6 +198,72 @@ namespace DiyetProgramiProje
             {
                 return Image.FromStream(ms);
             }
+        }
+
+
+
+        private decimal CalculateDailyCalorie(decimal height,decimal weight,DateTime dateTime,string gender,ExerciseEnum exercise)
+        {
+            decimal bmr=0;
+            decimal amr=0;
+            int age = DateTime.Now.Year - dateTime.Year;    
+
+
+            
+            switch (gender)
+            {
+                case "Male":
+                    bmr = (decimal)(66.47 + (13.75 * Convert.ToDouble(weight)) + (5.003 * Convert.ToDouble(height) - (6.755 * age)));
+                    break;
+
+                case "Female":
+                    bmr = (decimal)(655.1 + (9.563 * Convert.ToDouble(weight)) + (1.850 * Convert.ToDouble(height) - (4.676 * age)));
+                    break;
+            }
+
+            switch (exercise)
+            {
+                case ExerciseEnum.Sedentary:
+                    amr = bmr * Convert.ToDecimal(1.2);
+                    break;
+                case ExerciseEnum.LightlyActive:
+                    amr = bmr * Convert.ToDecimal(1.375);
+                    break;
+                case ExerciseEnum.ModeratelyActive:
+                    amr = bmr * Convert.ToDecimal(1.55);
+                    break;
+                case ExerciseEnum.Active:
+                    amr = bmr * Convert.ToDecimal(1.725);
+                    break;
+                case ExerciseEnum.VeryActive:
+                    amr = bmr * Convert.ToDecimal(1.9);
+                    break;
+            }
+            return amr;
+        }
+
+        private decimal CalculateRequaireCalorie(UserRequestsEnum userRequests,decimal dailyCalorie)
+        {
+            decimal requireCalorie = 0;
+            switch (userRequests)
+            {
+                case UserRequestsEnum.GainWeight:
+                    requireCalorie = dailyCalorie * Convert.ToDecimal(1.1);
+                    break;
+                case UserRequestsEnum.LoseWeight:
+                    requireCalorie = dailyCalorie * Convert.ToDecimal(0.9);
+                    break;
+                case UserRequestsEnum.MaintainWeight:
+                    requireCalorie = dailyCalorie * 1;
+                    break;
+            }
+            return requireCalorie;
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            cboxDietician.SelectedIndex = -1;
+            groupBox1.Visible = false;
         }
     }
 }

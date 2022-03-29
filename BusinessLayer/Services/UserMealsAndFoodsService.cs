@@ -19,7 +19,7 @@ namespace BusinessLayer.Services
         }
         public bool Add(UserMealsAndFoods meal)
         {
-            if (String.IsNullOrWhiteSpace(meal.Calorie.ToString()) || String.IsNullOrWhiteSpace(meal.FoodName.Name) || String.IsNullOrWhiteSpace(meal.Portion.ToString()) || String.IsNullOrWhiteSpace(meal.UserMeal.MealDate.ToString()) || String.IsNullOrWhiteSpace(meal.UserMeal.MealTime.ToString()))
+            if (String.IsNullOrWhiteSpace(meal.Calorie.ToString()) || String.IsNullOrWhiteSpace(meal.FoodNameID.ToString()) || String.IsNullOrWhiteSpace(meal.Portion.ToString()) || String.IsNullOrWhiteSpace(meal.UserMealID.ToString()))
             {
                 throw new Exception("Please fill all blanks");
             }

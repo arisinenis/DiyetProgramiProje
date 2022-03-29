@@ -10,7 +10,8 @@ namespace BusinessLayer.Abstract
     // T1 => Register, T2 => Information
     public interface IUserService<TRegister,TInformation>
     {
-        bool Add(TRegister userRegister, TInformation userInfo);
+        bool AddInformation(TInformation userInfo);
+        bool AddRegister(TRegister userRegister);
         TRegister CheckLogin(string email, string password);
         List<TInformation> GetPassives();
         TInformation GetById(int id);

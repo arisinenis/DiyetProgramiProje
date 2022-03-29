@@ -15,7 +15,7 @@ namespace DataAccessLayer.EntityConfiguration
             Property(u => u.FirstName).IsRequired().HasMaxLength(50);
             Property(u => u.LastName).IsRequired().HasMaxLength(50);
             Property(u => u.BirthDate).IsRequired();
-            Property(u => u.Gender).IsRequired().HasMaxLength(5);
+            Property(u => u.Gender).IsRequired().HasMaxLength(6);
             Property(u => u.Height).IsRequired();
             Property(u => u.Weight).IsRequired();
             Property(u => u.Status).IsRequired().HasMaxLength(7);

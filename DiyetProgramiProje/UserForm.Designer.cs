@@ -39,8 +39,7 @@ namespace DiyetProgramiProje
             this.btnAddMeal = new System.Windows.Forms.Button();
             this.nudPortion = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCategoyName = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblTotalCalories = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -108,7 +107,7 @@ namespace DiyetProgramiProje
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(74, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 0;
             // 
             // groupBox2
@@ -166,6 +165,7 @@ namespace DiyetProgramiProje
             this.btnAddMeal.TabIndex = 12;
             this.btnAddMeal.Text = "Add Meal";
             this.btnAddMeal.UseVisualStyleBackColor = true;
+            this.btnAddMeal.Click += new System.EventHandler(this.btnAddMeal_Click);
             // 
             // nudPortion
             // 
@@ -176,13 +176,13 @@ namespace DiyetProgramiProje
             131072});
             this.nudPortion.Location = new System.Drawing.Point(3, 535);
             this.nudPortion.Name = "nudPortion";
-            this.nudPortion.Size = new System.Drawing.Size(301, 28);
+            this.nudPortion.Size = new System.Drawing.Size(301, 24);
             this.nudPortion.TabIndex = 11;
+            this.nudPortion.ValueChanged += new System.EventHandler(this.nudPortion_ValueChanged);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.lblCategory);
-            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Controls.Add(this.lblCategoyName);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox5.Location = new System.Drawing.Point(326, 226);
             this.groupBox5.Name = "groupBox5";
@@ -191,21 +191,13 @@ namespace DiyetProgramiProje
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Category";
             // 
-            // lblCategory
+            // lblCategoyName
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(55, 39);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(0, 24);
-            this.lblCategory.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 24);
-            this.label6.TabIndex = 10;
+            this.lblCategoyName.AutoSize = true;
+            this.lblCategoyName.Location = new System.Drawing.Point(45, 50);
+            this.lblCategoyName.Name = "lblCategoyName";
+            this.lblCategoyName.Size = new System.Drawing.Size(0, 18);
+            this.lblCategoyName.TabIndex = 11;
             // 
             // groupBox4
             // 
@@ -223,7 +215,7 @@ namespace DiyetProgramiProje
             this.lblTotalCalories.AutoSize = true;
             this.lblTotalCalories.Location = new System.Drawing.Point(69, 36);
             this.lblTotalCalories.Name = "lblTotalCalories";
-            this.lblTotalCalories.Size = new System.Drawing.Size(0, 24);
+            this.lblTotalCalories.Size = new System.Drawing.Size(0, 18);
             this.lblTotalCalories.TabIndex = 11;
             // 
             // groupBox3
@@ -242,7 +234,7 @@ namespace DiyetProgramiProje
             this.lblCaloriesByPortion.AutoSize = true;
             this.lblCaloriesByPortion.Location = new System.Drawing.Point(55, 49);
             this.lblCaloriesByPortion.Name = "lblCaloriesByPortion";
-            this.lblCaloriesByPortion.Size = new System.Drawing.Size(0, 24);
+            this.lblCaloriesByPortion.Size = new System.Drawing.Size(0, 18);
             this.lblCaloriesByPortion.TabIndex = 10;
             // 
             // label5
@@ -250,7 +242,7 @@ namespace DiyetProgramiProje
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 505);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 24);
+            this.label5.Size = new System.Drawing.Size(130, 18);
             this.label5.TabIndex = 7;
             this.label5.Text = "Portion Quantity";
             // 
@@ -267,32 +259,35 @@ namespace DiyetProgramiProje
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Foods";
             // 
             // lboxFoods
             // 
             this.lboxFoods.FormattingEnabled = true;
-            this.lboxFoods.ItemHeight = 22;
+            this.lboxFoods.ItemHeight = 18;
             this.lboxFoods.Location = new System.Drawing.Point(7, 234);
             this.lboxFoods.Name = "lboxFoods";
-            this.lboxFoods.Size = new System.Drawing.Size(297, 268);
+            this.lboxFoods.Size = new System.Drawing.Size(297, 256);
             this.lboxFoods.TabIndex = 4;
+            this.lboxFoods.Click += new System.EventHandler(this.lboxFoods_Click);
+            this.lboxFoods.SelectedIndexChanged += new System.EventHandler(this.lboxFoods_SelectedIndexChanged);
             // 
             // txtFoodFilter
             // 
             this.txtFoodFilter.Location = new System.Drawing.Point(9, 171);
             this.txtFoodFilter.Name = "txtFoodFilter";
-            this.txtFoodFilter.Size = new System.Drawing.Size(298, 28);
+            this.txtFoodFilter.Size = new System.Drawing.Size(298, 24);
             this.txtFoodFilter.TabIndex = 3;
+            this.txtFoodFilter.TextChanged += new System.EventHandler(this.txtFoodFilter_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 24);
+            this.label3.Size = new System.Drawing.Size(90, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Food Filter";
             // 
@@ -301,7 +296,7 @@ namespace DiyetProgramiProje
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 24);
+            this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Meal Time";
             // 
@@ -310,7 +305,7 @@ namespace DiyetProgramiProje
             this.cboxMealTime.FormattingEnabled = true;
             this.cboxMealTime.Location = new System.Drawing.Point(9, 90);
             this.cboxMealTime.Name = "cboxMealTime";
-            this.cboxMealTime.Size = new System.Drawing.Size(298, 30);
+            this.cboxMealTime.Size = new System.Drawing.Size(298, 26);
             this.cboxMealTime.TabIndex = 0;
             // 
             // groupBox6
@@ -332,7 +327,7 @@ namespace DiyetProgramiProje
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(56, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 29);
+            this.label7.Size = new System.Drawing.Size(0, 24);
             this.label7.TabIndex = 0;
             // 
             // groupBox7
@@ -374,7 +369,7 @@ namespace DiyetProgramiProje
             this.label11.ForeColor = System.Drawing.Color.Red;
             this.label11.Location = new System.Drawing.Point(56, 36);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 29);
+            this.label11.Size = new System.Drawing.Size(0, 24);
             this.label11.TabIndex = 0;
             // 
             // groupBox8
@@ -396,7 +391,7 @@ namespace DiyetProgramiProje
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(56, 36);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 29);
+            this.label9.Size = new System.Drawing.Size(0, 24);
             this.label9.TabIndex = 0;
             // 
             // button1
@@ -424,7 +419,7 @@ namespace DiyetProgramiProje
             this.cboxLvMealTime.FormattingEnabled = true;
             this.cboxLvMealTime.Location = new System.Drawing.Point(153, 96);
             this.cboxLvMealTime.Name = "cboxLvMealTime";
-            this.cboxLvMealTime.Size = new System.Drawing.Size(320, 30);
+            this.cboxLvMealTime.Size = new System.Drawing.Size(320, 26);
             this.cboxLvMealTime.TabIndex = 18;
             // 
             // label10
@@ -432,7 +427,7 @@ namespace DiyetProgramiProje
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(11, 96);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 24);
+            this.label10.Size = new System.Drawing.Size(91, 18);
             this.label10.TabIndex = 17;
             this.label10.Text = "Meal Time:";
             // 
@@ -440,7 +435,7 @@ namespace DiyetProgramiProje
             // 
             this.dtMealDate.Location = new System.Drawing.Point(153, 39);
             this.dtMealDate.Name = "dtMealDate";
-            this.dtMealDate.Size = new System.Drawing.Size(320, 28);
+            this.dtMealDate.Size = new System.Drawing.Size(320, 24);
             this.dtMealDate.TabIndex = 16;
             // 
             // label8
@@ -448,7 +443,7 @@ namespace DiyetProgramiProje
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(11, 45);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 24);
+            this.label8.Size = new System.Drawing.Size(89, 18);
             this.label8.TabIndex = 15;
             this.label8.Text = "Meal Date:";
             // 
@@ -490,26 +485,27 @@ namespace DiyetProgramiProje
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 48);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.updateToolStripMenuItem.Text = "Update";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Location = new System.Drawing.Point(33, 667);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 24);
+            this.label12.Size = new System.Drawing.Size(90, 18);
             this.label12.TabIndex = 17;
             this.label12.Text = "Messages:";
             // 
@@ -525,7 +521,7 @@ namespace DiyetProgramiProje
             // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -542,6 +538,7 @@ namespace DiyetProgramiProje
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -587,8 +584,6 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.ListBox lboxFoods;
         private System.Windows.Forms.NumericUpDown nudPortion;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddMeal;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label7;
@@ -614,5 +609,6 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.Button btnUpdateMeal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblCategoyName;
     }
 }

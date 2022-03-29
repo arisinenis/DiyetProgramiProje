@@ -96,6 +96,10 @@
     <Compile Include="Migrations\202203281428303_dEmailSizeChanged.designer.cs">
       <DependentUpon>202203281428303_dEmailSizeChanged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203290925533_test10.cs" />
+    <Compile Include="Migrations\202203290925533_test10.designer.cs">
+      <DependentUpon>202203290925533_test10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203281428303_dEmailSizeChanged.resx">
       <DependentUpon>202203281428303_dEmailSizeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203290925533_test10.resx">
+      <DependentUpon>202203290925533_test10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

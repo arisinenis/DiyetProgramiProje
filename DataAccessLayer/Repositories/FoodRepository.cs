@@ -42,9 +42,18 @@ namespace DataAccessLayer.Repositories
             return db.FoodNames.ToList();
         }
 
+        public List<FoodName> GetByFilter(string filter)
+        {
+            List<FoodName> foodNames = db.FoodNames.Where(f=>f.Name.Contains(filter)).ToList();
+            return foodNames;
+        }
+
+
+
         public FoodName GetById(int id)
         {
-            FoodName food = db.FoodNames.Find(id);
+            //FoodName food = db.FoodNames.Find(id);
+            FoodName food = db.FoodNames.Where(f => f.Id == id).SingleOrDefault();
 
             return food;
         }

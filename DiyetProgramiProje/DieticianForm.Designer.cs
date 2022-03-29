@@ -44,6 +44,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpbox = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMessageTitle = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -54,8 +56,6 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtMessageTitle = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -101,7 +101,7 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(56, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 29);
+            this.label7.Size = new System.Drawing.Size(0, 24);
             this.label7.TabIndex = 0;
             // 
             // groupBox1
@@ -123,7 +123,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(74, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 0;
             // 
             // btnShowMeal
@@ -141,7 +141,7 @@
             this.cboxLvMealTime.FormattingEnabled = true;
             this.cboxLvMealTime.Location = new System.Drawing.Point(153, 96);
             this.cboxLvMealTime.Name = "cboxLvMealTime";
-            this.cboxLvMealTime.Size = new System.Drawing.Size(106, 32);
+            this.cboxLvMealTime.Size = new System.Drawing.Size(106, 26);
             this.cboxLvMealTime.TabIndex = 18;
             // 
             // label10
@@ -149,7 +149,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(11, 96);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 24);
+            this.label10.Size = new System.Drawing.Size(81, 18);
             this.label10.TabIndex = 17;
             this.label10.Text = "Meal Time:";
             // 
@@ -157,7 +157,7 @@
             // 
             this.dtMealDate.Location = new System.Drawing.Point(153, 39);
             this.dtMealDate.Name = "dtMealDate";
-            this.dtMealDate.Size = new System.Drawing.Size(229, 29);
+            this.dtMealDate.Size = new System.Drawing.Size(229, 24);
             this.dtMealDate.TabIndex = 16;
             // 
             // label8
@@ -165,7 +165,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(11, 45);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 24);
+            this.label8.Size = new System.Drawing.Size(79, 18);
             this.label8.TabIndex = 15;
             this.label8.Text = "Meal Date:";
             // 
@@ -216,6 +216,22 @@
             this.grpbox.TabStop = false;
             this.grpbox.Text = "Clients";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 545);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Message Title:";
+            // 
+            // txtMessageTitle
+            // 
+            this.txtMessageTitle.Location = new System.Drawing.Point(144, 545);
+            this.txtMessageTitle.Name = "txtMessageTitle";
+            this.txtMessageTitle.Size = new System.Drawing.Size(272, 24);
+            this.txtMessageTitle.TabIndex = 3;
+            // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -244,6 +260,7 @@
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(7, 23);
             this.listView1.Name = "listView1";
@@ -285,25 +302,9 @@
             this.columnHeader10.Text = "User Request";
             this.columnHeader10.Width = 139;
             // 
-            // txtMessageTitle
-            // 
-            this.txtMessageTitle.Location = new System.Drawing.Point(144, 545);
-            this.txtMessageTitle.Name = "txtMessageTitle";
-            this.txtMessageTitle.Size = new System.Drawing.Size(272, 29);
-            this.txtMessageTitle.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 545);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Message Title:";
-            // 
             // DieticianForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

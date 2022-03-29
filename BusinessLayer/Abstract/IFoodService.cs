@@ -17,5 +17,6 @@ namespace BusinessLayer.Abstract
         string GetCategoryNameByFoodId(int foodId);
         decimal GetCalorieByFoodId(int foodId);
         decimal GetTotalCalorieByPortion(int portion, int foodId);
+        List<T> GetByFilter(string filter);
     }
 }

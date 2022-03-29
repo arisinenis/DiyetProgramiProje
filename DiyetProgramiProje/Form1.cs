@@ -20,11 +20,12 @@ namespace DiyetProgramiProje
         {
             InitializeComponent();
             userService = new UserService();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -32,12 +33,14 @@ namespace DiyetProgramiProje
             try
             {
                 UserRegisterInfo user = userService.CheckLogin(txtEmail.Text, txtPassword.Text);
-                //UserForm userForm = new UserForm(user);
-                //userForm.ShowDialog();
+                UserForm userForm = new UserForm(user);
+                this.Hide();
+                userForm.ShowDialog();
+                
             }
             catch (Exception)
             {
-                throw;
+                MessageBox.Show("Please check your e-mail and password.");
             }
             
         }

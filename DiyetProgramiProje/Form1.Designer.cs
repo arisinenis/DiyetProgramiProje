@@ -99,7 +99,7 @@ namespace DiyetProgramiProje
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(46, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 24);
+            this.label2.Size = new System.Drawing.Size(50, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "Email";
             // 
@@ -107,14 +107,14 @@ namespace DiyetProgramiProje
             // 
             this.txtEmail.Location = new System.Drawing.Point(50, 68);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(265, 28);
+            this.txtEmail.Size = new System.Drawing.Size(265, 24);
             this.txtEmail.TabIndex = 11;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(51, 144);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(265, 28);
+            this.txtPassword.Size = new System.Drawing.Size(265, 24);
             this.txtPassword.TabIndex = 14;
             // 
             // label3
@@ -125,13 +125,13 @@ namespace DiyetProgramiProje
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(47, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 13;
             this.label3.Text = "Password";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 701);
             this.Controls.Add(this.panel1);
