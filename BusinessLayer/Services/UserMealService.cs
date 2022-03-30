@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Repositories;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,11 @@ namespace BusinessLayer.Services
             {
                 return userMealRepository.Update(_meal);
             }
+        }
+
+        public UserMeal CheckMeal(DateTime dateTime, MealTimesEnum mealTime)
+        {
+            return userMealRepository.CheckUserMeal(dateTime, mealTime);
         }
     }
 }

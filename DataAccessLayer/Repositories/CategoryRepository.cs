@@ -58,6 +58,14 @@ namespace DataAccessLayer.Repositories
             return db.FoodCategories.Find(id);
         }
 
+        public List<FoodCategory> GetActives()
+        {
+            return db.FoodCategories.Where(f => f.Status == "Active").ToList();
+        }
 
+        public List<FoodCategory> GetPassives()
+        {
+            return db.FoodCategories.Where(f => f.Status == "Passive").ToList();
+        }
     }
 }

@@ -14,5 +14,8 @@ namespace BusinessLayer.Abstract
         bool Passive(T entity);
         List<T> GetAll();
         T GetById(int id);
+        List<T> GetActives();
+        List<T> GetPassives();
+
     }
 }

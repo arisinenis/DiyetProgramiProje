@@ -33,6 +33,16 @@ namespace BusinessLayer.Services
             }
         }
 
+        public List<FoodCategory> GetActives()
+        {
+            return categoryRepository.GetActives();
+        }
+
+        public List<FoodCategory> GetPassives()
+        {
+            return categoryRepository.GetPassives();
+        }
+
         public List<FoodCategory> GetAll()
         {
             return categoryRepository.GetAll();
@@ -49,6 +59,8 @@ namespace BusinessLayer.Services
                 return categoryRepository.GetById(id);
             }
         }
+
+        
 
         public bool Passive(FoodCategory entity)
         {

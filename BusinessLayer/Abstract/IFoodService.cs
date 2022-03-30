@@ -18,5 +18,9 @@ namespace BusinessLayer.Abstract
         decimal GetCalorieByFoodId(int foodId);
         decimal GetTotalCalorieByPortion(int portion, int foodId);
         List<T> GetByFilter(string filter);
+        List<T> GetActives();
+        List<T> GetPassives();
+
+
     }
 }

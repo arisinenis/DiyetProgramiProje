@@ -15,7 +15,7 @@ namespace Model.Entities
             UserMealsAndFoods = new HashSet<UserMealsAndFoods>();
         }
         public int Id { get; set; }
-        public DateTime MealDate { get; set; } = DateTime.Now;
+        public DateTime MealDate { get; set; } = DateTime.Now.Date;
         public MealTimesEnum MealTime { get; set; }
 
         public int UserInformationId { get; set; }

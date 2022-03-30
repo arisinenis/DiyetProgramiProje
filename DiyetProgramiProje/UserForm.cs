@@ -97,23 +97,42 @@ namespace DiyetProgramiProje
 
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
+
             try
             {
-                UserMeal userMeal = new UserMeal();
-                userMeal.MealDate = DateTime.Now;
-                userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
-                userMeal.UserInformationId = userRegisterInfo.Id;
-                userMealService.Add(userMeal);
+                UserMeal userMeal = userMealService.CheckMeal(DateTime.Now.Date, (MealTimesEnum)cboxMealTime.SelectedItem);
 
-                FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
+                if (userMeal == null)
+                {
+                    userMeal = new UserMeal();
+                    userMeal.MealDate = DateTime.Now;
+                    userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
+                    userMeal.UserInformationId = userRegisterInfo.Id;
+                    userMealService.Add(userMeal);
 
-                UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
-                userMealsAndFoods.UserMealID = userMeal.Id;
-                userMealsAndFoods.FoodNameID = foodName.Id;
-                userMealsAndFoods.Portion = nudPortion.Value;
-                userMealsAndFoods.Calorie = foodName.Calorie;
+                    FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
 
-                userMealsAndFoodsService.Add(userMealsAndFoods);
+                    UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
+                    userMealsAndFoods.UserMealID = userMeal.Id;
+                    userMealsAndFoods.FoodNameID = foodName.Id;
+                    userMealsAndFoods.Portion = nudPortion.Value;
+                    userMealsAndFoods.Calorie = foodName.Calorie;
+
+                    userMealsAndFoodsService.Add(userMealsAndFoods);
+                }
+                else
+                {
+                    FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
+
+                    UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
+                    userMealsAndFoods.UserMealID = userMeal.Id;
+                    userMealsAndFoods.FoodNameID = foodName.Id;
+                    userMealsAndFoods.Portion = nudPortion.Value;
+                    userMealsAndFoods.Calorie = foodName.Calorie;
+
+                    userMealsAndFoodsService.Add(userMealsAndFoods);
+                }
+                
             }
             catch (Exception ex)
             {

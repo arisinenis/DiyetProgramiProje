@@ -44,19 +44,19 @@ namespace DataAccessLayer.Repositories
             return db.SaveChanges() > 0;
         }
 
-        public List<UserMealsAndFoods> GetById(MealTimesEnum mealTime, DateTime mealDate, int userId)
-        {
-            var mealList = db.UserMealsAndFoods.Select(u => new
-            {
-                u.UserMeal.UserInformation.Id,
-                u.FoodName,
-                u.UserMeal.MealTime,
-                u.UserMeal.MealDate,
-                u.Calorie
-            }).Where(u => u.MealDate == mealDate && u.MealTime == mealTime && u.Id == userId);
+        //public List<UserMealsAndFoods> GetById(MealTimesEnum mealTime, DateTime mealDate, int userId)
+        //{
+        //    var mealList = db.UserMealsAndFoods.Select(u => new
+        //    {
+        //        u.UserMeal.UserInformation.Id,
+        //        u.FoodName,
+        //        u.UserMeal.MealTime,
+        //        u.UserMeal.MealDate,
+        //        u.Calorie
+        //    }).Where(u => u.MealDate == mealDate && u.MealTime == mealTime && u.Id == userId);
 
-            return (List<UserMealsAndFoods>)mealList;
-        }
+        //    return mealList;
+        //}
         
         public List<UserMealsAndFoods> GetAllMeals(int userId)
         {

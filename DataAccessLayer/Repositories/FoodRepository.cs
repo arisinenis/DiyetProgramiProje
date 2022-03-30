@@ -48,11 +48,8 @@ namespace DataAccessLayer.Repositories
             return foodNames;
         }
 
-
-
         public FoodName GetById(int id)
         {
-            //FoodName food = db.FoodNames.Find(id);
             FoodName food = db.FoodNames.Where(f => f.Id == id).SingleOrDefault();
 
             return food;
@@ -92,6 +89,20 @@ namespace DataAccessLayer.Repositories
             FoodName food = db.FoodNames.Find(foodId);
 
             return food.Calorie * portion;
+        }
+
+        public List<FoodName> GetActives()
+        {
+            List<FoodName> foods = db.FoodNames.Where(f => f.Status == "Active").ToList();
+
+            return foods;
+        }
+
+        public List<FoodName> GetPassives()
+        {
+            List<FoodName> foods = db.FoodNames.Where(f => f.Status == "Passive").ToList();
+
+            return foods;
         }
     }
 }

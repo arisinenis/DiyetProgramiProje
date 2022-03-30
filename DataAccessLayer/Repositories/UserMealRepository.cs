@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Context;
 using Model.Abstract;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,13 @@ namespace DataAccessLayer.Repositories
             meal.MealTime = _meal.MealTime;
             
             return db.SaveChanges() > 0;
+        }
+
+        public UserMeal CheckUserMeal(DateTime dateTime, MealTimesEnum mealTime)
+        {
+            UserMeal meal = db.UserMeals.Where(u => u.MealDate == dateTime && u.MealTime == mealTime).SingleOrDefault();
+
+            return meal;
         }
 
 

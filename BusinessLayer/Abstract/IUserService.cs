@@ -17,6 +17,9 @@ namespace BusinessLayer.Abstract
         TInformation GetById(int id);
         List<TInformation> GetAll();
         List<TInformation> GetCustomers(Dietician dietician);
+        List<TInformation> GetAllClients();
+        List<TInformation> GetAllPassives();
+        List<TInformation> GetAllActives();
         bool Active(TInformation user);
         bool Passive(TInformation user);
     }

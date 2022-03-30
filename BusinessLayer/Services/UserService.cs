@@ -90,13 +90,25 @@ namespace BusinessLayer.Services
                 return userRepository.AddRegister(userRegister);
             }
         }
-        
 
         public bool Passive(UserInformation user)
         {
             return userRepository.Passive(user);
         }
 
-       
+        public List<UserInformation> GetAllClients()
+        {
+            return userRepository.GetAllClients();
+        }
+
+        public List<UserInformation> GetAllPassives()
+        {
+            return userRepository.GetAllPassives();
+        }
+
+        public List<UserInformation> GetAllActives()
+        {
+            return userRepository.GetAllActives();
+        }
     }
 }

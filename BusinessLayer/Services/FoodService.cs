@@ -41,6 +41,16 @@ namespace BusinessLayer.Services
             }
         }
 
+        public List<FoodName> GetActives()
+        {
+            return foodRepository.GetActives();
+        }
+
+        public List<FoodName> GetPassives()
+        {
+            return foodRepository.GetPassives();
+        }
+
         public List<FoodName> GetAll()
         {
             return foodRepository.GetAll();

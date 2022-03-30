@@ -55,6 +55,15 @@ namespace DataAccessLayer.Repositories
         {
             return db.UserInformations.Where(u => u.Status == "Passive").ToList();
         }
+        public List<UserInformation> GetAllActives()
+        {
+            return db.UserInformations.Where(u => u.Status == "Active").ToList();
+        }
+
+        public List<UserInformation> GetAllClients()
+        {
+            return db.UserInformations.Where(u => u.UserRegisterInfo.UserType.ToString() == "Client").ToList();
+        }
 
         public UserInformation GetById(int userId)
         {
