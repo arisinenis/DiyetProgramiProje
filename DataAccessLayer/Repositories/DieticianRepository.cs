@@ -33,16 +33,9 @@ namespace DataAccessLayer.Repositories
 
         public DieticianRegisterInfo CheckLogin(string email, string password)
         {
-            DieticianRegisterInfo dietician = db.DieticianRegisterInfos.Where(d => d.Email == email && d.Password == password).SingleOrDefault();
-
-            if (dietician.Dietician.Status == "Active")
-            {
+            DieticianRegisterInfo dietician = db.DieticianRegisterInfos.Where(d => d.Email == email && d.Password == password && d.Dietician.Status == "Active").SingleOrDefault();
+                
                 return dietician;
-            }
-            else
-            {
-                return null;
-            }
         }
 
         public bool Active(Dietician entity)
@@ -63,9 +56,18 @@ namespace DataAccessLayer.Repositories
 
         public string CheckStatus(string email)
         {
-            DieticianRegisterInfo dietician = (DieticianRegisterInfo)db.DieticianRegisterInfos.Where(d => d.Email == email);
+            DieticianRegisterInfo dietician = db.DieticianRegisterInfos.Where(d => d.Email == email).FirstOrDefault();
+            if (dietician!=null)
+            {
+                string status = db.Dieticians.Find(dietician.Id).Status;
+                return status;
+            }
+            else
+            {
+                return null;
+            }
+            
 
-            return dietician.Dietician.Status;
         }
 
         public List<Dietician> GetActiveAll()

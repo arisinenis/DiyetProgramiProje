@@ -34,21 +34,23 @@ namespace DataAccessLayer.Repositories
         {
             UserRegisterInfo user = db.UserRegisterInfos.Where(u => u.Email == email && u.Password == password && u.UserInformation.Status == "Active").SingleOrDefault();
 
-            if (user != null)
-            {
-                return user;
-            }
-            else
-            {
-                return null;
-            }
+            return user;
         }
 
         public string CheckUserStatus(string email)
         {
             UserRegisterInfo user = db.UserRegisterInfos.Where(u => u.Email == email).FirstOrDefault();
+            if (user!=null)
+            {
+                string status = db.UserInformations.Find(user.Id).Status;
+                return status;
+            }
 
-            return user.UserInformation.Status;
+            else
+            {
+                return null;
+            }
+
         }
 
         public List<UserInformation> GetAllPassives()

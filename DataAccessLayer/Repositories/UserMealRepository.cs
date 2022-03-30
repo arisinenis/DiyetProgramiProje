@@ -40,6 +40,11 @@ namespace DataAccessLayer.Repositories
             return meal;
         }
 
+        public UserMeal GetUserMeal(int userId, DateTime dateTime, MealTimesEnum mealTime)
+        {
+            return db.UserMeals.Where(u => u.UserInformationId == userId && u.MealDate == dateTime && u.MealTime == mealTime).SingleOrDefault();
+        }
+
 
     }
 }

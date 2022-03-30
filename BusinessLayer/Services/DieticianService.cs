@@ -47,13 +47,9 @@ namespace BusinessLayer.Services
 
         public DieticianRegisterInfo CheckLogin(string email, string password)
         {
-            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password))
+            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password) || dieticianRepository.CheckStatus(email) == "Passive")
             {
-                throw new Exception("Please fill email and/or password sections.");
-            }
-            else if (dieticianRepository.CheckStatus(email) == "Passive")
-            {
-                throw new Exception("Your membership status is passive.");
+                return null;
             }
             else
             {

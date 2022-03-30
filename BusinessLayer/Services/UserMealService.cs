@@ -45,5 +45,10 @@ namespace BusinessLayer.Services
         {
             return userMealRepository.CheckUserMeal(dateTime, mealTime);
         }
+
+        public UserMeal GetMeal(int userId, DateTime dateTime, MealTimesEnum mealTime)
+        {
+            return userMealRepository.GetUserMeal(userId, dateTime, mealTime);
+        }
     }
 }

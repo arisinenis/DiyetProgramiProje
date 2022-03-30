@@ -24,13 +24,9 @@ namespace BusinessLayer.Services
 
         public UserRegisterInfo CheckLogin(string email, string password)
         {
-            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password))
+            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password) || userRepository.CheckUserStatus(email) == "Passive")
             {
-                throw new Exception("Please fill email and/or password sections.");
-            }
-            else if (userRepository.CheckUserStatus(email) == "Passive")
-            {
-                throw new Exception("Your membership status is passive.");
+                return null;
             }
             else
             {

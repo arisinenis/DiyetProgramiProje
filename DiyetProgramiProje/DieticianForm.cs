@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace DiyetProgramiProje
 {
     public partial class DieticianForm : Form
     {
-        public DieticianForm()
+        DieticianRegisterInfo dieticianRegisterInfo;
+        public DieticianForm(DieticianRegisterInfo _dieticianRegisterInfo)
         {
             InitializeComponent();
+            dieticianRegisterInfo = _dieticianRegisterInfo;
         }
 
         private void DieticianForm_Load(object sender, EventArgs e)

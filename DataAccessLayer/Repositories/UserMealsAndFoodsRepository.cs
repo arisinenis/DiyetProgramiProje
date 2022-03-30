@@ -44,33 +44,6 @@ namespace DataAccessLayer.Repositories
             return db.SaveChanges() > 0;
         }
 
-        //public List<UserMealsAndFoods> GetById(MealTimesEnum mealTime, DateTime mealDate, int userId)
-        //{
-        //    var mealList = db.UserMealsAndFoods.Select(u => new
-        //    {
-        //        u.UserMeal.UserInformation.Id,
-        //        u.FoodName,
-        //        u.UserMeal.MealTime,
-        //        u.UserMeal.MealDate,
-        //        u.Calorie
-        //    }).Where(u => u.MealDate == mealDate && u.MealTime == mealTime && u.Id == userId);
-
-        //    return mealList;
-        //}
-        
-        public List<UserMealsAndFoods> GetAllMeals(int userId)
-        {
-            var mealList = db.UserMealsAndFoods.Select(u => new
-            {
-                u.UserMeal.UserInformation.Id,
-                u.FoodName,
-                u.UserMeal.MealTime,
-                u.Calorie
-            }).Where(u => u.Id == userId);
-
-            return (List<UserMealsAndFoods>)mealList;
-        }
-
         public List<UserMealsAndFoods> GetAllMealsById(int userId, DateTime mealDate)
         {
             var meals = db.UserMealsAndFoods.Where(u => u.UserMeal.UserInformationId == userId && u.UserMeal.MealDate == mealDate).ToList();
@@ -104,6 +77,11 @@ namespace DataAccessLayer.Repositories
 
             return totalCalorieByMeal;
         }
+
+        public List<UserMealsAndFoods> GetUserAndFoodByMealId(int mealId)
+        {
+            return db.UserMealsAndFoods.Where(u => u.UserMealID == mealId).ToList();
+        } 
 
     }
 }

@@ -41,17 +41,7 @@ namespace BusinessLayer.Services
             }
         }
 
-        public List<UserMealsAndFoods> GetAllMeals(int userId)
-        {
-            if (userId < 1)
-            {
-                throw new Exception("Invalid input");
-            }
-            else
-            {
-                return userMealsAndFoodsRepository.GetAllMeals(userId);
-            }
-        }
+      
 
         public List<UserMealsAndFoods> GetAllMealsById(int userId, DateTime mealDate)
         {
@@ -65,17 +55,7 @@ namespace BusinessLayer.Services
             }
         }
 
-        public List<UserMealsAndFoods> GetById(MealTimesEnum mealTime, DateTime mealDate, int userId)
-        {
-            if (userId < 1 || String.IsNullOrWhiteSpace(mealDate.ToString()) || String.IsNullOrWhiteSpace(mealTime.ToString()))
-            {
-                throw new Exception("Invalid input");
-            }
-            else
-            {
-                return userMealsAndFoodsRepository.GetById(mealTime, mealDate, userId);
-            }
-        }
+        
 
         public decimal GetCalorieByMeal(int userId, DateTime mealDate, MealTimesEnum mealTime)
         {
@@ -111,6 +91,11 @@ namespace BusinessLayer.Services
             {
                 return userMealsAndFoodsRepository.UpdateMealAndFood(_meal);
             }
+        }
+
+        public List<UserMealsAndFoods> GetUserAndFoodByMealId(int mealId)
+        {
+            return userMealsAndFoodsRepository.GetUserAndFoodByMealId(mealId);
         }
     }
 }

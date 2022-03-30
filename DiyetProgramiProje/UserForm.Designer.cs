@@ -413,6 +413,7 @@ namespace DiyetProgramiProje
             this.btnShowMeal.TabIndex = 19;
             this.btnShowMeal.Text = "Show Meal";
             this.btnShowMeal.UseVisualStyleBackColor = true;
+            this.btnShowMeal.Click += new System.EventHandler(this.btnShowMeal_Click);
             // 
             // cboxLvMealTime
             // 

@@ -15,12 +15,15 @@ namespace DiyetProgramiProje
     public partial class Form1 : Form
     {
         UserService userService;
+        DieticianService dieticianService;
 
         public Form1()
         {
             InitializeComponent();
             userService = new UserService();
-            
+            dieticianService = new DieticianService();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,19 +33,38 @@ namespace DiyetProgramiProje
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try
+            if (txtEmail.Text == "admin@admin.com" && txtPassword.Text == "1")
+            {
+                AdminForm adminForm = new AdminForm();
+                this.Hide();
+                adminForm.ShowDialog();
+            }
+            else
             {
                 UserRegisterInfo user = userService.CheckLogin(txtEmail.Text, txtPassword.Text);
-                UserForm userForm = new UserForm(user);
-                this.Hide();
-                userForm.ShowDialog();
-                
+                DieticianRegisterInfo dietician = dieticianService.CheckLogin(txtEmail.Text, txtPassword.Text);
+
+
+
+                if (user != null && dietician == null)
+                {
+                    UserForm userForm = new UserForm(user);
+                    this.Hide();
+                    userForm.ShowDialog();
+                }
+                else if (user == null && dietician != null)
+                {
+                    DieticianForm dieticianForm = new DieticianForm(dietician);
+                    this.Hide();
+                    dieticianForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Please check your login information");
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Please check your e-mail and password.");
-            }
-            
+
+
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)

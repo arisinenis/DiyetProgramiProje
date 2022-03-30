@@ -37,7 +37,9 @@ namespace DiyetProgramiProje
         {
             FillMealTimeCBox();
             FillFoodsListBox();
-            cboxMealTime.SelectedIndex=0;   
+            FillLvMealTimeCBox();
+            cboxMealTime.SelectedIndex=0;
+            cboxLvMealTime.SelectedIndex = 0;
         }
 
         private void FillMealTimeCBox()
@@ -45,6 +47,14 @@ namespace DiyetProgramiProje
             foreach (var item in Enum.GetValues(typeof(MealTimesEnum)))
             {
                 cboxMealTime.Items.Add(item);
+            }
+        }
+
+        private void FillLvMealTimeCBox()
+        {
+            foreach (var item in Enum.GetValues(typeof(MealTimesEnum)))
+            {
+                cboxLvMealTime.Items.Add(item);
             }
         }
 
@@ -105,7 +115,7 @@ namespace DiyetProgramiProje
                 if (userMeal == null)
                 {
                     userMeal = new UserMeal();
-                    userMeal.MealDate = DateTime.Now;
+                    userMeal.MealDate = DateTime.Now.Date;
                     userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
                     userMeal.UserInformationId = userRegisterInfo.Id;
                     userMealService.Add(userMeal);
@@ -128,7 +138,7 @@ namespace DiyetProgramiProje
                     userMealsAndFoods.UserMealID = userMeal.Id;
                     userMealsAndFoods.FoodNameID = foodName.Id;
                     userMealsAndFoods.Portion = nudPortion.Value;
-                    userMealsAndFoods.Calorie = foodName.Calorie;
+                    userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
 
                     userMealsAndFoodsService.Add(userMealsAndFoods);
                 }
@@ -140,6 +150,32 @@ namespace DiyetProgramiProje
              
             }
             
+        }
+
+        private void FillListView()
+        {
+
+            UserMeal meal = userMealService.GetMeal(userRegisterInfo.Id, dtMealDate.Value.Date, (MealTimesEnum)cboxLvMealTime.SelectedItem);
+
+            List<UserMealsAndFoods> meals = userMealsAndFoodsService.GetUserAndFoodByMealId(meal.Id);
+
+            foreach (var item in meals)
+            {
+                FoodName food = foodService.GetById(item.FoodNameID);
+
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = food.Name;
+                lvi.SubItems.Add(item.Portion.ToString());
+                lvi.SubItems.Add(item.Calorie.ToString());
+                lvi.Tag = item.UserMealID;
+
+                lvMeals.Items.Add(lvi);
+            }
+        }
+
+        private void btnShowMeal_Click(object sender, EventArgs e)
+        {
+            FillListView();
         }
     }
 }
