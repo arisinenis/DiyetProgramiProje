@@ -31,10 +31,10 @@ namespace BusinessLayer.Services
             {
                 throw new Exception("Please type a calorie !");
             }
-            else if (String.IsNullOrWhiteSpace(food.FoodCategory.CategoryName))
-            {
-                throw new Exception("Please type a categorie name !");
-            }
+            //else if (String.IsNullOrWhiteSpace(food.FoodCategory.CategoryName))
+            //{
+            //    throw new Exception("Please type a categorie name !");
+            //}
             else
             {
                 return foodRepository.Add(food);
@@ -117,7 +117,7 @@ namespace BusinessLayer.Services
 
         public bool Update(FoodName food)
         {
-            if (String.IsNullOrWhiteSpace(food.Name) || String.IsNullOrWhiteSpace(food.FoodCategory.ToString()) || String.IsNullOrWhiteSpace(food.Calorie.ToString()))
+            if (String.IsNullOrWhiteSpace(food.Name) || String.IsNullOrWhiteSpace(food.Calorie.ToString()))
             {
                 throw new Exception("Please fill all blanks");
             }

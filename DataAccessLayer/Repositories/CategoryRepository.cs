@@ -67,5 +67,13 @@ namespace DataAccessLayer.Repositories
         {
             return db.FoodCategories.Where(f => f.Status == "Passive").ToList();
         }
+
+        public List<FoodCategory> GetByFilter(string filter)
+        {
+            List<FoodCategory> foodCategories = db.FoodCategories.Where(f => f.CategoryName.Contains(filter)).ToList();
+            return foodCategories;
+        }
+
+
     }
 }

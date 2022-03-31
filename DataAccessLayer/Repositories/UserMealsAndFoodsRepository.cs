@@ -13,9 +13,13 @@ namespace DataAccessLayer.Repositories
     public class UserMealsAndFoodsRepository
     {
         DietProgramContext db;
+        UserMealRepository userMealRepository;
+        UserRepository userRepository;
         public UserMealsAndFoodsRepository()
         {
             db = new DietProgramContext();
+            userMealRepository = new UserMealRepository();
+            userRepository = new UserRepository();
         }
 
         public bool Add(UserMealsAndFoods meal)
@@ -27,38 +31,30 @@ namespace DataAccessLayer.Repositories
 
         public bool UpdateMealAndFood(UserMealsAndFoods _meal)
         {
-            UserMealsAndFoods meal = db.UserMealsAndFoods.Find(_meal.UserMealID);
-            meal.FoodName.Id = _meal.FoodName.Id;
-            meal.Portion = _meal.Portion;
-            meal.UserMeal.MealDate = _meal.UserMeal.MealDate;
-            meal.UserMeal.MealTime = _meal.UserMeal.MealTime;
+            Delete(_meal.UserMealID, _meal.FoodNameID);
+            Add(_meal);
 
             return db.SaveChanges() > 0;
         }
 
-        public bool Delete(int id)
+        public bool Delete(int mealId, int foodId)
         {
-            UserMealsAndFoods meal = db.UserMealsAndFoods.Find(id);
+            UserMealsAndFoods meal = db.UserMealsAndFoods.Where(u => u.UserMealID == mealId && u.FoodNameID == foodId).SingleOrDefault();
             db.UserMealsAndFoods.Remove(meal);
 
             return db.SaveChanges() > 0;
         }
 
-        public List<UserMealsAndFoods> GetAllMealsById(int userId, DateTime mealDate)
-        {
-            var meals = db.UserMealsAndFoods.Where(u => u.UserMeal.UserInformationId == userId && u.UserMeal.MealDate == mealDate).ToList();
 
-            return meals;
-        }
 
         public decimal GetTotalCalorieById(int userId, DateTime mealDate)
         {
             decimal totalCalorie = 0;
-            List<UserMealsAndFoods> meals = GetAllMealsById(userId, mealDate);
+            List<UserMeal> meals = userMealRepository.GetAllUserMeal(userId, mealDate);
 
-            foreach (UserMealsAndFoods item in meals)
+            foreach (UserMeal item in meals)
             {
-                totalCalorie += (item.Calorie * item.Portion);
+                totalCalorie += GetCalorieByMeal(item.UserInformationId, item.MealDate, item.MealTime);
             }
 
             return totalCalorie;
@@ -68,20 +64,59 @@ namespace DataAccessLayer.Repositories
         {
             decimal totalCalorieByMeal = 0;
 
-            List<UserMealsAndFoods> meals = db.UserMealsAndFoods.Where(u => u.UserMeal.UserInformationId == userId && u.UserMeal.MealDate == mealDate && u.UserMeal.MealTime == mealTime).ToList();
+            UserMeal userMeal = userMealRepository.GetUserMeal(userId, mealDate, mealTime);
 
-            foreach (UserMealsAndFoods item in meals)
+            if (userMeal != null)
             {
-                totalCalorieByMeal += (item.Calorie * item.Portion);
-            }
+                List<UserMealsAndFoods> meals = db.UserMealsAndFoods.Where(u => u.UserMealID == userMeal.Id).ToList();
 
-            return totalCalorieByMeal;
+                foreach (UserMealsAndFoods item in meals)
+                {
+                    totalCalorieByMeal += (item.Calorie);
+                }
+                return totalCalorieByMeal;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public List<UserMealsAndFoods> GetUserAndFoodByMealId(int mealId)
         {
             return db.UserMealsAndFoods.Where(u => u.UserMealID == mealId).ToList();
-        } 
+        }
+
+        public bool CheckMealAndFoods(int foodId, int mealId)
+        {
+            UserMealsAndFoods userMealsAndFoods = db.UserMealsAndFoods.Where(u => u.FoodNameID == foodId && u.UserMealID == mealId).SingleOrDefault();
+
+            return userMealsAndFoods != null;
+        }
+
+
+        public UserMealsAndFoods GetMealsAndFoods(int foodId, int mealId)
+        {
+            UserMealsAndFoods userMealsAndFoods = db.UserMealsAndFoods.Where(u => u.FoodNameID == foodId && u.UserMealID == mealId).SingleOrDefault();
+
+            return userMealsAndFoods;
+        }
+
+        public List<int> GetFoodIdbyUserMeal(UserMeal userMeal)
+        {
+            List<int> foodIds = new List<int>();
+            List<UserMealsAndFoods> meals = db.UserMealsAndFoods.Where(u => u.UserMealID == userMeal.Id).ToList();
+
+            foreach (var item in meals)
+            {
+                foodIds.Add(item.FoodNameID);
+            }
+
+            return foodIds;
+        }
+
 
     }
+
+    
 }

@@ -44,5 +44,10 @@ namespace DataAccessLayer.Repositories
 
             return messages;
         }
+
+        public Message GetByMessageId(int messageId)
+        {
+            return db.Messages.Find(messageId);
+        }
     }
 }

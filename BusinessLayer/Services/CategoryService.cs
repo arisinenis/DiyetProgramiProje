@@ -78,5 +78,10 @@ namespace BusinessLayer.Services
                 return categoryRepository.Update(category);
             }
         }
+
+        public List<FoodCategory> GetByFilter(string filter)
+        {
+            return categoryRepository.GetByFilter(filter);
+        }
     }
 }

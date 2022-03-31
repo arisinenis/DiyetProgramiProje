@@ -15,6 +15,7 @@ namespace DataAccessLayer.EntityConfiguration
             HasKey(f => f.Id);
             Property(f => f.Name).IsRequired().HasMaxLength(100);
             Property(f => f.Calorie).IsRequired();
+            //Property(f => f.FoodPicture).IsRequired();
             Property(f => f.Status).IsRequired().HasMaxLength(8);
             HasIndex(f => f.Name).IsUnique();
 

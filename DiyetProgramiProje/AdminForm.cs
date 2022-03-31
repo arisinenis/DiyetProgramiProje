@@ -18,12 +18,16 @@ namespace DiyetProgramiProje
         UserService userService;
         CategoryService categoryService;
         FoodService foodService;
-        public AdminForm()
+        UserRegisterInfo userRegisterInfo;
+        FoodName foodForUpdate;
+        FoodCategory foodCategory;
+        public AdminForm(UserRegisterInfo _user)
         {
             InitializeComponent();
             userService = new UserService();
             categoryService = new CategoryService();
             foodService = new FoodService();
+            userRegisterInfo = _user;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
@@ -105,6 +109,7 @@ namespace DiyetProgramiProje
 
         private void btnGetFoods_Click(object sender, EventArgs e)
         {
+            pboxFoodPic.Visible=false;
             try
             {
                 if (rbFoodActives.Checked) FillFoods(rbFoodActives.Text);
@@ -347,18 +352,21 @@ namespace DiyetProgramiProje
             }
         }
 
-        //private Image ConvertByteToPicture(FoodName food)
-        //{
-        //    using (var ms = new MemoryStream(food.FoodPicture))
-        //    {
-        //        return Image.FromStream(ms);
-        //    }
-        //}
+        private Image ConvertByteToPicture(FoodName food)
+        {
+                using (var ms = new MemoryStream(food.FoodPicture))
+                {
+                    return Image.FromStream(ms);
+                }
+
+        }
 
         private void lvFood_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
-            //pboxFoodPic.Image = ConvertByteToPicture(food);
+            pboxFoodPic.Visible = true;
+            FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
+            pboxFoodPic.Image = ConvertByteToPicture(food);
+            foodForUpdate = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
         }
 
         private void FillClientByFilter(string statusType)
@@ -414,6 +422,31 @@ namespace DiyetProgramiProje
             }
         }
 
-        
+        private void btnAddCatAndFood_Click(object sender, EventArgs e)
+        {
+            
+            FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo);
+            foodAddForm.ShowDialog();
+            foodAddForm.Hide();
+        }
+
+        private void lvCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foodCategory = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
+        }
+
+        private void btnUpdateCatAndFood_Click(object sender, EventArgs e)
+        {
+            if (lvFood.FocusedItem == null && lvCategory.FocusedItem == null)
+            {
+                MessageBox.Show("Please select an item.");
+            }
+            else
+            {
+                FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo, foodForUpdate, foodCategory);
+                foodAddForm.ShowDialog();
+            }
+            
+        }
     }
 }

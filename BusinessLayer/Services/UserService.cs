@@ -106,5 +106,10 @@ namespace BusinessLayer.Services
         {
             return userRepository.GetAllActives();
         }
+
+        public UserRegisterInfo GetUserByEmail(string email)
+        {
+            return userRepository.GetUserByEmail(email);
+        }
     }
 }

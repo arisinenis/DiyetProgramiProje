@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DieticianForm));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblDailyCalorieTaken = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDailyCalorieRequirement = new System.Windows.Forms.Label();
             this.btnShowMeal = new System.Windows.Forms.Button();
             this.cboxLvMealTime = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,9 +46,9 @@
             this.grpbox = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMessageTitle = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.txtMessage = new System.Windows.Forms.RichTextBox();
+            this.lvClients = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -85,7 +85,7 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.lblDailyCalorieTaken);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox6.Location = new System.Drawing.Point(216, 463);
             this.groupBox6.Name = "groupBox6";
@@ -94,20 +94,20 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Daily Calorie Taken";
             // 
-            // label7
+            // lblDailyCalorieTaken
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(56, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 24);
-            this.label7.TabIndex = 0;
+            this.lblDailyCalorieTaken.AutoSize = true;
+            this.lblDailyCalorieTaken.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDailyCalorieTaken.ForeColor = System.Drawing.Color.Red;
+            this.lblDailyCalorieTaken.Location = new System.Drawing.Point(56, 36);
+            this.lblDailyCalorieTaken.Name = "lblDailyCalorieTaken";
+            this.lblDailyCalorieTaken.Size = new System.Drawing.Size(0, 24);
+            this.lblDailyCalorieTaken.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblDailyCalorieRequirement);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(15, 462);
             this.groupBox1.Name = "groupBox1";
@@ -116,15 +116,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Daily Calorie Requirement";
             // 
-            // label1
+            // lblDailyCalorieRequirement
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(74, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
-            this.label1.TabIndex = 0;
+            this.lblDailyCalorieRequirement.AutoSize = true;
+            this.lblDailyCalorieRequirement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDailyCalorieRequirement.ForeColor = System.Drawing.Color.Red;
+            this.lblDailyCalorieRequirement.Location = new System.Drawing.Point(74, 36);
+            this.lblDailyCalorieRequirement.Name = "lblDailyCalorieRequirement";
+            this.lblDailyCalorieRequirement.Size = new System.Drawing.Size(0, 24);
+            this.lblDailyCalorieRequirement.TabIndex = 0;
             // 
             // btnShowMeal
             // 
@@ -135,6 +135,7 @@
             this.btnShowMeal.TabIndex = 19;
             this.btnShowMeal.Text = "Show Meal";
             this.btnShowMeal.UseVisualStyleBackColor = true;
+            this.btnShowMeal.Click += new System.EventHandler(this.btnShowMeal_Click);
             // 
             // cboxLvMealTime
             // 
@@ -159,6 +160,7 @@
             this.dtMealDate.Name = "dtMealDate";
             this.dtMealDate.Size = new System.Drawing.Size(229, 24);
             this.dtMealDate.TabIndex = 16;
+            this.dtMealDate.ValueChanged += new System.EventHandler(this.dtMealDate_ValueChanged);
             // 
             // label8
             // 
@@ -175,6 +177,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.lvMeals.FullRowSelect = true;
             this.lvMeals.GridLines = true;
             this.lvMeals.HideSelection = false;
             this.lvMeals.Location = new System.Drawing.Point(15, 137);
@@ -205,9 +208,9 @@
             this.grpbox.BackColor = System.Drawing.Color.Transparent;
             this.grpbox.Controls.Add(this.label2);
             this.grpbox.Controls.Add(this.txtMessageTitle);
-            this.grpbox.Controls.Add(this.button1);
-            this.grpbox.Controls.Add(this.richTextBox1);
-            this.grpbox.Controls.Add(this.listView1);
+            this.grpbox.Controls.Add(this.btnSend);
+            this.grpbox.Controls.Add(this.txtMessage);
+            this.grpbox.Controls.Add(this.lvClients);
             this.grpbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpbox.Location = new System.Drawing.Point(13, 13);
             this.grpbox.Name = "grpbox";
@@ -232,27 +235,28 @@
             this.txtMessageTitle.Size = new System.Drawing.Size(272, 24);
             this.txtMessageTitle.TabIndex = 3;
             // 
-            // button1
+            // btnSend
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(437, 532);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 59);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSend.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSend.Location = new System.Drawing.Point(437, 532);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(134, 59);
+            this.btnSend.TabIndex = 2;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // richTextBox1
+            // txtMessage
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(7, 304);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(564, 222);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.txtMessage.Location = new System.Drawing.Point(7, 304);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(564, 222);
+            this.txtMessage.TabIndex = 1;
+            this.txtMessage.Text = "";
             // 
-            // listView1
+            // lvClients
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvClients.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader5,
             this.columnHeader6,
@@ -260,14 +264,16 @@
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 23);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(564, 274);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvClients.FullRowSelect = true;
+            this.lvClients.GridLines = true;
+            this.lvClients.HideSelection = false;
+            this.lvClients.Location = new System.Drawing.Point(7, 23);
+            this.lvClients.Name = "lvClients";
+            this.lvClients.Size = new System.Drawing.Size(564, 274);
+            this.lvClients.TabIndex = 0;
+            this.lvClients.UseCompatibleStateImageBehavior = false;
+            this.lvClients.View = System.Windows.Forms.View.Details;
+            this.lvClients.SelectedIndexChanged += new System.EventHandler(this.lvClients_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -343,9 +349,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.GroupBox grpbox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.RichTextBox txtMessage;
+        private System.Windows.Forms.ListView lvClients;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
@@ -353,9 +359,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblDailyCalorieTaken;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDailyCalorieRequirement;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMessageTitle;

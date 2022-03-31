@@ -29,33 +29,10 @@ namespace BusinessLayer.Services
             }
         }
 
-        public bool Delete(int id)
+        public bool Delete(int mealId, int foodId)
         {
-            if (id < 1)
-            {
-                throw new Exception("Invalid input");
-            }
-            else
-            {
-                return userMealsAndFoodsRepository.Delete(id);
-            }
+                return userMealsAndFoodsRepository.Delete(mealId, foodId);
         }
-
-      
-
-        public List<UserMealsAndFoods> GetAllMealsById(int userId, DateTime mealDate)
-        {
-            if (userId < 1 || String.IsNullOrWhiteSpace(mealDate.ToString()))
-            {
-                throw new Exception("Invalid input");
-            }
-            else
-            {
-                return userMealsAndFoodsRepository.GetAllMealsById(userId, mealDate);
-            }
-        }
-
-        
 
         public decimal GetCalorieByMeal(int userId, DateTime mealDate, MealTimesEnum mealTime)
         {
@@ -83,7 +60,7 @@ namespace BusinessLayer.Services
 
         public bool UpdateMealAndFood(UserMealsAndFoods _meal)
         {
-            if (String.IsNullOrWhiteSpace(_meal.FoodName.Name) || String.IsNullOrWhiteSpace(_meal.Portion.ToString()) || String.IsNullOrWhiteSpace(_meal.UserMeal.MealDate.ToString()) || String.IsNullOrWhiteSpace(_meal.UserMeal.MealTime.ToString()))
+            if (String.IsNullOrWhiteSpace(_meal.Portion.ToString()))
             {
                 throw new Exception("Please fill all blanks");
             }
@@ -96,6 +73,20 @@ namespace BusinessLayer.Services
         public List<UserMealsAndFoods> GetUserAndFoodByMealId(int mealId)
         {
             return userMealsAndFoodsRepository.GetUserAndFoodByMealId(mealId);
+        }
+
+        public bool CheckMealAndFoods(int foodId, int mealId)
+        {
+            return userMealsAndFoodsRepository.CheckMealAndFoods(foodId,mealId);
+        }
+
+        public UserMealsAndFoods GetMealsAndFoods(int foodId, int mealId)
+        {
+            return userMealsAndFoodsRepository.GetMealsAndFoods(foodId, mealId);
+        }
+        public List<int> GetFoodIdbyUserMeal(UserMeal userMeal)
+        {
+            return userMealsAndFoodsRepository.GetFoodIdbyUserMeal(userMeal);
         }
     }
 }

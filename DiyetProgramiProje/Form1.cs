@@ -35,7 +35,8 @@ namespace DiyetProgramiProje
         {
             if (txtEmail.Text == "admin@admin.com" && txtPassword.Text == "1")
             {
-                AdminForm adminForm = new AdminForm();
+                UserRegisterInfo user = userService.GetUserByEmail(txtEmail.Text);
+                AdminForm adminForm = new AdminForm(user);
                 this.Hide();
                 adminForm.ShowDialog();
             }

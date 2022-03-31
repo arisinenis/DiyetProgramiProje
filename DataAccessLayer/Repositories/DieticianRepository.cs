@@ -80,9 +80,10 @@ namespace DataAccessLayer.Repositories
 
         public Dietician GetById(int _Id)
         {
-            Dietician dietician = (Dietician)db.Dieticians.Where(d => d.Id == _Id).SingleOrDefault();
+            Dietician dietician = db.Dieticians.Where(d => d.Id == _Id).SingleOrDefault();
 
             return dietician;
         }
+        
     }
 }

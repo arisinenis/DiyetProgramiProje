@@ -99,5 +99,10 @@ namespace DataAccessLayer.Repositories
             return db.SaveChanges() > 0;
         }
 
+        public UserRegisterInfo GetUserByEmail(string email)
+        {
+            return db.UserRegisterInfos.Where(u => u.Email == email).SingleOrDefault();
+        }
+
     }
 }

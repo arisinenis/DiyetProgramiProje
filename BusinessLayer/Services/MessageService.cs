@@ -56,5 +56,10 @@ namespace BusinessLayer.Services
                 return messageRepository.GetByUserId(userId);
             }
         }
+
+        public Message GetByMessageId(int messageId)
+        {
+            return messageRepository.GetByMessageId(messageId);
+        }
     }
 }

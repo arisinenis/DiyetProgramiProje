@@ -12,8 +12,7 @@ namespace BusinessLayer.Abstract
     {
         bool Add(T meal);
         bool UpdateMealAndFood(T _meal);
-        bool Delete(int id);
-        List<T> GetAllMealsById(int userId, DateTime mealDate);
+        bool Delete(int mealId, int foodId);
         decimal GetTotalCalorieById(int userId, DateTime mealDate);
         decimal GetCalorieByMeal(int userId, DateTime mealDate, MealTimesEnum mealTime);
 

@@ -33,9 +33,9 @@ namespace DataAccessLayer.Repositories
             return db.SaveChanges() > 0;
         }
 
-        public UserMeal CheckUserMeal(DateTime dateTime, MealTimesEnum mealTime)
+        public UserMeal CheckUserMeal(DateTime dateTime, MealTimesEnum mealTime, int userId)
         {
-            UserMeal meal = db.UserMeals.Where(u => u.MealDate == dateTime && u.MealTime == mealTime).SingleOrDefault();
+            UserMeal meal = db.UserMeals.Where(u => u.MealDate == dateTime && u.MealTime == mealTime && u.UserInformationId == userId).SingleOrDefault();
 
             return meal;
         }
@@ -45,6 +45,17 @@ namespace DataAccessLayer.Repositories
             return db.UserMeals.Where(u => u.UserInformationId == userId && u.MealDate == dateTime && u.MealTime == mealTime).SingleOrDefault();
         }
 
+        public List<UserMeal> GetAllUserMeal(int userId, DateTime dateTime)
+        {
+            return db.UserMeals.Where(u => u.UserInformationId == userId && u.MealDate == dateTime).ToList();
+        }
+
+        public UserMeal GetById(int mealId)
+        {
+            return db.UserMeals.Where(u=> u.Id==mealId).SingleOrDefault();
+        }
+
+        
 
     }
 }

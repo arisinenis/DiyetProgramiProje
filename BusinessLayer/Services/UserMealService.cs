@@ -41,14 +41,24 @@ namespace BusinessLayer.Services
             }
         }
 
-        public UserMeal CheckMeal(DateTime dateTime, MealTimesEnum mealTime)
+        public UserMeal CheckMeal(DateTime dateTime, MealTimesEnum mealTime, int userId)
         {
-            return userMealRepository.CheckUserMeal(dateTime, mealTime);
+            return userMealRepository.CheckUserMeal(dateTime, mealTime, userId);
         }
 
         public UserMeal GetMeal(int userId, DateTime dateTime, MealTimesEnum mealTime)
         {
             return userMealRepository.GetUserMeal(userId, dateTime, mealTime);
+        }
+
+        public List<UserMeal> GetAllUserMeal(int userId, DateTime dateTime)
+        {
+            return userMealRepository.GetAllUserMeal(userId, dateTime);
+        }
+
+        public UserMeal GetById(int mealId)
+        {
+            return userMealRepository.GetById(mealId);
         }
     }
 }

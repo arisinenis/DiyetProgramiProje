@@ -30,8 +30,8 @@ namespace DiyetProgramiProje
         private void InitializeComponent()
         {
             this.gboxMessages = new System.Windows.Forms.GroupBox();
-            this.lboxMessages = new System.Windows.Forms.ListBox();
             this.txtShowMessage = new System.Windows.Forms.TextBox();
+            this.lboxMessages = new System.Windows.Forms.ListBox();
             this.gboxMessages.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,34 +46,37 @@ namespace DiyetProgramiProje
             this.gboxMessages.TabIndex = 0;
             this.gboxMessages.TabStop = false;
             this.gboxMessages.Text = "Messages";
-            // 
-            // lboxMessages
-            // 
-            this.lboxMessages.FormattingEnabled = true;
-            this.lboxMessages.ItemHeight = 22;
-            this.lboxMessages.Location = new System.Drawing.Point(12, 27);
-            this.lboxMessages.Name = "lboxMessages";
-            this.lboxMessages.Size = new System.Drawing.Size(239, 378);
-            this.lboxMessages.TabIndex = 0;
+            this.gboxMessages.Enter += new System.EventHandler(this.gboxMessages_Enter);
             // 
             // txtShowMessage
             // 
             this.txtShowMessage.Location = new System.Drawing.Point(275, 27);
             this.txtShowMessage.Multiline = true;
             this.txtShowMessage.Name = "txtShowMessage";
-            this.txtShowMessage.Size = new System.Drawing.Size(287, 378);
+            this.txtShowMessage.Size = new System.Drawing.Size(287, 364);
             this.txtShowMessage.TabIndex = 1;
+            // 
+            // lboxMessages
+            // 
+            this.lboxMessages.FormattingEnabled = true;
+            this.lboxMessages.ItemHeight = 18;
+            this.lboxMessages.Location = new System.Drawing.Point(12, 27);
+            this.lboxMessages.Name = "lboxMessages";
+            this.lboxMessages.Size = new System.Drawing.Size(239, 364);
+            this.lboxMessages.TabIndex = 0;
+            this.lboxMessages.SelectedIndexChanged += new System.EventHandler(this.lboxMessages_SelectedIndexChanged);
             // 
             // UserMessagesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 421);
             this.Controls.Add(this.gboxMessages);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UserMessagesForm";
             this.Text = "UserMessagesForm";
+            this.Load += new System.EventHandler(this.UserMessagesForm_Load);
             this.gboxMessages.ResumeLayout(false);
             this.gboxMessages.PerformLayout();
             this.ResumeLayout(false);
