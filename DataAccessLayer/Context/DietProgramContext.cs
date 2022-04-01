@@ -26,6 +26,8 @@ namespace DataAccessLayer.Context
         public DbSet<UserMeal> UserMeals { get; set; }
         public DbSet<UserRegisterInfo> UserRegisterInfos { get; set; }
         public DbSet<UserMealsAndFoods> UserMealsAndFoods { get; set; }
+        public DbSet<DieticianMessage> DieticianMessages { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -39,6 +41,7 @@ namespace DataAccessLayer.Context
             modelBuilder.Configurations.Add(new UserMealConfiguration());
             modelBuilder.Configurations.Add(new UserRegisterInfoConfiguration());
             modelBuilder.Configurations.Add(new UserMealsAndFoodsConfiguration());
+            modelBuilder.Configurations.Add(new DieticianMessageConfiguration());
         }
 
     }

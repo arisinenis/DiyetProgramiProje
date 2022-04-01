@@ -19,8 +19,9 @@ namespace DataAccessLayer.EntityConfiguration
             Property(u => u.Height).IsRequired();
             Property(u => u.Weight).IsRequired();
             Property(u => u.Status).IsRequired().HasMaxLength(7);
+            Property(u => u.DieticianId).IsRequired();
 
-            HasOptional(u => u.Dietician).WithMany(u => u.UserInformations).HasForeignKey(u => u.DieticianId);
+            HasRequired(u => u.Dietician).WithMany(u => u.UserInformations).HasForeignKey(u => u.DieticianId);
 
 
             //HasMany(u => u.UserMeals).WithMany(m => m.UserInformations).Map(um =>

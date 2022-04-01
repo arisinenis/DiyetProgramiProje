@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityConfiguration
 {
-    public class MessageConfiguration 
-        : EntityTypeConfiguration<Message>
+    internal class DieticianMessageConfiguration:EntityTypeConfiguration<DieticianMessage>
     {
-        public MessageConfiguration()
+        public DieticianMessageConfiguration()
         {
             Property(m => m.MessageHeader).IsRequired();
             Property(m => m.Text).IsRequired();
             Property(m => m.MessageDate).IsRequired();
-            Property(m => m.DieticianId).IsRequired();
+            Property(m => m.UserId).IsRequired();
 
-            HasRequired(m => m.UserInformation).WithMany(m => m.Messages).HasForeignKey(m => m.UserInformationId);
+
+            HasRequired(m => m.Dietician).WithMany(m => m.DieticianMessages).HasForeignKey(m => m.DieticianId);
         }
     }
 }

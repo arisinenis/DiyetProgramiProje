@@ -68,6 +68,12 @@
     <Compile Include="DieticianForm.Designer.cs">
       <DependentUpon>DieticianForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DieticianMessagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieticianMessagesForm.Designer.cs">
+      <DependentUpon>DieticianMessagesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoodAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DieticianForm.resx">
       <DependentUpon>DieticianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DieticianMessagesForm.resx">
+      <DependentUpon>DieticianMessagesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoodAddForm.resx">
       <DependentUpon>FoodAddForm.cs</DependentUpon>

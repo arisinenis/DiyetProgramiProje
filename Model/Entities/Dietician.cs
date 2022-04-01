@@ -13,6 +13,7 @@ namespace Model.Entities
         public Dietician()
         {
             UserInformations = new HashSet<UserInformation>();
+            DieticianMessages = new HashSet<DieticianMessage>();
         }
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -33,5 +34,6 @@ namespace Model.Entities
 
         //public virtual int DieticianRegisterInfoId { get; set; }
         public virtual DieticianRegisterInfo DieticianRegisterInfo { get; set; }
+        public virtual ICollection<DieticianMessage> DieticianMessages { get; set; }
     }
 }

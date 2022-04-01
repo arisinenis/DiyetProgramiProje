@@ -32,7 +32,14 @@ namespace DiyetProgramiProje
             this.gboxMessages = new System.Windows.Forms.GroupBox();
             this.txtShowMessage = new System.Windows.Forms.TextBox();
             this.lboxMessages = new System.Windows.Forms.ListBox();
+            this.grpBoxReply = new System.Windows.Forms.GroupBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtHeader = new System.Windows.Forms.TextBox();
+            this.txtText = new System.Windows.Forms.RichTextBox();
             this.gboxMessages.SuspendLayout();
+            this.grpBoxReply.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboxMessages
@@ -42,7 +49,7 @@ namespace DiyetProgramiProje
             this.gboxMessages.Controls.Add(this.lboxMessages);
             this.gboxMessages.Location = new System.Drawing.Point(0, 0);
             this.gboxMessages.Name = "gboxMessages";
-            this.gboxMessages.Size = new System.Drawing.Size(580, 411);
+            this.gboxMessages.Size = new System.Drawing.Size(570, 341);
             this.gboxMessages.TabIndex = 0;
             this.gboxMessages.TabStop = false;
             this.gboxMessages.Text = "Messages";
@@ -50,27 +57,85 @@ namespace DiyetProgramiProje
             // 
             // txtShowMessage
             // 
-            this.txtShowMessage.Location = new System.Drawing.Point(275, 27);
+            this.txtShowMessage.Location = new System.Drawing.Point(273, 23);
             this.txtShowMessage.Multiline = true;
             this.txtShowMessage.Name = "txtShowMessage";
-            this.txtShowMessage.Size = new System.Drawing.Size(287, 364);
+            this.txtShowMessage.Size = new System.Drawing.Size(287, 310);
             this.txtShowMessage.TabIndex = 1;
             // 
             // lboxMessages
             // 
             this.lboxMessages.FormattingEnabled = true;
             this.lboxMessages.ItemHeight = 18;
-            this.lboxMessages.Location = new System.Drawing.Point(12, 27);
+            this.lboxMessages.Location = new System.Drawing.Point(12, 23);
             this.lboxMessages.Name = "lboxMessages";
-            this.lboxMessages.Size = new System.Drawing.Size(239, 364);
+            this.lboxMessages.Size = new System.Drawing.Size(245, 310);
             this.lboxMessages.TabIndex = 0;
             this.lboxMessages.SelectedIndexChanged += new System.EventHandler(this.lboxMessages_SelectedIndexChanged);
+            // 
+            // grpBoxReply
+            // 
+            this.grpBoxReply.Controls.Add(this.btnSend);
+            this.grpBoxReply.Controls.Add(this.label2);
+            this.grpBoxReply.Controls.Add(this.label1);
+            this.grpBoxReply.Controls.Add(this.txtHeader);
+            this.grpBoxReply.Controls.Add(this.txtText);
+            this.grpBoxReply.Location = new System.Drawing.Point(0, 347);
+            this.grpBoxReply.Name = "grpBoxReply";
+            this.grpBoxReply.Size = new System.Drawing.Size(570, 327);
+            this.grpBoxReply.TabIndex = 3;
+            this.grpBoxReply.TabStop = false;
+            this.grpBoxReply.Text = "Reply";
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(396, 33);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(147, 44);
+            this.btnSend.TabIndex = 3;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Message Text";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Message Header";
+            // 
+            // txtHeader
+            // 
+            this.txtHeader.Location = new System.Drawing.Point(6, 43);
+            this.txtHeader.Name = "txtHeader";
+            this.txtHeader.Size = new System.Drawing.Size(364, 24);
+            this.txtHeader.TabIndex = 1;
+            // 
+            // txtText
+            // 
+            this.txtText.Location = new System.Drawing.Point(6, 95);
+            this.txtText.Name = "txtText";
+            this.txtText.Size = new System.Drawing.Size(558, 222);
+            this.txtText.TabIndex = 0;
+            this.txtText.Text = "";
             // 
             // UserMessagesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 421);
+            this.ClientSize = new System.Drawing.Size(574, 671);
+            this.Controls.Add(this.grpBoxReply);
             this.Controls.Add(this.gboxMessages);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(0);
@@ -79,6 +144,8 @@ namespace DiyetProgramiProje
             this.Load += new System.EventHandler(this.UserMessagesForm_Load);
             this.gboxMessages.ResumeLayout(false);
             this.gboxMessages.PerformLayout();
+            this.grpBoxReply.ResumeLayout(false);
+            this.grpBoxReply.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -88,5 +155,11 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.GroupBox gboxMessages;
         private System.Windows.Forms.ListBox lboxMessages;
         private System.Windows.Forms.TextBox txtShowMessage;
+        private System.Windows.Forms.GroupBox grpBoxReply;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtHeader;
+        private System.Windows.Forms.RichTextBox txtText;
     }
 }

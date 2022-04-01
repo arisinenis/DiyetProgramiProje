@@ -17,13 +17,20 @@ namespace DiyetProgramiProje
     {
         UserRegisterInfo userRegisterInfo;
         MessageService messageService;
+        UserService userService;
+        UserInformation user;
+        DieticianMessageService dieticianMessageService;
         public UserMessagesForm(UserRegisterInfo _userRegisterInfo)
         {
             InitializeComponent();
             userRegisterInfo = _userRegisterInfo;
             messageService = new MessageService();
+            userService = new UserService();
+            dieticianMessageService = new DieticianMessageService();
+            user = userService.GetById(userRegisterInfo.Id);
+            
         }
-
+       
         private void gboxMessages_Enter(object sender, EventArgs e)
         {
 
@@ -54,6 +61,30 @@ namespace DiyetProgramiProje
             {
 
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (txtHeader.Text == string.Empty || txtText.Text == string.Empty)
+            {
+                MessageBox.Show("Please fill all blanks");
+            }
+
+            else
+            {
+                DieticianMessage dieticianMessage = new DieticianMessage();
+                dieticianMessage.MessageHeader = txtHeader.Text;
+                dieticianMessage.Text = txtText.Text;
+                dieticianMessage.UserId = userRegisterInfo.Id;
+                dieticianMessage.DieticianId = user.DieticianId;
+                dieticianMessageService.Add(dieticianMessage);
+            }
+            
         }
     }
 }

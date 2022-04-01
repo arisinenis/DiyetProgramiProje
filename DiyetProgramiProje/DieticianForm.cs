@@ -47,7 +47,7 @@ namespace DiyetProgramiProje
         }
         private void FillClient()
         {
-            lvClients.Items.Clear();
+            
             Dietician dietician = dieticianService.GetById(dieticianRegisterInfo.Id);
 
             List<UserInformation> Customers = userService.GetCustomers(dietician);
@@ -75,29 +75,6 @@ namespace DiyetProgramiProje
         }
         private void FillFoods()
         {
-            
-            UserMeal meal = userMealService.GetMeal(userRegisterInfo.Id, dtMealDate.Value.Date, (MealTimesEnum)cboxLvMealTime.SelectedItem);
-
-            List<UserMealsAndFoods> meals = userMealsAndFoodsService.GetUserAndFoodByMealId(meal.Id);
-
-            foreach (var item in meals)
-            {
-                FoodName food = foodService.GetById(item.FoodNameID);
-
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = food.Name;
-                lvi.SubItems.Add(item.Portion.ToString());
-                lvi.SubItems.Add(item.Calorie.ToString());
-                lvi.Tag = item.UserMealID;
-
-                lvMeals.Items.Add(lvi);
-            }
-        }
-
-        int userId=0;
-        private void btnShowMeal_Click(object sender, EventArgs e)
-        {
-            lvMeals.Items.Clear();
 
             if (lvClients.FocusedItem == null)
             {
@@ -124,19 +101,26 @@ namespace DiyetProgramiProje
                 }
                 else
                 {
-                    lvClients.Items.Clear();
+                    lvMeals.Items.Clear();
                 }
             }
-            
-            
+        }
+
+        int userId=0;
+        private void btnShowMeal_Click(object sender, EventArgs e)
+        {
+            lvMeals.Items.Clear();
+            FillFoods();
         }
 
         private void lvClients_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lvMeals.Items.Clear();
             userId = Convert.ToInt32(lvClients.FocusedItem.Text);
             UserInformation userInformation = userService.GetById(userId);
             lblDailyCalorieRequirement.Text = userInformation.DailyCalorie.ToString();
             lblDailyCalorieTaken.Text = userMealsAndFoodsService.GetTotalCalorieById(userId, dtMealDate.Value.Date).ToString();
+            FillFoods();
         }
 
         private void dtMealDate_ValueChanged(object sender, EventArgs e)
@@ -178,6 +162,13 @@ namespace DiyetProgramiProje
             }
             
            
+        }
+
+        private void btnShowMessages_Click(object sender, EventArgs e)
+        {
+            DieticianMessagesForm dieticianMessagesForm = new DieticianMessagesForm(dieticianRegisterInfo);
+            dieticianMessagesForm.ShowDialog();
+            this.Hide();
         }
     }
 }

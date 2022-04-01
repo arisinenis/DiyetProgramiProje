@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IStatusRepository.cs" />
     <Compile Include="Context\DietProgramContext.cs" />
     <Compile Include="EntityConfiguration\DieticianConfiguration.cs" />
+    <Compile Include="EntityConfiguration\DieticianMessageConfiguration.cs" />
     <Compile Include="EntityConfiguration\DieticianRegisterInfoConfiguration.cs" />
     <Compile Include="EntityConfiguration\FoodCategoryConfiguration.cs" />
     <Compile Include="EntityConfiguration\FoodNameConfiguration.cs" />
@@ -108,12 +109,30 @@
     <Compile Include="Migrations\202203301310490_test11.designer.cs">
       <DependentUpon>202203301310490_test11.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204011123017_MessagesUpdated.cs" />
+    <Compile Include="Migrations\202204011123017_MessagesUpdated.designer.cs">
+      <DependentUpon>202204011123017_MessagesUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204011146486_MessagesUpdatedAgain.cs" />
+    <Compile Include="Migrations\202204011146486_MessagesUpdatedAgain.designer.cs">
+      <DependentUpon>202204011146486_MessagesUpdatedAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204011226182_UserFullNameAdded.cs" />
+    <Compile Include="Migrations\202204011226182_UserFullNameAdded.designer.cs">
+      <DependentUpon>202204011226182_UserFullNameAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204011334575_messages-done.cs" />
+    <Compile Include="Migrations\202204011334575_messages-done.designer.cs">
+      <DependentUpon>202204011334575_messages-done.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\DieticianMessageRepository.cs" />
     <Compile Include="Repositories\DieticianRepository.cs" />
     <Compile Include="Repositories\FoodRepository.cs" />
     <Compile Include="Repositories\MessageRepository.cs" />
+    <Compile Include="Repositories\ReportRepository.cs" />
     <Compile Include="Repositories\UserMealRepository.cs" />
     <Compile Include="Repositories\UserMealsAndFoodsRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -162,6 +181,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203301310490_test11.resx">
       <DependentUpon>202203301310490_test11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204011123017_MessagesUpdated.resx">
+      <DependentUpon>202204011123017_MessagesUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204011146486_MessagesUpdatedAgain.resx">
+      <DependentUpon>202204011146486_MessagesUpdatedAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204011226182_UserFullNameAdded.resx">
+      <DependentUpon>202204011226182_UserFullNameAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204011334575_messages-done.resx">
+      <DependentUpon>202204011334575_messages-done.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

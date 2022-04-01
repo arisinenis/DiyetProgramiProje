@@ -56,6 +56,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnShowMessages = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,9 +76,9 @@
             this.groupBox7.Controls.Add(this.label8);
             this.groupBox7.Controls.Add(this.lvMeals);
             this.groupBox7.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox7.Location = new System.Drawing.Point(596, 12);
+            this.groupBox7.Location = new System.Drawing.Point(596, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(399, 599);
+            this.groupBox7.Size = new System.Drawing.Size(399, 527);
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Check Meals";
@@ -87,9 +88,9 @@
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
             this.groupBox6.Controls.Add(this.lblDailyCalorieTaken);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox6.Location = new System.Drawing.Point(216, 463);
+            this.groupBox6.Location = new System.Drawing.Point(216, 437);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(166, 113);
+            this.groupBox6.Size = new System.Drawing.Size(166, 84);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Daily Calorie Taken";
@@ -109,9 +110,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblDailyCalorieRequirement);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(15, 462);
+            this.groupBox1.Location = new System.Drawing.Point(15, 436);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(195, 114);
+            this.groupBox1.Size = new System.Drawing.Size(195, 85);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Daily Calorie Requirement";
@@ -212,9 +213,9 @@
             this.grpbox.Controls.Add(this.txtMessage);
             this.grpbox.Controls.Add(this.lvClients);
             this.grpbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grpbox.Location = new System.Drawing.Point(13, 13);
+            this.grpbox.Location = new System.Drawing.Point(3, 7);
             this.grpbox.Name = "grpbox";
-            this.grpbox.Size = new System.Drawing.Size(577, 598);
+            this.grpbox.Size = new System.Drawing.Size(587, 598);
             this.grpbox.TabIndex = 16;
             this.grpbox.TabStop = false;
             this.grpbox.Text = "Clients";
@@ -308,15 +309,27 @@
             this.columnHeader10.Text = "User Request";
             this.columnHeader10.Width = 139;
             // 
+            // btnShowMessages
+            // 
+            this.btnShowMessages.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShowMessages.Location = new System.Drawing.Point(861, 541);
+            this.btnShowMessages.Name = "btnShowMessages";
+            this.btnShowMessages.Size = new System.Drawing.Size(134, 59);
+            this.btnShowMessages.TabIndex = 17;
+            this.btnShowMessages.Text = "Show Messages";
+            this.btnShowMessages.UseVisualStyleBackColor = true;
+            this.btnShowMessages.Click += new System.EventHandler(this.btnShowMessages_Click);
+            // 
             // DieticianForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1007, 623);
-            this.Controls.Add(this.grpbox);
+            this.ClientSize = new System.Drawing.Size(1007, 611);
+            this.Controls.Add(this.btnShowMessages);
             this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.grpbox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -365,5 +378,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMessageTitle;
+        private System.Windows.Forms.Button btnShowMessages;
     }
 }

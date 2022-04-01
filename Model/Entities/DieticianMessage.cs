@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    public class Message : IEntity
+    public class DieticianMessage:IEntity
     {
         public int Id { get; set; }
-        public int DieticianId { get; set; }
+        public int UserId { get; set; }
         public string MessageHeader { get; set; }
         public string Text { get; set; }
         public string Status { get; set; } = "Active";
         public DateTime MessageDate { get; set; } = DateTime.Now;
 
-        public virtual int UserInformationId { get; set; }
-        public virtual UserInformation UserInformation { get; set; }
+        public virtual int DieticianId { get; set; }
+        public virtual Dietician Dietician { get; set; }
     }
 }

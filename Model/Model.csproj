@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Entities\Dietician.cs" />
+    <Compile Include="Entities\DieticianMessage.cs" />
     <Compile Include="Entities\DieticianRegisterInfo.cs" />
     <Compile Include="Entities\FoodCategory.cs" />
     <Compile Include="Entities\FoodName.cs" />
