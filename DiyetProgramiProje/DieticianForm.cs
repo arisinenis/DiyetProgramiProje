@@ -167,8 +167,15 @@ namespace DiyetProgramiProje
         private void btnShowMessages_Click(object sender, EventArgs e)
         {
             DieticianMessagesForm dieticianMessagesForm = new DieticianMessagesForm(dieticianRegisterInfo);
-            dieticianMessagesForm.ShowDialog();
             this.Hide();
+            dieticianMessagesForm.ShowDialog();
+            
+        }
+
+        private void DieticianForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["Form1"];
+            frm.Show();
         }
     }
 }

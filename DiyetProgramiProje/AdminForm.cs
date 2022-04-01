@@ -448,5 +448,19 @@ namespace DiyetProgramiProje
             }
             
         }
+
+        private void btnShowReports_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            this.Hide();
+            reportForm.ShowDialog();
+            
+        }
+
+        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["Form1"];
+            frm.Show();
+        }
     }
 }

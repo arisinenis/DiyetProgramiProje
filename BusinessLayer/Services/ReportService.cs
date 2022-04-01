@@ -22,5 +22,13 @@ namespace BusinessLayer.Services
         {
             return reportRepository.GetMostEatenCategories(dt1, dt2, mealTime);
         }
+        public Dictionary<string, int> GetMostEatenFoods(MealTimesEnum mealTime)
+        {
+            return reportRepository.GetMostEatenFoods(mealTime);
+        }
+        public Dictionary<string, int> GetMostEatenFoodsAllTime()
+        {
+            return reportRepository.GetMostEatenFoodsAllTime();
+        }
     }
 }

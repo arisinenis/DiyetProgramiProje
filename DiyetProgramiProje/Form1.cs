@@ -64,8 +64,8 @@ namespace DiyetProgramiProje
                     MessageBox.Show("Please check your login information");
                 }
             }
-
-
+            txtEmail.Text = string.Empty;
+            txtPassword.Text = string.Empty;
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -73,6 +73,14 @@ namespace DiyetProgramiProje
             RegisterForm registerForm = new RegisterForm();
             this.Hide();
             registerForm.ShowDialog();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
         }
     }
 }

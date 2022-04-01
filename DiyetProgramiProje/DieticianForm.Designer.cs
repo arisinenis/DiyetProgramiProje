@@ -336,6 +336,7 @@
             this.Name = "DieticianForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DieticianForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DieticianForm_FormClosed);
             this.Load += new System.EventHandler(this.DieticianForm_Load);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();

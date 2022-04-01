@@ -86,5 +86,11 @@ namespace DiyetProgramiProje
             }
             
         }
+
+        private void UserMessagesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["UserForm"];
+            frm.Show();
+        }
     }
 }

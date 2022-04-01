@@ -141,6 +141,7 @@ namespace DiyetProgramiProje
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UserMessagesForm";
             this.Text = "UserMessagesForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserMessagesForm_FormClosed);
             this.Load += new System.EventHandler(this.UserMessagesForm_Load);
             this.gboxMessages.ResumeLayout(false);
             this.gboxMessages.PerformLayout();

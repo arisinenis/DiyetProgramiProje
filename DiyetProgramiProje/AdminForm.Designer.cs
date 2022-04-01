@@ -75,6 +75,7 @@
             this.rbUserPassives = new System.Windows.Forms.RadioButton();
             this.rbUserGetAll = new System.Windows.Forms.RadioButton();
             this.btnGetClients = new System.Windows.Forms.Button();
+            this.btnShowReports = new System.Windows.Forms.Button();
             this.grpbox.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -189,6 +190,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShowReports);
             this.groupBox1.Controls.Add(this.btnUpdateCatAndFood);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -519,6 +521,16 @@
             this.btnGetClients.UseVisualStyleBackColor = true;
             this.btnGetClients.Click += new System.EventHandler(this.btnGetClients_Click);
             // 
+            // btnShowReports
+            // 
+            this.btnShowReports.Location = new System.Drawing.Point(956, 242);
+            this.btnShowReports.Name = "btnShowReports";
+            this.btnShowReports.Size = new System.Drawing.Size(120, 72);
+            this.btnShowReports.TabIndex = 42;
+            this.btnShowReports.Text = "Show Reports";
+            this.btnShowReports.UseVisualStyleBackColor = true;
+            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -537,6 +549,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminForm_FormClosed);
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.grpbox.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -599,5 +612,6 @@
         private System.Windows.Forms.RadioButton rbUserGetAll;
         private System.Windows.Forms.Button btnGetClients;
         private System.Windows.Forms.Button btnUpdateCatAndFood;
+        private System.Windows.Forms.Button btnShowReports;
     }
 }

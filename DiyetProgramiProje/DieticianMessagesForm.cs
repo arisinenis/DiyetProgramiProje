@@ -67,5 +67,11 @@ namespace DiyetProgramiProje
             FillListBoxMessages();
             txtShowMessage.Text = string.Empty;
         }
+
+        private void DieticianMessagesForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["DieticianForm"];
+            frm.Show();
+        }
     }
 }

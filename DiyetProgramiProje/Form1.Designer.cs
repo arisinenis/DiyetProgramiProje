@@ -113,9 +113,12 @@ namespace DiyetProgramiProje
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(51, 144);
+            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(265, 24);
             this.txtPassword.TabIndex = 14;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // label3
             // 

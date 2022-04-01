@@ -162,8 +162,9 @@ namespace DiyetProgramiProje
         private void btnNewMeal_Click(object sender, EventArgs e)
         {
             FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo);
+            this.Hide();
             foodAddForm.ShowDialog();
-            foodAddForm.Hide();
+            
         }
 
         int foodId;
@@ -260,8 +261,24 @@ namespace DiyetProgramiProje
         private void button2_Click(object sender, EventArgs e)
         {
             UserMessagesForm userMessagesForm = new UserMessagesForm(userRegisterInfo);
-            userMessagesForm.ShowDialog();
             this.Hide();
+            userMessagesForm.ShowDialog();
+           
+        }
+
+        private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = Application.OpenForms["Form1"];
+            frm.Show();
+           
+        }
+
+        private void btnShowReports_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            this.Hide();
+            reportForm.ShowDialog();
+            
         }
     }
 }

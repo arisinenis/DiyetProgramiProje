@@ -72,6 +72,7 @@ namespace DiyetProgramiProje
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnShowReports = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
@@ -497,13 +498,24 @@ namespace DiyetProgramiProje
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(177, 655);
+            this.button2.Location = new System.Drawing.Point(146, 653);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 47);
             this.button2.TabIndex = 18;
             this.button2.Text = "Show Messages";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnShowReports
+            // 
+            this.btnShowReports.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShowReports.Location = new System.Drawing.Point(362, 653);
+            this.btnShowReports.Name = "btnShowReports";
+            this.btnShowReports.Size = new System.Drawing.Size(211, 47);
+            this.btnShowReports.TabIndex = 19;
+            this.btnShowReports.Text = "Show Reports";
+            this.btnShowReports.UseVisualStyleBackColor = true;
+            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
             // 
             // UserForm
             // 
@@ -513,6 +525,7 @@ namespace DiyetProgramiProje
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1182, 726);
+            this.Controls.Add(this.btnShowReports);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox7);
@@ -524,6 +537,7 @@ namespace DiyetProgramiProje
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
             this.Text = "UserForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -594,5 +608,6 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblCategoyName;
+        private System.Windows.Forms.Button btnShowReports;
     }
 }

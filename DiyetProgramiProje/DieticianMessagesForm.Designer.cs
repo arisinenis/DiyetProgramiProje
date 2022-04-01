@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gboxMessages = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboxUsers = new System.Windows.Forms.ComboBox();
             this.txtShowMessage = new System.Windows.Forms.TextBox();
             this.lboxMessages = new System.Windows.Forms.ListBox();
-            this.cboxUsers = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gboxMessages.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,24 @@
             this.gboxMessages.TabIndex = 1;
             this.gboxMessages.TabStop = false;
             this.gboxMessages.Text = "Messages";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 18);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Users";
+            // 
+            // cboxUsers
+            // 
+            this.cboxUsers.FormattingEnabled = true;
+            this.cboxUsers.Location = new System.Drawing.Point(7, 46);
+            this.cboxUsers.Name = "cboxUsers";
+            this.cboxUsers.Size = new System.Drawing.Size(245, 26);
+            this.cboxUsers.TabIndex = 2;
+            this.cboxUsers.SelectedIndexChanged += new System.EventHandler(this.cboxUsers_SelectedIndexChanged);
             // 
             // txtShowMessage
             // 
@@ -69,24 +87,6 @@
             this.lboxMessages.TabIndex = 0;
             this.lboxMessages.SelectedIndexChanged += new System.EventHandler(this.lboxMessages_SelectedIndexChanged);
             // 
-            // cboxUsers
-            // 
-            this.cboxUsers.FormattingEnabled = true;
-            this.cboxUsers.Location = new System.Drawing.Point(7, 46);
-            this.cboxUsers.Name = "cboxUsers";
-            this.cboxUsers.Size = new System.Drawing.Size(245, 26);
-            this.cboxUsers.TabIndex = 2;
-            this.cboxUsers.SelectedIndexChanged += new System.EventHandler(this.cboxUsers_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Users";
-            // 
             // DieticianMessagesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -97,6 +97,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DieticianMessagesForm";
             this.Text = "DieticianMessagesForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DieticianMessagesForm_FormClosed);
             this.Load += new System.EventHandler(this.DieticianMessagesForm_Load);
             this.gboxMessages.ResumeLayout(false);
             this.gboxMessages.PerformLayout();

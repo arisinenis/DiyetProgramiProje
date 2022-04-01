@@ -12,7 +12,7 @@ namespace DataAccessLayer.Repositories
     public class ReportRepository
     {
         DietProgramContext db;
-       
+
         public ReportRepository()
         {
             db = new DietProgramContext();
@@ -45,6 +45,61 @@ namespace DataAccessLayer.Repositories
             foreach (var item in results)
             {
                 dicts.Add(item.CategoryName, item.Count);
+            }
+
+            return dicts;
+        }
+
+        public Dictionary<string, int> GetMostEatenFoods(MealTimesEnum mealTime)
+        {
+            Dictionary<string, int> dicts = new Dictionary<string, int>();
+            var results = db.UserMeals.Where(u => u.MealTime == mealTime)
+                .Join(db.UserMealsAndFoods, u => u.Id, mf => mf.UserMealID, (u, mf) => new
+                {
+                    mf.FoodNameID
+                })
+                .Join(db.FoodNames, mf => mf.FoodNameID, f => f.Id, (mf, f) => new
+                {
+                    f.Name
+                })
+                .GroupBy(x => x.Name)
+                .Select(g => new
+                {
+                    Name = g.Key,
+                    Count = g.Count()
+                }).ToList();
+
+            foreach (var item in results)
+            {
+                dicts.Add(item.Name, item.Count);
+            }
+
+            return dicts;
+
+        }
+
+        public Dictionary<string, int> GetMostEatenFoodsAllTime()
+        {
+            Dictionary<string, int> dicts = new Dictionary<string, int>();
+            var results = db.UserMeals
+                .Join(db.UserMealsAndFoods, u => u.Id, mf => mf.UserMealID, (u, mf) => new
+                {
+                    mf.FoodNameID
+                })
+                .Join(db.FoodNames, mf => mf.FoodNameID, f => f.Id, (mf, f) => new
+                {
+                    f.Name
+                })
+                .GroupBy(x => x.Name)
+                .Select(g => new
+                {
+                    Name = g.Key,
+                    Count = g.Count()
+                }).OrderByDescending(y => y.Count).ToList();
+
+            foreach (var item in results)
+            {
+                dicts.Add(item.Name, item.Count);
             }
 
             return dicts;
