@@ -109,6 +109,8 @@ namespace DiyetProgramiProje
                     FoodCategory foodCategory = new FoodCategory();
                     foodCategory.CategoryName = txtCategoryName.Text;
                     categoryService.Add(foodCategory);
+
+                    MessageBox.Show("Category has been added.");
                 }
                 else
                 {
@@ -117,10 +119,11 @@ namespace DiyetProgramiProje
             }
             else
             {
-                FoodCategory uptFoodCategory = new FoodCategory();
+                FoodCategory uptFoodCategory = categoryService.GetById(foodCategory.Id);
                 uptFoodCategory.CategoryName = txtCategoryName.Text;
-                uptFoodCategory.Id = foodCategory.Id;
-                categoryService.Update(foodCategory);
+                categoryService.Update(uptFoodCategory);
+
+                MessageBox.Show("Category has been updated.");
             } 
         }
         private void btnImport_Click(object sender, EventArgs e)
@@ -135,7 +138,7 @@ namespace DiyetProgramiProje
             }
         }
 
-
+        Image imgg;
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             if (txtFoodName.Text == string.Empty || txtFoodCalories.Text == string.Empty)
@@ -159,25 +162,36 @@ namespace DiyetProgramiProje
                     }
                     foodName.FoodPicture = arr;
                     foodService.Add(foodName);
+
+                    MessageBox.Show("Food has been added.");
+
                 }
+                
                 else
                 {
-                    FoodName uptFoodName = new FoodName();
-                    uptFoodName.Id = foodForUpdate.Id;
+
+                    FoodName uptFoodName = foodService.GetById(foodForUpdate.Id);
+                    imgg = ConvertByteToPicture(uptFoodName);
                     uptFoodName.Name = txtFoodName.Text;
                     uptFoodName.Calorie = Convert.ToDecimal(txtFoodCalories.Text);
                     uptFoodName.FoodCategoryId = (int)cboxCategoryName.SelectedValue;
                     Image img = pboxAddPicture.Image;
-                    byte[] arr;
-                    using (MemoryStream ms = new MemoryStream())
+                    if (img.Width != imgg.Width)
                     {
-                        img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        arr = ms.ToArray();
-                    }
-                    uptFoodName.FoodPicture = arr;
+                        byte[] arr;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            arr = ms.ToArray();
+                        }
+                        uptFoodName.FoodPicture = arr;
+                    }             
                     foodService.Update(uptFoodName);
+
+                    MessageBox.Show("Food has been updated.");
+
                 }
-                
+
             }
             
         }

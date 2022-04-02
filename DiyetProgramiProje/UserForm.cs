@@ -82,49 +82,52 @@ namespace DiyetProgramiProje
             lblTotalCalories.Text = (nudPortion.Value * Convert.ToDecimal(lblCaloriesByPortion.Text)).ToString();
         }
 
+        
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
             try
             {
                 lblTotalTakenCalory.Text = userMealsAndFoodsService.GetTotalCalorieById(userRegisterInfo.Id, dtMealDate.Value.Date).ToString();
                 lblRemainCalories.Text = (Convert.ToDecimal(lblDailyCalorieRequirement.Text) - Convert.ToDecimal(lblTotalTakenCalory.Text)).ToString();
-                UserMeal userMeal = userMealService.CheckMeal(DateTime.Now.Date, (MealTimesEnum)cboxMealTime.SelectedItem, userRegisterInfo.Id);
-                List<int>list = userMealsAndFoodsService.GetFoodIdbyUserMeal(userMeal);
-               
-                    if (userMeal == null)
+
+                UserMeal userMeal = userMealService.CheckMeal(dtAddMealDate.Value.Date, (MealTimesEnum)cboxMealTime.SelectedItem, userRegisterInfo.Id);
+
+                if (userMeal == null)
+                {
+                    userMeal = new UserMeal();
+                    userMeal.MealDate = dtAddMealDate.Value.Date; // Burası Değişti
+                    userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
+                    userMeal.UserInformationId = userRegisterInfo.Id;
+                    userMealService.Add(userMeal);
+
+                    FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
+
+                    UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
+                    userMealsAndFoods.UserMealID = userMeal.Id;
+                    userMealsAndFoods.FoodNameID = foodName.Id;
+                    userMealsAndFoods.Portion = nudPortion.Value;
+                    userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
+
+                    if (nudPortion.Value == 0)
                     {
-                        userMeal = new UserMeal();
-                        userMeal.MealDate = DateTime.Now.Date;
-                        userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
-                        userMeal.UserInformationId = userRegisterInfo.Id;
-                        userMealService.Add(userMeal);
-
-                        FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
-
-                        UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
-                        userMealsAndFoods.UserMealID = userMeal.Id;
-                        userMealsAndFoods.FoodNameID = foodName.Id;
-                        userMealsAndFoods.Portion = nudPortion.Value;
-                        userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
-
-                        if (nudPortion.Value == 0)
-                        {
-                            MessageBox.Show("Please type a portion value");
-                        }
-                        else
-                        {
-                            userMealsAndFoodsService.Add(userMealsAndFoods);
-                            FillListView();
-                        }
-
+                        MessageBox.Show("Please type a portion value");
                     }
-                    else if (userMeal != null && list.Contains((int)lboxFoods.SelectedValue))
+                    else
+                    {
+                        userMealsAndFoodsService.Add(userMealsAndFoods);
+                        FillListView();
+                    }
+                }
+                else
+                {
+                    List<int> list = userMealsAndFoodsService.GetFoodIdbyUserMeal(userMeal);
+
+                    if (list.Contains((int)lboxFoods.SelectedValue))
                     {
                         MessageBox.Show("This food is already exist.");
                     }
                     else
                     {
-
                         FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
 
                         UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
@@ -142,13 +145,13 @@ namespace DiyetProgramiProje
                             userMealsAndFoodsService.Add(userMealsAndFoods);
                         }
                         FillListView();
-    
                     }
+                }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Wrong !!");
              
             }
             

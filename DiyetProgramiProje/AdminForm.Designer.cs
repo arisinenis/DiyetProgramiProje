@@ -44,6 +44,7 @@
             this.activeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.passiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShowReports = new System.Windows.Forms.Button();
             this.btnUpdateCatAndFood = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnRefreshCats = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@
             this.rbUserPassives = new System.Windows.Forms.RadioButton();
             this.rbUserGetAll = new System.Windows.Forms.RadioButton();
             this.btnGetClients = new System.Windows.Forms.Button();
-            this.btnShowReports = new System.Windows.Forms.Button();
             this.grpbox.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -172,19 +172,19 @@
             this.activeToolStripMenuItem,
             this.passiveToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(115, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(129, 52);
             // 
             // activeToolStripMenuItem
             // 
             this.activeToolStripMenuItem.Name = "activeToolStripMenuItem";
-            this.activeToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.activeToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.activeToolStripMenuItem.Text = "Actived";
             this.activeToolStripMenuItem.Click += new System.EventHandler(this.activeToolStripMenuItem_Click);
             // 
             // passiveToolStripMenuItem
             // 
             this.passiveToolStripMenuItem.Name = "passiveToolStripMenuItem";
-            this.passiveToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.passiveToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.passiveToolStripMenuItem.Text = "Passive";
             this.passiveToolStripMenuItem.Click += new System.EventHandler(this.passiveToolStripMenuItem_Click);
             // 
@@ -210,6 +210,16 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Membership Request Panel";
+            // 
+            // btnShowReports
+            // 
+            this.btnShowReports.Location = new System.Drawing.Point(956, 242);
+            this.btnShowReports.Name = "btnShowReports";
+            this.btnShowReports.Size = new System.Drawing.Size(120, 72);
+            this.btnShowReports.TabIndex = 42;
+            this.btnShowReports.Text = "Show Reports";
+            this.btnShowReports.UseVisualStyleBackColor = true;
+            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
             // 
             // btnUpdateCatAndFood
             // 
@@ -249,7 +259,7 @@
             this.rbCatActive.AutoSize = true;
             this.rbCatActive.Location = new System.Drawing.Point(161, 28);
             this.rbCatActive.Name = "rbCatActive";
-            this.rbCatActive.Size = new System.Drawing.Size(80, 22);
+            this.rbCatActive.Size = new System.Drawing.Size(98, 28);
             this.rbCatActive.TabIndex = 29;
             this.rbCatActive.Text = "Actives";
             this.rbCatActive.UseVisualStyleBackColor = true;
@@ -259,7 +269,7 @@
             this.rbCatPassive.AutoSize = true;
             this.rbCatPassive.Location = new System.Drawing.Point(161, 60);
             this.rbCatPassive.Name = "rbCatPassive";
-            this.rbCatPassive.Size = new System.Drawing.Size(94, 22);
+            this.rbCatPassive.Size = new System.Drawing.Size(112, 28);
             this.rbCatPassive.TabIndex = 30;
             this.rbCatPassive.Text = "Passives";
             this.rbCatPassive.UseVisualStyleBackColor = true;
@@ -270,7 +280,7 @@
             this.rbCatActivePassive.Checked = true;
             this.rbCatActivePassive.Location = new System.Drawing.Point(161, 88);
             this.rbCatActivePassive.Name = "rbCatActivePassive";
-            this.rbCatActivePassive.Size = new System.Drawing.Size(163, 22);
+            this.rbCatActivePassive.Size = new System.Drawing.Size(199, 28);
             this.rbCatActivePassive.TabIndex = 31;
             this.rbCatActivePassive.TabStop = true;
             this.rbCatActivePassive.Text = "Get All Categories";
@@ -304,7 +314,7 @@
             this.rbFoodActives.AutoSize = true;
             this.rbFoodActives.Location = new System.Drawing.Point(164, 28);
             this.rbFoodActives.Name = "rbFoodActives";
-            this.rbFoodActives.Size = new System.Drawing.Size(80, 22);
+            this.rbFoodActives.Size = new System.Drawing.Size(98, 28);
             this.rbFoodActives.TabIndex = 33;
             this.rbFoodActives.Text = "Actives";
             this.rbFoodActives.UseVisualStyleBackColor = true;
@@ -314,7 +324,7 @@
             this.rbFoodPassives.AutoSize = true;
             this.rbFoodPassives.Location = new System.Drawing.Point(164, 62);
             this.rbFoodPassives.Name = "rbFoodPassives";
-            this.rbFoodPassives.Size = new System.Drawing.Size(94, 22);
+            this.rbFoodPassives.Size = new System.Drawing.Size(112, 28);
             this.rbFoodPassives.TabIndex = 34;
             this.rbFoodPassives.Text = "Passives";
             this.rbFoodPassives.UseVisualStyleBackColor = true;
@@ -325,7 +335,7 @@
             this.rbFoodsAll.Checked = true;
             this.rbFoodsAll.Location = new System.Drawing.Point(164, 96);
             this.rbFoodsAll.Name = "rbFoodsAll";
-            this.rbFoodsAll.Size = new System.Drawing.Size(163, 22);
+            this.rbFoodsAll.Size = new System.Drawing.Size(199, 28);
             this.rbFoodsAll.TabIndex = 35;
             this.rbFoodsAll.TabStop = true;
             this.rbFoodsAll.Text = "Get All Categories";
@@ -471,7 +481,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(20, 342);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 18);
+            this.label1.Size = new System.Drawing.Size(185, 24);
             this.label1.TabIndex = 29;
             this.label1.Text = "Membership Filter:";
             // 
@@ -481,7 +491,7 @@
             this.rbUserActives.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbUserActives.Location = new System.Drawing.Point(211, 340);
             this.rbUserActives.Name = "rbUserActives";
-            this.rbUserActives.Size = new System.Drawing.Size(80, 22);
+            this.rbUserActives.Size = new System.Drawing.Size(98, 28);
             this.rbUserActives.TabIndex = 34;
             this.rbUserActives.Text = "Actives";
             this.rbUserActives.UseVisualStyleBackColor = true;
@@ -492,7 +502,7 @@
             this.rbUserPassives.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbUserPassives.Location = new System.Drawing.Point(308, 341);
             this.rbUserPassives.Name = "rbUserPassives";
-            this.rbUserPassives.Size = new System.Drawing.Size(94, 22);
+            this.rbUserPassives.Size = new System.Drawing.Size(112, 28);
             this.rbUserPassives.TabIndex = 35;
             this.rbUserPassives.Text = "Passives";
             this.rbUserPassives.UseVisualStyleBackColor = true;
@@ -504,7 +514,7 @@
             this.rbUserGetAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbUserGetAll.Location = new System.Drawing.Point(418, 341);
             this.rbUserGetAll.Name = "rbUserGetAll";
-            this.rbUserGetAll.Size = new System.Drawing.Size(133, 22);
+            this.rbUserGetAll.Size = new System.Drawing.Size(162, 28);
             this.rbUserGetAll.TabIndex = 36;
             this.rbUserGetAll.TabStop = true;
             this.rbUserGetAll.Text = "Get All Clients";
@@ -521,19 +531,9 @@
             this.btnGetClients.UseVisualStyleBackColor = true;
             this.btnGetClients.Click += new System.EventHandler(this.btnGetClients_Click);
             // 
-            // btnShowReports
-            // 
-            this.btnShowReports.Location = new System.Drawing.Point(956, 242);
-            this.btnShowReports.Name = "btnShowReports";
-            this.btnShowReports.Size = new System.Drawing.Size(120, 72);
-            this.btnShowReports.TabIndex = 42;
-            this.btnShowReports.Text = "Show Reports";
-            this.btnShowReports.UseVisualStyleBackColor = true;
-            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
-            // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1105, 802);

@@ -33,7 +33,7 @@ namespace DiyetProgramiProje
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "admin@admin.com" && txtPassword.Text == "1")
+            if (txtEmail.Text == "admin@diet.com" && txtPassword.Text == "1")
             {
                 UserRegisterInfo user = userService.GetUserByEmail(txtEmail.Text);
                 AdminForm adminForm = new AdminForm(user);

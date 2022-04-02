@@ -59,7 +59,7 @@ namespace DiyetProgramiProje
             }
             catch (Exception)
             {
-                MessageBox.Show("Please check your choose");
+                MessageBox.Show("Please check your choice");
             }
         }
 
@@ -238,8 +238,8 @@ namespace DiyetProgramiProje
 
         private void FillAllCategories()
         {
-            List<FoodCategory> users = categoryService.GetAll();
-            foreach (var item in users)
+            List<FoodCategory> categories = categoryService.GetAll();
+            foreach (var item in categories)
             {
                 ListViewItem lvItem = new ListViewItem();
                 lvItem.Text = item.Id.ToString();
