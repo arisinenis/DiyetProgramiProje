@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,11 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Entities\Dietician.cs" />
+    <Compile Include="Entities\DieticianMessage.cs" />
+    <Compile Include="Entities\DieticianRegisterInfo.cs" />
+    <Compile Include="Entities\FoodCategory.cs" />
+    <Compile Include="Entities\FoodName.cs" />
+    <Compile Include="Entities\Message.cs" />
+    <Compile Include="Entities\UserInformation.cs" />
+    <Compile Include="Entities\UserMeal.cs" />
+    <Compile Include="Entities\UserMealsAndFoods.cs" />
+    <Compile Include="Entities\UserRegisterInfo.cs" />
+    <Compile Include="Enums\ExerciseEnum.cs" />
+    <Compile Include="Enums\MealTimesEnum.cs" />
+    <Compile Include="Enums\MembershipTypeEnum.cs" />
+    <Compile Include="Enums\UserRequestsEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Enums\" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace DiyetProgramiProje
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DieticianForm());
+            Application.Run(new Form1());
         }
     }
 }

@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,16 +52,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ILogin.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IStatusRepository.cs" />
+    <Compile Include="Context\DietProgramContext.cs" />
+    <Compile Include="EntityConfiguration\DieticianConfiguration.cs" />
+    <Compile Include="EntityConfiguration\DieticianMessageConfiguration.cs" />
+    <Compile Include="EntityConfiguration\DieticianRegisterInfoConfiguration.cs" />
+    <Compile Include="EntityConfiguration\FoodCategoryConfiguration.cs" />
+    <Compile Include="EntityConfiguration\FoodNameConfiguration.cs" />
+    <Compile Include="EntityConfiguration\MessageConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserInformationConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserMealsAndFoodsConfiguration.cs" />
+    <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityConfiguration\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Strategies\" />
+    <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\DieticianMessageRepository.cs" />
+    <Compile Include="Repositories\DieticianRepository.cs" />
+    <Compile Include="Repositories\FoodRepository.cs" />
+    <Compile Include="Repositories\MessageRepository.cs" />
+    <Compile Include="Repositories\ReportRepository.cs" />
+    <Compile Include="Repositories\UserMealRepository.cs" />
+    <Compile Include="Repositories\UserMealsAndFoodsRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{A85F341A-AC94-4C84-85A8-E139C0649842}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
