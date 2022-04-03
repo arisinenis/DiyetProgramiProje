@@ -428,8 +428,9 @@ namespace DiyetProgramiProje
         {
             
             FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo);
-            foodAddForm.ShowDialog();
             foodAddForm.Hide();
+            foodAddForm.ShowDialog();
+           
         }
 
         private void lvCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -447,7 +448,8 @@ namespace DiyetProgramiProje
             else
             {
                 FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo, foodForUpdate, foodCategory);
-                foodAddForm.ShowDialog();
+                this.Hide();
+                foodAddForm.Show();
             }
             
         }
@@ -462,8 +464,8 @@ namespace DiyetProgramiProje
 
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["Form1"];
-            frm.Show();
+            Form frmm = Application.OpenForms["Form1"];
+            frmm.Show();
         }
     }
 }

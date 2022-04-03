@@ -36,7 +36,9 @@ namespace DiyetProgramiProje
             {
                 UserRegisterInfo user = userService.GetUserByEmail(txtEmail.Text);
                 AdminForm adminForm = new AdminForm(user);
-                this.Hide();
+                txtEmail.Text = string.Empty;
+                txtPassword.Text = string.Empty;
+                Hide();
                 adminForm.ShowDialog();
             }
             else

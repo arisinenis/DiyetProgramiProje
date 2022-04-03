@@ -266,6 +266,7 @@ namespace DiyetProgramiProje
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FoodAddForm";
             this.Text = "FoodAddForm";
+            this.Activated += new System.EventHandler(this.FoodAddForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FoodAddForm_FormClosed);
             this.Load += new System.EventHandler(this.FoodAddForm_Load);
             this.groupBox1.ResumeLayout(false);
