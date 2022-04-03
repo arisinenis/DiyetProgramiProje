@@ -39,6 +39,14 @@ namespace BusinessLayer.Services
             {
                 throw new Exception("Please fill all blanks");
             }
+            else if (!dietician.Email.Contains("@") || !dietician.Email.Contains(".com"))
+            {
+                throw new Exception("Please type a correct email.");
+            }
+            else if (dietician.Password.Length<6 || dietician.Password.Length>25 || !dietician.Password.Any(c=> char.IsUpper(c)) || !dietician.Password.Any(c => char.IsDigit(c)) || !dietician.Password.Any(c => char.IsPunctuation(c)))
+            {
+                throw new Exception("Password length must be at least 6 and at most 25 digits and must contain at least one number, capital letter and symbol.");
+            }
             else
             {
                 return dieticianRepository.AddRegister(dietician);

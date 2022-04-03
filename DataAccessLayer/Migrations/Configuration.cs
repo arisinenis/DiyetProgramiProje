@@ -8,8 +8,6 @@
     using System.Drawing;
     using System.IO;
     using System.Linq;
-    using static System.Net.Mime.MediaTypeNames;
-    using Image = System.Drawing.Image;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DataAccessLayer.Context.DietProgramContext>
     {
@@ -25,7 +23,7 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
 
-            Image img = new Bitmap(@"C:\Desktop\1.jpeg");
+            Image img = new Bitmap(@"C:\Desktop\1.jpg");
             byte[] arr1;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -134,7 +132,7 @@
             context.SaveChanges();
 
 
-            Image food1Img = new Bitmap(@"C:\Desktop\beef.jpeg");
+            Image food1Img = new Bitmap(@"C:\Desktop\beef.jpg");
             byte[] arr2;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -155,7 +153,7 @@
             context.SaveChanges();
 
 
-            Image food2Img = new Bitmap(@"C:\Desktop\chicken.jpeg");
+            Image food2Img = new Bitmap(@"C:\Desktop\chicken.jpg");
             byte[] arr3;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -176,7 +174,7 @@
             context.SaveChanges();
 
 
-            Image food3Img = new Bitmap(@"C:\Desktop\bean.jpeg");
+            Image food3Img = new Bitmap(@"C:\Desktop\bean.jpg");
             byte[] arr4;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -197,7 +195,7 @@
             context.SaveChanges();
 
 
-            Image food4Img = new Bitmap(@"C:\Desktop\broccoli.jpeg");
+            Image food4Img = new Bitmap(@"C:\Desktop\broccoli.jpg");
             byte[] arr5;
             using (MemoryStream ms = new MemoryStream())
             {
