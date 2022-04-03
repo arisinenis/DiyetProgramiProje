@@ -33,6 +33,7 @@ namespace DiyetProgramiProje
             btnAddCategory.Text = "Add Category";
             groupBox3.Text = "Add Food";
             btnAddFood.Text = "Add Food";
+            btnShowCatMenu.Text = "Show Add Category Panel";
         }
         public FoodAddForm(UserRegisterInfo _user, FoodName _foodForUpdate, FoodCategory _foodCategory)
         {
@@ -47,6 +48,7 @@ namespace DiyetProgramiProje
             btnAddCategory.Text = "Update Category";
             groupBox3.Text = "Update Food";
             btnAddFood.Text = "Update Food";
+            btnShowCatMenu.Text = "Show Update Category Panel";
             FillForUpdate();
 
         }
