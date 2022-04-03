@@ -367,6 +367,8 @@ namespace DiyetProgramiProje
             FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
             pboxFoodPic.Image = ConvertByteToPicture(food);
             foodForUpdate = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
+
+            foodCategory = null;
         }
 
         private void FillClientByFilter(string statusType)
@@ -433,6 +435,7 @@ namespace DiyetProgramiProje
         private void lvCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             foodCategory = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
+            foodForUpdate = null;
         }
 
         private void btnUpdateCatAndFood_Click(object sender, EventArgs e)

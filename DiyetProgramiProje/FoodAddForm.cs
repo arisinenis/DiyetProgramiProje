@@ -205,18 +205,18 @@ namespace DiyetProgramiProje
 
         private void FillForUpdate()
         {
-            if (foodCategory != null)
+            if (foodCategory == null && foodForUpdate != null)
             {
-                FillLbCategory();
-                txtCategoryName.Text = foodCategory.CategoryName;
-            }
-            else
-            {
-
                 txtFoodName.Text = foodForUpdate.Name;
                 txtFoodCalories.Text = foodForUpdate.Calorie.ToString();
                 pboxAddPicture.Image = ConvertByteToPicture(foodForUpdate);
             }
+            else
+            {
+                FillLbCategory();
+                txtCategoryName.Text = foodCategory.CategoryName;
+            }
+            
         }
 
         private void FoodAddForm_FormClosed(object sender, FormClosedEventArgs e)
