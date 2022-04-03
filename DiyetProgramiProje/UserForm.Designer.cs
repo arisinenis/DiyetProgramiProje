@@ -32,6 +32,8 @@ namespace DiyetProgramiProje
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblTotalCalories = new System.Windows.Forms.Label();
             this.dtAddMealDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.btnNewMeal = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@ namespace DiyetProgramiProje
             this.nudPortion = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblCategoyName = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblTotalCalories = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblCaloriesByPortion = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,9 +76,9 @@ namespace DiyetProgramiProje
             this.lblRemainCalories = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFood)).BeginInit();
             this.groupBox7.SuspendLayout();
@@ -117,6 +117,25 @@ namespace DiyetProgramiProje
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Meal";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lblTotalCalories);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(326, 402);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(210, 84);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Total Calories";
+            // 
+            // lblTotalCalories
+            // 
+            this.lblTotalCalories.AutoSize = true;
+            this.lblTotalCalories.Location = new System.Drawing.Point(69, 36);
+            this.lblTotalCalories.Name = "lblTotalCalories";
+            this.lblTotalCalories.Size = new System.Drawing.Size(0, 31);
+            this.lblTotalCalories.TabIndex = 11;
             // 
             // dtAddMealDate
             // 
@@ -198,25 +217,6 @@ namespace DiyetProgramiProje
             this.lblCategoyName.Name = "lblCategoyName";
             this.lblCategoyName.Size = new System.Drawing.Size(0, 31);
             this.lblCategoyName.TabIndex = 11;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lblTotalCalories);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(326, 402);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(210, 84);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Total Calories";
-            // 
-            // lblTotalCalories
-            // 
-            this.lblTotalCalories.AutoSize = true;
-            this.lblTotalCalories.Location = new System.Drawing.Point(69, 36);
-            this.lblTotalCalories.Name = "lblTotalCalories";
-            this.lblTotalCalories.Size = new System.Drawing.Size(0, 31);
-            this.lblTotalCalories.TabIndex = 11;
             // 
             // groupBox3
             // 
@@ -410,7 +410,7 @@ namespace DiyetProgramiProje
             // 
             this.dtMealDate.Location = new System.Drawing.Point(153, 39);
             this.dtMealDate.Name = "dtMealDate";
-            this.dtMealDate.Size = new System.Drawing.Size(204, 41);
+            this.dtMealDate.Size = new System.Drawing.Size(223, 41);
             this.dtMealDate.TabIndex = 16;
             // 
             // label8
@@ -598,11 +598,11 @@ namespace DiyetProgramiProje
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFood)).EndInit();

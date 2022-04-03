@@ -70,10 +70,11 @@ namespace DiyetProgramiProje
             this.rbDietician = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnChoosePics = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.btnDieticianJoin = new System.Windows.Forms.Button();
-            this.btnChoosePics = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDGraduation = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtDLastName = new System.Windows.Forms.TextBox();
@@ -83,7 +84,6 @@ namespace DiyetProgramiProje
             this.txtDPassword = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtDEmail = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
@@ -91,8 +91,8 @@ namespace DiyetProgramiProje
             ((System.ComponentModel.ISupportInitialize)(this.pboxDietician)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,10 +125,10 @@ namespace DiyetProgramiProje
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(28, 10);
+            this.panel1.Location = new System.Drawing.Point(60, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 726);
+            this.panel1.Size = new System.Drawing.Size(297, 733);
             this.panel1.TabIndex = 0;
             // 
             // cboxDailyExercise
@@ -172,10 +172,10 @@ namespace DiyetProgramiProje
             this.btnShowDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShowDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShowDetails.ForeColor = System.Drawing.Color.Black;
-            this.btnShowDetails.Location = new System.Drawing.Point(220, 624);
+            this.btnShowDetails.Location = new System.Drawing.Point(220, 617);
             this.btnShowDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowDetails.Name = "btnShowDetails";
-            this.btnShowDetails.Size = new System.Drawing.Size(63, 48);
+            this.btnShowDetails.Size = new System.Drawing.Size(63, 63);
             this.btnShowDetails.TabIndex = 20;
             this.btnShowDetails.UseVisualStyleBackColor = true;
             this.btnShowDetails.Click += new System.EventHandler(this.btnShowDetails_Click);
@@ -391,12 +391,12 @@ namespace DiyetProgramiProje
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 18);
+            this.label1.Size = new System.Drawing.Size(63, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
             // 
@@ -414,7 +414,7 @@ namespace DiyetProgramiProje
             this.groupBox1.Controls.Add(this.pboxDietician);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(333, 429);
+            this.groupBox1.Location = new System.Drawing.Point(376, 455);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -561,7 +561,7 @@ namespace DiyetProgramiProje
             this.groupBox2.Controls.Add(this.rbDietician);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(344, 10);
+            this.groupBox2.Location = new System.Drawing.Point(393, 37);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -586,11 +586,48 @@ namespace DiyetProgramiProje
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.txtDEmail);
             this.panel2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel2.Location = new System.Drawing.Point(11, 10);
+            this.panel2.Location = new System.Drawing.Point(58, 80);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(314, 667);
             this.panel2.TabIndex = 4;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.btnChoosePics);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox3.Location = new System.Drawing.Point(17, 357);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(281, 218);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Photo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(5, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 173);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnChoosePics
+            // 
+            this.btnChoosePics.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChoosePics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnChoosePics.Image = ((System.Drawing.Image)(resources.GetObject("btnChoosePics.Image")));
+            this.btnChoosePics.Location = new System.Drawing.Point(170, 106);
+            this.btnChoosePics.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChoosePics.Name = "btnChoosePics";
+            this.btnChoosePics.Size = new System.Drawing.Size(110, 99);
+            this.btnChoosePics.TabIndex = 20;
+            this.btnChoosePics.Text = "Add Photo";
+            this.btnChoosePics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnChoosePics.UseVisualStyleBackColor = true;
+            this.btnChoosePics.Click += new System.EventHandler(this.btnChoosePics_Click);
             // 
             // label21
             // 
@@ -619,31 +656,6 @@ namespace DiyetProgramiProje
             this.btnDieticianJoin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDieticianJoin.UseVisualStyleBackColor = true;
             this.btnDieticianJoin.Click += new System.EventHandler(this.btnDieticianJoin_Click);
-            // 
-            // btnChoosePics
-            // 
-            this.btnChoosePics.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnChoosePics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnChoosePics.Image = ((System.Drawing.Image)(resources.GetObject("btnChoosePics.Image")));
-            this.btnChoosePics.Location = new System.Drawing.Point(170, 106);
-            this.btnChoosePics.Margin = new System.Windows.Forms.Padding(2);
-            this.btnChoosePics.Name = "btnChoosePics";
-            this.btnChoosePics.Size = new System.Drawing.Size(110, 99);
-            this.btnChoosePics.TabIndex = 20;
-            this.btnChoosePics.Text = "Add Photo";
-            this.btnChoosePics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnChoosePics.UseVisualStyleBackColor = true;
-            this.btnChoosePics.Click += new System.EventHandler(this.btnChoosePics_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(5, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 173);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
             // 
             // txtDGraduation
             // 
@@ -729,25 +741,13 @@ namespace DiyetProgramiProje
             this.txtDEmail.Size = new System.Drawing.Size(279, 36);
             this.txtDEmail.TabIndex = 9;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Controls.Add(this.btnChoosePics);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(17, 357);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(281, 218);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Photo";
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(679, 747);
+            this.ClientSize = new System.Drawing.Size(742, 823);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
@@ -768,8 +768,8 @@ namespace DiyetProgramiProje
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

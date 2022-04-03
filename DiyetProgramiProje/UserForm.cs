@@ -149,9 +149,9 @@ namespace DiyetProgramiProje
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Wrong !!");
+                MessageBox.Show(ex.Message);
              
             }
             
