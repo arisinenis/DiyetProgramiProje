@@ -68,6 +68,10 @@ namespace BusinessLayer.Services
             {
                 throw new Exception("Please fill all blanks.");
             }
+            else if (userInfo.BirthDate.Date.AddYears(13) > DateTime.Now.Date)
+            {
+                throw new Exception("You have to at least 13 years old for sign up.");
+            }
             else
             {
                 return userRepository.AddInformation(userInfo);

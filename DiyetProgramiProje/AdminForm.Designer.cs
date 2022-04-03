@@ -90,9 +90,9 @@
             this.grpbox.Controls.Add(this.lvUserInf);
             this.grpbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.grpbox.Location = new System.Drawing.Point(8, 27);
+            this.grpbox.Location = new System.Drawing.Point(8, 12);
             this.grpbox.Name = "grpbox";
-            this.grpbox.Size = new System.Drawing.Size(1089, 308);
+            this.grpbox.Size = new System.Drawing.Size(1089, 323);
             this.grpbox.TabIndex = 17;
             this.grpbox.TabStop = false;
             this.grpbox.Text = "Clients";
@@ -203,7 +203,7 @@
             this.groupBox1.Controls.Add(this.lvFood);
             this.groupBox1.Controls.Add(this.lvCategory);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 386);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1085, 412);
@@ -213,9 +213,9 @@
             // 
             // btnShowReports
             // 
-            this.btnShowReports.Location = new System.Drawing.Point(956, 242);
+            this.btnShowReports.Location = new System.Drawing.Point(948, 242);
             this.btnShowReports.Name = "btnShowReports";
-            this.btnShowReports.Size = new System.Drawing.Size(120, 72);
+            this.btnShowReports.Size = new System.Drawing.Size(131, 72);
             this.btnShowReports.TabIndex = 42;
             this.btnShowReports.Text = "Show Reports";
             this.btnShowReports.UseVisualStyleBackColor = true;
@@ -535,7 +535,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1105, 802);
             this.Controls.Add(this.btnGetClients);
             this.Controls.Add(this.rbUserGetAll);

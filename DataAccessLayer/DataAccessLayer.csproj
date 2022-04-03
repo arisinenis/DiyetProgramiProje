@@ -66,45 +66,9 @@
     <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserMealsAndFoodsConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
-    <Compile Include="Migrations\202204021106460_lastversion.cs" />
-    <Compile Include="Migrations\202204021106460_lastversion.designer.cs">
-      <DependentUpon>202204021106460_lastversion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021244591_seedUpdateVersion.cs" />
-    <Compile Include="Migrations\202204021244591_seedUpdateVersion.designer.cs">
-      <DependentUpon>202204021244591_seedUpdateVersion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021248094_seedMethodUpdated2.cs" />
-    <Compile Include="Migrations\202204021248094_seedMethodUpdated2.designer.cs">
-      <DependentUpon>202204021248094_seedMethodUpdated2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021249449_seedAdminUpdate.cs" />
-    <Compile Include="Migrations\202204021249449_seedAdminUpdate.designer.cs">
-      <DependentUpon>202204021249449_seedAdminUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021254583_userInformationsUpdate.cs" />
-    <Compile Include="Migrations\202204021254583_userInformationsUpdate.designer.cs">
-      <DependentUpon>202204021254583_userInformationsUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021259416_registerInfosUpdate.cs" />
-    <Compile Include="Migrations\202204021259416_registerInfosUpdate.designer.cs">
-      <DependentUpon>202204021259416_registerInfosUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021303076_adddedSaveChanges.cs" />
-    <Compile Include="Migrations\202204021303076_adddedSaveChanges.designer.cs">
-      <DependentUpon>202204021303076_adddedSaveChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021309233_checkAdmin.cs" />
-    <Compile Include="Migrations\202204021309233_checkAdmin.designer.cs">
-      <DependentUpon>202204021309233_checkAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021313096_otherUpdates.cs" />
-    <Compile Include="Migrations\202204021313096_otherUpdates.designer.cs">
-      <DependentUpon>202204021313096_otherUpdates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204021321230_UserMealDateChange.cs" />
-    <Compile Include="Migrations\202204021321230_UserMealDateChange.designer.cs">
-      <DependentUpon>202204021321230_UserMealDateChange.cs</DependentUpon>
+    <Compile Include="Migrations\202204031409077_lastversion.cs" />
+    <Compile Include="Migrations\202204031409077_lastversion.designer.cs">
+      <DependentUpon>202204031409077_lastversion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,35 +93,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204021106460_lastversion.resx">
-      <DependentUpon>202204021106460_lastversion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021244591_seedUpdateVersion.resx">
-      <DependentUpon>202204021244591_seedUpdateVersion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021248094_seedMethodUpdated2.resx">
-      <DependentUpon>202204021248094_seedMethodUpdated2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021249449_seedAdminUpdate.resx">
-      <DependentUpon>202204021249449_seedAdminUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021254583_userInformationsUpdate.resx">
-      <DependentUpon>202204021254583_userInformationsUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021259416_registerInfosUpdate.resx">
-      <DependentUpon>202204021259416_registerInfosUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021303076_adddedSaveChanges.resx">
-      <DependentUpon>202204021303076_adddedSaveChanges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021309233_checkAdmin.resx">
-      <DependentUpon>202204021309233_checkAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021313096_otherUpdates.resx">
-      <DependentUpon>202204021313096_otherUpdates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204021321230_UserMealDateChange.resx">
-      <DependentUpon>202204021321230_UserMealDateChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204031409077_lastversion.resx">
+      <DependentUpon>202204031409077_lastversion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
