@@ -66,6 +66,10 @@
     <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserMealsAndFoodsConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
+    <Compile Include="Migrations\202204031508062_seedmethodupdate.cs" />
+    <Compile Include="Migrations\202204031508062_seedmethodupdate.designer.cs">
+      <DependentUpon>202204031508062_seedmethodupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
@@ -87,6 +91,11 @@
       <Project>{A85F341A-AC94-4C84-85A8-E139C0649842}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202204031508062_seedmethodupdate.resx">
+      <DependentUpon>202204031508062_seedmethodupdate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
