@@ -60,7 +60,7 @@ namespace DiyetProgramiProje
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 701);
+            this.panel1.Size = new System.Drawing.Size(434, 547);
             this.panel1.TabIndex = 0;
             // 
             // labelWelcome
@@ -70,7 +70,7 @@ namespace DiyetProgramiProje
             this.labelWelcome.BackColor = System.Drawing.Color.Transparent;
             this.labelWelcome.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelWelcome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelWelcome.Location = new System.Drawing.Point(363, 100);
+            this.labelWelcome.Location = new System.Drawing.Point(12, 39);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(415, 85);
             this.labelWelcome.TabIndex = 2;
@@ -83,7 +83,7 @@ namespace DiyetProgramiProje
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnStart);
             this.panel3.Controls.Add(this.lblFirstMessage);
-            this.panel3.Location = new System.Drawing.Point(390, 188);
+            this.panel3.Location = new System.Drawing.Point(33, 127);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(369, 383);
             this.panel3.TabIndex = 1;
@@ -126,7 +126,7 @@ namespace DiyetProgramiProje
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(397, 199);
+            this.panel2.Location = new System.Drawing.Point(40, 138);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 287);
             this.panel2.TabIndex = 0;
@@ -224,7 +224,7 @@ namespace DiyetProgramiProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 701);
+            this.ClientSize = new System.Drawing.Size(434, 547);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);

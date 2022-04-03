@@ -183,8 +183,7 @@ namespace DiyetProgramiProje
             else
             {
                 MessageBox.Show("Please choose a food before delete");
-            }
-           
+            }           
         }
 
         private void FillListView()
@@ -237,7 +236,6 @@ namespace DiyetProgramiProje
             lboxFoods.DisplayMember = "Name";
             lboxFoods.ValueMember = "Id";
             lboxFoods.DataSource = foodService.GetAll();
-
         }
 
         private void lvMeals_Click(object sender, EventArgs e)
@@ -265,23 +263,20 @@ namespace DiyetProgramiProje
         {
             UserMessagesForm userMessagesForm = new UserMessagesForm(userRegisterInfo);
             this.Hide();
-            userMessagesForm.ShowDialog();
-           
+            userMessagesForm.ShowDialog();           
         }
 
         private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["Form1"];
-            frm.Show();
-           
+            Form frm = Application.OpenForms["UserForm"];
+            frm.Show();           
         }
 
         private void btnShowReports_Click(object sender, EventArgs e)
         {
             ReportForm reportForm = new ReportForm();
             this.Hide();
-            reportForm.ShowDialog();
-            
+            reportForm.ShowDialog();            
         }
     }
 }

@@ -33,7 +33,7 @@ namespace DiyetProgramiProje
             panel2.Visible = false;
             cboxDailyExercise.SelectedIndex=0;
             cboxRequest.SelectedIndex=0;
-            cboxDietician.SelectedIndex=-1;
+            cboxDietician.SelectedIndex=0;
 
         }
 
@@ -282,12 +282,6 @@ namespace DiyetProgramiProje
                     break;
             }
             return requireCalorie;
-        }
-
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            cboxDietician.SelectedIndex = -1;
-            groupBox1.Visible = false;
         }
     }
 }
