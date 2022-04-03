@@ -124,26 +124,34 @@ namespace DiyetProgramiProje
                     dietician.Graduation = txtDGraduation.Text;
 
                     Image img = pictureBox1.Image;
-                    byte[] arr;
-                    using (MemoryStream ms = new MemoryStream())
+                    if (img==null)
                     {
-                        img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        arr = ms.ToArray();
+                        MessageBox.Show("Please add a photo");
                     }
+                    else
+                    {
+                        byte[] arr;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            arr = ms.ToArray();
+                        }
 
-                    dietician.Picture = arr;
+                        dietician.Picture = arr;
 
-                    dieticianService.AddInformation(dietician);
+                        dieticianService.AddInformation(dietician);
 
-                    DieticianRegisterInfo dieticianRegisterInfo = new DieticianRegisterInfo();
-                    dieticianRegisterInfo.Id = dietician.Id;
-                    dieticianRegisterInfo.Email = txtDEmail.Text;
-                    dieticianRegisterInfo.Password = txtDPassword.Text;
-                    dieticianRegisterInfo.UserType = MembershipTypeEnum.Dietician;
+                        DieticianRegisterInfo dieticianRegisterInfo = new DieticianRegisterInfo();
+                        dieticianRegisterInfo.Id = dietician.Id;
+                        dieticianRegisterInfo.Email = txtDEmail.Text;
+                        dieticianRegisterInfo.Password = txtDPassword.Text;
+                        dieticianRegisterInfo.UserType = MembershipTypeEnum.Dietician;
 
-                    dieticianService.AddRegister(dieticianRegisterInfo);
+                        dieticianService.AddRegister(dieticianRegisterInfo);
 
-                    MessageBox.Show("Added");
+                        MessageBox.Show("Added");
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -156,6 +164,7 @@ namespace DiyetProgramiProje
         {
             panel1.Visible = true;
             panel2.Visible = false;
+            groupBox1.Visible = false;
         }
 
         private void rbDietician_CheckedChanged(object sender, EventArgs e)

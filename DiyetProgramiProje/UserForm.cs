@@ -268,7 +268,7 @@ namespace DiyetProgramiProje
 
         private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["UserForm"];
+            Form frm = Application.OpenForms["Form1"];
             frm.Show();           
         }
 

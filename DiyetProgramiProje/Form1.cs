@@ -52,7 +52,7 @@ namespace DiyetProgramiProje
                 {
                     UserForm userForm = new UserForm(user);
                     this.Hide();
-                    userForm.ShowDialog();
+                    userForm.Show();
                 }
                 else if (user == null && dietician != null)
                 {

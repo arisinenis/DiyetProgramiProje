@@ -26,6 +26,9 @@ namespace DiyetProgramiProje
             FillMealtime();
             cboxCategoryMealTime.SelectedIndex = 0;
             cboxFoodMealTime.SelectedIndex = 0;
+            dgvCategory.ForeColor = Color.Black;
+            dgvFood.ForeColor = Color.Black;
+            dgvMostEaten.ForeColor = Color.Black;
 
         }
 

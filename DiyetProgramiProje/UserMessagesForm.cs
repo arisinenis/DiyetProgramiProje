@@ -56,11 +56,6 @@ namespace DiyetProgramiProje
                 Message message = messageService.GetByMessageId(messageId);
                 txtShowMessage.Text = message.Text;
             }
-
-            else
-            {
-
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

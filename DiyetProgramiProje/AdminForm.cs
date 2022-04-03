@@ -428,8 +428,8 @@ namespace DiyetProgramiProje
         {
             
             FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo);
-            foodAddForm.Hide();
-            foodAddForm.ShowDialog();
+            this.Hide();
+            foodAddForm.Show();
            
         }
 
