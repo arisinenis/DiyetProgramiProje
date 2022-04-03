@@ -207,7 +207,7 @@ namespace DiyetProgramiProje
 
         private void FillForUpdate()
         {
-            if (foodCategory == null && foodForUpdate != null)
+            if (foodCategory == null && foodForUpdate != null )
             {
                 txtFoodName.Text = foodForUpdate.Name;
                 txtFoodCalories.Text = foodForUpdate.Calorie.ToString();

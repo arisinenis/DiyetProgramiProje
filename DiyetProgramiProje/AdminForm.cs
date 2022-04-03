@@ -441,7 +441,7 @@ namespace DiyetProgramiProje
 
         private void btnUpdateCatAndFood_Click(object sender, EventArgs e)
         {
-            if (lvFood.FocusedItem == null && lvCategory.FocusedItem == null)
+            if (foodForUpdate == null && foodCategory == null)
             {
                 MessageBox.Show("Please select an item.");
             }
