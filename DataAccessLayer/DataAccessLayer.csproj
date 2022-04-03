@@ -66,9 +66,9 @@
     <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserMealsAndFoodsConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
-    <Compile Include="Migrations\202204031409077_lastversion.cs" />
-    <Compile Include="Migrations\202204031409077_lastversion.designer.cs">
-      <DependentUpon>202204031409077_lastversion.cs</DependentUpon>
+    <Compile Include="Migrations\202204031508062_seedmethodupdate.cs" />
+    <Compile Include="Migrations\202204031508062_seedmethodupdate.designer.cs">
+      <DependentUpon>202204031508062_seedmethodupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,8 +93,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204031409077_lastversion.resx">
-      <DependentUpon>202204031409077_lastversion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204031508062_seedmethodupdate.resx">
+      <DependentUpon>202204031508062_seedmethodupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

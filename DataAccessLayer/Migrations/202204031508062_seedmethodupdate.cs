@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class lastversion : DbMigration
+    public partial class seedmethodupdate : DbMigration
     {
         public override void Up()
         {
