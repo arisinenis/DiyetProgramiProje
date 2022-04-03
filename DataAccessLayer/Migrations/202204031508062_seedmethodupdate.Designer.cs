@@ -7,13 +7,13 @@ namespace DataAccessLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class lastversion : IMigrationMetadata
+    public sealed partial class seedmethodupdate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(lastversion));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seedmethodupdate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202204031409077_lastversion"; }
+            get { return "202204031508062_seedmethodupdate"; }
         }
         
         string IMigrationMetadata.Source

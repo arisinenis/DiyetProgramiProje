@@ -95,7 +95,7 @@ namespace DiyetProgramiProje
                 if (userMeal == null)
                 {
                     userMeal = new UserMeal();
-                    userMeal.MealDate = dtAddMealDate.Value.Date; // Burası Değişti
+                    userMeal.MealDate = dtAddMealDate.Value.Date; 
                     userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
                     userMeal.UserInformationId = userRegisterInfo.Id;
                     userMealService.Add(userMeal);
@@ -151,7 +151,7 @@ namespace DiyetProgramiProje
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Wrong !!");
+                MessageBox.Show(ex.Message);
              
             }
             

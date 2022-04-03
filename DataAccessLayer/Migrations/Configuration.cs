@@ -23,7 +23,7 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
 
-            Image img = new Bitmap(@"C:\Desktop\1.jpg");
+            Image img = new Bitmap(@"C:\Desktop\d1.jpg");
             byte[] arr1;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -48,11 +48,44 @@
             {
                 Id = dietician1.Id,
                 Email = "dietician1@diet.com",
-                Password = "1234",
+                Password = "12345D!",
                 UserType = MembershipTypeEnum.Dietician
             };
 
             context.DieticianRegisterInfos.Add(dieticianRegisterInfo1);
+            context.SaveChanges();
+
+
+            Image imgD = new Bitmap(@"C:\Desktop\d2.jpg");
+            byte[] arrD;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imgD.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                arrD = ms.ToArray();
+            }
+
+            Dietician dietician2 = new Dietician()
+            {
+                FirstName = "dietician2",
+                LastName = "dietician2",
+                Graduation = "B university",
+                Status = "Active",
+                Picture = arrD
+            };
+
+            context.Dieticians.Add(dietician2);
+            context.SaveChanges();
+
+
+            DieticianRegisterInfo dieticianRegisterInfo2 = new DieticianRegisterInfo()
+            {
+                Id = dietician2.Id,
+                Email = "dietician2@diet.com",
+                Password = "12345D!",
+                UserType = MembershipTypeEnum.Dietician
+            };
+
+            context.DieticianRegisterInfos.Add(dieticianRegisterInfo2);
             context.SaveChanges();
 
 
@@ -77,7 +110,7 @@
             UserRegisterInfo admin = new UserRegisterInfo();
             admin.Id = adminInfo.Id;
             admin.Email = "admin@diet.com";
-            admin.Password = "1";
+            admin.Password = "A1111!";
             admin.UserType = MembershipTypeEnum.Admin;
 
             context.UserRegisterInfos.Add(admin);
@@ -105,10 +138,37 @@
             UserRegisterInfo user1 = new UserRegisterInfo();
             user1.Id = user1Info.Id;
             user1.Email = "user1@gmail.com";
-            user1.Password = "1234";
+            user1.Password = "12345B!";
             user1.UserType = MembershipTypeEnum.Client;
 
             context.UserRegisterInfos.Add(user1);
+            context.SaveChanges();
+
+            UserInformation user2Info = new UserInformation()
+            {
+                FirstName = "user2",
+                LastName = "user2",
+                BirthDate = DateTime.Now,
+                Gender = "Female",
+                Height = 165,
+                Weight = 53,
+                Status = "Active",
+                UserRequest = UserRequestsEnum.MaintainWeight,
+                DailyExercise = ExerciseEnum.LightlyActive,
+                DailyCalorie = 2000,
+                RequireCalorie = 2200,
+                DieticianId = 2
+            };
+            context.UserInformations.Add(user2Info);
+            context.SaveChanges();
+
+            UserRegisterInfo user2 = new UserRegisterInfo();
+            user2.Id = user2Info.Id;
+            user2.Email = "user2@gmail.com";
+            user2.Password = "12345A!";
+            user2.UserType = MembershipTypeEnum.Client;
+
+            context.UserRegisterInfos.Add(user2);
             context.SaveChanges();
 
 
@@ -213,6 +273,48 @@
             };
 
             context.FoodNames.Add(food4);
+            context.SaveChanges();
+
+
+            Image food5Img = new Bitmap(@"C:\Desktop\lettuce.jpg");
+            byte[] arr6;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                food5Img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                arr6 = ms.ToArray();
+            }
+
+            FoodName food5 = new FoodName()
+            {
+                Name = "Lettuce",
+                Calorie = 27,
+                Status = "Active",
+                FoodPicture = arr6,
+                FoodCategoryId = 2
+            };
+
+            context.FoodNames.Add(food5);
+            context.SaveChanges();
+
+
+            Image food6Img = new Bitmap(@"C:\Desktop\ham.jpg");
+            byte[] arr7;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                food6Img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                arr7 = ms.ToArray();
+            }
+
+            FoodName food6 = new FoodName()
+            {
+                Name = "Ham",
+                Calorie = 27,
+                Status = "Active",
+                FoodPicture = arr7,
+                FoodCategoryId = 1
+            };
+
+            context.FoodNames.Add(food6);
 
             context.SaveChanges();
         }
