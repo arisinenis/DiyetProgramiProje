@@ -25,7 +25,7 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
 
-            Image img = new Bitmap(@"C:\Desktop\1.jpg");
+            Image img = new Bitmap(@"C:\Desktop\1.jpeg");
             byte[] arr1;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -134,7 +134,7 @@
             context.SaveChanges();
 
 
-            Image food1Img = new Bitmap(@"C:\Desktop\beef.jpg");
+            Image food1Img = new Bitmap(@"C:\Desktop\beef.jpeg");
             byte[] arr2;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -155,7 +155,7 @@
             context.SaveChanges();
 
 
-            Image food2Img = new Bitmap(@"C:\Desktop\chicken.jpg");
+            Image food2Img = new Bitmap(@"C:\Desktop\chicken.jpeg");
             byte[] arr3;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -176,7 +176,7 @@
             context.SaveChanges();
 
 
-            Image food3Img = new Bitmap(@"C:\Desktop\bean.jpg");
+            Image food3Img = new Bitmap(@"C:\Desktop\bean.jpeg");
             byte[] arr4;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -197,7 +197,7 @@
             context.SaveChanges();
 
 
-            Image food4Img = new Bitmap(@"C:\Desktop\broccoli.jpg");
+            Image food4Img = new Bitmap(@"C:\Desktop\broccoli.jpeg");
             byte[] arr5;
             using (MemoryStream ms = new MemoryStream())
             {

@@ -22,13 +22,12 @@ namespace DiyetProgramiProje
             InitializeComponent();
             userService = new UserService();
             dieticianService = new DieticianService();
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            panel2.Visible = false;
+            panel3.Visible = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -81,6 +80,12 @@ namespace DiyetProgramiProje
             {
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel2.Visible = true;
         }
     }
 }
