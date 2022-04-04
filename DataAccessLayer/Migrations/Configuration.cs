@@ -22,8 +22,8 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-
-            Image img = new Bitmap(@"C:\Desktop\d1.jpg");
+            string d1 = Path.GetFullPath("d1.jpeg");
+            Image img = new Bitmap(d1);
             byte[] arr1;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -55,8 +55,8 @@
             context.DieticianRegisterInfos.Add(dieticianRegisterInfo1);
             context.SaveChanges();
 
-
-            Image imgD = new Bitmap(@"C:\Desktop\d2.jpg");
+            string d2 = Path.GetFullPath("d2.jpeg");
+            Image imgD = new Bitmap(d2);
             byte[] arrD;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -191,8 +191,8 @@
             context.FoodCategories.Add(category2);
             context.SaveChanges();
 
-
-            Image food1Img = new Bitmap(@"C:\Desktop\beef.jpg");
+            string beef = Path.GetFullPath("beef.jpeg");
+            Image food1Img = new Bitmap(beef);
             byte[] arr2;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -212,8 +212,8 @@
             context.FoodNames.Add(food1);
             context.SaveChanges();
 
-
-            Image food2Img = new Bitmap(@"C:\Desktop\chicken.jpg");
+            string chicken = Path.GetFullPath("chicken.jpeg");
+            Image food2Img = new Bitmap(chicken);
             byte[] arr3;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -233,8 +233,8 @@
             context.FoodNames.Add(food2);
             context.SaveChanges();
 
-
-            Image food3Img = new Bitmap(@"C:\Desktop\bean.jpg");
+            string bean = Path.GetFullPath("bean.jpeg");
+            Image food3Img = new Bitmap(bean);
             byte[] arr4;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -254,8 +254,8 @@
             context.FoodNames.Add(food3);
             context.SaveChanges();
 
-
-            Image food4Img = new Bitmap(@"C:\Desktop\broccoli.jpg");
+            string broccoli = Path.GetFullPath("broccoli.jpeg");
+            Image food4Img = new Bitmap(broccoli);
             byte[] arr5;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -275,8 +275,8 @@
             context.FoodNames.Add(food4);
             context.SaveChanges();
 
-
-            Image food5Img = new Bitmap(@"C:\Desktop\lettuce.jpg");
+            string lettuce = Path.GetFullPath("lettuce.jpeg");
+            Image food5Img = new Bitmap(lettuce);
             byte[] arr6;
             using (MemoryStream ms = new MemoryStream())
             {
@@ -296,8 +296,8 @@
             context.FoodNames.Add(food5);
             context.SaveChanges();
 
-
-            Image food6Img = new Bitmap(@"C:\Desktop\ham.jpg");
+            string ham = Path.GetFullPath("ham.jpeg");
+            Image food6Img = new Bitmap(ham);
             byte[] arr7;
             using (MemoryStream ms = new MemoryStream())
             {
