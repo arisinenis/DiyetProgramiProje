@@ -23,7 +23,7 @@ namespace BusinessLayer.Services
 
         public bool AddInformation(Dietician dietician)
         {
-            if(String.IsNullOrWhiteSpace(dietician.FirstName) || String.IsNullOrWhiteSpace(dietician.LastName) || String.IsNullOrWhiteSpace(dietician.Graduation))
+            if(string.IsNullOrWhiteSpace(dietician.FirstName) || string.IsNullOrWhiteSpace(dietician.LastName) || string.IsNullOrWhiteSpace(dietician.Graduation))
             {
                 throw new Exception("Please fill all blanks");
             }
@@ -35,7 +35,7 @@ namespace BusinessLayer.Services
 
         public bool AddRegister(DieticianRegisterInfo dietician)
         {
-            if (String.IsNullOrWhiteSpace(dietician.Email) || String.IsNullOrWhiteSpace(dietician.Password))
+            if (string.IsNullOrWhiteSpace(dietician.Email) || string.IsNullOrWhiteSpace(dietician.Password))
             {
                 throw new Exception("Please fill all blanks");
             }
@@ -55,7 +55,7 @@ namespace BusinessLayer.Services
 
         public DieticianRegisterInfo CheckLogin(string email, string password)
         {
-            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password) || dieticianRepository.CheckStatus(email) == "Passive")
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || dieticianRepository.CheckStatus(email) == "Passive")
             {
                 return null;
             }

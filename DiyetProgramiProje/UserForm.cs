@@ -175,15 +175,16 @@ namespace DiyetProgramiProje
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (lvMeals.FocusedItem!=null)
-            {
+            try
+            {   
                 userMealsAndFoodsService.Delete(mealId, foodId);
-                FillListView();
+                FillListView();     
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Please choose a food before delete");
-            }           
+                MessageBox.Show("Please select a food before delete");
+            }
+            
         }
 
         private void FillListView()
@@ -277,6 +278,11 @@ namespace DiyetProgramiProje
             ReportForm reportForm = new ReportForm();
             this.Hide();
             reportForm.ShowDialog();            
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

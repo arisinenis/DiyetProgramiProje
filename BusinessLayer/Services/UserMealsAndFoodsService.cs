@@ -31,6 +31,10 @@ namespace BusinessLayer.Services
 
         public bool Delete(int mealId, int foodId)
         {
+            if (mealId==0 || foodId==0)
+            {
+                throw new Exception("Please select a food before delete");
+            }
                 return userMealsAndFoodsRepository.Delete(mealId, foodId);
         }
 
