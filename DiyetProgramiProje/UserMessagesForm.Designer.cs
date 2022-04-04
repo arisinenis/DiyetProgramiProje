@@ -151,6 +151,7 @@ namespace DiyetProgramiProje
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UserMessagesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserMessagesForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserMessagesForm_FormClosed);
             this.Load += new System.EventHandler(this.UserMessagesForm_Load);

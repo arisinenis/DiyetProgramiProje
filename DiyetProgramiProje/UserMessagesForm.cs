@@ -78,6 +78,7 @@ namespace DiyetProgramiProje
                 dieticianMessage.UserId = userRegisterInfo.Id;
                 dieticianMessage.DieticianId = user.DieticianId;
                 dieticianMessageService.Add(dieticianMessage);
+                MessageBox.Show("Message has been sended");
             }
             
         }

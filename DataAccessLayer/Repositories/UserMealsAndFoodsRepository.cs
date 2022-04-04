@@ -40,9 +40,11 @@ namespace DataAccessLayer.Repositories
         public bool Delete(int mealId, int foodId)
         {
             UserMealsAndFoods meal = db.UserMealsAndFoods.Where(u => u.UserMealID == mealId && u.FoodNameID == foodId).SingleOrDefault();
-            db.UserMealsAndFoods.Remove(meal);
-
+            
+                db.UserMealsAndFoods.Remove(meal);  
+            
             return db.SaveChanges() > 0;
+
         }
 
 

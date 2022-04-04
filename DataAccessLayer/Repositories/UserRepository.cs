@@ -64,7 +64,7 @@ namespace DataAccessLayer.Repositories
 
         public List<UserInformation> GetAllClients()
         {
-            return db.UserInformations.Where(u => u.UserRegisterInfo.UserType.ToString() == "Client").ToList();
+            return db.UserInformations.Where(u => u.UserRegisterInfo.UserType.ToString() == "Client" && u.Id !=1).ToList();
         }
 
         public UserInformation GetById(int userId)
@@ -79,7 +79,7 @@ namespace DataAccessLayer.Repositories
 
         public List<UserInformation> GetCustomers(Dietician dietician)
         {
-            List<UserInformation> customers = db.UserInformations.Where(u => u.DieticianId == dietician.Id).ToList();
+            List<UserInformation> customers = db.UserInformations.Where(u => u.DieticianId == dietician.Id && u.Id!=1).ToList();
 
             return customers;
         }

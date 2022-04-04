@@ -102,6 +102,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DieticianMessagesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DieticianMessagesForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DieticianMessagesForm_FormClosed);
             this.Load += new System.EventHandler(this.DieticianMessagesForm_Load);

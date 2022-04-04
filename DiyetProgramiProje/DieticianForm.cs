@@ -136,34 +136,6 @@ namespace DiyetProgramiProje
             
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-            if (userId!=0)
-            {
-                Message message = new Message();
-                message.MessageHeader = txtMessageTitle.Text;
-                message.Text = txtMessage.Text;
-                message.UserInformationId = userId;
-                messageService.Add(message);
-                if (message != null)
-                {
-                    MessageBox.Show("Message has been send");
-                }
-
-                else
-                {
-                    MessageBox.Show("Error");
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Any client selected");
-            }
-            
-           
-        }
-
         private void btnShowMessages_Click(object sender, EventArgs e)
         {
             DieticianMessagesForm dieticianMessagesForm = new DieticianMessagesForm(dieticianRegisterInfo);
@@ -176,6 +148,32 @@ namespace DiyetProgramiProje
         {
             Form frm = Application.OpenForms["Form1"];
             frm.Show();
+        }
+
+        private void btnSend_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (userId != 0)
+                {
+                    Message message = new Message();
+                    message.MessageHeader = txtMessageTitle.Text;
+                    message.Text = txtMessage.Text;
+                    message.UserInformationId = userId;
+                    messageService.Add(message);
+                    MessageBox.Show("Message has been send");
+                }
+
+                else
+                {
+                    MessageBox.Show("Any client selected");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

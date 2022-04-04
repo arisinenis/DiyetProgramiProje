@@ -339,6 +339,7 @@
             this.btnSend.Text = "Send";
             this.btnSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click_1);
             // 
             // txtMessage
             // 
@@ -362,7 +363,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DieticianForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DieticianForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DieticianForm_FormClosed);
             this.Load += new System.EventHandler(this.DieticianForm_Load);

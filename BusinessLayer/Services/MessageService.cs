@@ -18,7 +18,7 @@ namespace BusinessLayer.Services
         }
         public bool Add(Message message)
         {
-            if (String.IsNullOrWhiteSpace(message.MessageHeader) || String.IsNullOrWhiteSpace(message.Text))
+            if (string.IsNullOrWhiteSpace(message.MessageHeader) || string.IsNullOrWhiteSpace(message.Text))
             {
                 throw new Exception("Please fill all blanks");
             }
