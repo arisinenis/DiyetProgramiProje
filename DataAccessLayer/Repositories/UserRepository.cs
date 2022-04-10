@@ -32,7 +32,7 @@ namespace DataAccessLayer.Repositories
 
         public UserRegisterInfo CheckLogin(string email, string password)
         {
-            UserRegisterInfo user = db.UserRegisterInfos.Where(u => u.Email == email && u.Password == password && u.UserInformation.Status == "Active").SingleOrDefault();
+            UserRegisterInfo user = db.UserRegisterInfos.Where(u => u.Email == email && u.Password == password && u.UserInformation.Status == StatusEnum.Active).SingleOrDefault();
 
             return user;
         }
@@ -42,8 +42,8 @@ namespace DataAccessLayer.Repositories
             UserRegisterInfo user = db.UserRegisterInfos.Where(u => u.Email == email).FirstOrDefault();
             if (user!=null)
             {
-                string status = db.UserInformations.Find(user.Id).Status;
-                return status;
+                StatusEnum status = db.UserInformations.Find(user.Id).Status;
+                return status.ToString();
             }
 
             else
@@ -55,11 +55,11 @@ namespace DataAccessLayer.Repositories
 
         public List<UserInformation> GetAllPassives()
         {
-            return db.UserInformations.Where(u => u.Status == "Passive").ToList();
+            return db.UserInformations.Where(u => u.Status == StatusEnum.Passive).ToList();
         }
         public List<UserInformation> GetAllActives()
         {
-            return db.UserInformations.Where(u => u.Status == "Active").ToList();
+            return db.UserInformations.Where(u => u.Status == StatusEnum.Active && u.Id != 1).ToList();
         }
 
         public List<UserInformation> GetAllClients()
@@ -87,14 +87,14 @@ namespace DataAccessLayer.Repositories
         public bool Active(UserInformation entity)
         {
             UserInformation passiveUser = db.UserInformations.Find(entity.Id);
-            passiveUser.Status = "Active";
+            passiveUser.Status = StatusEnum.Active;
             return db.SaveChanges() > 0;
         }
 
         public bool Passive(UserInformation entity)
         {
             UserInformation userInf = db.UserInformations.Find(entity.Id);
-            userInf.Status = "Passive";
+            userInf.Status = StatusEnum.Passive;
 
             return db.SaveChanges() > 0;
         }

@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace DataAccessLayer.Repositories
 
         public DieticianRegisterInfo CheckLogin(string email, string password)
         {
-            DieticianRegisterInfo dietician = db.DieticianRegisterInfos.Where(d => d.Email == email && d.Password == password && d.Dietician.Status == "Active").SingleOrDefault();
+            DieticianRegisterInfo dietician = db.DieticianRegisterInfos.Where(d => d.Email == email && d.Password == password && d.Dietician.Status == StatusEnum.Active).SingleOrDefault();
                 
                 return dietician;
         }
@@ -41,7 +42,7 @@ namespace DataAccessLayer.Repositories
         public bool Active(Dietician entity)
         {
             Dietician dietician = db.Dieticians.Find(entity.Id);
-            dietician.Status = "Active";
+            dietician.Status = StatusEnum.Active;
 
             return db.SaveChanges() > 0;
         }
@@ -49,7 +50,7 @@ namespace DataAccessLayer.Repositories
         public bool Passive(Dietician entity)
         {
             Dietician dietician = db.Dieticians.Find(entity.Id);
-            dietician.Status = "Passive";
+            dietician.Status = StatusEnum.Passive;
 
             return db.SaveChanges() > 0;
         }
@@ -59,8 +60,8 @@ namespace DataAccessLayer.Repositories
             DieticianRegisterInfo dietician = db.DieticianRegisterInfos.Where(d => d.Email == email).FirstOrDefault();
             if (dietician!=null)
             {
-                string status = db.Dieticians.Find(dietician.Id).Status;
-                return status;
+                StatusEnum status = db.Dieticians.Find(dietician.Id).Status;
+                return status.ToString();
             }
             else
             {
@@ -73,7 +74,7 @@ namespace DataAccessLayer.Repositories
         public List<Dietician> GetActiveAll()
         {
 
-            List<Dietician> dieticians = db.Dieticians.Where(d => d.Status == "Active").ToList();
+            List<Dietician> dieticians = db.Dieticians.Where(d => d.Status == StatusEnum.Active).ToList();
             return dieticians;
         
         }

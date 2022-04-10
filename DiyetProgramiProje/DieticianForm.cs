@@ -160,6 +160,7 @@ namespace DiyetProgramiProje
                     message.MessageHeader = txtMessageTitle.Text;
                     message.Text = txtMessage.Text;
                     message.UserInformationId = userId;
+                    message.DieticianId = dieticianRegisterInfo.Id;
                     messageService.Add(message);
                     MessageBox.Show("Message has been send");
                 }

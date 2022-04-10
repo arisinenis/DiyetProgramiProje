@@ -36,7 +36,7 @@
                 FirstName = "dietician1",
                 LastName = "dietician1",
                 Graduation = "A university",
-                Status = "Active",
+                Status = StatusEnum.Active,
                 Picture = arr1
             };
 
@@ -69,7 +69,7 @@
                 FirstName = "dietician2",
                 LastName = "dietician2",
                 Graduation = "B university",
-                Status = "Active",
+                Status = StatusEnum.Active,
                 Picture = arrD
             };
 
@@ -94,10 +94,10 @@
                 FirstName = "admin",
                 LastName = "admin",
                 BirthDate = DateTime.Now,
-                Gender = "Male",
+                Gender = GenderEnum.Male,
                 Height = 1,
                 Weight = 1,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 UserRequest = UserRequestsEnum.MaintainWeight,
                 DailyExercise = ExerciseEnum.LightlyActive,
                 DailyCalorie = 2000,
@@ -122,10 +122,10 @@
                 FirstName = "user1",
                 LastName = "user1",
                 BirthDate = DateTime.Now,
-                Gender = "Male",
+                Gender = GenderEnum.Male,
                 Height = 178,
                 Weight = 72,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 UserRequest = UserRequestsEnum.MaintainWeight,
                 DailyExercise = ExerciseEnum.LightlyActive,
                 DailyCalorie = 2000,
@@ -149,10 +149,10 @@
                 FirstName = "user2",
                 LastName = "user2",
                 BirthDate = DateTime.Now,
-                Gender = "Female",
+                Gender = GenderEnum.Female,
                 Height = 165,
                 Weight = 53,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 UserRequest = UserRequestsEnum.MaintainWeight,
                 DailyExercise = ExerciseEnum.LightlyActive,
                 DailyCalorie = 2000,
@@ -175,7 +175,7 @@
             FoodCategory category1 = new FoodCategory()
             {
                 CategoryName = "Meats",
-                Status = "Active"
+                Status = StatusEnum.Active
             };
 
             context.FoodCategories.Add(category1);
@@ -185,7 +185,7 @@
             FoodCategory category2 = new FoodCategory()
             {
                 CategoryName = "Vegetables",
-                Status = "Active"
+                Status = StatusEnum.Active
             };
 
             context.FoodCategories.Add(category2);
@@ -204,7 +204,7 @@
             {
                 Name = "Beef",
                 Calorie = 300,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 FoodPicture = arr2,
                 FoodCategoryId = 1
             };
@@ -225,7 +225,7 @@
             {
                 Name = "Chicken",
                 Calorie = 220,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 FoodPicture = arr3,
                 FoodCategoryId = 1
             };
@@ -246,7 +246,7 @@
             {
                 Name = "Bean",
                 Calorie = 50,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 FoodPicture = arr4,
                 FoodCategoryId = 2
             };
@@ -267,7 +267,7 @@
             {
                 Name = "Broccoli",
                 Calorie = 27,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 FoodPicture = arr5,
                 FoodCategoryId = 2
             };
@@ -288,7 +288,7 @@
             {
                 Name = "Lettuce",
                 Calorie = 27,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 FoodPicture = arr6,
                 FoodCategoryId = 2
             };
@@ -309,7 +309,7 @@
             {
                 Name = "Ham",
                 Calorie = 27,
-                Status = "Active",
+                Status = StatusEnum.Active,
                 FoodPicture = arr7,
                 FoodCategoryId = 1
             };
