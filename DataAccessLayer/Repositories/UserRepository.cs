@@ -59,7 +59,7 @@ namespace DataAccessLayer.Repositories
         }
         public List<UserInformation> GetAllActives()
         {
-            return db.UserInformations.Where(u => u.Status == StatusEnum.Active && u.Id != 1).ToList();
+            return db.UserInformations.Where(u => u.Status == StatusEnum.Active).ToList();
         }
 
         public List<UserInformation> GetAllClients()
