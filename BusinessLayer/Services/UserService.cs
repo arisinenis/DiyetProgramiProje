@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Repositories;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BusinessLayer.Services
 {
@@ -24,7 +26,7 @@ namespace BusinessLayer.Services
 
         public UserRegisterInfo CheckLogin(string email, string password)
         {
-            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password) || userRepository.CheckUserStatus(email) == "Passive")
+            if (String.IsNullOrWhiteSpace(email) || String.IsNullOrWhiteSpace(password) || userRepository.CheckUserStatus(email) == StatusEnum.Passive.ToString())
             {
                 return null;
             }
@@ -64,7 +66,7 @@ namespace BusinessLayer.Services
        
         public bool AddInformation(UserInformation userInfo)
         {
-            if (String.IsNullOrWhiteSpace(userInfo.FirstName) || String.IsNullOrWhiteSpace(userInfo.LastName) || String.IsNullOrWhiteSpace(userInfo.BirthDate.ToString()) || String.IsNullOrWhiteSpace(userInfo.Gender) || String.IsNullOrWhiteSpace(userInfo.Height.ToString()) || String.IsNullOrWhiteSpace(userInfo.Weight.ToString()) || String.IsNullOrWhiteSpace(userInfo.DailyExercise.ToString()) || String.IsNullOrWhiteSpace(userInfo.UserRequest.ToString()) || String.IsNullOrWhiteSpace(userInfo.DieticianId.ToString()) || String.IsNullOrWhiteSpace(userInfo.DailyCalorie.ToString()) || String.IsNullOrWhiteSpace(userInfo.RequireCalorie.ToString()))
+            if (string.IsNullOrWhiteSpace(userInfo.FirstName) || string.IsNullOrWhiteSpace(userInfo.LastName) || string.IsNullOrWhiteSpace(userInfo.BirthDate.ToString()) || string.IsNullOrWhiteSpace(userInfo.Gender.ToString()) || string.IsNullOrWhiteSpace(userInfo.Height.ToString()) || string.IsNullOrWhiteSpace(userInfo.Weight.ToString()) || string.IsNullOrWhiteSpace(userInfo.DailyExercise.ToString()) || string.IsNullOrWhiteSpace(userInfo.UserRequest.ToString()) || string.IsNullOrWhiteSpace(userInfo.DieticianId.ToString()) || string.IsNullOrWhiteSpace(userInfo.DailyCalorie.ToString()) || string.IsNullOrWhiteSpace(userInfo.RequireCalorie.ToString()))
             {
                 throw new Exception("Please fill all blanks.");
             }

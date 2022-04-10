@@ -26,7 +26,7 @@ namespace Model.Entities
             }
         }
         public string Graduation { get; set; }
-        public string Status { get; set; } = "Passive";
+        public StatusEnum Status { get; set; } = StatusEnum.Passive;
         public byte[] Picture { get; set; }
 
         public virtual ICollection<UserInformation> UserInformations { get; set; }

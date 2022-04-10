@@ -1,4 +1,5 @@
 ﻿using Model.Abstract;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Model.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Calorie { get; set; }
-        public string Status { get; set; } = "Passive";
+        public StatusEnum Status { get; set; } = StatusEnum.Passive;
         public byte[] FoodPicture { get; set; }
 
         public virtual int FoodCategoryId { get; set; }
