@@ -61,7 +61,7 @@ namespace DiyetProgramiProje
                     userInformation.FirstName = txtFirstName.Text;
                     userInformation.LastName = txtLastName.Text;
                     userInformation.BirthDate = dtBirthDate.Value;
-                    userInformation.Gender = rbMale.Checked ? "Male" : "Female";
+                    userInformation.Gender = rbMale.Checked ? GenderEnum.Male : GenderEnum.Female;
                     userInformation.Height = nudHeight.Value;
                     userInformation.Weight = nudWeight.Value;
                     userInformation.DailyExercise = (ExerciseEnum)Enum.Parse(typeof(ExerciseEnum), cboxDailyExercise.SelectedItem.ToString());
@@ -237,8 +237,7 @@ namespace DiyetProgramiProje
         }
 
 
-
-        private decimal CalculateDailyCalorie(decimal height,decimal weight,DateTime dateTime,string gender,ExerciseEnum exercise)
+        private decimal CalculateDailyCalorie(decimal height,decimal weight,DateTime dateTime, GenderEnum gender,ExerciseEnum exercise)
         {
             decimal bmr=0;
             decimal amr=0;
@@ -248,11 +247,11 @@ namespace DiyetProgramiProje
             
             switch (gender)
             {
-                case "Male":
+                case GenderEnum.Male:
                     bmr = (decimal)(66.47 + (13.75 * Convert.ToDouble(weight)) + (5.003 * Convert.ToDouble(height) - (6.755 * age)));
                     break;
 
-                case "Female":
+                case GenderEnum.Female:
                     bmr = (decimal)(655.1 + (9.563 * Convert.ToDouble(weight)) + (1.850 * Convert.ToDouble(height) - (4.676 * age)));
                     break;
             }

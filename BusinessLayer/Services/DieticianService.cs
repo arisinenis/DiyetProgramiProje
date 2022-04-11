@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Repositories;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +56,7 @@ namespace BusinessLayer.Services
 
         public DieticianRegisterInfo CheckLogin(string email, string password)
         {
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || dieticianRepository.CheckStatus(email) == "Passive")
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || dieticianRepository.CheckStatus(email) == StatusEnum.Passive.ToString())
             {
                 return null;
             }

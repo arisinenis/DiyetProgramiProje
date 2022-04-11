@@ -15,10 +15,10 @@ namespace DataAccessLayer.EntityConfiguration
             Property(u => u.FirstName).IsRequired().HasMaxLength(50);
             Property(u => u.LastName).IsRequired().HasMaxLength(50);
             Property(u => u.BirthDate).IsRequired();
-            Property(u => u.Gender).IsRequired().HasMaxLength(6);
+            Property(u => u.Gender).IsRequired();
             Property(u => u.Height).IsRequired();
             Property(u => u.Weight).IsRequired();
-            Property(u => u.Status).IsRequired().HasMaxLength(7);
+            Property(u => u.Status).IsRequired();
             Property(u => u.DieticianId).IsRequired();
 
             HasRequired(u => u.Dietician).WithMany(u => u.UserInformations).HasForeignKey(u => u.DieticianId);

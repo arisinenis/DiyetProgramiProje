@@ -26,14 +26,14 @@ namespace Model.Entities
             }
         }
         public DateTime BirthDate { get; set; }
-        public string Gender { get; set; }
+        public GenderEnum Gender { get; set; }
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
         public UserRequestsEnum UserRequest { get; set; }
         public ExerciseEnum DailyExercise { get; set; }
         public decimal DailyCalorie { get; set; }
         public decimal RequireCalorie { get; set; }
-        public string Status { get; set; } = "Passive";
+        public StatusEnum Status { get; set; } = StatusEnum.Passive;
 
         public virtual UserRegisterInfo UserRegisterInfo { get; set; }
 

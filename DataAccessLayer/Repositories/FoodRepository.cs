@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +59,7 @@ namespace DataAccessLayer.Repositories
         public bool Active(FoodName entity)
         {
             FoodName food = db.FoodNames.Find(entity.Id);
-            food.Status = "Active";
+            food.Status = StatusEnum.Active;
 
             return db.SaveChanges() > 0;
         }
@@ -66,7 +67,7 @@ namespace DataAccessLayer.Repositories
         public bool Passive(FoodName entity)
         {
             FoodName food = db.FoodNames.Find(entity.Id);
-            food.Status = "Passive";
+            food.Status = StatusEnum.Passive;
 
             return db.SaveChanges() > 0;
         }
@@ -93,14 +94,14 @@ namespace DataAccessLayer.Repositories
 
         public List<FoodName> GetActives()
         {
-            List<FoodName> foods = db.FoodNames.Where(f => f.Status == "Active").ToList();
+            List<FoodName> foods = db.FoodNames.Where(f => f.Status == StatusEnum.Active).ToList();
 
             return foods;
         }
 
         public List<FoodName> GetPassives()
         {
-            List<FoodName> foods = db.FoodNames.Where(f => f.Status == "Passive").ToList();
+            List<FoodName> foods = db.FoodNames.Where(f => f.Status == StatusEnum.Passive).ToList();
 
             return foods;
         }

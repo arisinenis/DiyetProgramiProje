@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Services;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,7 +74,7 @@ namespace DiyetProgramiProje
             {
                 FoodCategory category = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
 
-                if (category.Status == "Passive")
+                if (category.Status == StatusEnum.Passive)
                 {
                     categoryService.Active(category);
                     MessageBox.Show("Category status updated to ACTIVE");
@@ -95,7 +96,7 @@ namespace DiyetProgramiProje
             {
                 FoodCategory category = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
 
-                if (category.Status == "Active")
+                if (category.Status == StatusEnum.Active)
                 {
                     categoryService.Passive(category);
                     MessageBox.Show("Category status updated to PASSIVE");
@@ -132,7 +133,7 @@ namespace DiyetProgramiProje
             {
                 FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
 
-                if (food.Status == "Passive")
+                if (food.Status == StatusEnum.Passive)
                 {
                     foodService.Active(food);
                     MessageBox.Show("Food status updated to ACTIVE");
@@ -154,7 +155,7 @@ namespace DiyetProgramiProje
             {
                 FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
 
-                if (food.Status == "Active")
+                if (food.Status == StatusEnum.Active)
                 {
                     foodService.Passive(food);
                     MessageBox.Show("Food status updated to PASSIVE");
@@ -170,7 +171,7 @@ namespace DiyetProgramiProje
         {
             UserInformation user = userService.GetById(Convert.ToInt32(lvUserInf.FocusedItem.Text));
 
-            if (user.Status == "Passive")
+            if (user.Status == StatusEnum.Passive)
             {
                 userService.Active(user);
                 MessageBox.Show("User status updated to ACTIVE");
@@ -187,7 +188,7 @@ namespace DiyetProgramiProje
         {
             UserInformation user = userService.GetById(Convert.ToInt32(lvUserInf.FocusedItem.Text));
 
-            if (user.Status == "Active")
+            if (user.Status == StatusEnum.Active)
             {
                 userService.Passive(user);
                 MessageBox.Show("User status updated to PASSIVE");

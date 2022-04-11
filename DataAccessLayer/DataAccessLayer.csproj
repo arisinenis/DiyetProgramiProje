@@ -66,9 +66,9 @@
     <Compile Include="EntityConfiguration\UserMealConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserMealsAndFoodsConfiguration.cs" />
     <Compile Include="EntityConfiguration\UserRegisterInfoConfiguration.cs" />
-    <Compile Include="Migrations\202204040158564_Seed.cs" />
-    <Compile Include="Migrations\202204040158564_Seed.designer.cs">
-      <DependentUpon>202204040158564_Seed.cs</DependentUpon>
+    <Compile Include="Migrations\202204101429152_NewDatabase.cs" />
+    <Compile Include="Migrations\202204101429152_NewDatabase.designer.cs">
+      <DependentUpon>202204101429152_NewDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,8 +93,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204040158564_Seed.resx">
-      <DependentUpon>202204040158564_Seed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202204101429152_NewDatabase.resx">
+      <DependentUpon>202204101429152_NewDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
