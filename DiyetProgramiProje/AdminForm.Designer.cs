@@ -312,7 +312,7 @@
             // rbFoodActives
             // 
             this.rbFoodActives.AutoSize = true;
-            this.rbFoodActives.Location = new System.Drawing.Point(164, 28);
+            this.rbFoodActives.Location = new System.Drawing.Point(164, 34);
             this.rbFoodActives.Name = "rbFoodActives";
             this.rbFoodActives.Size = new System.Drawing.Size(80, 22);
             this.rbFoodActives.TabIndex = 33;

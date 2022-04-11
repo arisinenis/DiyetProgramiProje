@@ -97,14 +97,14 @@ namespace DiyetProgramiProje
 
         private void ReportForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["AdminForm"];
-            if (frm != null)
-                frm.Show();
-            else
-            {
-                Form frm1 = Application.OpenForms["UserForm"];
-                frm1.Show();
-            }
+            //Form frm = Application.OpenForms["AdminForm"];
+            //if (frm != null)
+            //    frm.Show();
+            //else
+            //{
+            //    Form frm1 = Application.OpenForms["UserForm"];
+            //    frm1.Show();
+            //}
         }
     }
 }

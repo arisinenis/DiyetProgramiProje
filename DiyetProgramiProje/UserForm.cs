@@ -262,22 +262,26 @@ namespace DiyetProgramiProje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UserMessagesForm userMessagesForm = new UserMessagesForm(userRegisterInfo);
-            this.Hide();
-            userMessagesForm.ShowDialog();           
+            //UserMessagesForm userMessagesForm = new UserMessagesForm(userRegisterInfo);
+            //this.Hide();
+            //userMessagesForm.ShowDialog();
+            var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+            MainForm.LoadForm(new UserMessagesForm(userRegisterInfo));
         }
 
         private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["Form1"];
-            frm.Show();           
+            //Form frm = Application.OpenForms["Form1"];
+            //frm.Show();
         }
 
         private void btnShowReports_Click(object sender, EventArgs e)
         {
-            ReportForm reportForm = new ReportForm();
-            this.Hide();
-            reportForm.ShowDialog();            
+            var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+            MainForm.LoadForm(new ReportForm());
+            //ReportForm reportForm = new ReportForm();
+            //this.Hide();
+            //reportForm.ShowDialog();            
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

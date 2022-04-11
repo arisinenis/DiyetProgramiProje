@@ -111,7 +111,7 @@ namespace DiyetProgramiProje
             this.groupBox2.Controls.Add(this.cboxMealTime);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(16, 12);
+            this.groupBox2.Location = new System.Drawing.Point(16, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(557, 659);
             this.groupBox2.TabIndex = 1;
@@ -322,7 +322,7 @@ namespace DiyetProgramiProje
             this.groupBox7.Controls.Add(this.lvMeals);
             this.groupBox7.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox7.Location = new System.Drawing.Point(579, 12);
+            this.groupBox7.Location = new System.Drawing.Point(579, 4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(595, 642);
             this.groupBox7.TabIndex = 14;
@@ -477,7 +477,7 @@ namespace DiyetProgramiProje
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(16, 674);
+            this.label12.Location = new System.Drawing.Point(16, 666);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 33);
             this.label12.TabIndex = 17;
@@ -492,7 +492,7 @@ namespace DiyetProgramiProje
             this.button2.DialogResult = System.Windows.Forms.DialogResult.No;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(115, 672);
+            this.button2.Location = new System.Drawing.Point(115, 664);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 73);
             this.button2.TabIndex = 18;
@@ -507,7 +507,7 @@ namespace DiyetProgramiProje
             this.btnShowReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShowReports.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShowReports.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShowReports.Location = new System.Drawing.Point(403, 677);
+            this.btnShowReports.Location = new System.Drawing.Point(403, 669);
             this.btnShowReports.Name = "btnShowReports";
             this.btnShowReports.Size = new System.Drawing.Size(77, 68);
             this.btnShowReports.TabIndex = 19;
@@ -521,7 +521,7 @@ namespace DiyetProgramiProje
             this.groupBox1.Controls.Add(this.lblDailyCalorieRequirement);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(579, 655);
+            this.groupBox1.Location = new System.Drawing.Point(579, 647);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(326, 87);
             this.groupBox1.TabIndex = 20;
@@ -545,7 +545,7 @@ namespace DiyetProgramiProje
             this.groupBox6.Controls.Add(this.lblRemainCalories);
             this.groupBox6.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox6.Location = new System.Drawing.Point(911, 655);
+            this.groupBox6.Location = new System.Drawing.Point(911, 647);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(263, 87);
             this.groupBox6.TabIndex = 21;
@@ -568,7 +568,7 @@ namespace DiyetProgramiProje
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(256, 674);
+            this.label6.Location = new System.Drawing.Point(256, 666);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 33);
             this.label6.TabIndex = 22;
@@ -581,7 +581,7 @@ namespace DiyetProgramiProje
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1186, 744);
+            this.ClientSize = new System.Drawing.Size(1186, 729);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox6);

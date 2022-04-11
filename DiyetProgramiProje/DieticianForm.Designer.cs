@@ -79,9 +79,9 @@
             this.groupBox7.Controls.Add(this.lvMeals);
             this.groupBox7.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox7.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox7.Location = new System.Drawing.Point(596, 15);
+            this.groupBox7.Location = new System.Drawing.Point(683, 41);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(399, 611);
+            this.groupBox7.Size = new System.Drawing.Size(399, 629);
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Check Meals";
@@ -217,7 +217,7 @@
             this.grpbox.Controls.Add(this.lvClients);
             this.grpbox.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpbox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grpbox.Location = new System.Drawing.Point(3, 16);
+            this.grpbox.Location = new System.Drawing.Point(37, 35);
             this.grpbox.Name = "grpbox";
             this.grpbox.Size = new System.Drawing.Size(587, 313);
             this.grpbox.TabIndex = 16;
@@ -304,7 +304,7 @@
             this.groupBox2.Controls.Add(this.txtMessage);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(4, 335);
+            this.groupBox2.Location = new System.Drawing.Point(37, 379);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(580, 291);
             this.groupBox2.TabIndex = 18;
@@ -355,7 +355,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1007, 629);
+            this.ClientSize = new System.Drawing.Size(1186, 744);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.grpbox);

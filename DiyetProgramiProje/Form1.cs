@@ -25,7 +25,9 @@ namespace DiyetProgramiProje
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {            
+            txtEmail.Text = "user1@gmail.com";
+            txtPassword.Text = "12345B!";
             panel2.Visible = false;
             panel3.Visible = true;
         }
@@ -35,11 +37,14 @@ namespace DiyetProgramiProje
             if (txtEmail.Text == "admin@diet.com" && txtPassword.Text == "A1111!")
             {
                 UserRegisterInfo user = userService.GetUserByEmail(txtEmail.Text);
-                AdminForm adminForm = new AdminForm(user);
+                //AdminForm adminForm = new AdminForm(user);
+                //Hide();
+                //adminForm.ShowDialog();
+                var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                MainForm.LoadForm(new AdminForm(user));
+
                 txtEmail.Text = string.Empty;
                 txtPassword.Text = string.Empty;
-                Hide();
-                adminForm.ShowDialog();
             }
             else
             {
@@ -47,18 +52,21 @@ namespace DiyetProgramiProje
                 DieticianRegisterInfo dietician = dieticianService.CheckLogin(txtEmail.Text, txtPassword.Text);
 
 
-
                 if (user != null && dietician == null)
                 {
-                    UserForm userForm = new UserForm(user);
-                    this.Hide();
-                    userForm.Show();
+                    //UserForm userForm = new UserForm(user);
+                    //this.Hide();
+                    //userForm.Show();
+                    var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                    MainForm.LoadForm(new UserForm(user));
                 }
                 else if (user == null && dietician != null)
                 {
-                    DieticianForm dieticianForm = new DieticianForm(dietician);
-                    this.Hide();
-                    dieticianForm.ShowDialog();
+                    //DieticianForm dieticianForm = new DieticianForm(dietician);
+                    //this.Hide();
+                    //dieticianForm.ShowDialog();
+                    var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                    MainForm.LoadForm(new DieticianForm(dietician));
                 }
                 else
                 {
@@ -71,9 +79,11 @@ namespace DiyetProgramiProje
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();
-            this.Hide();
-            registerForm.ShowDialog();
+            //RegisterForm registerForm = new RegisterForm();
+            //this.Hide();
+            //registerForm.ShowDialog();
+            var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+            MainForm.LoadForm(new RegisterForm());
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
@@ -83,8 +93,7 @@ namespace DiyetProgramiProje
                 btnLogin_Click(sender, e);
             }
         }
-
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnBegin_Click(object sender, EventArgs e)
         {
             panel3.Visible = false;
             panel2.Visible = true;

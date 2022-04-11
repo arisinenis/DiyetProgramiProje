@@ -34,7 +34,6 @@ namespace DiyetProgramiProje
             cboxDailyExercise.SelectedIndex=0;
             cboxRequest.SelectedIndex=0;
             cboxDietician.SelectedIndex=0;
-
         }
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -149,7 +148,11 @@ namespace DiyetProgramiProje
 
                         dieticianService.AddRegister(dieticianRegisterInfo);
 
-                        MessageBox.Show("Added");
+                        DialogResult result = MessageBox.Show("Successfully registered");
+                        if (result == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
                     }
                     
                 }
