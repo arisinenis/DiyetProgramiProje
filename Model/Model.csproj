@@ -56,8 +56,10 @@
     <Compile Include="Entities\UserMealsAndFoods.cs" />
     <Compile Include="Entities\UserRegisterInfo.cs" />
     <Compile Include="Enums\ExerciseEnum.cs" />
+    <Compile Include="Enums\GenderEnum.cs" />
     <Compile Include="Enums\MealTimesEnum.cs" />
     <Compile Include="Enums\MembershipTypeEnum.cs" />
+    <Compile Include="Enums\StatusEnum.cs" />
     <Compile Include="Enums\UserRequestsEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

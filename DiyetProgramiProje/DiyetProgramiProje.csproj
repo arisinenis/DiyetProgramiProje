@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\serka\OneDrive\Masaüstü\DietTracker\</PublishUrl>
+    <PublishUrl>C:\Users\Enis Arısın\Desktop\DietTracker\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>CB069DAB855AD3A1CAE5EDBF6B3616E573070CFE</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>E997FFA80A270673DA528C5977A78FBC04E89EAF</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>DiyetProgramiProje_TemporaryKey.pfx</ManifestKeyFile>

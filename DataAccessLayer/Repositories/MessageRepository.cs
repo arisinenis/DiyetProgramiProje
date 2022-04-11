@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Context;
 using Model.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace DataAccessLayer.Repositories
         public bool Delete(int messageId)
         {
             Message message = db.Messages.Find(messageId);
-            message.Status = "Passive";
+            message.Status = StatusEnum.Passive;
 
             return db.SaveChanges() > 0;
         }
