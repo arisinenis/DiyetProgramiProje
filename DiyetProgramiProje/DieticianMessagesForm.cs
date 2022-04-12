@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Message = Model.Entities.Message;
 
 namespace DiyetProgramiProje
 {
@@ -18,12 +19,14 @@ namespace DiyetProgramiProje
         DieticianMessageService dieticianMessageService;
         UserService userService;
         DieticianService dieticianService;
+        MessageService messageService;
         public DieticianMessagesForm(DieticianRegisterInfo _dieticianRegisterInfo)
         {
             dieticianRegisterInfo = _dieticianRegisterInfo;
             dieticianMessageService = new DieticianMessageService();
             userService = new UserService();
             dieticianService = new DieticianService();  
+            messageService = new MessageService();
             InitializeComponent();
 
         }
@@ -53,6 +56,7 @@ namespace DiyetProgramiProje
             FillUserCombobox();
             FillListBoxMessages();
             cboxUsers.SelectedIndex=0;
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
 
         private void lboxMessages_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +76,39 @@ namespace DiyetProgramiProje
         {
             Form frm = Application.OpenForms["DieticianForm"];
             frm.Show();
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (userId != 0)
+                {
+                    Message message = new Message();
+                    message.MessageHeader = txtMessageTitle.Text;
+                    message.Text = txtMessage.Text;
+                    message.UserInformationId = userId;
+                    message.DieticianId = dieticianRegisterInfo.Id;
+                    messageService.Add(message);
+                    MessageBox.Show("Message has been send");
+                }
+
+                else
+                {
+                    MessageBox.Show("Any client selected");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        int userId;
+        private void lvClients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            userId = Convert.ToInt32(lvClients.FocusedItem.Text);
+            UserInformation userInformation = userService.GetById(userId);
         }
     }
 }

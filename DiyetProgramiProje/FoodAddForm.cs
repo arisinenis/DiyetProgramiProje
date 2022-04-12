@@ -59,11 +59,9 @@ namespace DiyetProgramiProje
             {
                 groupBox1.Enabled = false;
             }
-
             FillLbCategory();
             FillCbFoodCategories();
-
-            
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
 
         private void FillLbCategory()
@@ -71,7 +69,6 @@ namespace DiyetProgramiProje
             lboxCategories.DisplayMember = "CategoryName";
             lboxCategories.ValueMember = "Id";
             lboxCategories.DataSource = categoryService.GetActives();
-
         }
 
         private void FilterCategory()

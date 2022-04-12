@@ -45,7 +45,8 @@ namespace DiyetProgramiProje
             lblDailyCalorieRequirement.Text = user.RequireCalorie.ToString();
             lblTotalTakenCalory.Text = userMealsAndFoodsService.GetTotalCalorieById(userRegisterInfo.Id,dtMealDate.Value.Date).ToString();
             lblRemainCalories.Text = (Convert.ToDecimal(lblDailyCalorieRequirement.Text) - Convert.ToDecimal(lblTotalTakenCalory.Text)).ToString();
-
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         private void txtFoodFilter_TextChanged(object sender, EventArgs e)

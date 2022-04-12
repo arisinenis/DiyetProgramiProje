@@ -42,8 +42,7 @@ namespace DiyetProgramiProje
             FillClient();
             FillMealTime();
             cboxLvMealTime.SelectedIndex = 0;
-            
-            
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
         private void FillClient()
         {
@@ -109,8 +108,8 @@ namespace DiyetProgramiProje
         int userId=0;
         private void btnShowMeal_Click(object sender, EventArgs e)
         {
-            lvMeals.Items.Clear();
-            FillFoods();
+            //lvMeals.Items.Clear();
+            //FillFoods();
         }
 
         private void lvClients_SelectedIndexChanged(object sender, EventArgs e)
@@ -152,29 +151,35 @@ namespace DiyetProgramiProje
 
         private void btnSend_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                if (userId != 0)
-                {
-                    Message message = new Message();
-                    message.MessageHeader = txtMessageTitle.Text;
-                    message.Text = txtMessage.Text;
-                    message.UserInformationId = userId;
-                    message.DieticianId = dieticianRegisterInfo.Id;
-                    messageService.Add(message);
-                    MessageBox.Show("Message has been send");
-                }
+            //try
+            //{
+            //    if (userId != 0)
+            //    {
+            //        Message message = new Message();
+            //        message.MessageHeader = txtMessageTitle.Text;
+            //        message.Text = txtMessage.Text;
+            //        message.UserInformationId = userId;
+            //        message.DieticianId = dieticianRegisterInfo.Id;
+            //        messageService.Add(message);
+            //        MessageBox.Show("Message has been send");
+            //    }
 
-                else
-                {
-                    MessageBox.Show("Any client selected");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    else
+            //    {
+            //        MessageBox.Show("Any client selected");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
             
+        }
+
+        private void cboxLvMealTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lvMeals.Items.Clear();
+            FillFoods();
         }
     }
 }

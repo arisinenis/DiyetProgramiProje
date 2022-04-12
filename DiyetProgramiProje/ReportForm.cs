@@ -29,6 +29,7 @@ namespace DiyetProgramiProje
             dgvCategory.ForeColor = Color.Black;
             dgvFood.ForeColor = Color.Black;
             dgvMostEaten.ForeColor = Color.Black;
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
 
         }
 

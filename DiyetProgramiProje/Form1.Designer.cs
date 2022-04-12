@@ -30,9 +30,9 @@ namespace DiyetProgramiProje
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBegin = new MaterialSkin.Controls.MaterialButton();
             this.lblFirstMessage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,24 +43,9 @@ namespace DiyetProgramiProje
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBegin = new MaterialSkin.Controls.MaterialButton();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.labelWelcome);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1386, 729);
-            this.panel1.TabIndex = 0;
             // 
             // labelWelcome
             // 
@@ -69,10 +54,10 @@ namespace DiyetProgramiProje
             this.labelWelcome.BackColor = System.Drawing.Color.Transparent;
             this.labelWelcome.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelWelcome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelWelcome.Location = new System.Drawing.Point(488, 130);
+            this.labelWelcome.Location = new System.Drawing.Point(486, 129);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(415, 85);
-            this.labelWelcome.TabIndex = 2;
+            this.labelWelcome.TabIndex = 5;
             this.labelWelcome.Text = "DIET TRACKER";
             // 
             // panel3
@@ -82,19 +67,39 @@ namespace DiyetProgramiProje
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.btnBegin);
             this.panel3.Controls.Add(this.lblFirstMessage);
-            this.panel3.Location = new System.Drawing.Point(509, 218);
+            this.panel3.Location = new System.Drawing.Point(440, 217);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(369, 383);
-            this.panel3.TabIndex = 1;
+            this.panel3.Size = new System.Drawing.Size(519, 318);
+            this.panel3.TabIndex = 4;
+            // 
+            // btnBegin
+            // 
+            this.btnBegin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBegin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBegin.Depth = 0;
+            this.btnBegin.HighEmphasis = true;
+            this.btnBegin.Icon = null;
+            this.btnBegin.Location = new System.Drawing.Point(208, 256);
+            this.btnBegin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBegin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBegin.Name = "btnBegin";
+            this.btnBegin.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnBegin.Size = new System.Drawing.Size(104, 36);
+            this.btnBegin.TabIndex = 1;
+            this.btnBegin.Text = "LETS START";
+            this.btnBegin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBegin.UseAccentColor = false;
+            this.btnBegin.UseVisualStyleBackColor = true;
+            this.btnBegin.Click += new System.EventHandler(this.btnBegin_Click_1);
             // 
             // lblFirstMessage
             // 
             this.lblFirstMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstMessage.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblFirstMessage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFirstMessage.Location = new System.Drawing.Point(15, 0);
+            this.lblFirstMessage.Location = new System.Drawing.Point(2, 0);
             this.lblFirstMessage.Name = "lblFirstMessage";
-            this.lblFirstMessage.Size = new System.Drawing.Size(340, 316);
+            this.lblFirstMessage.Size = new System.Drawing.Size(513, 273);
             this.lblFirstMessage.TabIndex = 0;
             this.lblFirstMessage.Text = resources.GetString("lblFirstMessage.Text");
             this.lblFirstMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,10 +116,10 @@ namespace DiyetProgramiProje
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(516, 229);
+            this.panel2.Location = new System.Drawing.Point(514, 228);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 287);
-            this.panel2.TabIndex = 0;
+            this.panel2.TabIndex = 3;
             // 
             // label5
             // 
@@ -149,7 +154,7 @@ namespace DiyetProgramiProje
             this.btnSignIn.Size = new System.Drawing.Size(62, 55);
             this.btnSignIn.TabIndex = 15;
             this.btnSignIn.UseVisualStyleBackColor = true;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click_1);
             // 
             // btnLogin
             // 
@@ -162,7 +167,7 @@ namespace DiyetProgramiProje
             this.btnLogin.Size = new System.Drawing.Size(78, 55);
             this.btnLogin.TabIndex = 16;
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // label2
             // 
@@ -191,7 +196,6 @@ namespace DiyetProgramiProje
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(265, 24);
             this.txtPassword.TabIndex = 14;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // label3
             // 
@@ -205,64 +209,45 @@ namespace DiyetProgramiProje
             this.label3.TabIndex = 13;
             this.label3.Text = "Password";
             // 
-            // btnBegin
-            // 
-            this.btnBegin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBegin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnBegin.Depth = 0;
-            this.btnBegin.HighEmphasis = true;
-            this.btnBegin.Icon = null;
-            this.btnBegin.Location = new System.Drawing.Point(101, 322);
-            this.btnBegin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnBegin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBegin.Name = "btnBegin";
-            this.btnBegin.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnBegin.Size = new System.Drawing.Size(158, 36);
-            this.btnBegin.TabIndex = 1;
-            this.btnBegin.Text = "LETS START";
-            this.btnBegin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnBegin.UseAccentColor = false;
-            this.btnBegin.UseVisualStyleBackColor = true;
-            this.btnBegin.Click += new System.EventHandler(this.btnBegin_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1386, 729);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.labelWelcome);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Panel panel3;
+        private MaterialSkin.Controls.MaterialButton btnBegin;
+        private System.Windows.Forms.Label lblFirstMessage;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblFirstMessage;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelWelcome;
-        private MaterialSkin.Controls.MaterialButton btnBegin;
     }
 }
 

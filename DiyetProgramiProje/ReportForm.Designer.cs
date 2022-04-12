@@ -63,8 +63,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnMostEatenFoods);
-            this.groupBox1.Controls.Add(this.btnShowFoodReport);
             this.groupBox1.Controls.Add(this.btnShowCategories);
             this.groupBox1.Controls.Add(this.cboxCategoryMealTime);
             this.groupBox1.Controls.Add(this.label5);
@@ -77,7 +75,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 816);
+            this.groupBox1.Size = new System.Drawing.Size(486, 816);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Report";
@@ -88,7 +86,7 @@
             this.btnMostEatenFoods.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMostEatenFoods.Image = ((System.Drawing.Image)(resources.GetObject("btnMostEatenFoods.Image")));
             this.btnMostEatenFoods.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMostEatenFoods.Location = new System.Drawing.Point(246, 638);
+            this.btnMostEatenFoods.Location = new System.Drawing.Point(694, 559);
             this.btnMostEatenFoods.Name = "btnMostEatenFoods";
             this.btnMostEatenFoods.Size = new System.Drawing.Size(118, 172);
             this.btnMostEatenFoods.TabIndex = 9;
@@ -103,7 +101,7 @@
             this.btnShowFoodReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnShowFoodReport.Image = ((System.Drawing.Image)(resources.GetObject("btnShowFoodReport.Image")));
             this.btnShowFoodReport.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnShowFoodReport.Location = new System.Drawing.Point(127, 638);
+            this.btnShowFoodReport.Location = new System.Drawing.Point(563, 559);
             this.btnShowFoodReport.Name = "btnShowFoodReport";
             this.btnShowFoodReport.Size = new System.Drawing.Size(113, 173);
             this.btnShowFoodReport.TabIndex = 8;
@@ -118,7 +116,7 @@
             this.btnShowCategories.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnShowCategories.Image = ((System.Drawing.Image)(resources.GetObject("btnShowCategories.Image")));
             this.btnShowCategories.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnShowCategories.Location = new System.Drawing.Point(9, 638);
+            this.btnShowCategories.Location = new System.Drawing.Point(368, 34);
             this.btnShowCategories.Name = "btnShowCategories";
             this.btnShowCategories.Size = new System.Drawing.Size(112, 172);
             this.btnShowCategories.TabIndex = 7;
@@ -152,11 +150,11 @@
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvCategory.Location = new System.Drawing.Point(9, 176);
+            this.dgvCategory.Location = new System.Drawing.Point(6, 214);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.RowHeadersWidth = 51;
             this.dgvCategory.RowTemplate.Height = 24;
-            this.dgvCategory.Size = new System.Drawing.Size(355, 452);
+            this.dgvCategory.Size = new System.Drawing.Size(358, 452);
             this.dgvCategory.TabIndex = 4;
             // 
             // Column1
@@ -234,7 +232,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox2.Location = new System.Drawing.Point(404, 12);
+            this.groupBox2.Location = new System.Drawing.Point(504, 31);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(352, 427);
             this.groupBox2.TabIndex = 1;
@@ -273,7 +271,7 @@
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.dgvMostEaten);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(404, 449);
+            this.groupBox3.Location = new System.Drawing.Point(992, 31);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(352, 379);
             this.groupBox3.TabIndex = 9;
@@ -311,8 +309,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1386, 729);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1386, 830);
+            this.Controls.Add(this.btnShowFoodReport);
+            this.Controls.Add(this.btnMostEatenFoods);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

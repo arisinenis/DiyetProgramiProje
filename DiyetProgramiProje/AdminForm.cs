@@ -42,7 +42,8 @@ namespace DiyetProgramiProje
             catch (Exception)
             {
                 MessageBox.Show("Please check your choose");
-            }            
+            }
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -454,19 +455,10 @@ namespace DiyetProgramiProje
             }
             
         }
-
-        private void btnShowReports_Click(object sender, EventArgs e)
-        {
-            ReportForm reportForm = new ReportForm();
-            this.Hide();
-            reportForm.ShowDialog();
-            
-        }
-
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frmm = Application.OpenForms["Form1"];
-            frmm.Show();
+            //Form frmm = Application.OpenForms["Form1"];
+            //frmm.Show();
         }
     }
 }

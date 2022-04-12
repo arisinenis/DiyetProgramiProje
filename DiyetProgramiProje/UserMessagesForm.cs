@@ -46,6 +46,7 @@ namespace DiyetProgramiProje
         private void UserMessagesForm_Load(object sender, EventArgs e)
         {
             FillListBox();
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
 
         private void lboxMessages_SelectedIndexChanged(object sender, EventArgs e)

@@ -44,7 +44,6 @@
             this.activeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.passiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnShowReports = new System.Windows.Forms.Button();
             this.btnUpdateCatAndFood = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnRefreshCats = new System.Windows.Forms.Button();
@@ -190,7 +189,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnShowReports);
             this.groupBox1.Controls.Add(this.btnUpdateCatAndFood);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -210,16 +208,6 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Membership Request Panel";
-            // 
-            // btnShowReports
-            // 
-            this.btnShowReports.Location = new System.Drawing.Point(956, 242);
-            this.btnShowReports.Name = "btnShowReports";
-            this.btnShowReports.Size = new System.Drawing.Size(123, 72);
-            this.btnShowReports.TabIndex = 42;
-            this.btnShowReports.Text = "Show Reports";
-            this.btnShowReports.UseVisualStyleBackColor = true;
-            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
             // 
             // btnUpdateCatAndFood
             // 
@@ -535,8 +523,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1105, 802);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1386, 837);
             this.Controls.Add(this.btnGetClients);
             this.Controls.Add(this.rbUserGetAll);
             this.Controls.Add(this.rbUserPassives);
@@ -613,6 +601,5 @@
         private System.Windows.Forms.RadioButton rbUserGetAll;
         private System.Windows.Forms.Button btnGetClients;
         private System.Windows.Forms.Button btnUpdateCatAndFood;
-        private System.Windows.Forms.Button btnShowReports;
     }
 }

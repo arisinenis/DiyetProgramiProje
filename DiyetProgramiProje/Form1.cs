@@ -30,9 +30,24 @@ namespace DiyetProgramiProje
             txtPassword.Text = "12345B!";
             panel2.Visible = false;
             panel3.Visible = true;
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click_1(sender, e);
+            }
+        }
+
+        private void btnBegin_Click_1(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel2.Visible = true;
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             if (txtEmail.Text == "admin@diet.com" && txtPassword.Text == "A1111!")
             {
@@ -66,7 +81,9 @@ namespace DiyetProgramiProje
                     //this.Hide();
                     //dieticianForm.ShowDialog();
                     var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                    MainForm.LoadForm(new DieticianMessagesForm(dietician));
                     MainForm.LoadForm(new DieticianForm(dietician));
+                    
                 }
                 else
                 {
@@ -77,26 +94,13 @@ namespace DiyetProgramiProje
             txtPassword.Text = string.Empty;
         }
 
-        private void btnSignIn_Click(object sender, EventArgs e)
+        private void btnSignIn_Click_1(object sender, EventArgs e)
         {
             //RegisterForm registerForm = new RegisterForm();
             //this.Hide();
             //registerForm.ShowDialog();
             var MainForm = Application.OpenForms.OfType<MainForm>().Single();
             MainForm.LoadForm(new RegisterForm());
-        }
-
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogin_Click(sender, e);
-            }
-        }
-        private void btnBegin_Click(object sender, EventArgs e)
-        {
-            panel3.Visible = false;
-            panel2.Visible = true;
         }
     }
 }

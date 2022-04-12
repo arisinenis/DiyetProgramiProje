@@ -144,7 +144,7 @@ namespace DiyetProgramiProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1386, 729);
             this.Controls.Add(this.grpBoxReply);
             this.Controls.Add(this.gboxMessages);

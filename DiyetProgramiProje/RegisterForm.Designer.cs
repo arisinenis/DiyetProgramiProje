@@ -101,6 +101,7 @@ namespace DiyetProgramiProje
             this.panel1.Controls.Add(this.cboxDailyExercise);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.btnJoin);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnShowDetails);
             this.panel1.Controls.Add(this.cboxDietician);
             this.panel1.Controls.Add(this.label10);
@@ -125,25 +126,25 @@ namespace DiyetProgramiProje
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(60, 50);
+            this.panel1.Location = new System.Drawing.Point(143, 116);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 733);
+            this.panel1.Size = new System.Drawing.Size(1060, 539);
             this.panel1.TabIndex = 0;
             // 
             // cboxDailyExercise
             // 
             this.cboxDailyExercise.FormattingEnabled = true;
-            this.cboxDailyExercise.Location = new System.Drawing.Point(5, 496);
+            this.cboxDailyExercise.Location = new System.Drawing.Point(9, 403);
             this.cboxDailyExercise.Margin = new System.Windows.Forms.Padding(2);
             this.cboxDailyExercise.Name = "cboxDailyExercise";
-            this.cboxDailyExercise.Size = new System.Drawing.Size(211, 36);
+            this.cboxDailyExercise.Size = new System.Drawing.Size(229, 36);
             this.cboxDailyExercise.TabIndex = 23;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(0, 466);
+            this.label14.Location = new System.Drawing.Point(4, 368);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(128, 28);
@@ -156,10 +157,10 @@ namespace DiyetProgramiProje
             this.btnJoin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnJoin.Image = ((System.Drawing.Image)(resources.GetObject("btnJoin.Image")));
             this.btnJoin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnJoin.Location = new System.Drawing.Point(5, 667);
+            this.btnJoin.Location = new System.Drawing.Point(839, 430);
             this.btnJoin.Margin = new System.Windows.Forms.Padding(2);
             this.btnJoin.Name = "btnJoin";
-            this.btnJoin.Size = new System.Drawing.Size(114, 57);
+            this.btnJoin.Size = new System.Drawing.Size(186, 57);
             this.btnJoin.TabIndex = 21;
             this.btnJoin.Text = "Join !";
             this.btnJoin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,10 +173,10 @@ namespace DiyetProgramiProje
             this.btnShowDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShowDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShowDetails.ForeColor = System.Drawing.Color.Black;
-            this.btnShowDetails.Location = new System.Drawing.Point(220, 617);
+            this.btnShowDetails.Location = new System.Drawing.Point(783, 32);
             this.btnShowDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowDetails.Name = "btnShowDetails";
-            this.btnShowDetails.Size = new System.Drawing.Size(63, 63);
+            this.btnShowDetails.Size = new System.Drawing.Size(36, 32);
             this.btnShowDetails.TabIndex = 20;
             this.btnShowDetails.UseVisualStyleBackColor = true;
             this.btnShowDetails.Click += new System.EventHandler(this.btnShowDetails_Click);
@@ -183,7 +184,7 @@ namespace DiyetProgramiProje
             // cboxDietician
             // 
             this.cboxDietician.FormattingEnabled = true;
-            this.cboxDietician.Location = new System.Drawing.Point(5, 631);
+            this.cboxDietician.Location = new System.Drawing.Point(568, 34);
             this.cboxDietician.Margin = new System.Windows.Forms.Padding(2);
             this.cboxDietician.Name = "cboxDietician";
             this.cboxDietician.Size = new System.Drawing.Size(211, 36);
@@ -192,7 +193,7 @@ namespace DiyetProgramiProje
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(0, 601);
+            this.label10.Location = new System.Drawing.Point(563, 8);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 28);
@@ -202,16 +203,16 @@ namespace DiyetProgramiProje
             // cboxRequest
             // 
             this.cboxRequest.FormattingEnabled = true;
-            this.cboxRequest.Location = new System.Drawing.Point(5, 563);
+            this.cboxRequest.Location = new System.Drawing.Point(282, 403);
             this.cboxRequest.Margin = new System.Windows.Forms.Padding(2);
             this.cboxRequest.Name = "cboxRequest";
-            this.cboxRequest.Size = new System.Drawing.Size(211, 36);
+            this.cboxRequest.Size = new System.Drawing.Size(238, 36);
             this.cboxRequest.TabIndex = 17;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(0, 534);
+            this.label9.Location = new System.Drawing.Point(277, 368);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 28);
@@ -220,7 +221,7 @@ namespace DiyetProgramiProje
             // 
             // nudWeight
             // 
-            this.nudWeight.Location = new System.Drawing.Point(126, 430);
+            this.nudWeight.Location = new System.Drawing.Point(171, 293);
             this.nudWeight.Margin = new System.Windows.Forms.Padding(2);
             this.nudWeight.Maximum = new decimal(new int[] {
             400,
@@ -228,13 +229,13 @@ namespace DiyetProgramiProje
             0,
             0});
             this.nudWeight.Name = "nudWeight";
-            this.nudWeight.Size = new System.Drawing.Size(90, 36);
+            this.nudWeight.Size = new System.Drawing.Size(133, 36);
             this.nudWeight.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(121, 400);
+            this.label8.Location = new System.Drawing.Point(166, 263);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 28);
@@ -243,7 +244,7 @@ namespace DiyetProgramiProje
             // 
             // nudHeight
             // 
-            this.nudHeight.Location = new System.Drawing.Point(5, 430);
+            this.nudHeight.Location = new System.Drawing.Point(7, 293);
             this.nudHeight.Margin = new System.Windows.Forms.Padding(2);
             this.nudHeight.Maximum = new decimal(new int[] {
             250,
@@ -256,7 +257,7 @@ namespace DiyetProgramiProje
             0,
             0});
             this.nudHeight.Name = "nudHeight";
-            this.nudHeight.Size = new System.Drawing.Size(90, 36);
+            this.nudHeight.Size = new System.Drawing.Size(122, 36);
             this.nudHeight.TabIndex = 13;
             this.nudHeight.Value = new decimal(new int[] {
             100,
@@ -267,7 +268,7 @@ namespace DiyetProgramiProje
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 400);
+            this.label7.Location = new System.Drawing.Point(2, 263);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 28);
@@ -277,7 +278,7 @@ namespace DiyetProgramiProje
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(76, 368);
+            this.rbFemale.Location = new System.Drawing.Point(435, 205);
             this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(85, 32);
@@ -289,7 +290,7 @@ namespace DiyetProgramiProje
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Checked = true;
-            this.rbMale.Location = new System.Drawing.Point(5, 368);
+            this.rbMale.Location = new System.Drawing.Point(352, 205);
             this.rbMale.Margin = new System.Windows.Forms.Padding(2);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(67, 32);
@@ -301,7 +302,7 @@ namespace DiyetProgramiProje
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 340);
+            this.label6.Location = new System.Drawing.Point(344, 169);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 28);
@@ -310,16 +311,16 @@ namespace DiyetProgramiProje
             // 
             // dtBirthDate
             // 
-            this.dtBirthDate.Location = new System.Drawing.Point(5, 304);
+            this.dtBirthDate.Location = new System.Drawing.Point(7, 201);
             this.dtBirthDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(238, 36);
+            this.dtBirthDate.Size = new System.Drawing.Size(297, 36);
             this.dtBirthDate.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(0, 274);
+            this.label5.Location = new System.Drawing.Point(2, 169);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 28);
@@ -328,7 +329,7 @@ namespace DiyetProgramiProje
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(5, 236);
+            this.txtLastName.Location = new System.Drawing.Point(282, 110);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(238, 36);
@@ -337,7 +338,7 @@ namespace DiyetProgramiProje
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 206);
+            this.label4.Location = new System.Drawing.Point(277, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 28);
@@ -346,7 +347,7 @@ namespace DiyetProgramiProje
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(5, 168);
+            this.txtFirstName.Location = new System.Drawing.Point(5, 110);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(238, 36);
@@ -355,7 +356,7 @@ namespace DiyetProgramiProje
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 135);
+            this.label3.Location = new System.Drawing.Point(2, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 28);
@@ -364,7 +365,7 @@ namespace DiyetProgramiProje
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(5, 97);
+            this.txtPassword.Location = new System.Drawing.Point(282, 35);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(238, 36);
@@ -373,7 +374,7 @@ namespace DiyetProgramiProje
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 67);
+            this.label2.Location = new System.Drawing.Point(277, 5);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 28);
@@ -382,7 +383,7 @@ namespace DiyetProgramiProje
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(5, 27);
+            this.txtEmail.Location = new System.Drawing.Point(5, 34);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(238, 36);
@@ -393,7 +394,7 @@ namespace DiyetProgramiProje
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Location = new System.Drawing.Point(2, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 28);
@@ -414,11 +415,11 @@ namespace DiyetProgramiProje
             this.groupBox1.Controls.Add(this.pboxDietician);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(376, 455);
+            this.groupBox1.Location = new System.Drawing.Point(568, 80);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(333, 307);
+            this.groupBox1.Size = new System.Drawing.Size(457, 327);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dietician Details";
@@ -514,7 +515,7 @@ namespace DiyetProgramiProje
             // 
             // pboxDietician
             // 
-            this.pboxDietician.Location = new System.Drawing.Point(176, 22);
+            this.pboxDietician.Location = new System.Drawing.Point(211, 28);
             this.pboxDietician.Margin = new System.Windows.Forms.Padding(2);
             this.pboxDietician.Name = "pboxDietician";
             this.pboxDietician.Size = new System.Drawing.Size(153, 154);
@@ -545,7 +546,7 @@ namespace DiyetProgramiProje
             this.rbDietician.BackColor = System.Drawing.Color.Transparent;
             this.rbDietician.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbDietician.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rbDietician.Location = new System.Drawing.Point(4, 67);
+            this.rbDietician.Location = new System.Drawing.Point(177, 44);
             this.rbDietician.Margin = new System.Windows.Forms.Padding(2);
             this.rbDietician.Name = "rbDietician";
             this.rbDietician.Size = new System.Drawing.Size(196, 32);
@@ -561,11 +562,11 @@ namespace DiyetProgramiProje
             this.groupBox2.Controls.Add(this.rbDietician);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(393, 37);
+            this.groupBox2.Location = new System.Drawing.Point(143, 33);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(203, 108);
+            this.groupBox2.Size = new System.Drawing.Size(469, 79);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Register Type";
@@ -586,10 +587,10 @@ namespace DiyetProgramiProje
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.txtDEmail);
             this.panel2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel2.Location = new System.Drawing.Point(58, 80);
+            this.panel2.Location = new System.Drawing.Point(746, 43);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 667);
+            this.panel2.Size = new System.Drawing.Size(629, 476);
             this.panel2.TabIndex = 4;
             // 
             // groupBox3
@@ -597,7 +598,7 @@ namespace DiyetProgramiProje
             this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.btnChoosePics);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(17, 357);
+            this.groupBox3.Location = new System.Drawing.Point(332, 37);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(281, 218);
             this.groupBox3.TabIndex = 22;
@@ -647,7 +648,7 @@ namespace DiyetProgramiProje
             this.btnDieticianJoin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDieticianJoin.Image = ((System.Drawing.Image)(resources.GetObject("btnDieticianJoin.Image")));
             this.btnDieticianJoin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDieticianJoin.Location = new System.Drawing.Point(17, 580);
+            this.btnDieticianJoin.Location = new System.Drawing.Point(484, 270);
             this.btnDieticianJoin.Margin = new System.Windows.Forms.Padding(2);
             this.btnDieticianJoin.Name = "btnDieticianJoin";
             this.btnDieticianJoin.Size = new System.Drawing.Size(119, 73);
@@ -659,7 +660,7 @@ namespace DiyetProgramiProje
             // 
             // txtDGraduation
             // 
-            this.txtDGraduation.Location = new System.Drawing.Point(18, 316);
+            this.txtDGraduation.Location = new System.Drawing.Point(17, 406);
             this.txtDGraduation.Margin = new System.Windows.Forms.Padding(2);
             this.txtDGraduation.Name = "txtDGraduation";
             this.txtDGraduation.Size = new System.Drawing.Size(280, 36);
@@ -669,7 +670,7 @@ namespace DiyetProgramiProje
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(17, 286);
+            this.label17.Location = new System.Drawing.Point(14, 376);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 28);
@@ -678,7 +679,7 @@ namespace DiyetProgramiProje
             // 
             // txtDLastName
             // 
-            this.txtDLastName.Location = new System.Drawing.Point(18, 248);
+            this.txtDLastName.Location = new System.Drawing.Point(19, 313);
             this.txtDLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtDLastName.Name = "txtDLastName";
             this.txtDLastName.Size = new System.Drawing.Size(278, 36);
@@ -688,7 +689,7 @@ namespace DiyetProgramiProje
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(15, 218);
+            this.label18.Location = new System.Drawing.Point(14, 283);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(100, 28);
@@ -697,7 +698,7 @@ namespace DiyetProgramiProje
             // 
             // txtDFirstName
             // 
-            this.txtDFirstName.Location = new System.Drawing.Point(18, 180);
+            this.txtDFirstName.Location = new System.Drawing.Point(20, 219);
             this.txtDFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtDFirstName.Name = "txtDFirstName";
             this.txtDFirstName.Size = new System.Drawing.Size(279, 36);
@@ -707,7 +708,7 @@ namespace DiyetProgramiProje
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label19.Location = new System.Drawing.Point(15, 150);
+            this.label19.Location = new System.Drawing.Point(17, 189);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(97, 28);
@@ -716,7 +717,7 @@ namespace DiyetProgramiProje
             // 
             // txtDPassword
             // 
-            this.txtDPassword.Location = new System.Drawing.Point(18, 112);
+            this.txtDPassword.Location = new System.Drawing.Point(18, 124);
             this.txtDPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtDPassword.Name = "txtDPassword";
             this.txtDPassword.Size = new System.Drawing.Size(279, 36);
@@ -726,7 +727,7 @@ namespace DiyetProgramiProje
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(15, 82);
+            this.label20.Location = new System.Drawing.Point(15, 101);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(93, 28);
@@ -738,7 +739,7 @@ namespace DiyetProgramiProje
             this.txtDEmail.Location = new System.Drawing.Point(18, 37);
             this.txtDEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtDEmail.Name = "txtDEmail";
-            this.txtDEmail.Size = new System.Drawing.Size(279, 36);
+            this.txtDEmail.Size = new System.Drawing.Size(280, 36);
             this.txtDEmail.TabIndex = 9;
             // 
             // RegisterForm
@@ -749,9 +750,8 @@ namespace DiyetProgramiProje
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1386, 729);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

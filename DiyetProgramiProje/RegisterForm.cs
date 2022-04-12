@@ -34,6 +34,7 @@ namespace DiyetProgramiProje
             cboxDailyExercise.SelectedIndex=0;
             cboxRequest.SelectedIndex=0;
             cboxDietician.SelectedIndex=0;
+            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
         }
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)

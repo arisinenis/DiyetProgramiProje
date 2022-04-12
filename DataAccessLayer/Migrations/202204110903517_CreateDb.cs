@@ -15,7 +15,7 @@
                         UserId = c.Int(nullable: false),
                         MessageHeader = c.String(nullable: false),
                         Text = c.String(nullable: false),
-                        Status = c.String(),
+                        Status = c.Int(nullable: false),
                         MessageDate = c.DateTime(nullable: false),
                         DieticianId = c.Int(nullable: false),
                     })
@@ -31,7 +31,7 @@
                         FirstName = c.String(nullable: false, maxLength: 50),
                         LastName = c.String(nullable: false, maxLength: 50),
                         Graduation = c.String(nullable: false, maxLength: 100),
-                        Status = c.String(),
+                        Status = c.Int(nullable: false),
                         Picture = c.Binary(),
                     })
                 .PrimaryKey(t => t.Id);
@@ -58,14 +58,14 @@
                         FirstName = c.String(nullable: false, maxLength: 50),
                         LastName = c.String(nullable: false, maxLength: 50),
                         BirthDate = c.DateTime(nullable: false),
-                        Gender = c.String(nullable: false, maxLength: 6),
+                        Gender = c.Int(nullable: false),
                         Height = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Weight = c.Decimal(nullable: false, precision: 18, scale: 2),
                         UserRequest = c.Int(nullable: false),
                         DailyExercise = c.Int(nullable: false),
                         DailyCalorie = c.Decimal(nullable: false, precision: 18, scale: 2),
                         RequireCalorie = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Status = c.String(nullable: false, maxLength: 7),
+                        Status = c.Int(nullable: false),
                         DieticianId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -80,7 +80,7 @@
                         DieticianId = c.Int(nullable: false),
                         MessageHeader = c.String(nullable: false),
                         Text = c.String(nullable: false),
-                        Status = c.String(),
+                        Status = c.Int(nullable: false),
                         MessageDate = c.DateTime(nullable: false),
                         UserInformationId = c.Int(nullable: false),
                     })
@@ -123,7 +123,7 @@
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 100),
                         Calorie = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Status = c.String(nullable: false, maxLength: 8),
+                        Status = c.Int(nullable: false),
                         FoodPicture = c.Binary(),
                         FoodCategoryId = c.Int(nullable: false),
                     })
@@ -138,7 +138,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CategoryName = c.String(nullable: false),
-                        Status = c.String(),
+                        Status = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

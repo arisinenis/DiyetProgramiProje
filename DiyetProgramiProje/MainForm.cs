@@ -27,6 +27,8 @@ namespace DiyetProgramiProje
             this.panelMain.Controls.Add(frm);
             this.panelMain.Tag = frm;
             frm.Show();
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+           
         }         
 
         private void btnQuit_Click_1(object sender, EventArgs e)
@@ -48,6 +50,58 @@ namespace DiyetProgramiProje
                 {
                     item.Close();
                 }
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            panelMain.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            panelSide.BackColor = ColorTranslator.FromHtml("#3d5a80");
+            //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        }
+
+        private void btnAdminMain_Click(object sender, EventArgs e)
+        {
+            var openForms = Application.OpenForms["ReportForm"];
+            if (openForms != null)
+            {
+                openForms.Close();
+                var formOpen = Application.OpenForms["AdminForm"];
+                panelMain.Controls.Add(formOpen);
+            }
+            
+        }
+
+        private void btnAdminReports_Click(object sender, EventArgs e)
+        {
+            var openForms = Application.OpenForms["ReportForm"];
+            if (openForms == null)
+            {
+                LoadForm(new ReportForm());
+            }
+            
+        }
+
+        private void btnDieticianMain_Click(object sender, EventArgs e)
+        {
+            var openForms = Application.OpenForms["DieticianMessagesForm"];
+            if (openForms != null)
+            {
+                openForms.Hide();
+                var formOpen = Application.OpenForms["DieticianForm"];
+                panelMain.Controls.Add(formOpen);
+            }
+        }
+
+        private void btnDieticianMessages_Click(object sender, EventArgs e)
+        {
+            var openForms = Application.OpenForms["DieticianForm"];
+            if (openForms != null)
+            {
+                openForms.Hide();
+                var formOpen = Application.OpenForms["DieticianMessagesForm"];
+                panelMain.Controls.Add(formOpen);
+
             }
         }
     }
