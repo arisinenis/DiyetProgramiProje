@@ -43,6 +43,8 @@ namespace DiyetProgramiProje
             FillMealTime();
             cboxLvMealTime.SelectedIndex = 0;
             this.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            
+
         }
         private void FillClient()
         {
@@ -119,7 +121,7 @@ namespace DiyetProgramiProje
             UserInformation userInformation = userService.GetById(userId);
             lblDailyCalorieRequirement.Text = userInformation.DailyCalorie.ToString();
             lblDailyCalorieTaken.Text = userMealsAndFoodsService.GetTotalCalorieById(userId, dtMealDate.Value.Date).ToString();
-            FillFoods();
+            //FillFoods();
         }
 
         private void dtMealDate_ValueChanged(object sender, EventArgs e)
@@ -145,8 +147,8 @@ namespace DiyetProgramiProje
 
         private void DieticianForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["Form1"];
-            frm.Show();
+            //Form frm = Application.OpenForms["Form1"];
+            //frm.Show();
         }
 
         private void btnSend_Click_1(object sender, EventArgs e)
@@ -179,7 +181,7 @@ namespace DiyetProgramiProje
         private void cboxLvMealTime_SelectedIndexChanged(object sender, EventArgs e)
         {
             lvMeals.Items.Clear();
-            FillFoods();
+            //FillFoods();
         }
     }
 }

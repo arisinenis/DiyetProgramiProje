@@ -22,6 +22,7 @@ namespace DiyetProgramiProje
         UserRegisterInfo userRegisterInfo;
         FoodName foodForUpdate;
         FoodCategory foodCategory;
+        DieticianRegisterInfo dietician = null;
         public AdminForm(UserRegisterInfo _user)
         {
             InitializeComponent();
@@ -428,11 +429,20 @@ namespace DiyetProgramiProje
 
         private void btnAddCatAndFood_Click(object sender, EventArgs e)
         {
-            
-            FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo);
-            this.Hide();
-            foodAddForm.Show();
-           
+            Form frm = Application.OpenForms["FoodAddForm"];
+            if (frm == null)
+            {
+                CloseAll();
+                var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                MainForm.LoadForm(new FoodAddForm(userRegisterInfo), dietician, userRegisterInfo);
+            }
+            else
+            {
+                return;
+            }
+
+            var MainForm1 = Application.OpenForms.OfType<MainForm>().Single();        
+            MainForm1.LoadForm(new FoodAddForm(userRegisterInfo), dietician, userRegisterInfo);
         }
 
         private void lvCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -449,9 +459,17 @@ namespace DiyetProgramiProje
             }
             else
             {
-                FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo, foodForUpdate, foodCategory);
-                this.Hide();
-                foodAddForm.Show();
+                Form frm = Application.OpenForms["FoodAddForm"];
+                if (frm == null)
+                {
+                    CloseAll();
+                    var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                    MainForm.LoadForm(new FoodAddForm(userRegisterInfo,foodForUpdate,foodCategory), dietician, userRegisterInfo);
+                }
+                else
+                {
+                    return;
+                }
             }
             
         }
@@ -459,6 +477,18 @@ namespace DiyetProgramiProje
         {
             //Form frmm = Application.OpenForms["Form1"];
             //frmm.Show();
+        }
+
+        private void CloseAll()
+        {
+            var formForClose = Application.OpenForms.OfType<Form>().ToList();
+            foreach (var item in formForClose)
+            {
+                if (item.Name != "MainForm")
+                {
+                    item.Close();
+                }
+            }
         }
     }
 }

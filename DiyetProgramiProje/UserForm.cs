@@ -266,8 +266,9 @@ namespace DiyetProgramiProje
             //UserMessagesForm userMessagesForm = new UserMessagesForm(userRegisterInfo);
             //this.Hide();
             //userMessagesForm.ShowDialog();
+            DieticianRegisterInfo dietician = null;
             var MainForm = Application.OpenForms.OfType<MainForm>().Single();
-            MainForm.LoadForm(new UserMessagesForm(userRegisterInfo));
+            MainForm.LoadForm(new UserMessagesForm(userRegisterInfo),dietician,userRegisterInfo);
         }
 
         private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -279,7 +280,8 @@ namespace DiyetProgramiProje
         private void btnShowReports_Click(object sender, EventArgs e)
         {
             var MainForm = Application.OpenForms.OfType<MainForm>().Single();
-            MainForm.LoadForm(new ReportForm());
+            DieticianRegisterInfo dietician = null;
+            MainForm.LoadForm(new ReportForm(),dietician, userRegisterInfo);
             //ReportForm reportForm = new ReportForm();
             //this.Hide();
             //reportForm.ShowDialog();            

@@ -74,8 +74,8 @@ namespace DiyetProgramiProje
 
         private void DieticianMessagesForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["DieticianForm"];
-            frm.Show();
+            //Form frm = Application.OpenForms["DieticianForm"];
+            //frm.Show();
         }
 
         private void btnSend_Click(object sender, EventArgs e)

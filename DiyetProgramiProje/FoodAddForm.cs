@@ -220,16 +220,16 @@ namespace DiyetProgramiProje
 
         private void FoodAddForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm1 = Application.OpenForms["UserForm"];
-            if (frm1!=null)
-            { 
-                frm1.Show();
-            }
-            else
-            {   
-                AdminForm adminForm = new AdminForm(userRegisterInfo);
-                adminForm.Show();
-            }
+            //Form frm1 = Application.OpenForms["UserForm"];
+            //if (frm1!=null)
+            //{ 
+            //    frm1.Show();
+            //}
+            //else
+            //{   
+            //    AdminForm adminForm = new AdminForm(userRegisterInfo);
+            //    adminForm.Show();
+            //}
         }
 
         private void FoodAddForm_Activated(object sender, EventArgs e)

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSide = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelUser = new System.Windows.Forms.Panel();
             this.btnUserNewFood = new FontAwesome.Sharp.IconButton();
             this.btnUserReports = new FontAwesome.Sharp.IconButton();
             this.btnUserMessages = new FontAwesome.Sharp.IconButton();
@@ -47,7 +47,7 @@
             this.btnQuit = new MaterialSkin.Controls.MaterialButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelSide.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelUser.SuspendLayout();
             this.panelDietician.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
@@ -55,9 +55,9 @@
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelSide.Controls.Add(this.panel1);
-            this.panelSide.Controls.Add(this.panelDietician);
             this.panelSide.Controls.Add(this.panelAdmin);
+            this.panelSide.Controls.Add(this.panelDietician);
+            this.panelSide.Controls.Add(this.panelUser);
             this.panelSide.Controls.Add(this.pnlLogo);
             this.panelSide.Controls.Add(this.btnStart);
             this.panelSide.Controls.Add(this.btnLogOut);
@@ -67,18 +67,19 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(200, 768);
             this.panelSide.TabIndex = 0;
+            this.panelSide.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSide_Paint);
             // 
-            // panel1
+            // panelUser
             // 
-            this.panel1.Controls.Add(this.btnUserNewFood);
-            this.panel1.Controls.Add(this.btnUserReports);
-            this.panel1.Controls.Add(this.btnUserMessages);
-            this.panel1.Controls.Add(this.btnUserMain);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 440);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 240);
-            this.panel1.TabIndex = 13;
+            this.panelUser.Controls.Add(this.btnUserNewFood);
+            this.panelUser.Controls.Add(this.btnUserReports);
+            this.panelUser.Controls.Add(this.btnUserMessages);
+            this.panelUser.Controls.Add(this.btnUserMain);
+            this.panelUser.Location = new System.Drawing.Point(0, 140);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(200, 240);
+            this.panelUser.TabIndex = 13;
+            this.panelUser.Visible = false;
             // 
             // btnUserNewFood
             // 
@@ -94,6 +95,7 @@
             this.btnUserNewFood.TabIndex = 18;
             this.btnUserNewFood.Text = "YEMEK EKLEME İSTEĞİ";
             this.btnUserNewFood.UseVisualStyleBackColor = true;
+            this.btnUserNewFood.Click += new System.EventHandler(this.btnUserNewFood_Click);
             // 
             // btnUserReports
             // 
@@ -109,6 +111,7 @@
             this.btnUserReports.TabIndex = 17;
             this.btnUserReports.Text = "RAPORLAR";
             this.btnUserReports.UseVisualStyleBackColor = true;
+            this.btnUserReports.Click += new System.EventHandler(this.btnUserReports_Click);
             // 
             // btnUserMessages
             // 
@@ -124,6 +127,7 @@
             this.btnUserMessages.TabIndex = 16;
             this.btnUserMessages.Text = "MESAJLAR";
             this.btnUserMessages.UseVisualStyleBackColor = true;
+            this.btnUserMessages.Click += new System.EventHandler(this.btnUserMessages_Click);
             // 
             // btnUserMain
             // 
@@ -139,6 +143,7 @@
             this.btnUserMain.TabIndex = 14;
             this.btnUserMain.Text = "ANASAYFA";
             this.btnUserMain.UseVisualStyleBackColor = true;
+            this.btnUserMain.Click += new System.EventHandler(this.btnUserMain_Click);
             // 
             // panelDietician
             // 
@@ -146,10 +151,11 @@
             this.panelDietician.Controls.Add(this.btnDieticianMessages);
             this.panelDietician.Controls.Add(this.btnDieticianMain);
             this.panelDietician.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDietician.Location = new System.Drawing.Point(0, 260);
+            this.panelDietician.Location = new System.Drawing.Point(0, 140);
             this.panelDietician.Name = "panelDietician";
             this.panelDietician.Size = new System.Drawing.Size(200, 180);
             this.panelDietician.TabIndex = 12;
+            this.panelDietician.Visible = false;
             // 
             // btnDieticianReports
             // 
@@ -165,6 +171,7 @@
             this.btnDieticianReports.TabIndex = 16;
             this.btnDieticianReports.Text = "RAPORLAR";
             this.btnDieticianReports.UseVisualStyleBackColor = true;
+            this.btnDieticianReports.Click += new System.EventHandler(this.btnDieticianReports_Click);
             // 
             // btnDieticianMessages
             // 
@@ -202,11 +209,11 @@
             // 
             this.panelAdmin.Controls.Add(this.btnAdminReports);
             this.panelAdmin.Controls.Add(this.btnAdminMain);
-            this.panelAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdmin.Location = new System.Drawing.Point(0, 140);
             this.panelAdmin.Name = "panelAdmin";
             this.panelAdmin.Size = new System.Drawing.Size(200, 120);
             this.panelAdmin.TabIndex = 11;
+            this.panelAdmin.Visible = false;
             // 
             // btnAdminReports
             // 
@@ -330,7 +337,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelSide.ResumeLayout(false);
             this.panelSide.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panelUser.ResumeLayout(false);
             this.panelDietician.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -352,7 +359,7 @@
         private FontAwesome.Sharp.IconButton btnDieticianMessages;
         private FontAwesome.Sharp.IconButton btnDieticianMain;
         private FontAwesome.Sharp.IconButton btnDieticianReports;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelUser;
         private FontAwesome.Sharp.IconButton btnUserReports;
         private FontAwesome.Sharp.IconButton btnUserMessages;
         private FontAwesome.Sharp.IconButton btnUserMain;
