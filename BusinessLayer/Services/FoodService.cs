@@ -23,18 +23,14 @@ namespace BusinessLayer.Services
 
         public bool Add(FoodName food)
         {
-            if (String.IsNullOrWhiteSpace(food.Name))
+            if (string.IsNullOrWhiteSpace(food.Name))
             {
                 throw new Exception("Please type a food name !");
             }
-            else if (String.IsNullOrWhiteSpace(food.Calorie.ToString()))
+            else if (string.IsNullOrWhiteSpace(food.Calorie.ToString())) //tryParse
             {
                 throw new Exception("Please type a calorie !");
             }
-            //else if (String.IsNullOrWhiteSpace(food.FoodCategory.CategoryName))
-            //{
-            //    throw new Exception("Please type a categorie name !");
-            //}
             else
             {
                 return foodRepository.Add(food);

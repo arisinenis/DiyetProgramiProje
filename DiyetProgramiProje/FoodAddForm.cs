@@ -143,58 +143,75 @@ namespace DiyetProgramiProje
         Image imgg;
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            if (txtFoodName.Text == string.Empty || txtFoodCalories.Text == string.Empty)
+            try
             {
-                MessageBox.Show("Please fill all blanks");
-            }
-            else
-            {
-                if (btnAddFood.Text=="Add Food")
+                if (txtFoodName.Text == string.Empty || txtFoodCalories.Text == string.Empty)
                 {
-                    FoodName foodName = new FoodName();
-                    foodName.Name = txtFoodName.Text;
-                    foodName.Calorie = Convert.ToDecimal(txtFoodCalories.Text);
-                    foodName.FoodCategoryId = (int)cboxCategoryName.SelectedValue;
-                    Image img = pboxAddPicture.Image;
-                    byte[] arr;
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        arr = ms.ToArray();
-                    }
-                    foodName.FoodPicture = arr;
-                    foodService.Add(foodName);
-
-                    MessageBox.Show("Food has been added.");
-
+                    MessageBox.Show("Please fill all blanks");
                 }
-                
                 else
                 {
-
-                    FoodName uptFoodName = foodService.GetById(foodForUpdate.Id);
-                    imgg = ConvertByteToPicture(uptFoodName);
-                    uptFoodName.Name = txtFoodName.Text;
-                    uptFoodName.Calorie = Convert.ToDecimal(txtFoodCalories.Text);
-                    uptFoodName.FoodCategoryId = (int)cboxCategoryName.SelectedValue;
-                    Image img = pboxAddPicture.Image;
-                    if (img.Width != imgg.Width)
+                    if (btnAddFood.Text == "Add Food")
                     {
-                        byte[] arr;
-                        using (MemoryStream ms = new MemoryStream())
+                        FoodName foodName = new FoodName();
+                        foodName.Name = txtFoodName.Text;
+                        foodName.Calorie = Convert.ToDecimal(txtFoodCalories.Text);
+                        foodName.FoodCategoryId = (int)cboxCategoryName.SelectedValue;
+                        Image img = pboxAddPicture.Image;
+                        if (img==null)
                         {
-                            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                            arr = ms.ToArray();
+                            MessageBox.Show("Please select a picture !");
                         }
-                        uptFoodName.FoodPicture = arr;
-                    }             
-                    foodService.Update(uptFoodName);
+                        else
+                        {
+                            byte[] arr;
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                arr = ms.ToArray();
+                            }
+                            foodName.FoodPicture = arr;
+                            foodService.Add(foodName);
 
-                    MessageBox.Show("Food has been updated.");
+                            MessageBox.Show("Food has been added.");
+                        }
+                       
+
+                    }
+
+                    else
+                    {
+
+                        FoodName uptFoodName = foodService.GetById(foodForUpdate.Id);
+                        imgg = ConvertByteToPicture(uptFoodName);
+                        uptFoodName.Name = txtFoodName.Text;
+                        uptFoodName.Calorie = Convert.ToDecimal(txtFoodCalories.Text);
+                        uptFoodName.FoodCategoryId = (int)cboxCategoryName.SelectedValue;
+                        Image img = pboxAddPicture.Image;
+                        if (img.Width != imgg.Width)
+                        {
+                            byte[] arr;
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                arr = ms.ToArray();
+                            }
+                            uptFoodName.FoodPicture = arr;
+                        }
+                        foodService.Update(uptFoodName);
+
+                        MessageBox.Show("Food has been updated.");
+
+                    }
 
                 }
-
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+           
             
         }
         private Image ConvertByteToPicture(FoodName food)
