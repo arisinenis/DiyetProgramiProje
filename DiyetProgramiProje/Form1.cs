@@ -30,31 +30,38 @@ namespace DiyetProgramiProje
             txtPassword.Text = "12345B!";
             panel2.Visible = false;
             panel3.Visible = true;
-            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.labelWelcome.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.lblFirstMessage.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.btnBegin1.BackColor = ColorTranslator.FromHtml("#a7c957");
+            this.labelMail.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelPassword.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnLogIn2.BackColor = ColorTranslator.FromHtml("#a7c957");
+            this.btnSıgnIn2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnLogin_Click_1(sender, e);
+                btnLogIn2_Click(sender, e);
             }
         }
 
-        private void btnBegin_Click_1(object sender, EventArgs e)
+        private void btnBegin1_Click(object sender, EventArgs e)
         {
             panel3.Visible = false;
             panel2.Visible = true;
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogIn2_Click(object sender, EventArgs e)
         {
             if (txtEmail.Text == "admin@diet.com" && txtPassword.Text == "A1111!")
             {
                 UserRegisterInfo user = userService.GetUserByEmail(txtEmail.Text);
-                DieticianRegisterInfo dietician= null;
+                DieticianRegisterInfo dietician = null;
                 var MainForm = Application.OpenForms.OfType<MainForm>().Single();
-                MainForm.LoadForm(new AdminForm(user),dietician,user);
+                MainForm.LoadForm(new AdminForm(user), dietician, user);
 
                 txtEmail.Text = string.Empty;
                 txtPassword.Text = string.Empty;
@@ -69,7 +76,7 @@ namespace DiyetProgramiProje
                 if (user != null && dietician == null)
                 {
                     var MainForm = Application.OpenForms.OfType<MainForm>().Single();
-                    MainForm.LoadForm(new UserForm(user),dietician,user);
+                    MainForm.LoadForm(new UserForm(user), dietician, user);
                     MainForm.PanelControl();
                 }
                 else if (user == null && dietician != null)
@@ -77,8 +84,8 @@ namespace DiyetProgramiProje
                     //DieticianForm dieticianForm = new DieticianForm(dietician);
                     //this.Hide();
                     //dieticianForm.ShowDialog();
-                    var MainForm = Application.OpenForms.OfType<MainForm>().Single(); 
-                    MainForm.LoadForm(new DieticianForm(dietician),dietician, user);
+                    var MainForm = Application.OpenForms.OfType<MainForm>().Single();
+                    MainForm.LoadForm(new DieticianForm(dietician), dietician, user);
                     MainForm.PanelControl();
                 }
                 else
@@ -90,7 +97,7 @@ namespace DiyetProgramiProje
             txtPassword.Text = string.Empty;
         }
 
-        private void btnSignIn_Click_1(object sender, EventArgs e)
+        private void btnSıgnIn2_Click(object sender, EventArgs e)
         {
             DieticianRegisterInfo dietician = null;
             UserRegisterInfo user = null;
@@ -98,7 +105,7 @@ namespace DiyetProgramiProje
             //this.Hide();
             //registerForm.ShowDialog();
             var MainForm = Application.OpenForms.OfType<MainForm>().Single();
-            MainForm.LoadForm(new RegisterForm(),dietician,user);
+            MainForm.LoadForm(new RegisterForm(), dietician, user);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace DiyetProgramiProje
             FillExerciseCBox();
             FillRequestCbox();
             FillDieticianCbox();
-            panel2.Visible = false;
+            panelDietician.Visible = false;
             cboxDailyExercise.SelectedIndex=0;
             cboxRequest.SelectedIndex=0;
             cboxDietician.SelectedIndex=0;
@@ -43,138 +43,17 @@ namespace DiyetProgramiProje
             frm.Show();
         }
 
-
-        private void btnJoin_Click(object sender, EventArgs e)
-        {
-            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains(".com"))
-            {
-                MessageBox.Show("Please type a correct email.");
-            }
-            else if (txtPassword.Text.Length < 6 || txtPassword.Text.Length > 25 || !txtPassword.Text.Any(c => char.IsUpper(c)) || !txtPassword.Text.Any(c => char.IsDigit(c)) || !txtPassword.Text.Any(c => char.IsPunctuation(c)))
-            {
-                MessageBox.Show("Password length must be at least 6 and at most 25 digits and must contain at least one number, capital letter and symbol.");
-            }
-            else
-            {
-                try
-                {
-                    UserInformation userInformation = new UserInformation();
-                    userInformation.FirstName = txtFirstName.Text;
-                    userInformation.LastName = txtLastName.Text;
-                    userInformation.BirthDate = dtBirthDate.Value;
-                    userInformation.Gender = rbMale.Checked ? GenderEnum.Male : GenderEnum.Female;
-                    userInformation.Height = nudHeight.Value;
-                    userInformation.Weight = nudWeight.Value;
-                    userInformation.DailyExercise = (ExerciseEnum)Enum.Parse(typeof(ExerciseEnum), cboxDailyExercise.SelectedItem.ToString());
-                    userInformation.UserRequest = (UserRequestsEnum)Enum.Parse(typeof(UserRequestsEnum), cboxRequest.SelectedItem.ToString());
-                    userInformation.DieticianId = (int)cboxDietician.SelectedValue;
-                    userInformation.DailyCalorie = CalculateDailyCalorie(userInformation.Height, userInformation.Weight, userInformation.BirthDate, userInformation.Gender, userInformation.DailyExercise);
-                    userInformation.RequireCalorie = CalculateRequaireCalorie(userInformation.UserRequest, userInformation.DailyCalorie);
-                    userService.AddInformation(userInformation);
-
-                    UserRegisterInfo userRegisterInfo = new UserRegisterInfo();
-                    userRegisterInfo.Id = userInformation.Id;
-                    userRegisterInfo.Email = txtEmail.Text;
-                    userRegisterInfo.Password = txtPassword.Text;
-                    userRegisterInfo.UserType = MembershipTypeEnum.Client;
-                    userService.AddRegister(userRegisterInfo);
-
-                    DialogResult result = MessageBox.Show("Successfully registered");
-                    if (result == DialogResult.OK)
-                    {
-                        this.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        private void btnChoosePics_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-
-            open.Filter = "Image Files(*.jpg; *.jpeg;)|*.jpg; *.jpeg;";
-
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = new Bitmap(open.FileName);
-            }
-        }
-
-        private void btnDieticianJoin_Click(object sender, EventArgs e)
-        {
-            if (!txtDEmail.Text.Contains("@") || !txtDEmail.Text.Contains(".com"))
-            {
-                MessageBox.Show("Please type a correct email.");
-            }
-            else if (txtDPassword.Text.Length < 6 || txtDPassword.Text.Length > 25 || !txtDPassword.Text.Any(c => char.IsUpper(c)) || !txtDPassword.Text.Any(c => char.IsDigit(c)) || !txtDPassword.Text.Any(c => char.IsPunctuation(c)))
-            {
-                MessageBox.Show("Password length must be at least 6 and at most 25 digits and must contain at least one number, capital letter and symbol.");
-            }
-            else
-            {
-                try
-                {
-                    Dietician dietician = new Dietician();
-                    dietician.FirstName = txtDFirstName.Text;
-                    dietician.LastName = txtDLastName.Text;
-                    dietician.Graduation = txtDGraduation.Text;
-
-                    Image img = pictureBox1.Image;
-                    if (img==null)
-                    {
-                        MessageBox.Show("Please add a photo");
-                    }
-                    else
-                    {
-                        byte[] arr;
-                        using (MemoryStream ms = new MemoryStream())
-                        {
-                            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                            arr = ms.ToArray();
-                        }
-
-                        dietician.Picture = arr;
-
-                        dieticianService.AddInformation(dietician);
-
-                        DieticianRegisterInfo dieticianRegisterInfo = new DieticianRegisterInfo();
-                        dieticianRegisterInfo.Id = dietician.Id;
-                        dieticianRegisterInfo.Email = txtDEmail.Text;
-                        dieticianRegisterInfo.Password = txtDPassword.Text;
-                        dieticianRegisterInfo.UserType = MembershipTypeEnum.Dietician;
-
-                        dieticianService.AddRegister(dieticianRegisterInfo);
-
-                        DialogResult result = MessageBox.Show("Successfully registered");
-                        if (result == DialogResult.OK)
-                        {
-                            this.Close();
-                        }
-                    }
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
         private void rbUser_CheckedChanged(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel2.Visible = false;
+            panelUser.Visible = true;
+            panelDietician.Visible = false;
             groupBox1.Visible = false;
         }
 
         private void rbDietician_CheckedChanged(object sender, EventArgs e)
         {
-            panel1.Visible = false;
-            panel2.Visible = true;
+            panelUser.Visible = false;
+            panelDietician.Visible = true;
         }
 
         private void btnShowDetails_Click(object sender, EventArgs e)
@@ -294,6 +173,126 @@ namespace DiyetProgramiProje
                     break;
             }
             return requireCalorie;
+        }
+
+        private void btnUserJoin_Click(object sender, EventArgs e)
+        {
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains(".com"))
+            {
+                MessageBox.Show("Please type a correct email.");
+            }
+            else if (txtPassword.Text.Length < 6 || txtPassword.Text.Length > 25 || !txtPassword.Text.Any(c => char.IsUpper(c)) || !txtPassword.Text.Any(c => char.IsDigit(c)) || !txtPassword.Text.Any(c => char.IsPunctuation(c)))
+            {
+                MessageBox.Show("Password length must be at least 6 and at most 25 digits and must contain at least one number, capital letter and symbol.");
+            }
+            else
+            {
+                try
+                {
+                    UserInformation userInformation = new UserInformation();
+                    userInformation.FirstName = txtFirstName.Text;
+                    userInformation.LastName = txtLastName.Text;
+                    userInformation.BirthDate = dtBirthDate.Value;
+                    userInformation.Gender = rbMale.Checked ? GenderEnum.Male : GenderEnum.Female;
+                    userInformation.Height = nudHeight.Value;
+                    userInformation.Weight = nudWeight.Value;
+                    userInformation.DailyExercise = (ExerciseEnum)Enum.Parse(typeof(ExerciseEnum), cboxDailyExercise.SelectedItem.ToString());
+                    userInformation.UserRequest = (UserRequestsEnum)Enum.Parse(typeof(UserRequestsEnum), cboxRequest.SelectedItem.ToString());
+                    userInformation.DieticianId = (int)cboxDietician.SelectedValue;
+                    userInformation.DailyCalorie = CalculateDailyCalorie(userInformation.Height, userInformation.Weight, userInformation.BirthDate, userInformation.Gender, userInformation.DailyExercise);
+                    userInformation.RequireCalorie = CalculateRequaireCalorie(userInformation.UserRequest, userInformation.DailyCalorie);
+                    userService.AddInformation(userInformation);
+
+                    UserRegisterInfo userRegisterInfo = new UserRegisterInfo();
+                    userRegisterInfo.Id = userInformation.Id;
+                    userRegisterInfo.Email = txtEmail.Text;
+                    userRegisterInfo.Password = txtPassword.Text;
+                    userRegisterInfo.UserType = MembershipTypeEnum.Client;
+                    userService.AddRegister(userRegisterInfo);
+
+                    DialogResult result = MessageBox.Show("Successfully registered");
+                    if (result == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btnJoinDietician_Click(object sender, EventArgs e)
+        {
+            if (!txtDEmail.Text.Contains("@") || !txtDEmail.Text.Contains(".com"))
+            {
+                MessageBox.Show("Please type a correct email.");
+            }
+            else if (txtDPassword.Text.Length < 6 || txtDPassword.Text.Length > 25 || !txtDPassword.Text.Any(c => char.IsUpper(c)) || !txtDPassword.Text.Any(c => char.IsDigit(c)) || !txtDPassword.Text.Any(c => char.IsPunctuation(c)))
+            {
+                MessageBox.Show("Password length must be at least 6 and at most 25 digits and must contain at least one number, capital letter and symbol.");
+            }
+            else
+            {
+                try
+                {
+                    Dietician dietician = new Dietician();
+                    dietician.FirstName = txtDFirstName.Text;
+                    dietician.LastName = txtDLastName.Text;
+                    dietician.Graduation = txtDGraduation.Text;
+
+                    Image img = pictureBox1.Image;
+                    if (img == null)
+                    {
+                        MessageBox.Show("Please add a photo");
+                    }
+                    else
+                    {
+                        byte[] arr;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            arr = ms.ToArray();
+                        }
+
+                        dietician.Picture = arr;
+
+                        dieticianService.AddInformation(dietician);
+
+                        DieticianRegisterInfo dieticianRegisterInfo = new DieticianRegisterInfo();
+                        dieticianRegisterInfo.Id = dietician.Id;
+                        dieticianRegisterInfo.Email = txtDEmail.Text;
+                        dieticianRegisterInfo.Password = txtDPassword.Text;
+                        dieticianRegisterInfo.UserType = MembershipTypeEnum.Dietician;
+
+                        dieticianService.AddRegister(dieticianRegisterInfo);
+
+                        DialogResult result = MessageBox.Show("Successfully registered");
+                        if (result == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btnAddPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            open.Filter = "Image Files(*.jpg; *.jpeg;)|*.jpg; *.jpeg;";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(open.FileName);
+            }
         }
     }
 }

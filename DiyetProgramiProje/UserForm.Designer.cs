@@ -37,58 +37,74 @@ namespace DiyetProgramiProje
             this.label4 = new System.Windows.Forms.Label();
             this.pboxFood = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxPortion = new System.Windows.Forms.GroupBox();
             this.lblCaloriesByPortion = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBoxCategory = new System.Windows.Forms.GroupBox();
             this.lblCategoyName = new System.Windows.Forms.Label();
             this.nudPortion = new System.Windows.Forms.NumericUpDown();
-            this.btnAddMeal = new System.Windows.Forms.Button();
-            this.btnNewMeal = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtAddMealDate = new System.Windows.Forms.DateTimePicker();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTotalCal = new System.Windows.Forms.GroupBox();
             this.lblTotalCalories = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxAddMeal = new System.Windows.Forms.GroupBox();
+            this.pbox3 = new System.Windows.Forms.PictureBox();
+            this.labelAddMeal3 = new System.Windows.Forms.Label();
+            this.labelAddMeal2 = new System.Windows.Forms.Label();
+            this.labelAddMeal1 = new System.Windows.Forms.Label();
+            this.btnNewMeal2 = new FontAwesome.Sharp.IconButton();
+            this.btnAddMeal2 = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.cboxMealTime = new System.Windows.Forms.ComboBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.lblDailyCalorieRequirement = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.groupBoxCheckMeal = new System.Windows.Forms.GroupBox();
+            this.pbox6 = new System.Windows.Forms.PictureBox();
+            this.labelCheckMeal3 = new System.Windows.Forms.Label();
+            this.pbox5 = new System.Windows.Forms.PictureBox();
+            this.labelCheckMeal2 = new System.Windows.Forms.Label();
+            this.labelCheckMeal1 = new System.Windows.Forms.Label();
             this.lblRemainCalories = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblDailyCalorieRequirement = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblTotalTakenCalory = new System.Windows.Forms.Label();
+            this.lblTakenCalorie = new System.Windows.Forms.Label();
+            this.lblCalorieByMeal = new System.Windows.Forms.Label();
+            this.lblMealCalorie = new System.Windows.Forms.Label();
+            this.cboxLvMealTime = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtMealDate = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.lvMeals = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtMealDate = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cboxLvMealTime = new System.Windows.Forms.ComboBox();
-            this.btnShowMeal = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lblCalorieByMeal = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.lblTotalTakenCalory = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.radioButtonOpen = new System.Windows.Forms.RadioButton();
+            this.radioButtonClose = new System.Windows.Forms.RadioButton();
+            this.pbox1 = new System.Windows.Forms.PictureBox();
+            this.pbox2 = new System.Windows.Forms.PictureBox();
+            this.labelTips = new System.Windows.Forms.Label();
+            this.pbox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFood)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.groupBoxPortion.SuspendLayout();
+            this.groupBoxCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxTotalCal.SuspendLayout();
+            this.groupBoxAddMeal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox3)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.groupBoxCheckMeal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 205);
+            this.label3.Location = new System.Drawing.Point(344, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 23);
             this.label3.TabIndex = 2;
@@ -96,9 +112,9 @@ namespace DiyetProgramiProje
             // 
             // txtFoodFilter
             // 
-            this.txtFoodFilter.Location = new System.Drawing.Point(5, 239);
+            this.txtFoodFilter.Location = new System.Drawing.Point(348, 306);
             this.txtFoodFilter.Name = "txtFoodFilter";
-            this.txtFoodFilter.Size = new System.Drawing.Size(298, 31);
+            this.txtFoodFilter.Size = new System.Drawing.Size(174, 31);
             this.txtFoodFilter.TabIndex = 3;
             this.txtFoodFilter.TextChanged += new System.EventHandler(this.txtFoodFilter_TextChanged);
             // 
@@ -106,16 +122,17 @@ namespace DiyetProgramiProje
             // 
             this.lboxFoods.FormattingEnabled = true;
             this.lboxFoods.ItemHeight = 23;
-            this.lboxFoods.Location = new System.Drawing.Point(7, 314);
+            this.lboxFoods.Location = new System.Drawing.Point(348, 53);
             this.lboxFoods.Name = "lboxFoods";
-            this.lboxFoods.Size = new System.Drawing.Size(297, 211);
+            this.lboxFoods.Size = new System.Drawing.Size(170, 211);
+            this.lboxFoods.Sorted = true;
             this.lboxFoods.TabIndex = 4;
             this.lboxFoods.SelectedIndexChanged += new System.EventHandler(this.lboxFoods_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 280);
+            this.label4.Location = new System.Drawing.Point(344, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 23);
             this.label4.TabIndex = 5;
@@ -123,9 +140,9 @@ namespace DiyetProgramiProje
             // 
             // pboxFood
             // 
-            this.pboxFood.Location = new System.Drawing.Point(326, 27);
+            this.pboxFood.Location = new System.Drawing.Point(542, 27);
             this.pboxFood.Name = "pboxFood";
-            this.pboxFood.Size = new System.Drawing.Size(210, 196);
+            this.pboxFood.Size = new System.Drawing.Size(178, 157);
             this.pboxFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxFood.TabIndex = 6;
             this.pboxFood.TabStop = false;
@@ -133,100 +150,71 @@ namespace DiyetProgramiProje
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 538);
+            this.label5.Location = new System.Drawing.Point(753, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Portion Quantity";
             // 
-            // groupBox3
+            // groupBoxPortion
             // 
-            this.groupBox3.Controls.Add(this.lblCaloriesByPortion);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(326, 294);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(210, 106);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Calories by Portion";
+            this.groupBoxPortion.Controls.Add(this.lblCaloriesByPortion);
+            this.groupBoxPortion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBoxPortion.Location = new System.Drawing.Point(542, 184);
+            this.groupBoxPortion.Name = "groupBoxPortion";
+            this.groupBoxPortion.Size = new System.Drawing.Size(178, 86);
+            this.groupBoxPortion.TabIndex = 8;
+            this.groupBoxPortion.TabStop = false;
+            this.groupBoxPortion.Text = "Calories by Portion";
             // 
             // lblCaloriesByPortion
             // 
             this.lblCaloriesByPortion.AutoSize = true;
-            this.lblCaloriesByPortion.Location = new System.Drawing.Point(55, 49);
+            this.lblCaloriesByPortion.Location = new System.Drawing.Point(53, 41);
             this.lblCaloriesByPortion.Name = "lblCaloriesByPortion";
-            this.lblCaloriesByPortion.Size = new System.Drawing.Size(0, 23);
+            this.lblCaloriesByPortion.Size = new System.Drawing.Size(49, 23);
             this.lblCaloriesByPortion.TabIndex = 10;
+            this.lblCaloriesByPortion.Text = "label";
             // 
-            // groupBox5
+            // groupBoxCategory
             // 
-            this.groupBox5.Controls.Add(this.lblCategoyName);
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox5.Location = new System.Drawing.Point(326, 210);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(210, 88);
-            this.groupBox5.TabIndex = 10;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Category";
+            this.groupBoxCategory.Controls.Add(this.lblCategoyName);
+            this.groupBoxCategory.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBoxCategory.Location = new System.Drawing.Point(542, 269);
+            this.groupBoxCategory.Name = "groupBoxCategory";
+            this.groupBoxCategory.Size = new System.Drawing.Size(178, 82);
+            this.groupBoxCategory.TabIndex = 10;
+            this.groupBoxCategory.TabStop = false;
+            this.groupBoxCategory.Text = "Category";
             // 
             // lblCategoyName
             // 
             this.lblCategoyName.AutoSize = true;
-            this.lblCategoyName.Location = new System.Drawing.Point(45, 50);
+            this.lblCategoyName.Location = new System.Drawing.Point(53, 37);
             this.lblCategoyName.Name = "lblCategoyName";
-            this.lblCategoyName.Size = new System.Drawing.Size(0, 23);
+            this.lblCategoyName.Size = new System.Drawing.Size(49, 23);
             this.lblCategoyName.TabIndex = 11;
+            this.lblCategoyName.Text = "label";
             // 
             // nudPortion
             // 
+            this.nudPortion.DecimalPlaces = 2;
             this.nudPortion.Increment = new decimal(new int[] {
             25,
             0,
             0,
             131072});
-            this.nudPortion.Location = new System.Drawing.Point(7, 568);
+            this.nudPortion.Location = new System.Drawing.Point(757, 54);
             this.nudPortion.Name = "nudPortion";
-            this.nudPortion.Size = new System.Drawing.Size(297, 31);
+            this.nudPortion.Size = new System.Drawing.Size(137, 31);
             this.nudPortion.TabIndex = 11;
             this.nudPortion.ValueChanged += new System.EventHandler(this.nudPortion_ValueChanged);
-            // 
-            // btnAddMeal
-            // 
-            this.btnAddMeal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddMeal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddMeal.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMeal.Image")));
-            this.btnAddMeal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddMeal.Location = new System.Drawing.Point(326, 492);
-            this.btnAddMeal.Name = "btnAddMeal";
-            this.btnAddMeal.Size = new System.Drawing.Size(210, 79);
-            this.btnAddMeal.TabIndex = 12;
-            this.btnAddMeal.Text = "Add Meal";
-            this.btnAddMeal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddMeal.UseVisualStyleBackColor = true;
-            this.btnAddMeal.Click += new System.EventHandler(this.btnAddMeal_Click);
-            // 
-            // btnNewMeal
-            // 
-            this.btnNewMeal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNewMeal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNewMeal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNewMeal.Image = ((System.Drawing.Image)(resources.GetObject("btnNewMeal.Image")));
-            this.btnNewMeal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewMeal.Location = new System.Drawing.Point(326, 577);
-            this.btnNewMeal.Name = "btnNewMeal";
-            this.btnNewMeal.Size = new System.Drawing.Size(210, 76);
-            this.btnNewMeal.TabIndex = 13;
-            this.btnNewMeal.Text = "New Food Request";
-            this.btnNewMeal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewMeal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNewMeal.UseVisualStyleBackColor = true;
-            this.btnNewMeal.Click += new System.EventHandler(this.btnNewMeal_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 47);
+            this.label1.Location = new System.Drawing.Point(22, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 16;
@@ -234,104 +222,148 @@ namespace DiyetProgramiProje
             // 
             // dtAddMealDate
             // 
-            this.dtAddMealDate.Location = new System.Drawing.Point(5, 78);
+            this.dtAddMealDate.Location = new System.Drawing.Point(25, 79);
             this.dtAddMealDate.Name = "dtAddMealDate";
-            this.dtAddMealDate.Size = new System.Drawing.Size(298, 31);
+            this.dtAddMealDate.Size = new System.Drawing.Size(269, 31);
             this.dtAddMealDate.TabIndex = 17;
             // 
-            // groupBox4
+            // groupBoxTotalCal
             // 
-            this.groupBox4.Controls.Add(this.lblTotalCalories);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(326, 402);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(210, 84);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Total Calories";
+            this.groupBoxTotalCal.Controls.Add(this.lblTotalCalories);
+            this.groupBoxTotalCal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBoxTotalCal.Location = new System.Drawing.Point(940, 30);
+            this.groupBoxTotalCal.Name = "groupBoxTotalCal";
+            this.groupBoxTotalCal.Size = new System.Drawing.Size(132, 70);
+            this.groupBoxTotalCal.TabIndex = 9;
+            this.groupBoxTotalCal.TabStop = false;
+            this.groupBoxTotalCal.Text = "Total Calories";
             // 
             // lblTotalCalories
             // 
             this.lblTotalCalories.AutoSize = true;
-            this.lblTotalCalories.Location = new System.Drawing.Point(69, 36);
+            this.lblTotalCalories.Location = new System.Drawing.Point(28, 32);
             this.lblTotalCalories.Name = "lblTotalCalories";
-            this.lblTotalCalories.Size = new System.Drawing.Size(0, 23);
+            this.lblTotalCalories.Size = new System.Drawing.Size(49, 23);
             this.lblTotalCalories.TabIndex = 11;
+            this.lblTotalCalories.Text = "label";
             // 
-            // groupBox2
+            // groupBoxAddMeal
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.dtAddMealDate);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnNewMeal);
-            this.groupBox2.Controls.Add(this.btnAddMeal);
-            this.groupBox2.Controls.Add(this.nudPortion);
-            this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.pboxFood);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.lboxFoods);
-            this.groupBox2.Controls.Add(this.txtFoodFilter);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cboxMealTime);
-            this.groupBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(26, 25);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(557, 659);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add Meal";
+            this.groupBoxAddMeal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxAddMeal.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxAddMeal.Controls.Add(this.pbox2);
+            this.groupBoxAddMeal.Controls.Add(this.pbox1);
+            this.groupBoxAddMeal.Controls.Add(this.pbox3);
+            this.groupBoxAddMeal.Controls.Add(this.labelAddMeal3);
+            this.groupBoxAddMeal.Controls.Add(this.labelAddMeal2);
+            this.groupBoxAddMeal.Controls.Add(this.labelAddMeal1);
+            this.groupBoxAddMeal.Controls.Add(this.btnNewMeal2);
+            this.groupBoxAddMeal.Controls.Add(this.groupBoxCategory);
+            this.groupBoxAddMeal.Controls.Add(this.btnAddMeal2);
+            this.groupBoxAddMeal.Controls.Add(this.groupBoxTotalCal);
+            this.groupBoxAddMeal.Controls.Add(this.dtAddMealDate);
+            this.groupBoxAddMeal.Controls.Add(this.label1);
+            this.groupBoxAddMeal.Controls.Add(this.nudPortion);
+            this.groupBoxAddMeal.Controls.Add(this.groupBoxPortion);
+            this.groupBoxAddMeal.Controls.Add(this.label5);
+            this.groupBoxAddMeal.Controls.Add(this.pboxFood);
+            this.groupBoxAddMeal.Controls.Add(this.label4);
+            this.groupBoxAddMeal.Controls.Add(this.lboxFoods);
+            this.groupBoxAddMeal.Controls.Add(this.txtFoodFilter);
+            this.groupBoxAddMeal.Controls.Add(this.label3);
+            this.groupBoxAddMeal.Controls.Add(this.label2);
+            this.groupBoxAddMeal.Controls.Add(this.cboxMealTime);
+            this.groupBoxAddMeal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAddMeal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBoxAddMeal.Location = new System.Drawing.Point(16, 27);
+            this.groupBoxAddMeal.Name = "groupBoxAddMeal";
+            this.groupBoxAddMeal.Size = new System.Drawing.Size(1158, 364);
+            this.groupBoxAddMeal.TabIndex = 1;
+            this.groupBoxAddMeal.TabStop = false;
+            this.groupBoxAddMeal.Text = "Add Meal";
+            // 
+            // pbox3
+            // 
+            this.pbox3.Image = ((System.Drawing.Image)(resources.GetObject("pbox3.Image")));
+            this.pbox3.Location = new System.Drawing.Point(957, 112);
+            this.pbox3.Name = "pbox3";
+            this.pbox3.Size = new System.Drawing.Size(50, 45);
+            this.pbox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox3.TabIndex = 25;
+            this.pbox3.TabStop = false;
+            // 
+            // labelAddMeal3
+            // 
+            this.labelAddMeal3.Location = new System.Drawing.Point(954, 168);
+            this.labelAddMeal3.Name = "labelAddMeal3";
+            this.labelAddMeal3.Size = new System.Drawing.Size(198, 80);
+            this.labelAddMeal3.TabIndex = 24;
+            this.labelAddMeal3.Text = "In the last step, you can add your food by entering the portion.";
+            // 
+            // labelAddMeal2
+            // 
+            this.labelAddMeal2.Location = new System.Drawing.Point(814, 269);
+            this.labelAddMeal2.Name = "labelAddMeal2";
+            this.labelAddMeal2.Size = new System.Drawing.Size(175, 79);
+            this.labelAddMeal2.TabIndex = 22;
+            this.labelAddMeal2.Text = "You can see the information of the food you want here";
+            // 
+            // labelAddMeal1
+            // 
+            this.labelAddMeal1.Location = new System.Drawing.Point(22, 246);
+            this.labelAddMeal1.Name = "labelAddMeal1";
+            this.labelAddMeal1.Size = new System.Drawing.Size(300, 68);
+            this.labelAddMeal1.TabIndex = 20;
+            this.labelAddMeal1.Text = "First of all, you should enter the meal time and meal in this section";
+            // 
+            // btnNewMeal2
+            // 
+            this.btnNewMeal2.FlatAppearance.BorderSize = 0;
+            this.btnNewMeal2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewMeal2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnNewMeal2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnNewMeal2.IconColor = System.Drawing.Color.Black;
+            this.btnNewMeal2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNewMeal2.Location = new System.Drawing.Point(757, 175);
+            this.btnNewMeal2.Name = "btnNewMeal2";
+            this.btnNewMeal2.Size = new System.Drawing.Size(160, 60);
+            this.btnNewMeal2.TabIndex = 19;
+            this.btnNewMeal2.Text = "NEW MEAL REQUEST";
+            this.btnNewMeal2.UseVisualStyleBackColor = true;
+            this.btnNewMeal2.Click += new System.EventHandler(this.btnNewMeal2_Click);
+            // 
+            // btnAddMeal2
+            // 
+            this.btnAddMeal2.FlatAppearance.BorderSize = 0;
+            this.btnAddMeal2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMeal2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddMeal2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddMeal2.IconColor = System.Drawing.Color.Black;
+            this.btnAddMeal2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddMeal2.Location = new System.Drawing.Point(757, 108);
+            this.btnAddMeal2.Name = "btnAddMeal2";
+            this.btnAddMeal2.Size = new System.Drawing.Size(160, 50);
+            this.btnAddMeal2.TabIndex = 18;
+            this.btnAddMeal2.Text = "ADD MEAL";
+            this.btnAddMeal2.UseVisualStyleBackColor = true;
+            this.btnAddMeal2.Click += new System.EventHandler(this.btnAddMeal2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Meal Time";
             // 
             // cboxMealTime
             // 
             this.cboxMealTime.FormattingEnabled = true;
-            this.cboxMealTime.Location = new System.Drawing.Point(6, 163);
+            this.cboxMealTime.Location = new System.Drawing.Point(25, 155);
             this.cboxMealTime.Name = "cboxMealTime";
-            this.cboxMealTime.Size = new System.Drawing.Size(298, 31);
+            this.cboxMealTime.Size = new System.Drawing.Size(269, 31);
             this.cboxMealTime.TabIndex = 0;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.lblRemainCalories);
-            this.groupBox6.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox6.Location = new System.Drawing.Point(921, 668);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(263, 87);
-            this.groupBox6.TabIndex = 21;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Remain Calories";
-            // 
-            // lblDailyCalorieRequirement
-            // 
-            this.lblDailyCalorieRequirement.AutoSize = true;
-            this.lblDailyCalorieRequirement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDailyCalorieRequirement.ForeColor = System.Drawing.Color.Red;
-            this.lblDailyCalorieRequirement.Location = new System.Drawing.Point(74, 36);
-            this.lblDailyCalorieRequirement.Name = "lblDailyCalorieRequirement";
-            this.lblDailyCalorieRequirement.Size = new System.Drawing.Size(0, 24);
-            this.lblDailyCalorieRequirement.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.lblDailyCalorieRequirement);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(589, 668);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 87);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Daily Calorie Requirement";
             // 
             // deleteToolStripMenuItem
             // 
@@ -349,15 +381,196 @@ namespace DiyetProgramiProje
             this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
+            // groupBoxCheckMeal
+            // 
+            this.groupBoxCheckMeal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxCheckMeal.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxCheckMeal.Controls.Add(this.pbox4);
+            this.groupBoxCheckMeal.Controls.Add(this.pbox6);
+            this.groupBoxCheckMeal.Controls.Add(this.labelCheckMeal3);
+            this.groupBoxCheckMeal.Controls.Add(this.pbox5);
+            this.groupBoxCheckMeal.Controls.Add(this.labelCheckMeal2);
+            this.groupBoxCheckMeal.Controls.Add(this.labelCheckMeal1);
+            this.groupBoxCheckMeal.Controls.Add(this.lblRemainCalories);
+            this.groupBoxCheckMeal.Controls.Add(this.label12);
+            this.groupBoxCheckMeal.Controls.Add(this.lblDailyCalorieRequirement);
+            this.groupBoxCheckMeal.Controls.Add(this.label11);
+            this.groupBoxCheckMeal.Controls.Add(this.lblTotalTakenCalory);
+            this.groupBoxCheckMeal.Controls.Add(this.lblTakenCalorie);
+            this.groupBoxCheckMeal.Controls.Add(this.lblCalorieByMeal);
+            this.groupBoxCheckMeal.Controls.Add(this.lblMealCalorie);
+            this.groupBoxCheckMeal.Controls.Add(this.cboxLvMealTime);
+            this.groupBoxCheckMeal.Controls.Add(this.label10);
+            this.groupBoxCheckMeal.Controls.Add(this.dtMealDate);
+            this.groupBoxCheckMeal.Controls.Add(this.label8);
+            this.groupBoxCheckMeal.Controls.Add(this.lvMeals);
+            this.groupBoxCheckMeal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCheckMeal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBoxCheckMeal.Location = new System.Drawing.Point(16, 390);
+            this.groupBoxCheckMeal.Name = "groupBoxCheckMeal";
+            this.groupBoxCheckMeal.Size = new System.Drawing.Size(1158, 343);
+            this.groupBoxCheckMeal.TabIndex = 16;
+            this.groupBoxCheckMeal.TabStop = false;
+            this.groupBoxCheckMeal.Text = "Check Meals";
+            // 
+            // pbox6
+            // 
+            this.pbox6.Image = ((System.Drawing.Image)(resources.GetObject("pbox6.Image")));
+            this.pbox6.Location = new System.Drawing.Point(1012, 197);
+            this.pbox6.Name = "pbox6";
+            this.pbox6.Size = new System.Drawing.Size(50, 45);
+            this.pbox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox6.TabIndex = 35;
+            this.pbox6.TabStop = false;
+            // 
+            // labelCheckMeal3
+            // 
+            this.labelCheckMeal3.Location = new System.Drawing.Point(841, 220);
+            this.labelCheckMeal3.Name = "labelCheckMeal3";
+            this.labelCheckMeal3.Size = new System.Drawing.Size(189, 71);
+            this.labelCheckMeal3.TabIndex = 34;
+            this.labelCheckMeal3.Text = "You can see all the calorie information from this section";
+            // 
+            // pbox5
+            // 
+            this.pbox5.Image = ((System.Drawing.Image)(resources.GetObject("pbox5.Image")));
+            this.pbox5.Location = new System.Drawing.Point(390, 256);
+            this.pbox5.Name = "pbox5";
+            this.pbox5.Size = new System.Drawing.Size(50, 45);
+            this.pbox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox5.TabIndex = 33;
+            this.pbox5.TabStop = false;
+            // 
+            // labelCheckMeal2
+            // 
+            this.labelCheckMeal2.AutoSize = true;
+            this.labelCheckMeal2.Location = new System.Drawing.Point(225, 220);
+            this.labelCheckMeal2.Name = "labelCheckMeal2";
+            this.labelCheckMeal2.Size = new System.Drawing.Size(237, 23);
+            this.labelCheckMeal2.TabIndex = 32;
+            this.labelCheckMeal2.Text = "Here is the list of your meals";
+            // 
+            // labelCheckMeal1
+            // 
+            this.labelCheckMeal1.Location = new System.Drawing.Point(22, 221);
+            this.labelCheckMeal1.Name = "labelCheckMeal1";
+            this.labelCheckMeal1.Size = new System.Drawing.Size(176, 51);
+            this.labelCheckMeal1.TabIndex = 30;
+            this.labelCheckMeal1.Text = "You can check your meals here";
+            // 
             // lblRemainCalories
             // 
             this.lblRemainCalories.AutoSize = true;
-            this.lblRemainCalories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRemainCalories.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRemainCalories.ForeColor = System.Drawing.Color.Red;
-            this.lblRemainCalories.Location = new System.Drawing.Point(56, 36);
+            this.lblRemainCalories.Location = new System.Drawing.Point(980, 147);
             this.lblRemainCalories.Name = "lblRemainCalories";
-            this.lblRemainCalories.Size = new System.Drawing.Size(0, 24);
+            this.lblRemainCalories.Size = new System.Drawing.Size(20, 23);
             this.lblRemainCalories.TabIndex = 0;
+            this.lblRemainCalories.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(836, 147);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(139, 23);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Remain Calorie :";
+            // 
+            // lblDailyCalorieRequirement
+            // 
+            this.lblDailyCalorieRequirement.AutoSize = true;
+            this.lblDailyCalorieRequirement.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDailyCalorieRequirement.ForeColor = System.Drawing.Color.Red;
+            this.lblDailyCalorieRequirement.Location = new System.Drawing.Point(1070, 110);
+            this.lblDailyCalorieRequirement.Name = "lblDailyCalorieRequirement";
+            this.lblDailyCalorieRequirement.Size = new System.Drawing.Size(20, 23);
+            this.lblDailyCalorieRequirement.TabIndex = 0;
+            this.lblDailyCalorieRequirement.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(836, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(228, 23);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Daily Requirement Calorie :";
+            // 
+            // lblTotalTakenCalory
+            // 
+            this.lblTotalTakenCalory.AutoSize = true;
+            this.lblTotalTakenCalory.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalTakenCalory.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalTakenCalory.Location = new System.Drawing.Point(1008, 74);
+            this.lblTotalTakenCalory.Name = "lblTotalTakenCalory";
+            this.lblTotalTakenCalory.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalTakenCalory.TabIndex = 0;
+            this.lblTotalTakenCalory.Text = "0";
+            // 
+            // lblTakenCalorie
+            // 
+            this.lblTakenCalorie.AutoSize = true;
+            this.lblTakenCalorie.Location = new System.Drawing.Point(836, 75);
+            this.lblTakenCalorie.Name = "lblTakenCalorie";
+            this.lblTakenCalorie.Size = new System.Drawing.Size(166, 23);
+            this.lblTakenCalorie.TabIndex = 27;
+            this.lblTakenCalorie.Text = "Total Taken Calorie :";
+            // 
+            // lblCalorieByMeal
+            // 
+            this.lblCalorieByMeal.AutoSize = true;
+            this.lblCalorieByMeal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCalorieByMeal.ForeColor = System.Drawing.Color.Red;
+            this.lblCalorieByMeal.Location = new System.Drawing.Point(980, 37);
+            this.lblCalorieByMeal.Name = "lblCalorieByMeal";
+            this.lblCalorieByMeal.Size = new System.Drawing.Size(20, 23);
+            this.lblCalorieByMeal.TabIndex = 0;
+            this.lblCalorieByMeal.Text = "0";
+            // 
+            // lblMealCalorie
+            // 
+            this.lblMealCalorie.AutoSize = true;
+            this.lblMealCalorie.Location = new System.Drawing.Point(836, 38);
+            this.lblMealCalorie.Name = "lblMealCalorie";
+            this.lblMealCalorie.Size = new System.Drawing.Size(120, 23);
+            this.lblMealCalorie.TabIndex = 26;
+            this.lblMealCalorie.Text = "Meal Calorie :";
+            // 
+            // cboxLvMealTime
+            // 
+            this.cboxLvMealTime.FormattingEnabled = true;
+            this.cboxLvMealTime.Location = new System.Drawing.Point(127, 112);
+            this.cboxLvMealTime.Name = "cboxLvMealTime";
+            this.cboxLvMealTime.Size = new System.Drawing.Size(254, 31);
+            this.cboxLvMealTime.TabIndex = 18;
+            this.cboxLvMealTime.SelectedIndexChanged += new System.EventHandler(this.cboxLvMealTime_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 115);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 23);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Meal Time:";
+            // 
+            // dtMealDate
+            // 
+            this.dtMealDate.Location = new System.Drawing.Point(127, 53);
+            this.dtMealDate.Name = "dtMealDate";
+            this.dtMealDate.Size = new System.Drawing.Size(254, 31);
+            this.dtMealDate.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 59);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 23);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Meal Date:";
             // 
             // lvMeals
             // 
@@ -365,155 +578,95 @@ namespace DiyetProgramiProje
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lvMeals.ContextMenuStrip = this.contextMenuStrip1;
             this.lvMeals.FullRowSelect = true;
             this.lvMeals.GridLines = true;
             this.lvMeals.HideSelection = false;
-            this.lvMeals.Location = new System.Drawing.Point(17, 143);
+            this.lvMeals.Location = new System.Drawing.Point(468, 38);
             this.lvMeals.Name = "lvMeals";
-            this.lvMeals.Size = new System.Drawing.Size(559, 386);
+            this.lvMeals.Size = new System.Drawing.Size(346, 277);
             this.lvMeals.TabIndex = 14;
             this.lvMeals.UseCompatibleStateImageBehavior = false;
             this.lvMeals.View = System.Windows.Forms.View.Details;
-            this.lvMeals.Click += new System.EventHandler(this.lvMeals_Click);
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Food";
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Width = 174;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Portion";
-            this.columnHeader3.Width = 190;
+            this.columnHeader3.Width = 78;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Calorie";
-            this.columnHeader4.Width = 158;
+            this.columnHeader4.Width = 90;
             // 
-            // label8
+            // radioButtonOpen
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 45);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 23);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Meal Date:";
+            this.radioButtonOpen.AutoSize = true;
+            this.radioButtonOpen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonOpen.Location = new System.Drawing.Point(240, 4);
+            this.radioButtonOpen.Name = "radioButtonOpen";
+            this.radioButtonOpen.Size = new System.Drawing.Size(107, 27);
+            this.radioButtonOpen.TabIndex = 26;
+            this.radioButtonOpen.Text = "Tips Open";
+            this.radioButtonOpen.UseVisualStyleBackColor = true;
+            this.radioButtonOpen.CheckedChanged += new System.EventHandler(this.radioButtonOpen_CheckedChanged);
             // 
-            // dtMealDate
+            // radioButtonClose
             // 
-            this.dtMealDate.Location = new System.Drawing.Point(153, 39);
-            this.dtMealDate.Name = "dtMealDate";
-            this.dtMealDate.Size = new System.Drawing.Size(223, 31);
-            this.dtMealDate.TabIndex = 16;
+            this.radioButtonClose.AutoSize = true;
+            this.radioButtonClose.Checked = true;
+            this.radioButtonClose.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonClose.Location = new System.Drawing.Point(345, 4);
+            this.radioButtonClose.Name = "radioButtonClose";
+            this.radioButtonClose.Size = new System.Drawing.Size(117, 27);
+            this.radioButtonClose.TabIndex = 27;
+            this.radioButtonClose.TabStop = true;
+            this.radioButtonClose.Text = "Tips Closed";
+            this.radioButtonClose.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // pbox1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 23);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Meal Time:";
+            this.pbox1.Image = ((System.Drawing.Image)(resources.GetObject("pbox1.Image")));
+            this.pbox1.Location = new System.Drawing.Point(26, 201);
+            this.pbox1.Name = "pbox1";
+            this.pbox1.Size = new System.Drawing.Size(50, 45);
+            this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox1.TabIndex = 36;
+            this.pbox1.TabStop = false;
             // 
-            // cboxLvMealTime
+            // pbox2
             // 
-            this.cboxLvMealTime.FormattingEnabled = true;
-            this.cboxLvMealTime.Location = new System.Drawing.Point(153, 96);
-            this.cboxLvMealTime.Name = "cboxLvMealTime";
-            this.cboxLvMealTime.Size = new System.Drawing.Size(204, 31);
-            this.cboxLvMealTime.TabIndex = 18;
+            this.pbox2.Image = ((System.Drawing.Image)(resources.GetObject("pbox2.Image")));
+            this.pbox2.Location = new System.Drawing.Point(749, 269);
+            this.pbox2.Name = "pbox2";
+            this.pbox2.Size = new System.Drawing.Size(50, 45);
+            this.pbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox2.TabIndex = 37;
+            this.pbox2.TabStop = false;
             // 
-            // btnShowMeal
+            // labelTips
             // 
-            this.btnShowMeal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowMeal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnShowMeal.Image = ((System.Drawing.Image)(resources.GetObject("btnShowMeal.Image")));
-            this.btnShowMeal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowMeal.Location = new System.Drawing.Point(382, 34);
-            this.btnShowMeal.Name = "btnShowMeal";
-            this.btnShowMeal.Size = new System.Drawing.Size(183, 95);
-            this.btnShowMeal.TabIndex = 19;
-            this.btnShowMeal.Text = "Show Meal";
-            this.btnShowMeal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowMeal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnShowMeal.UseVisualStyleBackColor = true;
-            this.btnShowMeal.Click += new System.EventHandler(this.btnShowMeal_Click);
+            this.labelTips.AutoSize = true;
+            this.labelTips.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTips.Location = new System.Drawing.Point(22, 6);
+            this.labelTips.Name = "labelTips";
+            this.labelTips.Size = new System.Drawing.Size(212, 23);
+            this.labelTips.TabIndex = 28;
+            this.labelTips.Text = "You can change tips here :";
             // 
-            // groupBox8
+            // pbox4
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox8.Controls.Add(this.lblCalorieByMeal);
-            this.groupBox8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox8.Location = new System.Drawing.Point(15, 535);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(207, 97);
-            this.groupBox8.TabIndex = 21;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Calory By Meal";
-            // 
-            // lblCalorieByMeal
-            // 
-            this.lblCalorieByMeal.AutoSize = true;
-            this.lblCalorieByMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCalorieByMeal.ForeColor = System.Drawing.Color.Red;
-            this.lblCalorieByMeal.Location = new System.Drawing.Point(56, 36);
-            this.lblCalorieByMeal.Name = "lblCalorieByMeal";
-            this.lblCalorieByMeal.Size = new System.Drawing.Size(0, 24);
-            this.lblCalorieByMeal.TabIndex = 0;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox9.Controls.Add(this.lblTotalTakenCalory);
-            this.groupBox9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox9.Location = new System.Drawing.Point(361, 535);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(215, 97);
-            this.groupBox9.TabIndex = 22;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Total Taken Calory";
-            // 
-            // lblTotalTakenCalory
-            // 
-            this.lblTotalTakenCalory.AutoSize = true;
-            this.lblTotalTakenCalory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalTakenCalory.ForeColor = System.Drawing.Color.Red;
-            this.lblTotalTakenCalory.Location = new System.Drawing.Point(56, 36);
-            this.lblTotalTakenCalory.Name = "lblTotalTakenCalory";
-            this.lblTotalTakenCalory.Size = new System.Drawing.Size(0, 24);
-            this.lblTotalTakenCalory.TabIndex = 0;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox7.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox7.Controls.Add(this.groupBox9);
-            this.groupBox7.Controls.Add(this.groupBox8);
-            this.groupBox7.Controls.Add(this.btnShowMeal);
-            this.groupBox7.Controls.Add(this.cboxLvMealTime);
-            this.groupBox7.Controls.Add(this.label10);
-            this.groupBox7.Controls.Add(this.dtMealDate);
-            this.groupBox7.Controls.Add(this.label8);
-            this.groupBox7.Controls.Add(this.lvMeals);
-            this.groupBox7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox7.Location = new System.Drawing.Point(589, 25);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(595, 642);
-            this.groupBox7.TabIndex = 14;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Check Meals";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Meal Time";
+            this.pbox4.Image = ((System.Drawing.Image)(resources.GetObject("pbox4.Image")));
+            this.pbox4.Location = new System.Drawing.Point(26, 166);
+            this.pbox4.Name = "pbox4";
+            this.pbox4.Size = new System.Drawing.Size(50, 45);
+            this.pbox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox4.TabIndex = 37;
+            this.pbox4.TabStop = false;
             // 
             // UserForm
             // 
@@ -521,11 +674,12 @@ namespace DiyetProgramiProje
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1206, 770);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1186, 729);
+            this.Controls.Add(this.labelTips);
+            this.Controls.Add(this.groupBoxCheckMeal);
+            this.Controls.Add(this.radioButtonClose);
+            this.Controls.Add(this.groupBoxAddMeal);
+            this.Controls.Add(this.radioButtonOpen);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -535,27 +689,26 @@ namespace DiyetProgramiProje
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
             this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxFood)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.groupBoxPortion.ResumeLayout(false);
+            this.groupBoxPortion.PerformLayout();
+            this.groupBoxCategory.ResumeLayout(false);
+            this.groupBoxCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxTotalCal.ResumeLayout(false);
+            this.groupBoxTotalCal.PerformLayout();
+            this.groupBoxAddMeal.ResumeLayout(false);
+            this.groupBoxAddMeal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox3)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.groupBoxCheckMeal.ResumeLayout(false);
+            this.groupBoxCheckMeal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -567,39 +720,53 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pboxFood;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxPortion;
         private System.Windows.Forms.Label lblCaloriesByPortion;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBoxCategory;
         private System.Windows.Forms.Label lblCategoyName;
         private System.Windows.Forms.NumericUpDown nudPortion;
-        private System.Windows.Forms.Button btnAddMeal;
-        private System.Windows.Forms.Button btnNewMeal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtAddMealDate;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBoxTotalCal;
         private System.Windows.Forms.Label lblTotalCalories;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxAddMeal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboxMealTime;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label lblRemainCalories;
-        private System.Windows.Forms.Label lblDailyCalorieRequirement;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private FontAwesome.Sharp.IconButton btnAddMeal2;
+        private FontAwesome.Sharp.IconButton btnNewMeal2;
+        private System.Windows.Forms.Label labelAddMeal1;
+        private System.Windows.Forms.GroupBox groupBoxCheckMeal;
+        private System.Windows.Forms.Label lblTotalTakenCalory;
+        private System.Windows.Forms.Label lblCalorieByMeal;
+        private System.Windows.Forms.ComboBox cboxLvMealTime;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dtMealDate;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView lvMeals;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dtMealDate;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cboxLvMealTime;
-        private System.Windows.Forms.Button btnShowMeal;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label lblCalorieByMeal;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label lblTotalTakenCalory;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label lblRemainCalories;
+        private System.Windows.Forms.Label lblDailyCalorieRequirement;
+        private System.Windows.Forms.PictureBox pbox3;
+        private System.Windows.Forms.Label labelAddMeal3;
+        private System.Windows.Forms.Label labelAddMeal2;
+        private System.Windows.Forms.PictureBox pbox5;
+        private System.Windows.Forms.Label labelCheckMeal2;
+        private System.Windows.Forms.Label labelCheckMeal1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblTakenCalorie;
+        private System.Windows.Forms.Label lblMealCalorie;
+        private System.Windows.Forms.PictureBox pbox6;
+        private System.Windows.Forms.Label labelCheckMeal3;
+        private System.Windows.Forms.RadioButton radioButtonClose;
+        private System.Windows.Forms.RadioButton radioButtonOpen;
+        private System.Windows.Forms.PictureBox pbox2;
+        private System.Windows.Forms.PictureBox pbox1;
+        private System.Windows.Forms.Label labelTips;
+        private System.Windows.Forms.PictureBox pbox4;
     }
 }

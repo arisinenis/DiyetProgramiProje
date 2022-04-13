@@ -33,47 +33,24 @@ namespace DiyetProgramiProje
             frm.Show();
             userRegisterInfo = _userRegisterInfo;
             dietician = _dietician;  
-        }         
-
-        private void btnQuit_Click_1(object sender, EventArgs e)
-        {
-            Close();
-        }        
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            Form frm = Application.OpenForms["Form1"];
-            if (frm == null)
-            {
-                CloseAll();
-                LoadForm(new Form1(), dietician, userRegisterInfo);
-            }
-            else
-            {
-                return;
-            }
-                        
-        }
-
-        private void btnLogOut_Click_1(object sender, EventArgs e)
-        {
-            panelAdmin.Visible = false;
-            panelDietician.Visible = false;
-            panelUser.Visible = false;
-            var formForClose = Application.OpenForms.OfType<Form>().ToList();
-            foreach (var item in formForClose)
-            {
-                if (item.Name != "MainForm")
-                {
-                    item.Close();
-                }
-            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            panelMain.BackColor = ColorTranslator.FromHtml("#98c1d9");
-            panelSide.BackColor = ColorTranslator.FromHtml("#3d5a80");  
+            this.panelSide.BackColor = ColorTranslator.FromHtml("#293241");
+            this.panelMain.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.btnAdminMain.BackColor = ColorTranslator.FromHtml("#e0fbfc");
+            this.btnAdminReports.BackColor = ColorTranslator.FromHtml("#e0fbfc");
+            this.btnDieticianMain.BackColor = ColorTranslator.FromHtml("#e0fbfc");
+            this.btnDieticianMessages.BackColor = ColorTranslator.FromHtml("#e0fbfc");
+            this.btnDieticianReports.BackColor = ColorTranslator.FromHtml("#e0fbfc");
+            this.btnUserMain.BackColor = ColorTranslator.FromHtml("#f1faee");
+            this.btnUserMessages.BackColor = ColorTranslator.FromHtml("#f1faee");
+            this.btnUserNewFood.BackColor = ColorTranslator.FromHtml("#f1faee");
+            this.btnUserReports.BackColor = ColorTranslator.FromHtml("#f1faee");
+            this.btnGo.BackColor = ColorTranslator.FromHtml("#a7c957");
+            this.btnLogOut1.BackColor = ColorTranslator.FromHtml("#f1faee");
+            this.btnExit.BackColor = ColorTranslator.FromHtml("#e63946");
         }
 
         private void btnAdminMain_Click(object sender, EventArgs e)
@@ -242,6 +219,40 @@ namespace DiyetProgramiProje
         private void panelSide_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLogOut1_Click(object sender, EventArgs e)
+        {
+            panelAdmin.Visible = false;
+            panelDietician.Visible = false;
+            panelUser.Visible = false;
+            var formForClose = Application.OpenForms.OfType<Form>().ToList();
+            foreach (var item in formForClose)
+            {
+                if (item.Name != "MainForm")
+                {
+                    item.Close();
+                }
+            }
+        }
+
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms["Form1"];
+            if (frm == null)
+            {
+                CloseAll();
+                LoadForm(new Form1(), dietician, userRegisterInfo);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

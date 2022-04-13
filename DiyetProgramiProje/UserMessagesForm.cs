@@ -46,7 +46,22 @@ namespace DiyetProgramiProje
         private void UserMessagesForm_Load(object sender, EventArgs e)
         {
             FillListBox();
-            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.btnReplySend.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelTips.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonOpen.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonClose.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.gboxMessages.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.gboxReply.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelMessage1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelMessage2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelReply1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            labelMessage1.Visible = false;
+            labelMessage2.Visible = false;
+            labelReply1.Visible = false;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            picturebox3.Visible = false;
         }
 
         private void lboxMessages_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,12 +74,13 @@ namespace DiyetProgramiProje
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void UserMessagesForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            //Form frm = Application.OpenForms["UserForm"];
+            //frm.Show();
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
+        private void btnReplySend_Click(object sender, EventArgs e)
         {
             if (txtHeader.Text == string.Empty || txtText.Text == string.Empty)
             {
@@ -81,13 +97,28 @@ namespace DiyetProgramiProje
                 dieticianMessageService.Add(dieticianMessage);
                 MessageBox.Show("Message has been sended");
             }
-            
         }
 
-        private void UserMessagesForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void radioButtonOpen_CheckedChanged(object sender, EventArgs e)
         {
-            //Form frm = Application.OpenForms["UserForm"];
-            //frm.Show();
+            if (radioButtonOpen.Checked)
+            {
+                labelMessage1.Visible = true;
+                labelMessage2.Visible = true;
+                labelReply1.Visible = true;
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                picturebox3.Visible = true;
+            }
+            else if (radioButtonClose.Checked)
+            {
+                labelMessage1.Visible = false;
+                labelMessage2.Visible = false;
+                labelReply1.Visible = false;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                picturebox3.Visible = false;
+            }
         }
     }
 }

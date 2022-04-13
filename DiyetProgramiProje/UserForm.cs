@@ -45,8 +45,43 @@ namespace DiyetProgramiProje
             lblDailyCalorieRequirement.Text = user.RequireCalorie.ToString();
             lblTotalTakenCalory.Text = userMealsAndFoodsService.GetTotalCalorieById(userRegisterInfo.Id,dtMealDate.Value.Date).ToString();
             lblRemainCalories.Text = (Convert.ToDecimal(lblDailyCalorieRequirement.Text) - Convert.ToDecimal(lblTotalTakenCalory.Text)).ToString();
-            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
-            //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.groupBoxAddMeal.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxCheckMeal.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxCheckMeal.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.lblCalorieByMeal.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.lblCaloriesByPortion.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.lblTotalTakenCalory.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.lblDailyCalorieRequirement.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.lblRemainCalories.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelTips.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.lblTotalCalories.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.lblCategoyName.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.groupBoxPortion.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxCategory.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxTotalCal.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonOpen.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonClose.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.btnAddMeal2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.btnNewMeal2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAddMeal1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAddMeal2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAddMeal3.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelCheckMeal1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelCheckMeal2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelCheckMeal3.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            labelAddMeal1.Visible = false;
+            labelAddMeal2.Visible = false;
+            labelAddMeal3.Visible = false;
+            labelCheckMeal1.Visible = false;
+            labelCheckMeal2.Visible = false;
+            labelCheckMeal3.Visible = false;
+            pbox1.Visible = false;
+            pbox2.Visible = false;
+            pbox3.Visible = false;
+            pbox4.Visible = false;
+            pbox5.Visible = false;
+            pbox6.Visible = false;
         }
 
         private void txtFoodFilter_TextChanged(object sender, EventArgs e)
@@ -83,92 +118,11 @@ namespace DiyetProgramiProje
             lblTotalCalories.Text = (nudPortion.Value * Convert.ToDecimal(lblCaloriesByPortion.Text)).ToString();
         }
 
-        
-        private void btnAddMeal_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                lblTotalTakenCalory.Text = userMealsAndFoodsService.GetTotalCalorieById(userRegisterInfo.Id, dtMealDate.Value.Date).ToString();
-                lblRemainCalories.Text = (Convert.ToDecimal(lblDailyCalorieRequirement.Text) - Convert.ToDecimal(lblTotalTakenCalory.Text)).ToString();
-
-                UserMeal userMeal = userMealService.CheckMeal(dtAddMealDate.Value.Date, (MealTimesEnum)cboxMealTime.SelectedItem, userRegisterInfo.Id);
-
-                if (userMeal == null)
-                {
-                    userMeal = new UserMeal();
-                    userMeal.MealDate = dtAddMealDate.Value.Date; 
-                    userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
-                    userMeal.UserInformationId = userRegisterInfo.Id;
-                    userMealService.Add(userMeal);
-
-                    FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
-
-                    UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
-                    userMealsAndFoods.UserMealID = userMeal.Id;
-                    userMealsAndFoods.FoodNameID = foodName.Id;
-                    userMealsAndFoods.Portion = nudPortion.Value;
-                    userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
-
-                    if (nudPortion.Value == 0)
-                    {
-                        MessageBox.Show("Please type a portion value");
-                    }
-                    else
-                    {
-                        userMealsAndFoodsService.Add(userMealsAndFoods);
-                        FillListView();
-                    }
-                }
-                else
-                {
-                    List<int> list = userMealsAndFoodsService.GetFoodIdbyUserMeal(userMeal);
-
-                    if (list.Contains((int)lboxFoods.SelectedValue))
-                    {
-                        MessageBox.Show("This food is already exist.");
-                    }
-                    else
-                    {
-                        FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
-
-                        UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
-                        userMealsAndFoods.UserMealID = userMeal.Id;
-                        userMealsAndFoods.FoodNameID = foodName.Id;
-                        userMealsAndFoods.Portion = nudPortion.Value;
-                        userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
-
-                        if (nudPortion.Value == 0)
-                        {
-                            MessageBox.Show("Please type a portion value");
-                        }
-                        else
-                        {
-                            userMealsAndFoodsService.Add(userMealsAndFoods);
-                        }
-                        FillListView();
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-             
-            }
-            
-        }
-        private void btnShowMeal_Click(object sender, EventArgs e)
-        {
-            FillListView();
-            lblCalorieByMeal.Text = userMealsAndFoodsService.GetCalorieByMeal(userRegisterInfo.Id,  dtMealDate.Value.Date,(MealTimesEnum)cboxLvMealTime.SelectedItem).ToString();
-        }
-
-        private void btnNewMeal_Click(object sender, EventArgs e)
+        private void btnNewMeal2_Click(object sender, EventArgs e)
         {
             FoodAddForm foodAddForm = new FoodAddForm(userRegisterInfo);
             this.Hide();
             foodAddForm.ShowDialog();
-            
         }
 
         int foodId;
@@ -277,19 +231,121 @@ namespace DiyetProgramiProje
             //frm.Show();
         }
 
-        private void btnShowReports_Click(object sender, EventArgs e)
-        {
-            var MainForm = Application.OpenForms.OfType<MainForm>().Single();
-            DieticianRegisterInfo dietician = null;
-            MainForm.LoadForm(new ReportForm(),dietician, userRegisterInfo);
-            //ReportForm reportForm = new ReportForm();
-            //this.Hide();
-            //reportForm.ShowDialog();            
-        }
-
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void btnAddMeal2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblTotalTakenCalory.Text = userMealsAndFoodsService.GetTotalCalorieById(userRegisterInfo.Id, dtMealDate.Value.Date).ToString();
+                lblRemainCalories.Text = (Convert.ToDecimal(lblDailyCalorieRequirement.Text) - Convert.ToDecimal(lblTotalTakenCalory.Text)).ToString();
+
+                UserMeal userMeal = userMealService.CheckMeal(dtAddMealDate.Value.Date, (MealTimesEnum)cboxMealTime.SelectedItem, userRegisterInfo.Id);
+
+                if (userMeal == null)
+                {
+                    userMeal = new UserMeal();
+                    userMeal.MealDate = dtAddMealDate.Value.Date;
+                    userMeal.MealTime = (MealTimesEnum)cboxMealTime.SelectedItem;
+                    userMeal.UserInformationId = userRegisterInfo.Id;
+                    userMealService.Add(userMeal);
+
+                    FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
+
+                    UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
+                    userMealsAndFoods.UserMealID = userMeal.Id;
+                    userMealsAndFoods.FoodNameID = foodName.Id;
+                    userMealsAndFoods.Portion = nudPortion.Value;
+                    userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
+
+                    if (nudPortion.Value == 0)
+                    {
+                        MessageBox.Show("Please type a portion value");
+                    }
+                    else
+                    {
+                        userMealsAndFoodsService.Add(userMealsAndFoods);
+                        FillListView();
+                    }
+                }
+                else
+                {
+                    List<int> list = userMealsAndFoodsService.GetFoodIdbyUserMeal(userMeal);
+
+                    if (list.Contains((int)lboxFoods.SelectedValue))
+                    {
+                        MessageBox.Show("This food is already exist.");
+                    }
+                    else
+                    {
+                        FoodName foodName = foodService.GetById((int)lboxFoods.SelectedValue);
+
+                        UserMealsAndFoods userMealsAndFoods = new UserMealsAndFoods();
+                        userMealsAndFoods.UserMealID = userMeal.Id;
+                        userMealsAndFoods.FoodNameID = foodName.Id;
+                        userMealsAndFoods.Portion = nudPortion.Value;
+                        userMealsAndFoods.Calorie = foodName.Calorie * nudPortion.Value;
+
+                        if (nudPortion.Value == 0)
+                        {
+                            MessageBox.Show("Please type a portion value");
+                        }
+                        else
+                        {
+                            userMealsAndFoodsService.Add(userMealsAndFoods);
+                        }
+                        FillListView();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void radioButtonOpen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonOpen.Checked)
+            {
+                labelAddMeal1.Visible = true;
+                labelAddMeal2.Visible = true;
+                labelAddMeal3.Visible = true;
+                labelCheckMeal1.Visible = true;
+                labelCheckMeal2.Visible = true;
+                labelCheckMeal3.Visible = true;
+                pbox1.Visible = true;
+                pbox2.Visible = true;
+                pbox3.Visible = true;
+                pbox4.Visible = true;
+                pbox5.Visible = true;
+                pbox6.Visible = true;
+            }
+            else if (radioButtonClose.Checked)
+            {
+                labelAddMeal1.Visible = false;
+                labelAddMeal2.Visible = false;
+                labelAddMeal3.Visible = false;
+                labelCheckMeal1.Visible = false;
+                labelCheckMeal2.Visible = false;
+                labelCheckMeal3.Visible = false;
+                pbox1.Visible = false;
+                pbox2.Visible = false;
+                pbox3.Visible = false;
+                pbox4.Visible = false;
+                pbox5.Visible = false;
+                pbox6.Visible = false;
+            }
+        }
+
+        private void cboxLvMealTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillListView();
+            lblCalorieByMeal.Text = userMealsAndFoodsService.GetCalorieByMeal(userRegisterInfo.Id, dtMealDate.Value.Date, (MealTimesEnum)cboxLvMealTime.SelectedItem).ToString();
         }
     }
 }

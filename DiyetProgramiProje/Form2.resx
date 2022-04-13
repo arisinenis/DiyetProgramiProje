@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblFirstMessage.Text" xml:space="preserve">
-    <value>Welcome to the program. In this program, you can enter your diet list and calculate the calories you need to take. If you want, you can get advice from our dietitians by messaging them. Just click to get started :)</value>
-  </data>
 </root>
