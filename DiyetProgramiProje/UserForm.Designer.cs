@@ -47,6 +47,8 @@ namespace DiyetProgramiProje
             this.groupBoxTotalCal = new System.Windows.Forms.GroupBox();
             this.lblTotalCalories = new System.Windows.Forms.Label();
             this.groupBoxAddMeal = new System.Windows.Forms.GroupBox();
+            this.pbox2 = new System.Windows.Forms.PictureBox();
+            this.pbox1 = new System.Windows.Forms.PictureBox();
             this.pbox3 = new System.Windows.Forms.PictureBox();
             this.labelAddMeal3 = new System.Windows.Forms.Label();
             this.labelAddMeal2 = new System.Windows.Forms.Label();
@@ -58,6 +60,7 @@ namespace DiyetProgramiProje
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBoxCheckMeal = new System.Windows.Forms.GroupBox();
+            this.pbox4 = new System.Windows.Forms.PictureBox();
             this.pbox6 = new System.Windows.Forms.PictureBox();
             this.labelCheckMeal3 = new System.Windows.Forms.Label();
             this.pbox5 = new System.Windows.Forms.PictureBox();
@@ -81,24 +84,21 @@ namespace DiyetProgramiProje
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.radioButtonOpen = new System.Windows.Forms.RadioButton();
             this.radioButtonClose = new System.Windows.Forms.RadioButton();
-            this.pbox1 = new System.Windows.Forms.PictureBox();
-            this.pbox2 = new System.Windows.Forms.PictureBox();
             this.labelTips = new System.Windows.Forms.Label();
-            this.pbox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFood)).BeginInit();
             this.groupBoxPortion.SuspendLayout();
             this.groupBoxCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
             this.groupBoxTotalCal.SuspendLayout();
             this.groupBoxAddMeal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox3)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBoxCheckMeal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -282,6 +282,26 @@ namespace DiyetProgramiProje
             this.groupBoxAddMeal.TabStop = false;
             this.groupBoxAddMeal.Text = "Add Meal";
             // 
+            // pbox2
+            // 
+            this.pbox2.Image = ((System.Drawing.Image)(resources.GetObject("pbox2.Image")));
+            this.pbox2.Location = new System.Drawing.Point(749, 269);
+            this.pbox2.Name = "pbox2";
+            this.pbox2.Size = new System.Drawing.Size(50, 45);
+            this.pbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox2.TabIndex = 37;
+            this.pbox2.TabStop = false;
+            // 
+            // pbox1
+            // 
+            this.pbox1.Image = ((System.Drawing.Image)(resources.GetObject("pbox1.Image")));
+            this.pbox1.Location = new System.Drawing.Point(26, 201);
+            this.pbox1.Name = "pbox1";
+            this.pbox1.Size = new System.Drawing.Size(50, 45);
+            this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox1.TabIndex = 36;
+            this.pbox1.TabStop = false;
+            // 
             // pbox3
             // 
             this.pbox3.Image = ((System.Drawing.Image)(resources.GetObject("pbox3.Image")));
@@ -368,9 +388,8 @@ namespace DiyetProgramiProje
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -378,8 +397,8 @@ namespace DiyetProgramiProje
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Click += new System.EventHandler(this.contextMenuStrip1_Click);
             // 
             // groupBoxCheckMeal
             // 
@@ -412,6 +431,16 @@ namespace DiyetProgramiProje
             this.groupBoxCheckMeal.TabIndex = 16;
             this.groupBoxCheckMeal.TabStop = false;
             this.groupBoxCheckMeal.Text = "Check Meals";
+            // 
+            // pbox4
+            // 
+            this.pbox4.Image = ((System.Drawing.Image)(resources.GetObject("pbox4.Image")));
+            this.pbox4.Location = new System.Drawing.Point(26, 166);
+            this.pbox4.Name = "pbox4";
+            this.pbox4.Size = new System.Drawing.Size(50, 45);
+            this.pbox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbox4.TabIndex = 37;
+            this.pbox4.TabStop = false;
             // 
             // pbox6
             // 
@@ -578,6 +607,7 @@ namespace DiyetProgramiProje
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.lvMeals.ContextMenuStrip = this.contextMenuStrip1;
             this.lvMeals.FullRowSelect = true;
             this.lvMeals.GridLines = true;
             this.lvMeals.HideSelection = false;
@@ -587,6 +617,7 @@ namespace DiyetProgramiProje
             this.lvMeals.TabIndex = 14;
             this.lvMeals.UseCompatibleStateImageBehavior = false;
             this.lvMeals.View = System.Windows.Forms.View.Details;
+            this.lvMeals.Click += new System.EventHandler(this.lvMeals_Click);
             // 
             // columnHeader2
             // 
@@ -628,26 +659,6 @@ namespace DiyetProgramiProje
             this.radioButtonClose.Text = "Tips Closed";
             this.radioButtonClose.UseVisualStyleBackColor = true;
             // 
-            // pbox1
-            // 
-            this.pbox1.Image = ((System.Drawing.Image)(resources.GetObject("pbox1.Image")));
-            this.pbox1.Location = new System.Drawing.Point(26, 201);
-            this.pbox1.Name = "pbox1";
-            this.pbox1.Size = new System.Drawing.Size(50, 45);
-            this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbox1.TabIndex = 36;
-            this.pbox1.TabStop = false;
-            // 
-            // pbox2
-            // 
-            this.pbox2.Image = ((System.Drawing.Image)(resources.GetObject("pbox2.Image")));
-            this.pbox2.Location = new System.Drawing.Point(749, 269);
-            this.pbox2.Name = "pbox2";
-            this.pbox2.Size = new System.Drawing.Size(50, 45);
-            this.pbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbox2.TabIndex = 37;
-            this.pbox2.TabStop = false;
-            // 
             // labelTips
             // 
             this.labelTips.AutoSize = true;
@@ -657,16 +668,6 @@ namespace DiyetProgramiProje
             this.labelTips.Size = new System.Drawing.Size(212, 23);
             this.labelTips.TabIndex = 28;
             this.labelTips.Text = "You can change tips here :";
-            // 
-            // pbox4
-            // 
-            this.pbox4.Image = ((System.Drawing.Image)(resources.GetObject("pbox4.Image")));
-            this.pbox4.Location = new System.Drawing.Point(26, 166);
-            this.pbox4.Name = "pbox4";
-            this.pbox4.Size = new System.Drawing.Size(50, 45);
-            this.pbox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbox4.TabIndex = 37;
-            this.pbox4.TabStop = false;
             // 
             // UserForm
             // 
@@ -686,7 +687,6 @@ namespace DiyetProgramiProje
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserForm_FormClosed);
             this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxFood)).EndInit();
             this.groupBoxPortion.ResumeLayout(false);
@@ -698,15 +698,15 @@ namespace DiyetProgramiProje
             this.groupBoxTotalCal.PerformLayout();
             this.groupBoxAddMeal.ResumeLayout(false);
             this.groupBoxAddMeal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox3)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.groupBoxCheckMeal.ResumeLayout(false);
             this.groupBoxCheckMeal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

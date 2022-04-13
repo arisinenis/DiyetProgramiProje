@@ -151,6 +151,7 @@
             this.cboxUsers.Name = "cboxUsers";
             this.cboxUsers.Size = new System.Drawing.Size(202, 31);
             this.cboxUsers.TabIndex = 2;
+            this.cboxUsers.SelectedIndexChanged += new System.EventHandler(this.cboxUsers_SelectedIndexChanged_1);
             // 
             // txtShowMessage
             // 
@@ -169,6 +170,7 @@
             this.lboxMessages.Name = "lboxMessages";
             this.lboxMessages.Size = new System.Drawing.Size(202, 188);
             this.lboxMessages.TabIndex = 0;
+            this.lboxMessages.SelectedIndexChanged += new System.EventHandler(this.lboxMessages_SelectedIndexChanged_1);
             // 
             // grpbox
             // 
@@ -255,7 +257,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DieticianMessagesForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DieticianMessagesForm_FormClosed);
             this.Load += new System.EventHandler(this.DieticianMessagesForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

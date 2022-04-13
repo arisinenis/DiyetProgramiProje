@@ -167,7 +167,7 @@ namespace DiyetProgramiProje
             }
             else
             {
-                dgvFood.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = dgvFood.DefaultCellStyle;
+                dgvMostEaten.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = dgvFood.DefaultCellStyle;
             }
         }
 

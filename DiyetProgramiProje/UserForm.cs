@@ -128,20 +128,6 @@ namespace DiyetProgramiProje
         int foodId;
         int mealId;
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {   
-                userMealsAndFoodsService.Delete(mealId, foodId);
-                FillListView();     
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please select a food before delete");
-            }
-            
-        }
-
         private void FillListView()
         {
             
@@ -194,19 +180,6 @@ namespace DiyetProgramiProje
             lboxFoods.DataSource = foodService.GetAll();
         }
 
-        private void lvMeals_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foodId = Convert.ToInt32(lvMeals.SelectedItems[0].SubItems[3].Text);
-                mealId = Convert.ToInt32(lvMeals.SelectedItems[0].SubItems[4].Text);
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private Image ConvertByteToPicture(FoodName food)
         {
             using (var ms = new MemoryStream(food.FoodPicture))
@@ -217,23 +190,9 @@ namespace DiyetProgramiProje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //UserMessagesForm userMessagesForm = new UserMessagesForm(userRegisterInfo);
-            //this.Hide();
-            //userMessagesForm.ShowDialog();
             DieticianRegisterInfo dietician = null;
             var MainForm = Application.OpenForms.OfType<MainForm>().Single();
             MainForm.LoadForm(new UserMessagesForm(userRegisterInfo),dietician,userRegisterInfo);
-        }
-
-        private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Form frm = Application.OpenForms["Form1"];
-            //frm.Show();
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
         }
 
         private void btnAddMeal2_Click(object sender, EventArgs e)
@@ -346,6 +305,33 @@ namespace DiyetProgramiProje
         {
             FillListView();
             lblCalorieByMeal.Text = userMealsAndFoodsService.GetCalorieByMeal(userRegisterInfo.Id, dtMealDate.Value.Date, (MealTimesEnum)cboxLvMealTime.SelectedItem).ToString();
+        }
+
+        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                userMealsAndFoodsService.Delete(mealId, foodId);
+                FillListView();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select a food before delete");
+            }
+        }
+
+        private void lvMeals_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foodId = Convert.ToInt32(lvMeals.SelectedItems[0].SubItems[3].Text);
+                mealId = Convert.ToInt32(lvMeals.SelectedItems[0].SubItems[4].Text);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

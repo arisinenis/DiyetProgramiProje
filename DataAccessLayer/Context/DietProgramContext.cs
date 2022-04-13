@@ -12,7 +12,7 @@ namespace DataAccessLayer.Context
     public class DietProgramContext : DbContext
     {
         public DietProgramContext() 
-            : base(@"Server=DESKTOP-U45D5S4\SQLEXPRESS;Database=DietTrackerDB2;Trusted_Connection=True;")
+            : base(@"Server=DESKTOP-MLA1I95\SQLEXPRESS;Database=DietTrackerDB2;Trusted_Connection=True;")
         {
 
         }

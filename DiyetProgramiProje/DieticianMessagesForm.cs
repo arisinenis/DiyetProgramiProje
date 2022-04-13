@@ -48,34 +48,13 @@ namespace DiyetProgramiProje
             lboxMessages.ValueMember = "Id";
             lboxMessages.DataSource = dieticianMessages;
         }
-
-
-
         private void DieticianMessagesForm_Load(object sender, EventArgs e)
         {
             FillUserCombobox();
             FillListBoxMessages();
+            FillClient();
             cboxUsers.SelectedIndex=0;
             this.BackColor = ColorTranslator.FromHtml("#98c1d9");
-        }
-
-        private void lboxMessages_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtShowMessage.Text=string.Empty;
-            txtShowMessage.Text = dieticianMessageService.GetByMessageId((int)lboxMessages.SelectedValue).Text;
-            
-        }
-
-        private void cboxUsers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FillListBoxMessages();
-            txtShowMessage.Text = string.Empty;
-        }
-
-        private void DieticianMessagesForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Form frm = Application.OpenForms["DieticianForm"];
-            //frm.Show();
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -109,6 +88,39 @@ namespace DiyetProgramiProje
             
             userId = Convert.ToInt32(lvClients.FocusedItem.Text);
             UserInformation userInformation = userService.GetById(userId);
+        }
+
+        private void lboxMessages_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            txtShowMessage.Text = string.Empty;
+            txtShowMessage.Text = dieticianMessageService.GetByMessageId((int)lboxMessages.SelectedValue).Text;
+        }
+
+        private void cboxUsers_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            FillListBoxMessages();
+            txtShowMessage.Text = string.Empty;
+        }
+        private void FillClient()
+        {
+
+            Dietician dietician = dieticianService.GetById(dieticianRegisterInfo.Id);
+
+            List<UserInformation> Customers = userService.GetCustomers(dietician);
+
+            foreach (var item in Customers)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = item.Id.ToString();
+                lvi.SubItems.Add(item.FirstName.ToString());
+                lvi.SubItems.Add(item.LastName.ToString());
+                lvi.SubItems.Add(item.Height.ToString());
+                lvi.SubItems.Add(item.Weight.ToString());
+                lvi.SubItems.Add(item.BirthDate.ToString());
+                lvi.SubItems.Add(item.UserRequest.ToString());
+
+                lvClients.Items.Add(lvi);
+            }
         }
     }
 }

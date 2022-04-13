@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Message = Model.Entities.Message;
 
 namespace DiyetProgramiProje
 {
@@ -41,11 +40,11 @@ namespace DiyetProgramiProje
         {
             FillClient();
             FillMealTime();
+            FillFoods();
             cboxLvMealTime.SelectedIndex = 0;
             this.BackColor = ColorTranslator.FromHtml("#98c1d9");
-            
-
         }
+        int userId = 0;
         private void FillClient()
         {
             
@@ -76,12 +75,7 @@ namespace DiyetProgramiProje
         }
         private void FillFoods()
         {
-
-            if (lvClients.FocusedItem == null)
-            {
-                MessageBox.Show("Any clients selected");
-            }
-            else
+            if (lvClients.FocusedItem!=null)
             {
                 userId = Convert.ToInt32(lvClients.FocusedItem.Text);
                 UserMeal userMeal = userMealService.GetMeal(userId, dtMealDate.Value.Date, (MealTimesEnum)cboxLvMealTime.SelectedItem);
@@ -97,7 +91,6 @@ namespace DiyetProgramiProje
                         lvi.SubItems.Add(item.Portion.ToString());
                         lvi.SubItems.Add(item.Calorie.ToString());
                         lvMeals.Items.Add(lvi);
-
                     }
                 }
                 else
@@ -106,14 +99,6 @@ namespace DiyetProgramiProje
                 }
             }
         }
-
-        int userId=0;
-        private void btnShowMeal_Click(object sender, EventArgs e)
-        {
-            //lvMeals.Items.Clear();
-            //FillFoods();
-        }
-
         private void lvClients_SelectedIndexChanged(object sender, EventArgs e)
         {
             lvMeals.Items.Clear();
@@ -121,9 +106,8 @@ namespace DiyetProgramiProje
             UserInformation userInformation = userService.GetById(userId);
             lblDailyCalorieRequirement.Text = userInformation.DailyCalorie.ToString();
             lblDailyCalorieTaken.Text = userMealsAndFoodsService.GetTotalCalorieById(userId, dtMealDate.Value.Date).ToString();
-            //FillFoods();
+            FillFoods();
         }
-
         private void dtMealDate_ValueChanged(object sender, EventArgs e)
         {
             if (userId!=0)
@@ -134,54 +118,11 @@ namespace DiyetProgramiProje
             {
                 MessageBox.Show("Any client selected");
             }
-            
         }
-
-        private void btnShowMessages_Click(object sender, EventArgs e)
-        {
-            DieticianMessagesForm dieticianMessagesForm = new DieticianMessagesForm(dieticianRegisterInfo);
-            this.Hide();
-            dieticianMessagesForm.ShowDialog();
-            
-        }
-
-        private void DieticianForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Form frm = Application.OpenForms["Form1"];
-            //frm.Show();
-        }
-
-        private void btnSend_Click_1(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    if (userId != 0)
-            //    {
-            //        Message message = new Message();
-            //        message.MessageHeader = txtMessageTitle.Text;
-            //        message.Text = txtMessage.Text;
-            //        message.UserInformationId = userId;
-            //        message.DieticianId = dieticianRegisterInfo.Id;
-            //        messageService.Add(message);
-            //        MessageBox.Show("Message has been send");
-            //    }
-
-            //    else
-            //    {
-            //        MessageBox.Show("Any client selected");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            
-        }
-
         private void cboxLvMealTime_SelectedIndexChanged(object sender, EventArgs e)
         {
             lvMeals.Items.Clear();
-            //FillFoods();
+            FillFoods();
         }
     }
 }
