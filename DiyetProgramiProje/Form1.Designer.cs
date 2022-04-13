@@ -32,15 +32,15 @@ namespace DiyetProgramiProje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelWelcome = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBegin1 = new FontAwesome.Sharp.IconButton();
             this.lblFirstMessage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSıgnIn2 = new FontAwesome.Sharp.IconButton();
+            this.btnLogIn2 = new FontAwesome.Sharp.IconButton();
             this.labelMail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.btnBegin1 = new FontAwesome.Sharp.IconButton();
-            this.btnLogIn2 = new FontAwesome.Sharp.IconButton();
-            this.btnSıgnIn2 = new FontAwesome.Sharp.IconButton();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,23 @@ namespace DiyetProgramiProje
             this.panel3.Size = new System.Drawing.Size(797, 392);
             this.panel3.TabIndex = 4;
             // 
+            // btnBegin1
+            // 
+            this.btnBegin1.FlatAppearance.BorderSize = 0;
+            this.btnBegin1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBegin1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBegin1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBegin1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBegin1.IconColor = System.Drawing.Color.Black;
+            this.btnBegin1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBegin1.Location = new System.Drawing.Point(335, 332);
+            this.btnBegin1.Name = "btnBegin1";
+            this.btnBegin1.Size = new System.Drawing.Size(160, 50);
+            this.btnBegin1.TabIndex = 2;
+            this.btnBegin1.Text = "START";
+            this.btnBegin1.UseVisualStyleBackColor = true;
+            this.btnBegin1.Click += new System.EventHandler(this.btnBegin1_Click);
+            // 
             // lblFirstMessage
             // 
             this.lblFirstMessage.BackColor = System.Drawing.Color.Transparent;
@@ -96,6 +113,40 @@ namespace DiyetProgramiProje
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 287);
             this.panel2.TabIndex = 3;
+            // 
+            // btnSıgnIn2
+            // 
+            this.btnSıgnIn2.FlatAppearance.BorderSize = 0;
+            this.btnSıgnIn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSıgnIn2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSıgnIn2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSıgnIn2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSıgnIn2.IconColor = System.Drawing.Color.Black;
+            this.btnSıgnIn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSıgnIn2.Location = new System.Drawing.Point(195, 207);
+            this.btnSıgnIn2.Name = "btnSıgnIn2";
+            this.btnSıgnIn2.Size = new System.Drawing.Size(120, 50);
+            this.btnSıgnIn2.TabIndex = 20;
+            this.btnSıgnIn2.Text = "SIGN UP";
+            this.btnSıgnIn2.UseVisualStyleBackColor = true;
+            this.btnSıgnIn2.Click += new System.EventHandler(this.btnSıgnIn2_Click);
+            // 
+            // btnLogIn2
+            // 
+            this.btnLogIn2.FlatAppearance.BorderSize = 0;
+            this.btnLogIn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogIn2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogIn2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogIn2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnLogIn2.IconColor = System.Drawing.Color.Black;
+            this.btnLogIn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogIn2.Location = new System.Drawing.Point(50, 207);
+            this.btnLogIn2.Name = "btnLogIn2";
+            this.btnLogIn2.Size = new System.Drawing.Size(120, 50);
+            this.btnLogIn2.TabIndex = 19;
+            this.btnLogIn2.Text = "LOG IN";
+            this.btnLogIn2.UseVisualStyleBackColor = true;
+            this.btnLogIn2.Click += new System.EventHandler(this.btnLogIn2_Click);
             // 
             // labelMail
             // 
@@ -138,51 +189,6 @@ namespace DiyetProgramiProje
             this.labelPassword.Size = new System.Drawing.Size(94, 26);
             this.labelPassword.TabIndex = 13;
             this.labelPassword.Text = "Password";
-            // 
-            // btnBegin1
-            // 
-            this.btnBegin1.FlatAppearance.BorderSize = 0;
-            this.btnBegin1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBegin1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnBegin1.IconColor = System.Drawing.Color.Black;
-            this.btnBegin1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBegin1.Location = new System.Drawing.Point(335, 332);
-            this.btnBegin1.Name = "btnBegin1";
-            this.btnBegin1.Size = new System.Drawing.Size(160, 50);
-            this.btnBegin1.TabIndex = 2;
-            this.btnBegin1.Text = "START";
-            this.btnBegin1.UseVisualStyleBackColor = true;
-            this.btnBegin1.Click += new System.EventHandler(this.btnBegin1_Click);
-            // 
-            // btnLogIn2
-            // 
-            this.btnLogIn2.FlatAppearance.BorderSize = 0;
-            this.btnLogIn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogIn2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnLogIn2.IconColor = System.Drawing.Color.Black;
-            this.btnLogIn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogIn2.Location = new System.Drawing.Point(50, 207);
-            this.btnLogIn2.Name = "btnLogIn2";
-            this.btnLogIn2.Size = new System.Drawing.Size(120, 50);
-            this.btnLogIn2.TabIndex = 19;
-            this.btnLogIn2.Text = "LOG IN";
-            this.btnLogIn2.UseVisualStyleBackColor = true;
-            this.btnLogIn2.Click += new System.EventHandler(this.btnLogIn2_Click);
-            // 
-            // btnSıgnIn2
-            // 
-            this.btnSıgnIn2.FlatAppearance.BorderSize = 0;
-            this.btnSıgnIn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSıgnIn2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSıgnIn2.IconColor = System.Drawing.Color.Black;
-            this.btnSıgnIn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSıgnIn2.Location = new System.Drawing.Point(195, 207);
-            this.btnSıgnIn2.Name = "btnSıgnIn2";
-            this.btnSıgnIn2.Size = new System.Drawing.Size(120, 50);
-            this.btnSıgnIn2.TabIndex = 20;
-            this.btnSıgnIn2.Text = "SIGN IN";
-            this.btnSıgnIn2.UseVisualStyleBackColor = true;
-            this.btnSıgnIn2.Click += new System.EventHandler(this.btnSıgnIn2_Click);
             // 
             // Form1
             // 

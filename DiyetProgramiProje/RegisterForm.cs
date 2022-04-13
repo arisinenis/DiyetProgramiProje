@@ -34,20 +34,66 @@ namespace DiyetProgramiProje
             cboxDailyExercise.SelectedIndex=0;
             cboxRequest.SelectedIndex=0;
             cboxDietician.SelectedIndex=0;
-            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            labelRegister1.Visible = false;
+            labelRegister2.Visible = false;
+            labelRegister3.Visible = false;
+            labelRegister4.Visible = false;
+            pBoxRegister1.Visible = false;
+            pBoxRegister2.Visible = false;
+            pBoxRegister3.Visible = false;
+            pBoxRegister4.Visible = false;
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.panelDietician.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelRegister1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelRegister2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelRegister3.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelRegister4.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.radioButtonOpen.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonClose.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelTips.BackColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxRegisterType.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbDietician.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbUser.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxDietician.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelEmail.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelFirstName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelLastName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelGradution.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnAddPhoto.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnJoinDietician.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnUserJoin.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDieticianFirstName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDieticianLastName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDieticianMail.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDieticianGraduation.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDieticianPassword.BackColor = ColorTranslator.FromHtml("#293241");
+            this.groupBoxPhoto.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelMail.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelPassword.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelNameLast.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelGender.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDate.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelHeight.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelWeight.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelExercise.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelRequest.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelSelectDietician.BackColor = ColorTranslator.FromHtml("#293241");
+            this.rbMale.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbFemale.ForeColor = ColorTranslator.FromHtml("#293241");
         }
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form frm = Application.OpenForms["Form1"];
-            frm.Show();
+            //Form frm = Application.OpenForms["Form1"];
+            //frm.Show();
         }
 
         private void rbUser_CheckedChanged(object sender, EventArgs e)
         {
             panelUser.Visible = true;
             panelDietician.Visible = false;
-            groupBox1.Visible = false;
+            groupBoxDietician.Visible = false;
         }
 
         private void rbDietician_CheckedChanged(object sender, EventArgs e)
@@ -62,7 +108,7 @@ namespace DiyetProgramiProje
             {
                 if (cboxDietician.SelectedIndex!=-1)
                 {
-                    groupBox1.Visible = true;
+                    groupBoxDietician.Visible = true;
                     Dietician dietician = dieticianService.GetById((int)cboxDietician.SelectedValue);
                     lblFirstName.Text = dietician.FirstName;
                     lblLastName.Text = dietician.LastName;
@@ -292,6 +338,54 @@ namespace DiyetProgramiProje
             if (open.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = new Bitmap(open.FileName);
+            }
+        }
+
+        private void radioButtonOpen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbDietician.Checked && radioButtonOpen.Checked)
+            {
+                labelRegister1.Visible = true;
+                labelRegister2.Visible = true;
+                labelRegister3.Visible = false;
+                labelRegister4.Visible = false;
+                pBoxRegister1.Visible = true;
+                pBoxRegister2.Visible = true;
+                pBoxRegister3.Visible = false;
+                pBoxRegister4.Visible = false;
+            }
+            else if (rbDietician.Checked && radioButtonClose.Checked)
+            {
+                labelRegister1.Visible = false;
+                labelRegister2.Visible = false;
+                labelRegister3.Visible = false;
+                labelRegister4.Visible = false;
+                pBoxRegister1.Visible = false;
+                pBoxRegister2.Visible = false;
+                pBoxRegister3.Visible = false;
+                pBoxRegister4.Visible = false;
+            }
+            else if (rbUser.Checked && radioButtonOpen.Checked)
+            {
+                labelRegister1.Visible = true;
+                labelRegister2.Visible = false;
+                labelRegister3.Visible = true;
+                labelRegister4.Visible = true;
+                pBoxRegister1.Visible = true;
+                pBoxRegister2.Visible = false;
+                pBoxRegister3.Visible = true;
+                pBoxRegister4.Visible = true;
+            }
+            else if (rbUser.Checked && radioButtonClose.Checked)
+            {
+                labelRegister1.Visible = false;
+                labelRegister2.Visible = false;
+                labelRegister3.Visible = false;
+                labelRegister4.Visible = false;
+                pBoxRegister1.Visible = false;
+                pBoxRegister2.Visible = false;
+                pBoxRegister3.Visible = false;
+                pBoxRegister4.Visible = false;
             }
         }
     }

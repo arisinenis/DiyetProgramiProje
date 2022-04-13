@@ -33,11 +33,11 @@ namespace DiyetProgramiProje
             this.BackColor = ColorTranslator.FromHtml("#cad2c5");
             this.labelWelcome.ForeColor = ColorTranslator.FromHtml("#293241");
             this.lblFirstMessage.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.btnBegin1.BackColor = ColorTranslator.FromHtml("#a7c957");
+            this.btnBegin1.BackColor = ColorTranslator.FromHtml("#293241");
             this.labelMail.BackColor = ColorTranslator.FromHtml("#293241");
             this.labelPassword.BackColor = ColorTranslator.FromHtml("#293241");
             this.btnLogIn2.BackColor = ColorTranslator.FromHtml("#a7c957");
-            this.btnSıgnIn2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.btnSıgnIn2.BackColor = ColorTranslator.FromHtml("#293241");
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
