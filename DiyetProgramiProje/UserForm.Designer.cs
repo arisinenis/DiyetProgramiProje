@@ -303,26 +303,6 @@ namespace DiyetProgramiProje
             this.pbox1.TabIndex = 36;
             this.pbox1.TabStop = false;
             // 
-            // pbox2
-            // 
-            this.pbox2.Image = ((System.Drawing.Image)(resources.GetObject("pbox2.Image")));
-            this.pbox2.Location = new System.Drawing.Point(749, 269);
-            this.pbox2.Name = "pbox2";
-            this.pbox2.Size = new System.Drawing.Size(50, 45);
-            this.pbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbox2.TabIndex = 37;
-            this.pbox2.TabStop = false;
-            // 
-            // pbox1
-            // 
-            this.pbox1.Image = ((System.Drawing.Image)(resources.GetObject("pbox1.Image")));
-            this.pbox1.Location = new System.Drawing.Point(26, 201);
-            this.pbox1.Name = "pbox1";
-            this.pbox1.Size = new System.Drawing.Size(50, 45);
-            this.pbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbox1.TabIndex = 36;
-            this.pbox1.TabStop = false;
-            // 
             // pbox3
             // 
             this.pbox3.Image = ((System.Drawing.Image)(resources.GetObject("pbox3.Image")));
@@ -409,7 +389,7 @@ namespace DiyetProgramiProje
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // contextMenuStrip1
@@ -418,7 +398,7 @@ namespace DiyetProgramiProje
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
             this.contextMenuStrip1.Click += new System.EventHandler(this.contextMenuStrip1_Click);
             // 
             // groupBoxCheckMeal
@@ -453,16 +433,6 @@ namespace DiyetProgramiProje
             this.groupBoxCheckMeal.TabStop = false;
             this.groupBoxCheckMeal.Text = "Check Meals";
             this.groupBoxCheckMeal.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxCheckMeal_Paint);
-            // 
-            // pbox4
-            // 
-            this.pbox4.Image = ((System.Drawing.Image)(resources.GetObject("pbox4.Image")));
-            this.pbox4.Location = new System.Drawing.Point(26, 166);
-            this.pbox4.Name = "pbox4";
-            this.pbox4.Size = new System.Drawing.Size(50, 45);
-            this.pbox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbox4.TabIndex = 37;
-            this.pbox4.TabStop = false;
             // 
             // pbox4
             // 
@@ -649,7 +619,7 @@ namespace DiyetProgramiProje
             this.lvMeals.TabIndex = 14;
             this.lvMeals.UseCompatibleStateImageBehavior = false;
             this.lvMeals.View = System.Windows.Forms.View.Details;
-            this.lvMeals.Click += new System.EventHandler(this.lvMeals_Click);
+            this.lvMeals.Click += new System.EventHandler(this.lvMeals_Click_1);
             // 
             // columnHeader2
             // 
