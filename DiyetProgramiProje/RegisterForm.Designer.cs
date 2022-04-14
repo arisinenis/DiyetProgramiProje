@@ -31,6 +31,9 @@ namespace DiyetProgramiProje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.panelUser = new System.Windows.Forms.Panel();
+            this.labelRegister3 = new System.Windows.Forms.Label();
+            this.pBoxRegister3 = new System.Windows.Forms.PictureBox();
+            this.btnUserJoin = new FontAwesome.Sharp.IconButton();
             this.cboxDailyExercise = new System.Windows.Forms.ComboBox();
             this.labelExercise = new System.Windows.Forms.Label();
             this.groupBoxDietician = new System.Windows.Forms.GroupBox();
@@ -69,7 +72,11 @@ namespace DiyetProgramiProje
             this.rbDietician = new System.Windows.Forms.RadioButton();
             this.groupBoxRegisterType = new System.Windows.Forms.GroupBox();
             this.panelDietician = new System.Windows.Forms.Panel();
+            this.pBoxRegister2 = new System.Windows.Forms.PictureBox();
+            this.labelRegister2 = new System.Windows.Forms.Label();
+            this.btnJoinDietician = new FontAwesome.Sharp.IconButton();
             this.groupBoxPhoto = new System.Windows.Forms.GroupBox();
+            this.btnAddPhoto = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelDieticianMail = new System.Windows.Forms.Label();
             this.txtDGraduation = new System.Windows.Forms.TextBox();
@@ -81,33 +88,26 @@ namespace DiyetProgramiProje
             this.txtDPassword = new System.Windows.Forms.TextBox();
             this.labelDieticianPassword = new System.Windows.Forms.Label();
             this.txtDEmail = new System.Windows.Forms.TextBox();
-            this.btnUserJoin = new FontAwesome.Sharp.IconButton();
-            this.btnJoinDietician = new FontAwesome.Sharp.IconButton();
             this.labelRegister1 = new System.Windows.Forms.Label();
             this.pBoxRegister1 = new System.Windows.Forms.PictureBox();
             this.labelTips = new System.Windows.Forms.Label();
             this.radioButtonClose = new System.Windows.Forms.RadioButton();
             this.radioButtonOpen = new System.Windows.Forms.RadioButton();
-            this.labelRegister2 = new System.Windows.Forms.Label();
-            this.btnAddPhoto = new FontAwesome.Sharp.IconButton();
-            this.labelRegister3 = new System.Windows.Forms.Label();
-            this.pBoxRegister3 = new System.Windows.Forms.PictureBox();
             this.labelRegister4 = new System.Windows.Forms.Label();
             this.pBoxRegister4 = new System.Windows.Forms.PictureBox();
-            this.pBoxRegister2 = new System.Windows.Forms.PictureBox();
             this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister3)).BeginInit();
             this.groupBoxDietician.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxDietician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             this.groupBoxRegisterType.SuspendLayout();
             this.panelDietician.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister2)).BeginInit();
             this.groupBoxPhoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUser
@@ -144,16 +144,51 @@ namespace DiyetProgramiProje
             this.panelUser.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panelUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelUser.Location = new System.Drawing.Point(85, 169);
-            this.panelUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUser.Margin = new System.Windows.Forms.Padding(2);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(1060, 549);
             this.panelUser.TabIndex = 0;
+            // 
+            // labelRegister3
+            // 
+            this.labelRegister3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelRegister3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelRegister3.Location = new System.Drawing.Point(598, 462);
+            this.labelRegister3.Name = "labelRegister3";
+            this.labelRegister3.Size = new System.Drawing.Size(243, 59);
+            this.labelRegister3.TabIndex = 40;
+            this.labelRegister3.Text = "You can join us after you enter your information";
+            // 
+            // pBoxRegister3
+            // 
+            this.pBoxRegister3.Image = ((System.Drawing.Image)(resources.GetObject("pBoxRegister3.Image")));
+            this.pBoxRegister3.Location = new System.Drawing.Point(542, 462);
+            this.pBoxRegister3.Name = "pBoxRegister3";
+            this.pBoxRegister3.Size = new System.Drawing.Size(50, 45);
+            this.pBoxRegister3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBoxRegister3.TabIndex = 41;
+            this.pBoxRegister3.TabStop = false;
+            // 
+            // btnUserJoin
+            // 
+            this.btnUserJoin.FlatAppearance.BorderSize = 0;
+            this.btnUserJoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserJoin.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUserJoin.IconColor = System.Drawing.Color.Black;
+            this.btnUserJoin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUserJoin.Location = new System.Drawing.Point(360, 457);
+            this.btnUserJoin.Name = "btnUserJoin";
+            this.btnUserJoin.Size = new System.Drawing.Size(160, 50);
+            this.btnUserJoin.TabIndex = 24;
+            this.btnUserJoin.Text = "JOIN !";
+            this.btnUserJoin.UseVisualStyleBackColor = true;
+            this.btnUserJoin.Click += new System.EventHandler(this.btnUserJoin_Click);
             // 
             // cboxDailyExercise
             // 
             this.cboxDailyExercise.FormattingEnabled = true;
             this.cboxDailyExercise.Location = new System.Drawing.Point(9, 403);
-            this.cboxDailyExercise.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxDailyExercise.Margin = new System.Windows.Forms.Padding(2);
             this.cboxDailyExercise.Name = "cboxDailyExercise";
             this.cboxDailyExercise.Size = new System.Drawing.Size(229, 31);
             this.cboxDailyExercise.TabIndex = 23;
@@ -183,14 +218,15 @@ namespace DiyetProgramiProje
             this.groupBoxDietician.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBoxDietician.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBoxDietician.Location = new System.Drawing.Point(567, 80);
-            this.groupBoxDietician.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDietician.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxDietician.Name = "groupBoxDietician";
-            this.groupBoxDietician.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDietician.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxDietician.Size = new System.Drawing.Size(457, 354);
             this.groupBoxDietician.TabIndex = 1;
             this.groupBoxDietician.TabStop = false;
             this.groupBoxDietician.Text = "Dietician Details";
             this.groupBoxDietician.Visible = false;
+            this.groupBoxDietician.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxDietician_Paint);
             // 
             // lblLastName
             // 
@@ -286,8 +322,9 @@ namespace DiyetProgramiProje
             // 
             // pboxDietician
             // 
+            this.pboxDietician.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pboxDietician.Location = new System.Drawing.Point(243, 47);
-            this.pboxDietician.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxDietician.Margin = new System.Windows.Forms.Padding(2);
             this.pboxDietician.Name = "pboxDietician";
             this.pboxDietician.Size = new System.Drawing.Size(168, 159);
             this.pboxDietician.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -301,7 +338,7 @@ namespace DiyetProgramiProje
             this.btnShowDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShowDetails.ForeColor = System.Drawing.Color.Black;
             this.btnShowDetails.Location = new System.Drawing.Point(783, 32);
-            this.btnShowDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowDetails.Name = "btnShowDetails";
             this.btnShowDetails.Size = new System.Drawing.Size(36, 32);
             this.btnShowDetails.TabIndex = 20;
@@ -312,7 +349,7 @@ namespace DiyetProgramiProje
             // 
             this.cboxDietician.FormattingEnabled = true;
             this.cboxDietician.Location = new System.Drawing.Point(567, 35);
-            this.cboxDietician.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxDietician.Margin = new System.Windows.Forms.Padding(2);
             this.cboxDietician.Name = "cboxDietician";
             this.cboxDietician.Size = new System.Drawing.Size(211, 31);
             this.cboxDietician.TabIndex = 19;
@@ -331,7 +368,7 @@ namespace DiyetProgramiProje
             // 
             this.cboxRequest.FormattingEnabled = true;
             this.cboxRequest.Location = new System.Drawing.Point(282, 403);
-            this.cboxRequest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboxRequest.Margin = new System.Windows.Forms.Padding(2);
             this.cboxRequest.Name = "cboxRequest";
             this.cboxRequest.Size = new System.Drawing.Size(238, 31);
             this.cboxRequest.TabIndex = 17;
@@ -349,7 +386,7 @@ namespace DiyetProgramiProje
             // nudWeight
             // 
             this.nudWeight.Location = new System.Drawing.Point(171, 293);
-            this.nudWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudWeight.Margin = new System.Windows.Forms.Padding(2);
             this.nudWeight.Maximum = new decimal(new int[] {
             400,
             0,
@@ -372,7 +409,7 @@ namespace DiyetProgramiProje
             // nudHeight
             // 
             this.nudHeight.Location = new System.Drawing.Point(7, 293);
-            this.nudHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudHeight.Margin = new System.Windows.Forms.Padding(2);
             this.nudHeight.Maximum = new decimal(new int[] {
             250,
             0,
@@ -406,7 +443,7 @@ namespace DiyetProgramiProje
             // 
             this.rbFemale.AutoSize = true;
             this.rbFemale.Location = new System.Drawing.Point(435, 205);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(86, 27);
             this.rbFemale.TabIndex = 11;
@@ -418,7 +455,7 @@ namespace DiyetProgramiProje
             this.rbMale.AutoSize = true;
             this.rbMale.Checked = true;
             this.rbMale.Location = new System.Drawing.Point(352, 205);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(2);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(69, 27);
             this.rbMale.TabIndex = 11;
@@ -439,7 +476,7 @@ namespace DiyetProgramiProje
             // dtBirthDate
             // 
             this.dtBirthDate.Location = new System.Drawing.Point(7, 201);
-            this.dtBirthDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtBirthDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(297, 31);
             this.dtBirthDate.TabIndex = 9;
@@ -457,7 +494,7 @@ namespace DiyetProgramiProje
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(282, 110);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(238, 31);
             this.txtLastName.TabIndex = 7;
@@ -475,7 +512,7 @@ namespace DiyetProgramiProje
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(5, 110);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(238, 31);
             this.txtFirstName.TabIndex = 5;
@@ -493,7 +530,7 @@ namespace DiyetProgramiProje
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(282, 35);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(238, 31);
             this.txtPassword.TabIndex = 3;
@@ -511,7 +548,7 @@ namespace DiyetProgramiProje
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(5, 34);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(238, 31);
             this.txtEmail.TabIndex = 1;
@@ -536,7 +573,7 @@ namespace DiyetProgramiProje
             this.rbUser.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rbUser.Location = new System.Drawing.Point(22, 31);
-            this.rbUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbUser.Margin = new System.Windows.Forms.Padding(2);
             this.rbUser.Name = "rbUser";
             this.rbUser.Size = new System.Drawing.Size(160, 27);
             this.rbUser.TabIndex = 2;
@@ -552,7 +589,7 @@ namespace DiyetProgramiProje
             this.rbDietician.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbDietician.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rbDietician.Location = new System.Drawing.Point(192, 31);
-            this.rbDietician.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDietician.Margin = new System.Windows.Forms.Padding(2);
             this.rbDietician.Name = "rbDietician";
             this.rbDietician.Size = new System.Drawing.Size(193, 27);
             this.rbDietician.TabIndex = 2;
@@ -568,13 +605,14 @@ namespace DiyetProgramiProje
             this.groupBoxRegisterType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBoxRegisterType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBoxRegisterType.Location = new System.Drawing.Point(215, 74);
-            this.groupBoxRegisterType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxRegisterType.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxRegisterType.Name = "groupBoxRegisterType";
-            this.groupBoxRegisterType.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxRegisterType.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxRegisterType.Size = new System.Drawing.Size(415, 79);
             this.groupBoxRegisterType.TabIndex = 3;
             this.groupBoxRegisterType.TabStop = false;
             this.groupBoxRegisterType.Text = "Register Type";
+            this.groupBoxRegisterType.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxRegisterType_Paint);
             // 
             // panelDietician
             // 
@@ -595,10 +633,46 @@ namespace DiyetProgramiProje
             this.panelDietician.Controls.Add(this.txtDEmail);
             this.panelDietician.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panelDietician.Location = new System.Drawing.Point(215, 169);
-            this.panelDietician.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDietician.Margin = new System.Windows.Forms.Padding(2);
             this.panelDietician.Name = "panelDietician";
             this.panelDietician.Size = new System.Drawing.Size(790, 476);
             this.panelDietician.TabIndex = 4;
+            // 
+            // pBoxRegister2
+            // 
+            this.pBoxRegister2.Image = ((System.Drawing.Image)(resources.GetObject("pBoxRegister2.Image")));
+            this.pBoxRegister2.Location = new System.Drawing.Point(451, 299);
+            this.pBoxRegister2.Name = "pBoxRegister2";
+            this.pBoxRegister2.Size = new System.Drawing.Size(50, 45);
+            this.pBoxRegister2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBoxRegister2.TabIndex = 40;
+            this.pBoxRegister2.TabStop = false;
+            // 
+            // labelRegister2
+            // 
+            this.labelRegister2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelRegister2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelRegister2.Location = new System.Drawing.Point(442, 357);
+            this.labelRegister2.Name = "labelRegister2";
+            this.labelRegister2.Size = new System.Drawing.Size(243, 59);
+            this.labelRegister2.TabIndex = 38;
+            this.labelRegister2.Text = "You can join us after you enter your information";
+            // 
+            // btnJoinDietician
+            // 
+            this.btnJoinDietician.FlatAppearance.BorderSize = 0;
+            this.btnJoinDietician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJoinDietician.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnJoinDietician.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnJoinDietician.IconColor = System.Drawing.Color.Black;
+            this.btnJoinDietician.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnJoinDietician.Location = new System.Drawing.Point(529, 294);
+            this.btnJoinDietician.Name = "btnJoinDietician";
+            this.btnJoinDietician.Size = new System.Drawing.Size(160, 50);
+            this.btnJoinDietician.TabIndex = 23;
+            this.btnJoinDietician.Text = "JOIN !";
+            this.btnJoinDietician.UseVisualStyleBackColor = true;
+            this.btnJoinDietician.Click += new System.EventHandler(this.btnJoinDietician_Click);
             // 
             // groupBoxPhoto
             // 
@@ -611,11 +685,29 @@ namespace DiyetProgramiProje
             this.groupBoxPhoto.TabIndex = 22;
             this.groupBoxPhoto.TabStop = false;
             this.groupBoxPhoto.Text = "Photo";
+            this.groupBoxPhoto.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxPhoto_Paint);
+            // 
+            // btnAddPhoto
+            // 
+            this.btnAddPhoto.FlatAppearance.BorderSize = 0;
+            this.btnAddPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPhoto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAddPhoto.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddPhoto.IconColor = System.Drawing.Color.Black;
+            this.btnAddPhoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPhoto.Location = new System.Drawing.Point(197, 155);
+            this.btnAddPhoto.Name = "btnAddPhoto";
+            this.btnAddPhoto.Size = new System.Drawing.Size(160, 50);
+            this.btnAddPhoto.TabIndex = 21;
+            this.btnAddPhoto.Text = "Add Photo";
+            this.btnAddPhoto.UseVisualStyleBackColor = true;
+            this.btnAddPhoto.Click += new System.EventHandler(this.btnAddPhoto_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(23, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 173);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -637,7 +729,7 @@ namespace DiyetProgramiProje
             // txtDGraduation
             // 
             this.txtDGraduation.Location = new System.Drawing.Point(17, 406);
-            this.txtDGraduation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDGraduation.Margin = new System.Windows.Forms.Padding(2);
             this.txtDGraduation.Name = "txtDGraduation";
             this.txtDGraduation.Size = new System.Drawing.Size(280, 31);
             this.txtDGraduation.TabIndex = 17;
@@ -656,7 +748,7 @@ namespace DiyetProgramiProje
             // txtDLastName
             // 
             this.txtDLastName.Location = new System.Drawing.Point(19, 313);
-            this.txtDLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtDLastName.Name = "txtDLastName";
             this.txtDLastName.Size = new System.Drawing.Size(278, 31);
             this.txtDLastName.TabIndex = 15;
@@ -675,7 +767,7 @@ namespace DiyetProgramiProje
             // txtDFirstName
             // 
             this.txtDFirstName.Location = new System.Drawing.Point(20, 219);
-            this.txtDFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtDFirstName.Name = "txtDFirstName";
             this.txtDFirstName.Size = new System.Drawing.Size(279, 31);
             this.txtDFirstName.TabIndex = 13;
@@ -694,7 +786,7 @@ namespace DiyetProgramiProje
             // txtDPassword
             // 
             this.txtDPassword.Location = new System.Drawing.Point(18, 124);
-            this.txtDPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtDPassword.Name = "txtDPassword";
             this.txtDPassword.Size = new System.Drawing.Size(279, 31);
             this.txtDPassword.TabIndex = 11;
@@ -713,47 +805,16 @@ namespace DiyetProgramiProje
             // txtDEmail
             // 
             this.txtDEmail.Location = new System.Drawing.Point(18, 37);
-            this.txtDEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtDEmail.Name = "txtDEmail";
             this.txtDEmail.Size = new System.Drawing.Size(280, 31);
             this.txtDEmail.TabIndex = 9;
-            // 
-            // btnUserJoin
-            // 
-            this.btnUserJoin.FlatAppearance.BorderSize = 0;
-            this.btnUserJoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserJoin.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnUserJoin.IconColor = System.Drawing.Color.Black;
-            this.btnUserJoin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUserJoin.Location = new System.Drawing.Point(360, 457);
-            this.btnUserJoin.Name = "btnUserJoin";
-            this.btnUserJoin.Size = new System.Drawing.Size(160, 50);
-            this.btnUserJoin.TabIndex = 24;
-            this.btnUserJoin.Text = "JOIN !";
-            this.btnUserJoin.UseVisualStyleBackColor = true;
-            this.btnUserJoin.Click += new System.EventHandler(this.btnUserJoin_Click);
-            // 
-            // btnJoinDietician
-            // 
-            this.btnJoinDietician.FlatAppearance.BorderSize = 0;
-            this.btnJoinDietician.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJoinDietician.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnJoinDietician.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnJoinDietician.IconColor = System.Drawing.Color.Black;
-            this.btnJoinDietician.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnJoinDietician.Location = new System.Drawing.Point(529, 294);
-            this.btnJoinDietician.Name = "btnJoinDietician";
-            this.btnJoinDietician.Size = new System.Drawing.Size(160, 50);
-            this.btnJoinDietician.TabIndex = 23;
-            this.btnJoinDietician.Text = "JOIN !";
-            this.btnJoinDietician.UseVisualStyleBackColor = true;
-            this.btnJoinDietician.Click += new System.EventHandler(this.btnJoinDietician_Click);
             // 
             // labelRegister1
             // 
             this.labelRegister1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelRegister1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelRegister1.Location = new System.Drawing.Point(41, 59);
+            this.labelRegister1.Location = new System.Drawing.Point(23, 57);
             this.labelRegister1.Name = "labelRegister1";
             this.labelRegister1.Size = new System.Drawing.Size(122, 110);
             this.labelRegister1.TabIndex = 5;
@@ -807,52 +868,6 @@ namespace DiyetProgramiProje
             this.radioButtonOpen.UseVisualStyleBackColor = true;
             this.radioButtonOpen.CheckedChanged += new System.EventHandler(this.radioButtonOpen_CheckedChanged);
             // 
-            // labelRegister2
-            // 
-            this.labelRegister2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelRegister2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelRegister2.Location = new System.Drawing.Point(442, 357);
-            this.labelRegister2.Name = "labelRegister2";
-            this.labelRegister2.Size = new System.Drawing.Size(243, 59);
-            this.labelRegister2.TabIndex = 38;
-            this.labelRegister2.Text = "You can join us after you enter your information";
-            // 
-            // btnAddPhoto
-            // 
-            this.btnAddPhoto.FlatAppearance.BorderSize = 0;
-            this.btnAddPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPhoto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddPhoto.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddPhoto.IconColor = System.Drawing.Color.Black;
-            this.btnAddPhoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddPhoto.Location = new System.Drawing.Point(197, 155);
-            this.btnAddPhoto.Name = "btnAddPhoto";
-            this.btnAddPhoto.Size = new System.Drawing.Size(160, 50);
-            this.btnAddPhoto.TabIndex = 21;
-            this.btnAddPhoto.Text = "Add Photo";
-            this.btnAddPhoto.UseVisualStyleBackColor = true;
-            this.btnAddPhoto.Click += new System.EventHandler(this.btnAddPhoto_Click);
-            // 
-            // labelRegister3
-            // 
-            this.labelRegister3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelRegister3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelRegister3.Location = new System.Drawing.Point(598, 462);
-            this.labelRegister3.Name = "labelRegister3";
-            this.labelRegister3.Size = new System.Drawing.Size(243, 59);
-            this.labelRegister3.TabIndex = 40;
-            this.labelRegister3.Text = "You can join us after you enter your information";
-            // 
-            // pBoxRegister3
-            // 
-            this.pBoxRegister3.Image = ((System.Drawing.Image)(resources.GetObject("pBoxRegister3.Image")));
-            this.pBoxRegister3.Location = new System.Drawing.Point(542, 462);
-            this.pBoxRegister3.Name = "pBoxRegister3";
-            this.pBoxRegister3.Size = new System.Drawing.Size(50, 45);
-            this.pBoxRegister3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBoxRegister3.TabIndex = 41;
-            this.pBoxRegister3.TabStop = false;
-            // 
             // labelRegister4
             // 
             this.labelRegister4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -873,16 +888,6 @@ namespace DiyetProgramiProje
             this.pBoxRegister4.TabIndex = 39;
             this.pBoxRegister4.TabStop = false;
             // 
-            // pBoxRegister2
-            // 
-            this.pBoxRegister2.Image = ((System.Drawing.Image)(resources.GetObject("pBoxRegister2.Image")));
-            this.pBoxRegister2.Location = new System.Drawing.Point(451, 299);
-            this.pBoxRegister2.Name = "pBoxRegister2";
-            this.pBoxRegister2.Size = new System.Drawing.Size(50, 45);
-            this.pBoxRegister2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBoxRegister2.TabIndex = 40;
-            this.pBoxRegister2.TabStop = false;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -900,7 +905,7 @@ namespace DiyetProgramiProje
             this.Controls.Add(this.groupBoxRegisterType);
             this.Controls.Add(this.panelDietician);
             this.Controls.Add(this.panelUser);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
@@ -908,6 +913,7 @@ namespace DiyetProgramiProje
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister3)).EndInit();
             this.groupBoxDietician.ResumeLayout(false);
             this.groupBoxDietician.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxDietician)).EndInit();
@@ -917,12 +923,11 @@ namespace DiyetProgramiProje
             this.groupBoxRegisterType.PerformLayout();
             this.panelDietician.ResumeLayout(false);
             this.panelDietician.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister2)).EndInit();
             this.groupBoxPhoto.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxRegister2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -48,9 +48,9 @@ namespace DiyetProgramiProje
             this.btnUserMessages.BackColor = ColorTranslator.FromHtml("#f1faee");
             this.btnUserNewFood.BackColor = ColorTranslator.FromHtml("#f1faee");
             this.btnUserReports.BackColor = ColorTranslator.FromHtml("#f1faee");
-            this.btnGo.BackColor = ColorTranslator.FromHtml("#a7c957");
             this.btnLogOut1.BackColor = ColorTranslator.FromHtml("#f1faee");
             this.btnExit.BackColor = ColorTranslator.FromHtml("#e63946");
+            GetForm1();
         }
 
         private void btnAdminMain_Click(object sender, EventArgs e)
@@ -239,9 +239,10 @@ namespace DiyetProgramiProje
                     item.Close();
                 }
             }
+            GetForm1();
         }
 
-        private void btnGo_Click(object sender, EventArgs e)
+        private void GetForm1()
         {
             Form frm = Application.OpenForms["Form1"];
             if (frm == null)

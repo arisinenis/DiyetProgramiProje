@@ -140,6 +140,7 @@ namespace DiyetProgramiProje
             // 
             // pboxFood
             // 
+            this.pboxFood.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pboxFood.Location = new System.Drawing.Point(542, 27);
             this.pboxFood.Name = "pboxFood";
             this.pboxFood.Size = new System.Drawing.Size(178, 157);
@@ -458,7 +459,7 @@ namespace DiyetProgramiProje
             // 
             this.labelCheckMeal3.Location = new System.Drawing.Point(841, 220);
             this.labelCheckMeal3.Name = "labelCheckMeal3";
-            this.labelCheckMeal3.Size = new System.Drawing.Size(189, 71);
+            this.labelCheckMeal3.Size = new System.Drawing.Size(166, 71);
             this.labelCheckMeal3.TabIndex = 34;
             this.labelCheckMeal3.Text = "You can see all the calorie information from this section";
             // 
@@ -593,6 +594,7 @@ namespace DiyetProgramiProje
             this.dtMealDate.Name = "dtMealDate";
             this.dtMealDate.Size = new System.Drawing.Size(254, 31);
             this.dtMealDate.TabIndex = 16;
+            this.dtMealDate.ValueChanged += new System.EventHandler(this.dtMealDate_ValueChanged);
             // 
             // labelMealDate2
             // 

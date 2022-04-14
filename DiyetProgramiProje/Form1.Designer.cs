@@ -83,7 +83,7 @@ namespace DiyetProgramiProje
             this.btnBegin1.Name = "btnBegin1";
             this.btnBegin1.Size = new System.Drawing.Size(160, 50);
             this.btnBegin1.TabIndex = 2;
-            this.btnBegin1.Text = "START";
+            this.btnBegin1.Text = "LET\'S START!";
             this.btnBegin1.UseVisualStyleBackColor = true;
             this.btnBegin1.Click += new System.EventHandler(this.btnBegin1_Click);
             // 
@@ -177,6 +177,7 @@ namespace DiyetProgramiProje
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(265, 24);
             this.txtPassword.TabIndex = 14;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown_1);
             // 
             // labelPassword
             // 
@@ -197,8 +198,8 @@ namespace DiyetProgramiProje
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1386, 729);
             this.Controls.Add(this.labelWelcome);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btnGo = new FontAwesome.Sharp.IconButton();
             this.btnLogOut1 = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panelUser = new System.Windows.Forms.Panel();
@@ -59,7 +58,6 @@
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelSide.Controls.Add(this.btnGo);
             this.panelSide.Controls.Add(this.btnLogOut1);
             this.panelSide.Controls.Add(this.btnExit);
             this.panelSide.Controls.Add(this.panelUser);
@@ -72,22 +70,6 @@
             this.panelSide.Size = new System.Drawing.Size(200, 768);
             this.panelSide.TabIndex = 0;
             this.panelSide.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSide_Paint);
-            // 
-            // btnGo
-            // 
-            this.btnGo.FlatAppearance.BorderSize = 0;
-            this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGo.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGo.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnGo.IconColor = System.Drawing.Color.Black;
-            this.btnGo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGo.Location = new System.Drawing.Point(20, 594);
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(160, 50);
-            this.btnGo.TabIndex = 16;
-            this.btnGo.Text = "LETS START!";
-            this.btnGo.UseVisualStyleBackColor = true;
-            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // btnLogOut1
             // 
@@ -368,7 +350,6 @@
         private FontAwesome.Sharp.IconButton btnUserMessages;
         private FontAwesome.Sharp.IconButton btnUserMain;
         private FontAwesome.Sharp.IconButton btnUserNewFood;
-        private FontAwesome.Sharp.IconButton btnGo;
         private FontAwesome.Sharp.IconButton btnLogOut1;
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -72,12 +72,12 @@ namespace DiyetProgramiProje
             this.radioButtonClose.ForeColor = ColorTranslator.FromHtml("#293241");
             this.btnAddMeal2.BackColor = ColorTranslator.FromHtml("#293241");
             this.btnNewMeal2.BackColor = ColorTranslator.FromHtml("#293241");
-            this.labelAddMeal1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelAddMeal2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelAddMeal3.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelCheckMeal1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelCheckMeal2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelCheckMeal3.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAddMeal1.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAddMeal2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAddMeal3.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelCheckMeal1.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelCheckMeal2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelCheckMeal3.BackColor = ColorTranslator.FromHtml("#ee6c4d");
             labelAddMeal1.Visible = false;
             labelAddMeal2.Visible = false;
             labelAddMeal3.Visible = false;
@@ -393,6 +393,11 @@ namespace DiyetProgramiProje
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dtMealDate_ValueChanged(object sender, EventArgs e)
+        {
+            FillListView();
         }
     }
 }

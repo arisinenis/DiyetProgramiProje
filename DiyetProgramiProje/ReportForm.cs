@@ -41,22 +41,18 @@ namespace DiyetProgramiProje
             pBox3.Visible = false;
             pBox4.Visible = false;
             this.BackColor = ColorTranslator.FromHtml("#cad2c5");
-            this.labelReport1.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelReport2.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelReport3.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelReport4.ForeColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.labelTips.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelReport1.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelReport2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelReport3.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelReport4.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelTips.BackColor = ColorTranslator.FromHtml("#293241");
             this.radioButtonOpen.ForeColor = ColorTranslator.FromHtml("#293241");
             this.radioButtonClose.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.grpBoxCatReport.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.grpBoxFoodReport.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.grpBoxMostEatenFoods.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.labelMealTime1.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.labelMealTime2.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.labelStartedDate.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.labelEndDate.ForeColor = ColorTranslator.FromHtml("#293241");
-            this.btnCategoriesShow.BackColor = ColorTranslator.FromHtml("#ee6c4d");
-            this.btnCategoriesShow.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelStartedDate.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelEndDate.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelMealTime1.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelMealTime2.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnCategoriesShow.BackColor = ColorTranslator.FromHtml("#293241");
         }
 
         private void FillMealtime()
@@ -122,7 +118,7 @@ namespace DiyetProgramiProje
                 labelReport3.Visible = true;
                 labelReport4.Visible = true;
                 pBox1.Visible = true;
-                pBox1.Visible = true;
+                pBox2.Visible = true;
                 pBox3.Visible = true;
                 pBox4.Visible = true;
             }

@@ -44,129 +44,21 @@ namespace DiyetProgramiProje
             {
                 MessageBox.Show("Please check your choose");
             }
-            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            FillClients();
-        }
-
-        private void btnRefreshCats_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (rbCatActive.Checked) FillCategories(rbCatActive.Text);
-                if (rbCatPassive.Checked) FillCategories(rbCatPassive.Text);
-                if (rbCatActivePassive.Checked) FillCategories(rbCatActivePassive.Text);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please check your choice");
-            }
-        }
-
-        private void btnCategoryApprove_Click(object sender, EventArgs e)
-        {
-            if (lvCategory.FocusedItem == null)
-            {
-                MessageBox.Show("Please select an item.");
-            }
-            else
-            {
-                FoodCategory category = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
-
-                if (category.Status == StatusEnum.Passive)
-                {
-                    categoryService.Active(category);
-                    MessageBox.Show("Category status updated to ACTIVE");
-                }
-                else
-                {
-                    MessageBox.Show("Category status is ACTIVE");
-                }
-            }
-        }
-
-        private void btnCatPassive_Click(object sender, EventArgs e)
-        {
-            if (lvCategory.FocusedItem == null)
-            {
-                MessageBox.Show("Please select an item.");
-            }
-            else
-            {
-                FoodCategory category = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
-
-                if (category.Status == StatusEnum.Active)
-                {
-                    categoryService.Passive(category);
-                    MessageBox.Show("Category status updated to PASSIVE");
-                }
-                else
-                {
-                    MessageBox.Show("Category status is PASSIVE");
-                }
-            }
-        }
-
-        private void btnGetFoods_Click(object sender, EventArgs e)
-        {
-            pboxFoodPic.Visible=false;
-            try
-            {
-                if (rbFoodActives.Checked) FillFoods(rbFoodActives.Text);
-                if (rbFoodPassives.Checked) FillFoods(rbFoodPassives.Text);
-                if (rbFoodsAll.Checked) FillFoods(rbFoodsAll.Text);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please check your choose");
-            }
-        }
-
-        private void btnFoodActive_Click(object sender, EventArgs e)
-        {
-            if (lvFood.FocusedItem == null)
-            {
-                MessageBox.Show("Please select an item.");
-            }
-            else
-            {
-                FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
-
-                if (food.Status == StatusEnum.Passive)
-                {
-                    foodService.Active(food);
-                    MessageBox.Show("Food status updated to ACTIVE");
-                }
-                else
-                {
-                    MessageBox.Show("Food status is ACTIVE");
-                }
-            }
-        }
-
-        private void btnFoodPassive_Click(object sender, EventArgs e)
-        {
-            if (lvFood.FocusedItem == null)
-            {
-                MessageBox.Show("Please select an item.");
-            }
-            else
-            {
-                FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
-
-                if (food.Status == StatusEnum.Active)
-                {
-                    foodService.Passive(food);
-                    MessageBox.Show("Food status updated to PASSIVE");
-                }
-                else
-                {
-                    MessageBox.Show("Food status is PASSIVE");
-                }
-            }
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.labelFilter.BackColor = ColorTranslator.FromHtml("#293241");
+            this.rbCatActive.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbCatActivePassive.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbCatPassive.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbUserActives.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbUserPassives.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbUserGetAll.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbFoodActives.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbFoodPassives.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.rbFoodsAll.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.btnAddCatAndFood.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnUpdateCatAndFood.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelTip1.BackColor = ColorTranslator.FromHtml("#e63946");
+            this.labelTip2.BackColor = ColorTranslator.FromHtml("#e63946");
         }
 
         private void activeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,19 +93,6 @@ namespace DiyetProgramiProje
             }
 
             FillClients();
-        }
-        private void btnGetClients_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (rbUserActives.Checked) FillClientByFilter(rbUserActives.Text);
-                if (rbUserPassives.Checked) FillClientByFilter(rbUserPassives.Text);
-                if (rbUserGetAll.Checked) FillClientByFilter(rbUserGetAll.Text);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please check your choose");
-            }
         }
 
         private void FillClients()
@@ -473,11 +352,6 @@ namespace DiyetProgramiProje
             }
             
         }
-        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Form frmm = Application.OpenForms["Form1"];
-            //frmm.Show();
-        }
 
         private void CloseAll()
         {
@@ -489,6 +363,263 @@ namespace DiyetProgramiProje
                     item.Close();
                 }
             }
+        }
+
+        private void rbUserActives_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                FillClientByFilter(rbUserActives.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choose");
+            }
+        }
+
+        private void rbUserPassives_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                FillClientByFilter(rbUserPassives.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choose");
+            }
+        }
+
+        private void rbUserGetAll_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                FillClientByFilter(rbUserGetAll.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choose");
+            }
+        }
+
+        private void rbFoodActives_CheckedChanged(object sender, EventArgs e)
+        {
+            pboxFoodPic.Visible = false;
+            try
+            {
+                if (rbFoodActives.Checked) FillFoods(rbFoodActives.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choose");
+            }
+        }
+
+        private void rbFoodPassives_CheckedChanged(object sender, EventArgs e)
+        {
+            pboxFoodPic.Visible = false;
+            try
+            {
+                if (rbFoodPassives.Checked) FillFoods(rbFoodPassives.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choose");
+            }
+        }
+
+        private void rbFoodsAll_CheckedChanged(object sender, EventArgs e)
+        {
+            pboxFoodPic.Visible = false;
+            try
+            {
+                if (rbFoodsAll.Checked) FillFoods(rbFoodsAll.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choose");
+            }
+        }
+
+        private void rbCatActive_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbCatActive.Checked) FillCategories(rbCatActive.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choice");
+            }
+        }
+
+        private void rbCatPassive_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbCatPassive.Checked) FillCategories(rbCatPassive.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choice");
+            }
+        }
+
+        private void rbCatActivePassive_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbCatActivePassive.Checked) FillCategories(rbCatActivePassive.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please check your choice");
+            }
+        }
+
+        private void activeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (lvCategory.FocusedItem == null)
+            {
+                MessageBox.Show("Please select an item.");
+            }
+            else
+            {
+                FoodCategory category = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
+
+                if (category.Status == StatusEnum.Passive)
+                {
+                    categoryService.Active(category);
+                    MessageBox.Show("Category status updated to ACTIVE");
+                }
+                else
+                {
+                    MessageBox.Show("Category status is ACTIVE");
+                }
+            }
+        }
+
+        private void passiveToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (lvCategory.FocusedItem == null)
+            {
+                MessageBox.Show("Please select an item.");
+            }
+            else
+            {
+                FoodCategory category = categoryService.GetById(Convert.ToInt32(lvCategory.FocusedItem.Text));
+
+                if (category.Status == StatusEnum.Active)
+                {
+                    categoryService.Passive(category);
+                    MessageBox.Show("Category status updated to PASSIVE");
+                }
+                else
+                {
+                    MessageBox.Show("Category status is PASSIVE");
+                }
+            }
+        }
+
+        private void activeToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (lvFood.FocusedItem == null)
+            {
+                MessageBox.Show("Please select an item.");
+            }
+            else
+            {
+                FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
+
+                if (food.Status == StatusEnum.Passive)
+                {
+                    foodService.Active(food);
+                    MessageBox.Show("Food status updated to ACTIVE");
+                }
+                else
+                {
+                    MessageBox.Show("Food status is ACTIVE");
+                }
+            }
+        }
+
+        private void passiveToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (lvFood.FocusedItem == null)
+            {
+                MessageBox.Show("Please select an item.");
+            }
+            else
+            {
+                FoodName food = foodService.GetById(Convert.ToInt32(lvFood.FocusedItem.Text));
+
+                if (food.Status == StatusEnum.Active)
+                {
+                    foodService.Passive(food);
+                    MessageBox.Show("Food status updated to PASSIVE");
+                }
+                else
+                {
+                    MessageBox.Show("Food status is PASSIVE");
+                }
+            }
+        }
+
+        private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
+        {
+            if (box != null)
+            {
+                Brush textBrush = new SolidBrush(textColor);
+                Brush borderBrush = new SolidBrush(borderColor);
+                Pen borderPen = new Pen(borderBrush);
+                SizeF strSize = g.MeasureString(box.Text, box.Font);
+                Rectangle rect = new Rectangle(box.ClientRectangle.X,
+                                               box.ClientRectangle.Y + (int)(strSize.Height / 2),
+                                               box.ClientRectangle.Width - 1,
+                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
+
+                // Clear text and border
+                g.Clear(this.BackColor);
+
+                // Draw text
+                g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
+
+                // Drawing Border
+                //Left
+                g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
+                //Right
+                g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Bottom
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Top1
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
+                //Top2
+                g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
+
+            }
+        }
+
+        private void grpboxClients_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void groupBoxCatFood_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void groupBoxCatFilter_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void groupBoxFoodFilter_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
         }
     }
 }

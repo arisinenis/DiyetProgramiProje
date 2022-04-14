@@ -35,16 +35,16 @@ namespace DiyetProgramiProje
             this.labelMessage1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picturebox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.labelList = new System.Windows.Forms.Label();
             this.txtShowMessage = new System.Windows.Forms.TextBox();
             this.lboxMessages = new System.Windows.Forms.ListBox();
             this.gboxReply = new System.Windows.Forms.GroupBox();
             this.labelReply1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReplySend = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelText = new System.Windows.Forms.Label();
+            this.labelHeader = new System.Windows.Forms.Label();
             this.txtHeader = new System.Windows.Forms.TextBox();
             this.txtText = new System.Windows.Forms.RichTextBox();
             this.labelTips = new System.Windows.Forms.Label();
@@ -64,8 +64,8 @@ namespace DiyetProgramiProje
             this.gboxMessages.Controls.Add(this.labelMessage1);
             this.gboxMessages.Controls.Add(this.pictureBox2);
             this.gboxMessages.Controls.Add(this.picturebox3);
-            this.gboxMessages.Controls.Add(this.label4);
-            this.gboxMessages.Controls.Add(this.label3);
+            this.gboxMessages.Controls.Add(this.labelMessage);
+            this.gboxMessages.Controls.Add(this.labelList);
             this.gboxMessages.Controls.Add(this.txtShowMessage);
             this.gboxMessages.Controls.Add(this.lboxMessages);
             this.gboxMessages.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -76,6 +76,7 @@ namespace DiyetProgramiProje
             this.gboxMessages.TabIndex = 0;
             this.gboxMessages.TabStop = false;
             this.gboxMessages.Text = "Messages";
+            this.gboxMessages.Paint += new System.Windows.Forms.PaintEventHandler(this.gboxMessages_Paint);
             this.gboxMessages.Enter += new System.EventHandler(this.gboxMessages_Enter);
             // 
             // labelMessage2
@@ -115,23 +116,23 @@ namespace DiyetProgramiProje
             this.picturebox3.TabIndex = 37;
             this.picturebox3.TabStop = false;
             // 
-            // label4
+            // labelMessage
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 23);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Message";
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Location = new System.Drawing.Point(232, 44);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(81, 23);
+            this.labelMessage.TabIndex = 3;
+            this.labelMessage.Text = "Message";
             // 
-            // label3
+            // labelList
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Message List";
+            this.labelList.AutoSize = true;
+            this.labelList.Location = new System.Drawing.Point(40, 44);
+            this.labelList.Name = "labelList";
+            this.labelList.Size = new System.Drawing.Size(113, 23);
+            this.labelList.TabIndex = 2;
+            this.labelList.Text = "Message List";
             // 
             // txtShowMessage
             // 
@@ -158,8 +159,8 @@ namespace DiyetProgramiProje
             this.gboxReply.Controls.Add(this.labelReply1);
             this.gboxReply.Controls.Add(this.pictureBox1);
             this.gboxReply.Controls.Add(this.btnReplySend);
-            this.gboxReply.Controls.Add(this.label2);
-            this.gboxReply.Controls.Add(this.label1);
+            this.gboxReply.Controls.Add(this.labelText);
+            this.gboxReply.Controls.Add(this.labelHeader);
             this.gboxReply.Controls.Add(this.txtHeader);
             this.gboxReply.Controls.Add(this.txtText);
             this.gboxReply.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -170,6 +171,7 @@ namespace DiyetProgramiProje
             this.gboxReply.TabIndex = 3;
             this.gboxReply.TabStop = false;
             this.gboxReply.Text = "Reply";
+            this.gboxReply.Paint += new System.Windows.Forms.PaintEventHandler(this.gboxReply_Paint);
             // 
             // labelReply1
             // 
@@ -193,7 +195,7 @@ namespace DiyetProgramiProje
             // 
             this.btnReplySend.FlatAppearance.BorderSize = 0;
             this.btnReplySend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReplySend.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReplySend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReplySend.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnReplySend.IconColor = System.Drawing.Color.Black;
             this.btnReplySend.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -205,23 +207,23 @@ namespace DiyetProgramiProje
             this.btnReplySend.UseVisualStyleBackColor = true;
             this.btnReplySend.Click += new System.EventHandler(this.btnReplySend_Click);
             // 
-            // label2
+            // labelText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Message Text";
+            this.labelText.AutoSize = true;
+            this.labelText.Location = new System.Drawing.Point(44, 122);
+            this.labelText.Name = "labelText";
+            this.labelText.Size = new System.Drawing.Size(118, 23);
+            this.labelText.TabIndex = 2;
+            this.labelText.Text = "Message Text";
             // 
-            // label1
+            // labelHeader
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Message Header";
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Location = new System.Drawing.Point(44, 44);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(143, 23);
+            this.labelHeader.TabIndex = 2;
+            this.labelHeader.Text = "Message Header";
             // 
             // txtHeader
             // 
@@ -312,15 +314,15 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.ListBox lboxMessages;
         private System.Windows.Forms.TextBox txtShowMessage;
         private System.Windows.Forms.GroupBox gboxReply;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelText;
+        private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.TextBox txtHeader;
         private System.Windows.Forms.RichTextBox txtText;
         private System.Windows.Forms.Label labelTips;
         private System.Windows.Forms.RadioButton radioButtonClose;
         private System.Windows.Forms.RadioButton radioButtonOpen;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.Label labelList;
         private FontAwesome.Sharp.IconButton btnReplySend;
         private System.Windows.Forms.Label labelMessage2;
         private System.Windows.Forms.Label labelMessage1;

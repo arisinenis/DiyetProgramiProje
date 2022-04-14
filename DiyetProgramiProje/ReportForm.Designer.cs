@@ -138,7 +138,7 @@
             // 
             this.btnCategoriesShow.FlatAppearance.BorderSize = 0;
             this.btnCategoriesShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriesShow.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCategoriesShow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCategoriesShow.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCategoriesShow.IconColor = System.Drawing.Color.Black;
             this.btnCategoriesShow.IconFont = FontAwesome.Sharp.IconFont.Auto;

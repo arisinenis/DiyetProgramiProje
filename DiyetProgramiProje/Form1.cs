@@ -40,14 +40,6 @@ namespace DiyetProgramiProje
             this.btnSıgnIn2.BackColor = ColorTranslator.FromHtml("#293241");
         }
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogIn2_Click(sender, e);
-            }
-        }
-
         private void btnBegin1_Click(object sender, EventArgs e)
         {
             panel3.Visible = false;
@@ -81,9 +73,6 @@ namespace DiyetProgramiProje
                 }
                 else if (user == null && dietician != null)
                 {
-                    //DieticianForm dieticianForm = new DieticianForm(dietician);
-                    //this.Hide();
-                    //dieticianForm.ShowDialog();
                     var MainForm = Application.OpenForms.OfType<MainForm>().Single();
                     MainForm.LoadForm(new DieticianForm(dietician), dietician, user);
                     MainForm.PanelControl();
@@ -101,11 +90,16 @@ namespace DiyetProgramiProje
         {
             DieticianRegisterInfo dietician = null;
             UserRegisterInfo user = null;
-            //RegisterForm registerForm = new RegisterForm();
-            //this.Hide();
-            //registerForm.ShowDialog();
             var MainForm = Application.OpenForms.OfType<MainForm>().Single();
             MainForm.LoadForm(new RegisterForm(), dietician, user);
+        }
+
+        private void txtPassword_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogIn2_Click(sender, e);
+            }
         }
     }
 }

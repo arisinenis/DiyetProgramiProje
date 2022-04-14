@@ -30,10 +30,9 @@ namespace DiyetProgramiProje
             foodService = new FoodService();
             groupBox1.Text = "Add Category";
             groupBox2.Text = "Add Category Menu";
-            btnAddCategory.Text = "Add Category";
-            groupBox3.Text = "Add Food";
-            btnAddFood.Text = "Add Food";
-            btnShowCatMenu.Text = "Show Add Category Panel";
+            btnAddCat.Text = "Add Category";
+            groupBoxAddFood.Text = "Add Food";
+            btnFoodAdd.Text = "Add Food";
         }
         public FoodAddForm(UserRegisterInfo _user, FoodName _foodForUpdate, FoodCategory _foodCategory)
         {
@@ -45,23 +44,52 @@ namespace DiyetProgramiProje
             foodCategory = _foodCategory;
             groupBox1.Text = "Update Category";
             groupBox2.Text = "Update Category Menu";
-            btnAddCategory.Text = "Update Category";
-            groupBox3.Text = "Update Food";
-            btnAddFood.Text = "Update Food";
-            btnShowCatMenu.Text = "Show Update Category Panel";
+            groupBoxAddFood.Text = "Update Food";
+            btnFoodAdd.Text = "Update Food";
+            btnAddCat.Text = "Update Category";
             FillForUpdate();
-
         }
 
         private void FoodAddForm_Load(object sender, EventArgs e)
         {
             if (userRegisterInfo.UserType==MembershipTypeEnum.Client)
             {
-                groupBox1.Enabled = false;
+                groupBox1.Visible = false;
+                groupBoxAddFood.Location = new Point(340,85);
+            }
+            else
+            {
+                groupBox1.Visible = true;
+                labelTips.Visible = false;
+                radioButtonClose.Visible = false;
+                radioButtonOpen.Visible = false;
+                pboxFoodAdd3.Visible = false;
+                pboxFoodAdd4.Visible = false;
+                labelFoodAdd3.Visible = false;
+                labelFoodAdd4.Visible = false;
+                labelAttention.Visible = false;
             }
             FillLbCategory();
             FillCbFoodCategories();
-            this.BackColor = ColorTranslator.FromHtml("#98c1d9");
+            labelFoodAdd3.Visible = false;
+            labelFoodAdd4.Visible = false;
+            pboxFoodAdd3.Visible = false;
+            pboxFoodAdd4.Visible = false;
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.labelTips.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelTitle.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelFoodName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelFoodCatName.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelFoodCal.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelFilter.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelPicture.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnAddCat.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnAddPicture.BackColor = ColorTranslator.FromHtml("#293241");
+            this.btnFoodAdd.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelFoodAdd3.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelFoodAdd4.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelAttention.BackColor = ColorTranslator.FromHtml("#e63946");
+            this.labelCatName.BackColor = ColorTranslator.FromHtml("#e63946");
         }
 
         private void FillLbCategory()
@@ -94,14 +122,34 @@ namespace DiyetProgramiProje
             FilterCategory();
         }
 
-        private void btnShowCatMenu_Click(object sender, EventArgs e)
+        Image imgg;
+
+        private Image ConvertByteToPicture(FoodName food)
         {
-            groupBox2.Visible = true;
+            using (var ms = new MemoryStream(food.FoodPicture))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
+        private void FillForUpdate()
         {
-            if (btnAddCategory.Text== "Add Category")
+            if (foodCategory == null && foodForUpdate != null )
+            {
+                txtFoodName.Text = foodForUpdate.Name;
+                txtFoodCalories.Text = foodForUpdate.Calorie.ToString();
+                pboxAddPicture.Image = ConvertByteToPicture(foodForUpdate);
+            }
+            else
+            {
+                FillLbCategory();
+                txtCategoryName.Text = foodCategory.CategoryName;
+            }            
+        }
+
+        private void btnAddCat_Click(object sender, EventArgs e)
+        {
+            if (btnAddCat.Text == "Add Category")
             {
                 if (txtCategoryName.Text != string.Empty)
                 {
@@ -123,9 +171,10 @@ namespace DiyetProgramiProje
                 categoryService.Update(uptFoodCategory);
 
                 MessageBox.Show("Category has been updated.");
-            } 
+            }
         }
-        private void btnImport_Click(object sender, EventArgs e)
+
+        private void btnAddPicture_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
 
@@ -137,8 +186,7 @@ namespace DiyetProgramiProje
             }
         }
 
-        Image imgg;
-        private void btnAddFood_Click(object sender, EventArgs e)
+        private void btnFoodAdd_Click(object sender, EventArgs e)
         {
             if (txtFoodName.Text == string.Empty || txtFoodCalories.Text == string.Empty)
             {
@@ -146,7 +194,7 @@ namespace DiyetProgramiProje
             }
             else
             {
-                if (btnAddFood.Text=="Add Food")
+                if (btnFoodAdd.Text == "Add Food")
                 {
                     FoodName foodName = new FoodName();
                     foodName.Name = txtFoodName.Text;
@@ -162,10 +210,10 @@ namespace DiyetProgramiProje
                     foodName.FoodPicture = arr;
                     foodService.Add(foodName);
 
-                    MessageBox.Show("Food has been added.");
+                    MessageBox.Show("Food has been added. ");
 
                 }
-                
+
                 else
                 {
 
@@ -184,7 +232,7 @@ namespace DiyetProgramiProje
                             arr = ms.ToArray();
                         }
                         uptFoodName.FoodPicture = arr;
-                    }             
+                    }
                     foodService.Update(uptFoodName);
 
                     MessageBox.Show("Food has been updated.");
@@ -192,48 +240,76 @@ namespace DiyetProgramiProje
                 }
 
             }
-            
         }
-        private Image ConvertByteToPicture(FoodName food)
+
+        private void radioButtonOpen_CheckedChanged(object sender, EventArgs e)
         {
-            using (var ms = new MemoryStream(food.FoodPicture))
+            if (radioButtonOpen.Checked)
             {
-                return Image.FromStream(ms);
+                labelFoodAdd3.Visible = true;
+                labelFoodAdd4.Visible = true;
+                pboxFoodAdd3.Visible = true;
+                pboxFoodAdd4.Visible = true;
+            }
+            else if (radioButtonClose.Checked)
+            {
+                labelFoodAdd3.Visible = false;
+                labelFoodAdd4.Visible = false;
+                pboxFoodAdd3.Visible = false;
+                pboxFoodAdd4.Visible = false;
             }
         }
 
-        private void FillForUpdate()
+        private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
         {
-            if (foodCategory == null && foodForUpdate != null )
+            if (box != null)
             {
-                txtFoodName.Text = foodForUpdate.Name;
-                txtFoodCalories.Text = foodForUpdate.Calorie.ToString();
-                pboxAddPicture.Image = ConvertByteToPicture(foodForUpdate);
+                Brush textBrush = new SolidBrush(textColor);
+                Brush borderBrush = new SolidBrush(borderColor);
+                Pen borderPen = new Pen(borderBrush);
+                SizeF strSize = g.MeasureString(box.Text, box.Font);
+                Rectangle rect = new Rectangle(box.ClientRectangle.X,
+                                               box.ClientRectangle.Y + (int)(strSize.Height / 2),
+                                               box.ClientRectangle.Width - 1,
+                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
+
+                // Clear text and border
+                g.Clear(this.BackColor);
+
+                // Draw text
+                g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
+
+                // Drawing Border
+                //Left
+                g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
+                //Right
+                g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Bottom
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Top1
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
+                //Top2
+                g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
+
             }
-            else
-            {
-                FillLbCategory();
-                txtCategoryName.Text = foodCategory.CategoryName;
-            }
-            
         }
 
-        private void FoodAddForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void groupBox1_Paint(object sender, PaintEventArgs e)
         {
-            //Form frm1 = Application.OpenForms["UserForm"];
-            //if (frm1!=null)
-            //{ 
-            //    frm1.Show();
-            //}
-            //else
-            //{   
-            //    AdminForm adminForm = new AdminForm(userRegisterInfo);
-            //    adminForm.Show();
-            //}
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
         }
 
-        private void FoodAddForm_Activated(object sender, EventArgs e)
-        {   
+        private void groupBox2_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void groupBoxAddFood_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
         }
     }
 }
