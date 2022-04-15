@@ -30,320 +30,418 @@ namespace DiyetProgramiProje
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodAddForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnAddCategory = new System.Windows.Forms.Button();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnShowCatMenu = new System.Windows.Forms.Button();
-            this.lboxCategories = new System.Windows.Forms.ListBox();
-            this.txtFilterCategory = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBoxAddFood = new System.Windows.Forms.GroupBox();
+            this.btnFoodAdd = new FontAwesome.Sharp.IconButton();
+            this.btnAddPicture = new FontAwesome.Sharp.IconButton();
+            this.labelPicture = new System.Windows.Forms.Label();
             this.pboxAddPicture = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelFoodCatName = new System.Windows.Forms.Label();
             this.cboxCategoryName = new System.Windows.Forms.ComboBox();
             this.txtFoodCalories = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnAddFood = new System.Windows.Forms.Button();
+            this.labelFoodCal = new System.Windows.Forms.Label();
             this.txtFoodName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.labelFoodName = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelFilter = new System.Windows.Forms.Label();
+            this.txtFilterCategory = new System.Windows.Forms.TextBox();
+            this.lboxCategories = new System.Windows.Forms.ListBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddCat = new FontAwesome.Sharp.IconButton();
+            this.txtCategoryName = new System.Windows.Forms.TextBox();
+            this.labelCatName = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelTips = new System.Windows.Forms.Label();
+            this.radioButtonClose = new System.Windows.Forms.RadioButton();
+            this.radioButtonOpen = new System.Windows.Forms.RadioButton();
+            this.labelFoodAdd3 = new System.Windows.Forms.Label();
+            this.labelFoodAdd4 = new System.Windows.Forms.Label();
+            this.pboxFoodAdd3 = new System.Windows.Forms.PictureBox();
+            this.pboxFoodAdd4 = new System.Windows.Forms.PictureBox();
+            this.labelAttention = new System.Windows.Forms.Label();
+            this.groupBoxAddFood.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAddPicture)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxFoodAdd3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxFoodAdd4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // groupBoxAddFood
+            // 
+            this.groupBoxAddFood.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxAddFood.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxAddFood.Controls.Add(this.labelAttention);
+            this.groupBoxAddFood.Controls.Add(this.pboxFoodAdd4);
+            this.groupBoxAddFood.Controls.Add(this.pboxFoodAdd3);
+            this.groupBoxAddFood.Controls.Add(this.labelFoodAdd4);
+            this.groupBoxAddFood.Controls.Add(this.labelFoodAdd3);
+            this.groupBoxAddFood.Controls.Add(this.btnFoodAdd);
+            this.groupBoxAddFood.Controls.Add(this.btnAddPicture);
+            this.groupBoxAddFood.Controls.Add(this.labelPicture);
+            this.groupBoxAddFood.Controls.Add(this.pboxAddPicture);
+            this.groupBoxAddFood.Controls.Add(this.labelFoodCatName);
+            this.groupBoxAddFood.Controls.Add(this.cboxCategoryName);
+            this.groupBoxAddFood.Controls.Add(this.txtFoodCalories);
+            this.groupBoxAddFood.Controls.Add(this.labelFoodCal);
+            this.groupBoxAddFood.Controls.Add(this.txtFoodName);
+            this.groupBoxAddFood.Controls.Add(this.labelFoodName);
+            this.groupBoxAddFood.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBoxAddFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBoxAddFood.Location = new System.Drawing.Point(610, 97);
+            this.groupBoxAddFood.Name = "groupBoxAddFood";
+            this.groupBoxAddFood.Size = new System.Drawing.Size(530, 535);
+            this.groupBoxAddFood.TabIndex = 1;
+            this.groupBoxAddFood.TabStop = false;
+            this.groupBoxAddFood.Text = "Add Food";
+            this.groupBoxAddFood.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBoxAddFood_Paint);
+            // 
+            // btnFoodAdd
+            // 
+            this.btnFoodAdd.FlatAppearance.BorderSize = 0;
+            this.btnFoodAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoodAdd.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFoodAdd.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnFoodAdd.IconColor = System.Drawing.Color.Black;
+            this.btnFoodAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFoodAdd.Location = new System.Drawing.Point(63, 294);
+            this.btnFoodAdd.Name = "btnFoodAdd";
+            this.btnFoodAdd.Size = new System.Drawing.Size(160, 50);
+            this.btnFoodAdd.TabIndex = 16;
+            this.btnFoodAdd.Text = "Add Food";
+            this.btnFoodAdd.UseVisualStyleBackColor = true;
+            this.btnFoodAdd.Click += new System.EventHandler(this.btnFoodAdd_Click);
+            // 
+            // btnAddPicture
+            // 
+            this.btnAddPicture.FlatAppearance.BorderSize = 0;
+            this.btnAddPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPicture.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddPicture.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddPicture.IconColor = System.Drawing.Color.Black;
+            this.btnAddPicture.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPicture.Location = new System.Drawing.Point(312, 294);
+            this.btnAddPicture.Name = "btnAddPicture";
+            this.btnAddPicture.Size = new System.Drawing.Size(160, 50);
+            this.btnAddPicture.TabIndex = 15;
+            this.btnAddPicture.Text = "Add Picture";
+            this.btnAddPicture.UseVisualStyleBackColor = true;
+            this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
+            // 
+            // labelPicture
+            // 
+            this.labelPicture.AutoSize = true;
+            this.labelPicture.Location = new System.Drawing.Point(318, 40);
+            this.labelPicture.Name = "labelPicture";
+            this.labelPicture.Size = new System.Drawing.Size(110, 23);
+            this.labelPicture.TabIndex = 13;
+            this.labelPicture.Text = "Food Picture";
+            // 
+            // pboxAddPicture
+            // 
+            this.pboxAddPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pboxAddPicture.Location = new System.Drawing.Point(276, 71);
+            this.pboxAddPicture.Name = "pboxAddPicture";
+            this.pboxAddPicture.Size = new System.Drawing.Size(196, 189);
+            this.pboxAddPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAddPicture.TabIndex = 12;
+            this.pboxAddPicture.TabStop = false;
+            // 
+            // labelFoodCatName
+            // 
+            this.labelFoodCatName.AutoSize = true;
+            this.labelFoodCatName.Location = new System.Drawing.Point(48, 201);
+            this.labelFoodCatName.Name = "labelFoodCatName";
+            this.labelFoodCatName.Size = new System.Drawing.Size(175, 23);
+            this.labelFoodCatName.TabIndex = 11;
+            this.labelFoodCatName.Text = "Food Category Name";
+            // 
+            // cboxCategoryName
+            // 
+            this.cboxCategoryName.FormattingEnabled = true;
+            this.cboxCategoryName.Location = new System.Drawing.Point(27, 229);
+            this.cboxCategoryName.Name = "cboxCategoryName";
+            this.cboxCategoryName.Size = new System.Drawing.Size(222, 31);
+            this.cboxCategoryName.TabIndex = 10;
+            // 
+            // txtFoodCalories
+            // 
+            this.txtFoodCalories.Location = new System.Drawing.Point(28, 150);
+            this.txtFoodCalories.Name = "txtFoodCalories";
+            this.txtFoodCalories.Size = new System.Drawing.Size(221, 31);
+            this.txtFoodCalories.TabIndex = 9;
+            // 
+            // labelFoodCal
+            // 
+            this.labelFoodCal.AutoSize = true;
+            this.labelFoodCal.Location = new System.Drawing.Point(81, 119);
+            this.labelFoodCal.Name = "labelFoodCal";
+            this.labelFoodCal.Size = new System.Drawing.Size(117, 23);
+            this.labelFoodCal.TabIndex = 8;
+            this.labelFoodCal.Text = "Food Calories";
+            // 
+            // txtFoodName
+            // 
+            this.txtFoodName.Location = new System.Drawing.Point(28, 71);
+            this.txtFoodName.Name = "txtFoodName";
+            this.txtFoodName.Size = new System.Drawing.Size(222, 31);
+            this.txtFoodName.TabIndex = 1;
+            // 
+            // labelFoodName
+            // 
+            this.labelFoodName.AutoSize = true;
+            this.labelFoodName.Location = new System.Drawing.Point(81, 40);
+            this.labelFoodName.Name = "labelFoodName";
+            this.labelFoodName.Size = new System.Drawing.Size(100, 23);
+            this.labelFoodName.TabIndex = 0;
+            this.labelFoodName.Text = "Food Name";
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTitle.Location = new System.Drawing.Point(522, 22);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(175, 47);
+            this.labelTitle.TabIndex = 2;
+            this.labelTitle.Text = "FOOD ADD";
+            // 
+            // labelFilter
+            // 
+            this.labelFilter.AutoSize = true;
+            this.labelFilter.Location = new System.Drawing.Point(347, 41);
+            this.labelFilter.Name = "labelFilter";
+            this.labelFilter.Size = new System.Drawing.Size(142, 23);
+            this.labelFilter.TabIndex = 0;
+            this.labelFilter.Text = "Filter Categories";
+            // 
+            // txtFilterCategory
+            // 
+            this.txtFilterCategory.Location = new System.Drawing.Point(327, 72);
+            this.txtFilterCategory.Name = "txtFilterCategory";
+            this.txtFilterCategory.Size = new System.Drawing.Size(189, 31);
+            this.txtFilterCategory.TabIndex = 1;
+            this.txtFilterCategory.TextChanged += new System.EventHandler(this.txtFilterCategory_TextChanged);
+            // 
+            // lboxCategories
+            // 
+            this.lboxCategories.FormattingEnabled = true;
+            this.lboxCategories.ItemHeight = 23;
+            this.lboxCategories.Location = new System.Drawing.Point(327, 120);
+            this.lboxCategories.Name = "lboxCategories";
+            this.lboxCategories.Size = new System.Drawing.Size(189, 257);
+            this.lboxCategories.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnAddCat);
+            this.groupBox2.Controls.Add(this.txtCategoryName);
+            this.groupBox2.Controls.Add(this.labelCatName);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(26, 62);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(283, 314);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Add Category Menu";
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
+            // 
+            // btnAddCat
+            // 
+            this.btnAddCat.FlatAppearance.BorderSize = 0;
+            this.btnAddCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCat.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddCat.IconColor = System.Drawing.Color.Black;
+            this.btnAddCat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddCat.Location = new System.Drawing.Point(60, 126);
+            this.btnAddCat.Name = "btnAddCat";
+            this.btnAddCat.Size = new System.Drawing.Size(160, 50);
+            this.btnAddCat.TabIndex = 5;
+            this.btnAddCat.Text = "Add Category";
+            this.btnAddCat.UseVisualStyleBackColor = true;
+            this.btnAddCat.Click += new System.EventHandler(this.btnAddCat_Click);
+            // 
+            // txtCategoryName
+            // 
+            this.txtCategoryName.Location = new System.Drawing.Point(26, 89);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(229, 31);
+            this.txtCategoryName.TabIndex = 2;
+            // 
+            // labelCatName
+            // 
+            this.labelCatName.AutoSize = true;
+            this.labelCatName.Location = new System.Drawing.Point(72, 54);
+            this.labelCatName.Name = "labelCatName";
+            this.labelCatName.Size = new System.Drawing.Size(132, 23);
+            this.labelCatName.TabIndex = 1;
+            this.labelCatName.Text = "Category Name";
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.btnShowCatMenu);
             this.groupBox1.Controls.Add(this.lboxCategories);
             this.groupBox1.Controls.Add(this.txtFilterCategory);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.Controls.Add(this.labelFilter);
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(56, 130);
+            this.groupBox1.Location = new System.Drawing.Point(34, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(278, 663);
+            this.groupBox1.Size = new System.Drawing.Size(552, 535);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Category";
+            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
-            // groupBox2
+            // labelTips
             // 
-            this.groupBox2.Controls.Add(this.btnAddCategory);
-            this.groupBox2.Controls.Add(this.txtCategoryName);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(10, 469);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(248, 194);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add Category Menu";
-            this.groupBox2.Visible = false;
+            this.labelTips.AutoSize = true;
+            this.labelTips.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTips.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTips.Location = new System.Drawing.Point(52, 22);
+            this.labelTips.Name = "labelTips";
+            this.labelTips.Size = new System.Drawing.Size(212, 23);
+            this.labelTips.TabIndex = 31;
+            this.labelTips.Text = "You can change tips here :";
             // 
-            // btnAddCategory
+            // radioButtonClose
             // 
-            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.Image")));
-            this.btnAddCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddCategory.Location = new System.Drawing.Point(57, 112);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(173, 70);
-            this.btnAddCategory.TabIndex = 4;
-            this.btnAddCategory.Text = "Add Category";
-            this.btnAddCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCategory.UseVisualStyleBackColor = true;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            this.radioButtonClose.AutoSize = true;
+            this.radioButtonClose.Checked = true;
+            this.radioButtonClose.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonClose.Location = new System.Drawing.Point(375, 20);
+            this.radioButtonClose.Name = "radioButtonClose";
+            this.radioButtonClose.Size = new System.Drawing.Size(117, 27);
+            this.radioButtonClose.TabIndex = 30;
+            this.radioButtonClose.TabStop = true;
+            this.radioButtonClose.Text = "Tips Closed";
+            this.radioButtonClose.UseVisualStyleBackColor = true;
             // 
-            // txtCategoryName
+            // radioButtonOpen
             // 
-            this.txtCategoryName.Location = new System.Drawing.Point(10, 69);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(220, 36);
-            this.txtCategoryName.TabIndex = 2;
+            this.radioButtonOpen.AutoSize = true;
+            this.radioButtonOpen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonOpen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonOpen.Location = new System.Drawing.Point(270, 20);
+            this.radioButtonOpen.Name = "radioButtonOpen";
+            this.radioButtonOpen.Size = new System.Drawing.Size(107, 27);
+            this.radioButtonOpen.TabIndex = 29;
+            this.radioButtonOpen.Text = "Tips Open";
+            this.radioButtonOpen.UseVisualStyleBackColor = true;
+            this.radioButtonOpen.CheckedChanged += new System.EventHandler(this.radioButtonOpen_CheckedChanged);
             // 
-            // label2
+            // labelFoodAdd3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Category Name";
+            this.labelFoodAdd3.Location = new System.Drawing.Point(82, 407);
+            this.labelFoodAdd3.Name = "labelFoodAdd3";
+            this.labelFoodAdd3.Size = new System.Drawing.Size(130, 58);
+            this.labelFoodAdd3.TabIndex = 17;
+            this.labelFoodAdd3.Text = "Here you can add a new food";
             // 
-            // btnShowCatMenu
+            // labelFoodAdd4
             // 
-            this.btnShowCatMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShowCatMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowCatMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnShowCatMenu.Image")));
-            this.btnShowCatMenu.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnShowCatMenu.Location = new System.Drawing.Point(10, 381);
-            this.btnShowCatMenu.Name = "btnShowCatMenu";
-            this.btnShowCatMenu.Size = new System.Drawing.Size(248, 82);
-            this.btnShowCatMenu.TabIndex = 3;
-            this.btnShowCatMenu.Text = "Show Add Category Panel";
-            this.btnShowCatMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnShowCatMenu.UseVisualStyleBackColor = true;
-            this.btnShowCatMenu.Click += new System.EventHandler(this.btnShowCatMenu_Click);
+            this.labelFoodAdd4.Location = new System.Drawing.Point(318, 407);
+            this.labelFoodAdd4.Name = "labelFoodAdd4";
+            this.labelFoodAdd4.Size = new System.Drawing.Size(154, 71);
+            this.labelFoodAdd4.TabIndex = 18;
+            this.labelFoodAdd4.Text = "You must upload an image to add a new food";
             // 
-            // lboxCategories
+            // pboxFoodAdd3
             // 
-            this.lboxCategories.FormattingEnabled = true;
-            this.lboxCategories.ItemHeight = 28;
-            this.lboxCategories.Location = new System.Drawing.Point(10, 119);
-            this.lboxCategories.Name = "lboxCategories";
-            this.lboxCategories.Size = new System.Drawing.Size(248, 256);
-            this.lboxCategories.TabIndex = 2;
+            this.pboxFoodAdd3.Image = ((System.Drawing.Image)(resources.GetObject("pboxFoodAdd3.Image")));
+            this.pboxFoodAdd3.Location = new System.Drawing.Point(115, 359);
+            this.pboxFoodAdd3.Name = "pboxFoodAdd3";
+            this.pboxFoodAdd3.Size = new System.Drawing.Size(50, 45);
+            this.pboxFoodAdd3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxFoodAdd3.TabIndex = 38;
+            this.pboxFoodAdd3.TabStop = false;
             // 
-            // txtFilterCategory
+            // pboxFoodAdd4
             // 
-            this.txtFilterCategory.Location = new System.Drawing.Point(10, 73);
-            this.txtFilterCategory.Name = "txtFilterCategory";
-            this.txtFilterCategory.Size = new System.Drawing.Size(248, 36);
-            this.txtFilterCategory.TabIndex = 1;
-            this.txtFilterCategory.TextChanged += new System.EventHandler(this.txtFilterCategory_TextChanged);
+            this.pboxFoodAdd4.Image = ((System.Drawing.Image)(resources.GetObject("pboxFoodAdd4.Image")));
+            this.pboxFoodAdd4.Location = new System.Drawing.Point(363, 359);
+            this.pboxFoodAdd4.Name = "pboxFoodAdd4";
+            this.pboxFoodAdd4.Size = new System.Drawing.Size(50, 45);
+            this.pboxFoodAdd4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxFoodAdd4.TabIndex = 39;
+            this.pboxFoodAdd4.TabStop = false;
             // 
-            // label1
+            // labelAttention
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Filter Categories";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btnImport);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.pboxAddPicture);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.cboxCategoryName);
-            this.groupBox3.Controls.Add(this.txtFoodCalories);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.btnAddFood);
-            this.groupBox3.Controls.Add(this.txtFoodName);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(353, 130);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(278, 663);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Add Food";
-            // 
-            // btnImport
-            // 
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
-            this.btnImport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImport.Location = new System.Drawing.Point(10, 309);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(185, 47);
-            this.btnImport.TabIndex = 14;
-            this.btnImport.Text = "Import Picture";
-            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 276);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 28);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Food Picture";
-            // 
-            // pboxAddPicture
-            // 
-            this.pboxAddPicture.Location = new System.Drawing.Point(10, 362);
-            this.pboxAddPicture.Name = "pboxAddPicture";
-            this.pboxAddPicture.Size = new System.Drawing.Size(248, 213);
-            this.pboxAddPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAddPicture.TabIndex = 12;
-            this.pboxAddPicture.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 196);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 28);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Food Category Name";
-            // 
-            // cboxCategoryName
-            // 
-            this.cboxCategoryName.FormattingEnabled = true;
-            this.cboxCategoryName.Location = new System.Drawing.Point(10, 229);
-            this.cboxCategoryName.Name = "cboxCategoryName";
-            this.cboxCategoryName.Size = new System.Drawing.Size(248, 36);
-            this.cboxCategoryName.TabIndex = 10;
-            // 
-            // txtFoodCalories
-            // 
-            this.txtFoodCalories.Location = new System.Drawing.Point(10, 152);
-            this.txtFoodCalories.Name = "txtFoodCalories";
-            this.txtFoodCalories.Size = new System.Drawing.Size(248, 36);
-            this.txtFoodCalories.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 28);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Food Calories";
-            // 
-            // btnAddFood
-            // 
-            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddFood.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFood.Image")));
-            this.btnAddFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddFood.Location = new System.Drawing.Point(112, 581);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(146, 76);
-            this.btnAddFood.TabIndex = 7;
-            this.btnAddFood.Text = "Add Food";
-            this.btnAddFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddFood.UseVisualStyleBackColor = true;
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
-            // 
-            // txtFoodName
-            // 
-            this.txtFoodName.Location = new System.Drawing.Point(10, 73);
-            this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(248, 36);
-            this.txtFoodName.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Food Name";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(247, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 47);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "FOOD ADD";
+            this.labelAttention.AutoSize = true;
+            this.labelAttention.Location = new System.Drawing.Point(12, 492);
+            this.labelAttention.Name = "labelAttention";
+            this.labelAttention.Size = new System.Drawing.Size(514, 23);
+            this.labelAttention.TabIndex = 40;
+            this.labelAttention.Text = "Do not forget that the foods you add are approved by the admin";
             // 
             // FoodAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(695, 840);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(1186, 729);
+            this.Controls.Add(this.labelTips);
+            this.Controls.Add(this.radioButtonClose);
+            this.Controls.Add(this.radioButtonOpen);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.groupBoxAddFood);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FoodAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FoodAddForm";
-            this.Activated += new System.EventHandler(this.FoodAddForm_Activated);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FoodAddForm_FormClosed);
             this.Load += new System.EventHandler(this.FoodAddForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxAddFood.ResumeLayout(false);
+            this.groupBoxAddFood.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAddPicture)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAddPicture)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxFoodAdd3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxFoodAdd4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtFilterCategory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnAddCategory;
-        private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnShowCatMenu;
-        private System.Windows.Forms.ListBox lboxCategories;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBoxAddFood;
+        private System.Windows.Forms.Label labelFoodCatName;
         private System.Windows.Forms.ComboBox cboxCategoryName;
         private System.Windows.Forms.TextBox txtFoodCalories;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAddFood;
+        private System.Windows.Forms.Label labelFoodCal;
         private System.Windows.Forms.TextBox txtFoodName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelFoodName;
+        private System.Windows.Forms.Label labelPicture;
         private System.Windows.Forms.PictureBox pboxAddPicture;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelTitle;
+        private FontAwesome.Sharp.IconButton btnFoodAdd;
+        private FontAwesome.Sharp.IconButton btnAddPicture;
+        private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.TextBox txtFilterCategory;
+        private System.Windows.Forms.ListBox lboxCategories;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private FontAwesome.Sharp.IconButton btnAddCat;
+        private System.Windows.Forms.TextBox txtCategoryName;
+        private System.Windows.Forms.Label labelCatName;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label labelFoodAdd4;
+        private System.Windows.Forms.Label labelFoodAdd3;
+        private System.Windows.Forms.Label labelTips;
+        private System.Windows.Forms.RadioButton radioButtonClose;
+        private System.Windows.Forms.RadioButton radioButtonOpen;
+        private System.Windows.Forms.PictureBox pboxFoodAdd4;
+        private System.Windows.Forms.PictureBox pboxFoodAdd3;
+        private System.Windows.Forms.Label labelAttention;
     }
 }

@@ -35,7 +35,11 @@ namespace BusinessLayer.Services
             {
                 throw new Exception("Please select a food before delete");
             }
+            else
+            {
                 return userMealsAndFoodsRepository.Delete(mealId, foodId);
+            }
+               
         }
 
         public decimal GetCalorieByMeal(int userId, DateTime mealDate, MealTimesEnum mealTime)
