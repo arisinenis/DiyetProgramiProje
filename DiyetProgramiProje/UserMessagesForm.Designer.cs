@@ -31,36 +31,112 @@ namespace DiyetProgramiProje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMessagesForm));
             this.gboxMessages = new System.Windows.Forms.GroupBox();
+            this.labelMessage2 = new System.Windows.Forms.Label();
+            this.labelMessage1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picturebox3 = new System.Windows.Forms.PictureBox();
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.labelList = new System.Windows.Forms.Label();
             this.txtShowMessage = new System.Windows.Forms.TextBox();
             this.lboxMessages = new System.Windows.Forms.ListBox();
-            this.grpBoxReply = new System.Windows.Forms.GroupBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.gboxReply = new System.Windows.Forms.GroupBox();
+            this.labelReply1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnReplySend = new FontAwesome.Sharp.IconButton();
+            this.labelText = new System.Windows.Forms.Label();
+            this.labelHeader = new System.Windows.Forms.Label();
             this.txtHeader = new System.Windows.Forms.TextBox();
             this.txtText = new System.Windows.Forms.RichTextBox();
+            this.labelTips = new System.Windows.Forms.Label();
+            this.radioButtonClose = new System.Windows.Forms.RadioButton();
+            this.radioButtonOpen = new System.Windows.Forms.RadioButton();
             this.gboxMessages.SuspendLayout();
-            this.grpBoxReply.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox3)).BeginInit();
+            this.gboxReply.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxMessages
             // 
             this.gboxMessages.BackColor = System.Drawing.Color.Transparent;
+            this.gboxMessages.Controls.Add(this.labelMessage2);
+            this.gboxMessages.Controls.Add(this.labelMessage1);
+            this.gboxMessages.Controls.Add(this.pictureBox2);
+            this.gboxMessages.Controls.Add(this.picturebox3);
+            this.gboxMessages.Controls.Add(this.labelMessage);
+            this.gboxMessages.Controls.Add(this.labelList);
             this.gboxMessages.Controls.Add(this.txtShowMessage);
             this.gboxMessages.Controls.Add(this.lboxMessages);
-            this.gboxMessages.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gboxMessages.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gboxMessages.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gboxMessages.Location = new System.Drawing.Point(12, 0);
+            this.gboxMessages.Location = new System.Drawing.Point(27, 116);
             this.gboxMessages.Name = "gboxMessages";
-            this.gboxMessages.Size = new System.Drawing.Size(570, 316);
+            this.gboxMessages.Size = new System.Drawing.Size(615, 569);
             this.gboxMessages.TabIndex = 0;
             this.gboxMessages.TabStop = false;
             this.gboxMessages.Text = "Messages";
+            this.gboxMessages.Paint += new System.Windows.Forms.PaintEventHandler(this.gboxMessages_Paint);
             this.gboxMessages.Enter += new System.EventHandler(this.gboxMessages_Enter);
+            // 
+            // labelMessage2
+            // 
+            this.labelMessage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelMessage2.Location = new System.Drawing.Point(339, 419);
+            this.labelMessage2.Name = "labelMessage2";
+            this.labelMessage2.Size = new System.Drawing.Size(136, 57);
+            this.labelMessage2.TabIndex = 40;
+            this.labelMessage2.Text = "Your messages appear here";
+            // 
+            // labelMessage1
+            // 
+            this.labelMessage1.Location = new System.Drawing.Point(57, 419);
+            this.labelMessage1.Name = "labelMessage1";
+            this.labelMessage1.Size = new System.Drawing.Size(137, 56);
+            this.labelMessage1.TabIndex = 39;
+            this.labelMessage1.Text = "Your messages are listed here";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(373, 359);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // picturebox3
+            // 
+            this.picturebox3.Image = ((System.Drawing.Image)(resources.GetObject("picturebox3.Image")));
+            this.picturebox3.Location = new System.Drawing.Point(94, 355);
+            this.picturebox3.Name = "picturebox3";
+            this.picturebox3.Size = new System.Drawing.Size(50, 45);
+            this.picturebox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturebox3.TabIndex = 37;
+            this.picturebox3.TabStop = false;
+            // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Location = new System.Drawing.Point(232, 44);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(81, 23);
+            this.labelMessage.TabIndex = 3;
+            this.labelMessage.Text = "Message";
+            // 
+            // labelList
+            // 
+            this.labelList.AutoSize = true;
+            this.labelList.Location = new System.Drawing.Point(40, 44);
+            this.labelList.Name = "labelList";
+            this.labelList.Size = new System.Drawing.Size(113, 23);
+            this.labelList.TabIndex = 2;
+            this.labelList.Text = "Message List";
             // 
             // txtShowMessage
             // 
-            this.txtShowMessage.Location = new System.Drawing.Point(220, 44);
+            this.txtShowMessage.Location = new System.Drawing.Point(236, 75);
             this.txtShowMessage.Multiline = true;
             this.txtShowMessage.Name = "txtShowMessage";
             this.txtShowMessage.ReadOnly = true;
@@ -70,83 +146,148 @@ namespace DiyetProgramiProje
             // lboxMessages
             // 
             this.lboxMessages.FormattingEnabled = true;
-            this.lboxMessages.ItemHeight = 28;
-            this.lboxMessages.Location = new System.Drawing.Point(10, 44);
+            this.lboxMessages.ItemHeight = 23;
+            this.lboxMessages.Location = new System.Drawing.Point(44, 74);
             this.lboxMessages.Name = "lboxMessages";
-            this.lboxMessages.Size = new System.Drawing.Size(204, 256);
+            this.lboxMessages.Size = new System.Drawing.Size(164, 257);
             this.lboxMessages.TabIndex = 0;
             this.lboxMessages.SelectedIndexChanged += new System.EventHandler(this.lboxMessages_SelectedIndexChanged);
             // 
-            // grpBoxReply
+            // gboxReply
             // 
-            this.grpBoxReply.BackColor = System.Drawing.Color.Transparent;
-            this.grpBoxReply.Controls.Add(this.btnSend);
-            this.grpBoxReply.Controls.Add(this.label2);
-            this.grpBoxReply.Controls.Add(this.label1);
-            this.grpBoxReply.Controls.Add(this.txtHeader);
-            this.grpBoxReply.Controls.Add(this.txtText);
-            this.grpBoxReply.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpBoxReply.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grpBoxReply.Location = new System.Drawing.Point(12, 322);
-            this.grpBoxReply.Name = "grpBoxReply";
-            this.grpBoxReply.Size = new System.Drawing.Size(570, 359);
-            this.grpBoxReply.TabIndex = 3;
-            this.grpBoxReply.TabStop = false;
-            this.grpBoxReply.Text = "Reply";
+            this.gboxReply.BackColor = System.Drawing.Color.Transparent;
+            this.gboxReply.Controls.Add(this.labelReply1);
+            this.gboxReply.Controls.Add(this.pictureBox1);
+            this.gboxReply.Controls.Add(this.btnReplySend);
+            this.gboxReply.Controls.Add(this.labelText);
+            this.gboxReply.Controls.Add(this.labelHeader);
+            this.gboxReply.Controls.Add(this.txtHeader);
+            this.gboxReply.Controls.Add(this.txtText);
+            this.gboxReply.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gboxReply.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gboxReply.Location = new System.Drawing.Point(662, 116);
+            this.gboxReply.Name = "gboxReply";
+            this.gboxReply.Size = new System.Drawing.Size(496, 569);
+            this.gboxReply.TabIndex = 3;
+            this.gboxReply.TabStop = false;
+            this.gboxReply.Text = "Reply";
+            this.gboxReply.Paint += new System.Windows.Forms.PaintEventHandler(this.gboxReply_Paint);
             // 
-            // btnSend
+            // labelReply1
             // 
-            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSend.Image = ((System.Drawing.Image)(resources.GetObject("btnSend.Image")));
-            this.btnSend.Location = new System.Drawing.Point(297, 56);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(97, 92);
-            this.btnSend.TabIndex = 3;
-            this.btnSend.Text = "Send";
-            this.btnSend.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.labelReply1.Location = new System.Drawing.Point(150, 467);
+            this.labelReply1.Name = "labelReply1";
+            this.labelReply1.Size = new System.Drawing.Size(225, 80);
+            this.labelReply1.TabIndex = 38;
+            this.labelReply1.Text = "You can write your message with its title here and send it";
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Message Text";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(206, 419);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // btnReplySend
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Message Header";
+            this.btnReplySend.FlatAppearance.BorderSize = 0;
+            this.btnReplySend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReplySend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReplySend.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReplySend.IconColor = System.Drawing.Color.Black;
+            this.btnReplySend.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReplySend.Location = new System.Drawing.Point(48, 350);
+            this.btnReplySend.Name = "btnReplySend";
+            this.btnReplySend.Size = new System.Drawing.Size(160, 50);
+            this.btnReplySend.TabIndex = 4;
+            this.btnReplySend.Text = "Send";
+            this.btnReplySend.UseVisualStyleBackColor = true;
+            this.btnReplySend.Click += new System.EventHandler(this.btnReplySend_Click);
+            // 
+            // labelText
+            // 
+            this.labelText.AutoSize = true;
+            this.labelText.Location = new System.Drawing.Point(44, 122);
+            this.labelText.Name = "labelText";
+            this.labelText.Size = new System.Drawing.Size(118, 23);
+            this.labelText.TabIndex = 2;
+            this.labelText.Text = "Message Text";
+            // 
+            // labelHeader
+            // 
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Location = new System.Drawing.Point(44, 44);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(143, 23);
+            this.labelHeader.TabIndex = 2;
+            this.labelHeader.Text = "Message Header";
             // 
             // txtHeader
             // 
-            this.txtHeader.Location = new System.Drawing.Point(11, 75);
+            this.txtHeader.Location = new System.Drawing.Point(48, 75);
             this.txtHeader.Name = "txtHeader";
-            this.txtHeader.Size = new System.Drawing.Size(280, 36);
+            this.txtHeader.Size = new System.Drawing.Size(280, 31);
             this.txtHeader.TabIndex = 1;
             // 
             // txtText
             // 
-            this.txtText.Location = new System.Drawing.Point(11, 154);
+            this.txtText.Location = new System.Drawing.Point(48, 148);
             this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(549, 192);
+            this.txtText.Size = new System.Drawing.Size(387, 184);
             this.txtText.TabIndex = 0;
             this.txtText.Text = "";
+            // 
+            // labelTips
+            // 
+            this.labelTips.AutoSize = true;
+            this.labelTips.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTips.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTips.Location = new System.Drawing.Point(23, 42);
+            this.labelTips.Name = "labelTips";
+            this.labelTips.Size = new System.Drawing.Size(212, 23);
+            this.labelTips.TabIndex = 31;
+            this.labelTips.Text = "You can change tips here :";
+            // 
+            // radioButtonClose
+            // 
+            this.radioButtonClose.AutoSize = true;
+            this.radioButtonClose.Checked = true;
+            this.radioButtonClose.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonClose.Location = new System.Drawing.Point(346, 40);
+            this.radioButtonClose.Name = "radioButtonClose";
+            this.radioButtonClose.Size = new System.Drawing.Size(117, 27);
+            this.radioButtonClose.TabIndex = 30;
+            this.radioButtonClose.TabStop = true;
+            this.radioButtonClose.Text = "Tips Closed";
+            this.radioButtonClose.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonOpen
+            // 
+            this.radioButtonOpen.AutoSize = true;
+            this.radioButtonOpen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButtonOpen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButtonOpen.Location = new System.Drawing.Point(241, 40);
+            this.radioButtonOpen.Name = "radioButtonOpen";
+            this.radioButtonOpen.Size = new System.Drawing.Size(107, 27);
+            this.radioButtonOpen.TabIndex = 29;
+            this.radioButtonOpen.Text = "Tips Open";
+            this.radioButtonOpen.UseVisualStyleBackColor = true;
+            this.radioButtonOpen.CheckedChanged += new System.EventHandler(this.radioButtonOpen_CheckedChanged);
             // 
             // UserMessagesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(594, 692);
-            this.Controls.Add(this.grpBoxReply);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1186, 729);
+            this.Controls.Add(this.labelTips);
+            this.Controls.Add(this.radioButtonClose);
+            this.Controls.Add(this.radioButtonOpen);
+            this.Controls.Add(this.gboxReply);
             this.Controls.Add(this.gboxMessages);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(0);
@@ -157,9 +298,13 @@ namespace DiyetProgramiProje
             this.Load += new System.EventHandler(this.UserMessagesForm_Load);
             this.gboxMessages.ResumeLayout(false);
             this.gboxMessages.PerformLayout();
-            this.grpBoxReply.ResumeLayout(false);
-            this.grpBoxReply.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox3)).EndInit();
+            this.gboxReply.ResumeLayout(false);
+            this.gboxReply.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -168,11 +313,22 @@ namespace DiyetProgramiProje
         private System.Windows.Forms.GroupBox gboxMessages;
         private System.Windows.Forms.ListBox lboxMessages;
         private System.Windows.Forms.TextBox txtShowMessage;
-        private System.Windows.Forms.GroupBox grpBoxReply;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox gboxReply;
+        private System.Windows.Forms.Label labelText;
+        private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.TextBox txtHeader;
         private System.Windows.Forms.RichTextBox txtText;
+        private System.Windows.Forms.Label labelTips;
+        private System.Windows.Forms.RadioButton radioButtonClose;
+        private System.Windows.Forms.RadioButton radioButtonOpen;
+        private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.Label labelList;
+        private FontAwesome.Sharp.IconButton btnReplySend;
+        private System.Windows.Forms.Label labelMessage2;
+        private System.Windows.Forms.Label labelMessage1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picturebox3;
+        private System.Windows.Forms.Label labelReply1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

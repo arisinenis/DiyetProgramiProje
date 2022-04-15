@@ -12,9 +12,10 @@ namespace DataAccessLayer.Context
     public class DietProgramContext : DbContext
     {
         public DietProgramContext() 
-            : base(@"Server=DESKTOP-R3U4DOV\SQLEXPRESS;Database=DietTrackerDB3;Trusted_Connection=True;")
+            : base(@"Server=DESKTOP-U45D5S4\SQLEXPRESS;Database=DietTrackerDB2;Trusted_Connection=True;")
         {
-
+            //DESKTOP-MLA1I95
+            //DESKTOP-U45D5S4
         }
 
         public DbSet<Dietician> Dieticians { get; set; }

@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Message = Model.Entities.Message;
 
 namespace DiyetProgramiProje
 {
@@ -41,10 +40,27 @@ namespace DiyetProgramiProje
         {
             FillClient();
             FillMealTime();
+            FillFoods();
             cboxLvMealTime.SelectedIndex = 0;
-            
-            
+            labelDietician1.Visible = false;
+            labelDietician2.Visible = false;
+            labelDietician3.Visible = false;
+            pBoxDietician2.Visible = false;
+            pboxDietician1.Visible = false;
+            pBoxDietician3.Visible = false;
+            this.BackColor = ColorTranslator.FromHtml("#cad2c5");
+            this.labelTips.BackColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonOpen.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.radioButtonClose.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.lblDailyCalorieRequirement.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.lblDailyCalorieTaken.ForeColor = ColorTranslator.FromHtml("#293241");
+            this.labelMealDate.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelMealTime.BackColor = ColorTranslator.FromHtml("#293241");
+            this.labelDietician1.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelDietician2.BackColor = ColorTranslator.FromHtml("#ee6c4d");
+            this.labelDietician3.BackColor = ColorTranslator.FromHtml("#ee6c4d");
         }
+        int userId = 0;
         private void FillClient()
         {
             
@@ -75,12 +91,7 @@ namespace DiyetProgramiProje
         }
         private void FillFoods()
         {
-
-            if (lvClients.FocusedItem == null)
-            {
-                MessageBox.Show("Any clients selected");
-            }
-            else
+            if (lvClients.FocusedItem!=null)
             {
                 userId = Convert.ToInt32(lvClients.FocusedItem.Text);
                 UserMeal userMeal = userMealService.GetMeal(userId, dtMealDate.Value.Date, (MealTimesEnum)cboxLvMealTime.SelectedItem);
@@ -96,7 +107,6 @@ namespace DiyetProgramiProje
                         lvi.SubItems.Add(item.Portion.ToString());
                         lvi.SubItems.Add(item.Calorie.ToString());
                         lvMeals.Items.Add(lvi);
-
                     }
                 }
                 else
@@ -105,14 +115,6 @@ namespace DiyetProgramiProje
                 }
             }
         }
-
-        int userId=0;
-        private void btnShowMeal_Click(object sender, EventArgs e)
-        {
-            lvMeals.Items.Clear();
-            FillFoods();
-        }
-
         private void lvClients_SelectedIndexChanged(object sender, EventArgs e)
         {
             lvMeals.Items.Clear();
@@ -122,7 +124,6 @@ namespace DiyetProgramiProje
             lblDailyCalorieTaken.Text = userMealsAndFoodsService.GetTotalCalorieById(userId, dtMealDate.Value.Date).ToString();
             FillFoods();
         }
-
         private void dtMealDate_ValueChanged(object sender, EventArgs e)
         {
             if (userId!=0)
@@ -133,48 +134,91 @@ namespace DiyetProgramiProje
             {
                 MessageBox.Show("Any client selected");
             }
-            
+        }
+        private void cboxLvMealTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lvMeals.Items.Clear();
+            FillFoods();
         }
 
-        private void btnShowMessages_Click(object sender, EventArgs e)
+        private void radioButtonOpen_CheckedChanged(object sender, EventArgs e)
         {
-            DieticianMessagesForm dieticianMessagesForm = new DieticianMessagesForm(dieticianRegisterInfo);
-            this.Hide();
-            dieticianMessagesForm.ShowDialog();
-            
-        }
-
-        private void DieticianForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form frm = Application.OpenForms["Form1"];
-            frm.Show();
-        }
-
-        private void btnSend_Click_1(object sender, EventArgs e)
-        {
-            try
+            if (radioButtonOpen.Checked)
             {
-                if (userId != 0)
-                {
-                    Message message = new Message();
-                    message.MessageHeader = txtMessageTitle.Text;
-                    message.Text = txtMessage.Text;
-                    message.UserInformationId = userId;
-                    message.DieticianId = dieticianRegisterInfo.Id;
-                    messageService.Add(message);
-                    MessageBox.Show("Message has been send");
-                }
-
-                else
-                {
-                    MessageBox.Show("Any client selected");
-                }
+                labelDietician1.Visible = true;
+                labelDietician2.Visible = true;
+                labelDietician3.Visible = true;
+                pBoxDietician2.Visible = true;
+                pboxDietician1.Visible = true;
+                pBoxDietician3.Visible = true;
             }
-            catch (Exception ex)
+            else if (radioButtonClose.Checked)
             {
-                MessageBox.Show(ex.Message);
+                labelDietician1.Visible = false;
+                labelDietician2.Visible = false;
+                labelDietician3.Visible = false;
+                pBoxDietician2.Visible = false;
+                pboxDietician1.Visible = false;
+                pBoxDietician3.Visible = false;
             }
-            
+        }
+
+        private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
+        {
+            if (box != null)
+            {
+                Brush textBrush = new SolidBrush(textColor);
+                Brush borderBrush = new SolidBrush(borderColor);
+                Pen borderPen = new Pen(borderBrush);
+                SizeF strSize = g.MeasureString(box.Text, box.Font);
+                Rectangle rect = new Rectangle(box.ClientRectangle.X,
+                                               box.ClientRectangle.Y + (int)(strSize.Height / 2),
+                                               box.ClientRectangle.Width - 1,
+                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
+
+                // Clear text and border
+                g.Clear(this.BackColor);
+
+                // Draw text
+                g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
+
+                // Drawing Border
+                //Left
+                g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
+                //Right
+                g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Bottom
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Top1
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
+                //Top2
+                g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
+
+            }
+        }
+
+        private void grpboxClients_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void grpBoxMeals_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void grpBoxCalRequirement_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
+        }
+
+        private void grpBoxTakenCal_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            DrawGroupBox(box, e.Graphics, ColorTranslator.FromHtml("#293241"), ColorTranslator.FromHtml("#293241"));
         }
     }
 }
